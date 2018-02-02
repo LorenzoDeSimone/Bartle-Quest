@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-
     public float inputDelay = 0.1f;
     public float forwardVel = 12;
     public float rotateVel = 100;
 
     Quaternion targetRotation;
     Rigidbody rBody;
-    float forwardInput, turnInput;
+    private float forwardInput, turnInput;
+
+    private bool isRunning = false;
+    private Animator myAnimator;
 
     public Quaternion TargetRotation
     {
@@ -34,6 +36,11 @@ public class CharacterController : MonoBehaviour
         else
             Debug.LogError("Character has no rigidbody.");
 
+        if (GetComponent <Animator>())
+            myAnimator = GetComponent<Animator>();
+        else
+            Debug.LogError("Character has no animator.");
+
         forwardInput = turnInput = 0;
 
 	}
@@ -53,9 +60,17 @@ public class CharacterController : MonoBehaviour
     void Run()
     {
         if (Mathf.Abs(forwardInput) > inputDelay)
+        {
             rBody.velocity = transform.forward * forwardInput * forwardVel;
+            isRunning = true;
+        }
         else
+        {
             rBody.velocity = Vector3.zero;
+            isRunning = false;
+        }
+
+        myAnimator.SetBool("isRunning",isRunning);
     }
 
     void Turn()
