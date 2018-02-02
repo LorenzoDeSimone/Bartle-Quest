@@ -10,6 +10,7 @@ Assets/AssetStoreTools*
 *.ogg.meta
 *.ogv
 *.ogv.meta
+*.vs
 
 
 # ===================================== #
