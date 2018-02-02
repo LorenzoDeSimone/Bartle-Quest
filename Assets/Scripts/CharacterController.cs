@@ -13,6 +13,8 @@ public class CharacterController : MonoBehaviour
     private float forwardInput, turnInput;
 
     private bool isRunning = false;
+    private bool isAttacking = false;
+
     private Animator myAnimator;
 
     public Quaternion TargetRotation
@@ -50,6 +52,7 @@ public class CharacterController : MonoBehaviour
     {
         GetInput();
         Turn();
+        Attack();
 	}
 
     void FixedUpdate()
@@ -79,5 +82,15 @@ public class CharacterController : MonoBehaviour
             targetRotation *= Quaternion.AngleAxis(rotateVel * turnInput * Time.deltaTime, Vector3.up);
 
         transform.rotation = targetRotation;
+    }
+
+    void Attack()
+    {
+        if (Input.GetButtonDown("Attack"))
+            isAttacking = true;
+        else// if (Input.GetButtonUp("Attack"))
+            isAttacking = false;
+        
+        myAnimator.SetBool("isAttacking", isAttacking);
     }
 }
