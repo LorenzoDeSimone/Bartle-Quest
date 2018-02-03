@@ -26,7 +26,6 @@ public class CharacterController : MonoBehaviour
     {
         forwardInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
-
     }
 
     // Use this for initialization
@@ -76,8 +75,10 @@ public class CharacterController : MonoBehaviour
     void Attack()
     {
         if (Input.GetButtonDown("Attack"))
-            myCharacterStatus.AttackingStatus = true;
-        else// if (Input.GetButtonUp("Attack"))
-            myCharacterStatus.AttackingStatus = false;
+        {
+            myCharacterStatus.RequestAttack();
+        }
+            //else if (Input.GetButtonUp("Attack"))
+        //    myCharacterStatus.AttackingStatus = false;
     }
 }
