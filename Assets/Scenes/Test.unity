@@ -422,6 +422,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 600627956}
+  - component: {fileID: 600627957}
+  - component: {fileID: 600627958}
   m_Layer: 0
   m_Name: Spear
   m_TagString: Untagged
@@ -442,6 +444,30 @@ Transform:
   m_Father: {fileID: 589658670}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 8.898513, y: -171.73848, z: -86.58312}
+--- !u!65 &600627957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600627955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.510302, y: 200.66132, z: 14.625201}
+  m_Center: {x: 0.8190621, y: 99.829865, z: 0.69086844}
+--- !u!114 &600627958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600627955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93b20f5d3412794a848d1c972aa9491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &615802556
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +612,7 @@ GameObject:
   - component: {fileID: 761015733}
   - component: {fileID: 761015731}
   - component: {fileID: 761015732}
+  - component: {fileID: 761015735}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -656,6 +683,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &761015735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761015730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef938c216e6cc742a1ebe49fd2b9ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789929010
 GameObject:
   m_ObjectHideFlags: 0

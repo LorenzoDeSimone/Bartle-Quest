@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CharacterStatus))]
+
 public class CharacterController : MonoBehaviour
 {
     public float inputDelay = 0.1f;
@@ -9,13 +12,10 @@ public class CharacterController : MonoBehaviour
     public float rotateVel = 100;
 
     Quaternion targetRotation;
-    Rigidbody rBody;
+    private Rigidbody myRigidbody;
+    private CharacterStatus myCharacterStatus;
+
     private float forwardInput, turnInput;
-
-    private bool isRunning = false;
-    private bool isAttacking = false;
-
-    private Animator myAnimator;
 
     public Quaternion TargetRotation
     {
@@ -33,18 +33,9 @@ public class CharacterController : MonoBehaviour
     void Start ()
     {
         targetRotation = transform.rotation;
-        if (GetComponent<Rigidbody>())
-            rBody = GetComponent<Rigidbody>();
-        else
-            Debug.LogError("Character has no rigidbody.");
-
-        if (GetComponent <Animator>())
-            myAnimator = GetComponent<Animator>();
-        else
-            Debug.LogError("Character has no animator.");
-
+        myRigidbody = GetComponent<Rigidbody>();
+        myCharacterStatus = GetComponent<CharacterStatus>();
         forwardInput = turnInput = 0;
-
 	}
 	
 	// Update is called once per frame
@@ -64,16 +55,14 @@ public class CharacterController : MonoBehaviour
     {
         if (Mathf.Abs(forwardInput) > inputDelay)
         {
-            rBody.velocity = transform.forward * forwardInput * forwardVel;
-            isRunning = true;
+            myRigidbody.velocity = transform.forward * forwardInput * forwardVel;
+            myCharacterStatus.RunningStatus = true;
         }
         else
         {
-            rBody.velocity = Vector3.zero;
-            isRunning = false;
+            myRigidbody.velocity = Vector3.zero;
+            myCharacterStatus.RunningStatus = false;
         }
-
-        myAnimator.SetBool("isRunning",isRunning);
     }
 
     void Turn()
@@ -87,10 +76,8 @@ public class CharacterController : MonoBehaviour
     void Attack()
     {
         if (Input.GetButtonDown("Attack"))
-            isAttacking = true;
+            myCharacterStatus.AttackingStatus = true;
         else// if (Input.GetButtonUp("Attack"))
-            isAttacking = false;
-        
-        myAnimator.SetBool("isAttacking", isAttacking);
+            myCharacterStatus.AttackingStatus = false;
     }
 }
