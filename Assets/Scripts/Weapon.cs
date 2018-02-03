@@ -7,12 +7,16 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
+    private CharacterStatus weaponHolder;
+
+    [SerializeField]
     private int damage = 1;
 
     // Use this for initialization
     void Start ()
     {
-		
+        if (weaponHolder == null)
+            Debug.LogError("This weapon has no holder.");
 	}
 	
 	// Update is called once per frame
@@ -23,9 +27,12 @@ public class Weapon : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Fighter hitEnemy = collision.collider.GetComponent<Fighter>();
-        if (hitEnemy)
-            hitEnemy.Hit(damage);
-
+        if (weaponHolder.AttackingStatus)
+        {
+            Debug.Log("Hit");
+            Hittable hitTarget = collision.collider.GetComponent<Hittable>();
+            if (hitTarget)
+                hitTarget.Hit(damage);
+        }
     }
 }
