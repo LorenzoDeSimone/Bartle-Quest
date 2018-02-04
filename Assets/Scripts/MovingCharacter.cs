@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class MovingCharacter : MonoBehaviour
 {
-
     [SerializeField] private float inputDelay = 0.1f;
+    [SerializeField] private float jumpForce = 10f;
 
     public float forwardVel = 12;
     public float rotateVel = 100;
@@ -35,14 +35,11 @@ public class MovingCharacter : MonoBehaviour
     {
         if (Mathf.Abs(forwardInput) > inputDelay && !myCharacterStatus.AttackingStatus)
         {
-            myRigidbody.velocity = transform.forward * forwardInput * forwardVel;
+            transform.position += transform.forward * forwardInput * forwardVel * Time.deltaTime;
             myCharacterStatus.RunningStatus = true;
         }
         else
-        {
-            myRigidbody.velocity = Vector3.zero;
             myCharacterStatus.RunningStatus = false;
-        }
     }
 
     public void Turn(float turnInput)
@@ -56,5 +53,11 @@ public class MovingCharacter : MonoBehaviour
     public void Attack()
     {
         myCharacterStatus.RequestAttack();
+    }
+
+    public void Jump()
+    {
+        Debug.Log("Jump!");
+        myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
