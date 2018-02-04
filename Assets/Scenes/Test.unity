@@ -712,9 +712,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef938c216e6cc742a1ebe49fd2b9ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack1: Attack02
-  Attack2: 
-  Attack3: 
+  AttackStates:
+  - Attack01
+  - Attack02
 --- !u!114 &761015736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,9 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef938c216e6cc742a1ebe49fd2b9ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack1: 
-  Attack2: 
-  Attack3: 
+  AttackStates: []
 --- !u!65 &955456024
 BoxCollider:
   m_ObjectHideFlags: 0
