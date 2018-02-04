@@ -9,6 +9,7 @@ public class MovingCharacter : MonoBehaviour
 {
     [SerializeField] private float inputDelay = 0.1f;
     [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float raycastLenght = 20f;
 
     public float forwardVel = 12;
     public float rotateVel = 100;
@@ -57,7 +58,13 @@ public class MovingCharacter : MonoBehaviour
 
     public void Jump()
     {
-        Debug.Log("Jump!");
-        myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        if(Physics.Raycast(transform.position, Vector3.down, raycastLenght, LayerMask.GetMask("Ground")))
+            myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+
+    void Update()
+    {
+        Debug.DrawLine(transform.position, transform.position + Vector3.down * raycastLenght, Color.red);
     }
 }
+

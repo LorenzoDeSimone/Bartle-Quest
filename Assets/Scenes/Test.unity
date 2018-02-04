@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 735025663}
   - component: {fileID: 735025662}
   - component: {fileID: 735025661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc149b144359174c8cb2b842b8f3593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
   inputDelay: 0.1
-  hasGravity: 1
+  jumpForce: 10
+  raycastLenght: 0.05
   forwardVel: 10
   rotateVel: 100
 --- !u!95 &761015733
