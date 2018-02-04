@@ -8,8 +8,8 @@ public class CharacterStatus : MonoBehaviour
 {
 
     [SerializeField]
-    private string Attack1, Attack2, Attack3;
-
+    private string[] AttackStates;
+    private int comboCounter = -1;
 
     private bool _isRunning = false;
     private bool _isAttacking = false;
@@ -38,67 +38,34 @@ public class CharacterStatus : MonoBehaviour
 
     public bool AttackingStatus
     {
-        get { return myAnimator.GetCurrentAnimatorStateInfo(0).IsName(Attack1); }
+        get
+        {
+            foreach (string attackState in AttackStates)
+            {
+                if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName(attackState))
+                    return true;
+            }
+            return false;
+        }
     }
 
     public void RequestAttack()
     {
         //Debug.Log("Attack requested");
         //nextAttackButtonPressed = false;
-        if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName(Attack1))//!myAnimator.GetCurrentAnimatorStateInfo(0).IsName(Attack1))
+
+        //The character is not attacking and combo needs to start
+        if (!AttackingStatus)
         {
-            Debug.Log("FIRST PRESS");
-            //_isAttacking = true;
-            //StartCoroutine(PlayOneShot("isAttacking"));
-            //myAnimator.SetBool("isAttacking", _isAttacking);
-            //myAnimator.SetTrigger("isAttacking");
-            myAnimator.Play(Attack1, 0);
-            //StartCoroutine(wait("Attack02"));
+            Debug.Log(AttackStates[0] + "FIRST PRESS");
+            myAnimator.Play(AttackStates[0], 0);
         }
-
-        //_isAttacking = false;
-        //myAnimator.SetBool("isAttacking", false);
-
         //If character is already attacking, input is registered to act when current animation is finished
-
-        else//if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName(Attack1))
+        else
         {
-            nextAttackButtonPressed = true;
-            Debug.Log("SECOND PRESS");
+            myAnimator.SetTrigger("comboButtonPressed");
+            Debug.Log("COMBO PRESS");
         }
-    }
-
-    void Update()
-    {
-        //_isAttacking = false;
-        //Debug.Log(nextAttackButtonPressed);
-    }
-
-    public IEnumerator PlayOneShot(string paramName)
-    {
-        myAnimator.SetBool(paramName, true);
-        yield return null;
-        myAnimator.SetBool(paramName, false);
-        _isAttacking = false;
-    }
-
-
-    IEnumerator wait(string animationName)
-    {
-        //yield return new WaitForSeconds(myAnimator.GetCurrentAnimatorStateInfo(0).length + 
-        //myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        //myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))
-        while (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-            yield return null;
-
-        /*while ((!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))||
-              (myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !myAnimator.IsInTransition(0)))
-        {
-            yield return null;
-        }*/
-
-        _isAttacking = false;
-        myAnimator.SetBool("isAttacking", _isAttacking);
     }
 
     public bool DeathStatus

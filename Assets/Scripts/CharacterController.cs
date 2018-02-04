@@ -52,7 +52,7 @@ public class CharacterController : MonoBehaviour
 
     void Run()
     {
-        if (Mathf.Abs(forwardInput) > inputDelay)
+        if (Mathf.Abs(forwardInput) > inputDelay && !myCharacterStatus.AttackingStatus)
         {
             myRigidbody.velocity = transform.forward * forwardInput * forwardVel;
             myCharacterStatus.RunningStatus = true;
