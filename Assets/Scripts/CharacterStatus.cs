@@ -11,11 +11,6 @@ public class CharacterStatus : MonoBehaviour
     private string[] AttackStates;
     private int comboCounter = -1;
 
-    private bool _isRunning = false;
-    private bool _isAttacking = false;
-    private bool _isDead = false;
-
-
     private bool nextAttackButtonPressed = false;
 
     private Animator myAnimator;
@@ -28,16 +23,13 @@ public class CharacterStatus : MonoBehaviour
 
     public bool RunningStatus
     {
-        get { return _isRunning; }
-        set
-        {
-            _isRunning = value;
-            myAnimator.SetBool("isRunning", _isRunning);
-        }
+        get { return myAnimator.GetBool("isRunning"); }
+        set { myAnimator.SetBool("isRunning", value); }
     }
 
     public bool AttackingStatus
     {
+        //Checks if the character is in one of the states labelled as attackStates in the animator
         get
         {
             foreach (string attackState in AttackStates)
@@ -47,6 +39,12 @@ public class CharacterStatus : MonoBehaviour
             }
             return false;
         }
+    }
+
+    public bool DeathStatus
+    {
+        get { return myAnimator.GetBool("isDead"); }
+        set { myAnimator.SetBool("isDead", value); }
     }
 
     public void RequestAttack()
@@ -67,15 +65,4 @@ public class CharacterStatus : MonoBehaviour
             Debug.Log("COMBO PRESS");
         }
     }
-
-    public bool DeathStatus
-    {
-        get { return _isDead; }
-        set
-        {
-            _isDead = value;
-            myAnimator.SetBool("isDead", _isDead);
-        }
-    }
-
 }
