@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     public float xTilt = 10;
 
     private Vector3 destination = Vector3.zero;
-    private CharacterController charController;
+    private MovingCharacter myMovingCharacter;
 
     float rotateVel = 0;
 
@@ -19,8 +19,8 @@ public class CameraController : MonoBehaviour
         if (t != null)
         {
             target = t;
-            if (target.GetComponent<CharacterController>())
-                charController = target.GetComponent<CharacterController>();
+            if (target.GetComponent<MovingCharacter>())
+                myMovingCharacter = target.GetComponent<MovingCharacter>();
             else
                 Debug.LogError("Camera's target is not a character controller.");
         }
@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
 
     void MoveToTarget()
     {
-        destination = charController.TargetRotation * offsetFromTarget;
+        destination = myMovingCharacter.TargetRotation * offsetFromTarget;
         destination += target.position;
         transform.position = destination;
     }

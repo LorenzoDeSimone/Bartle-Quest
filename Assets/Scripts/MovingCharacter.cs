@@ -5,9 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterStatus))]
 
-public class CharacterController : MonoBehaviour
+public class MovingCharacter : MonoBehaviour
 {
-    public float inputDelay = 0.1f;
+
+    [SerializeField] private float inputDelay = 0.1f;
+
     public float forwardVel = 12;
     public float rotateVel = 100;
 
@@ -15,17 +17,10 @@ public class CharacterController : MonoBehaviour
     private Rigidbody myRigidbody;
     private CharacterStatus myCharacterStatus;
 
-    private float forwardInput, turnInput;
 
     public Quaternion TargetRotation
     {
         get { return targetRotation; }
-    }
-
-    void GetInput()
-    {
-        forwardInput = Input.GetAxis("Vertical");
-        turnInput = Input.GetAxis("Horizontal");
     }
 
     // Use this for initialization
@@ -34,23 +29,9 @@ public class CharacterController : MonoBehaviour
         targetRotation = transform.rotation;
         myRigidbody = GetComponent<Rigidbody>();
         myCharacterStatus = GetComponent<CharacterStatus>();
-        forwardInput = turnInput = 0;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        GetInput();
-        Turn();
-        Attack();
 	}
 
-    void FixedUpdate()
-    {
-        Run();
-    }
-
-    void Run()
+    public void Run(float forwardInput)
     {
         if (Mathf.Abs(forwardInput) > inputDelay && !myCharacterStatus.AttackingStatus)
         {
@@ -64,7 +45,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    void Turn()
+    public void Turn(float turnInput)
     {
         if (Mathf.Abs(turnInput) > inputDelay)
             targetRotation *= Quaternion.AngleAxis(rotateVel * turnInput * Time.deltaTime, Vector3.up);
@@ -72,13 +53,8 @@ public class CharacterController : MonoBehaviour
         transform.rotation = targetRotation;
     }
 
-    void Attack()
+    public void Attack()
     {
-        if (Input.GetButtonDown("Attack"))
-        {
-            myCharacterStatus.RequestAttack();
-        }
-            //else if (Input.GetButtonUp("Attack"))
-        //    myCharacterStatus.AttackingStatus = false;
+        myCharacterStatus.RequestAttack();
     }
 }

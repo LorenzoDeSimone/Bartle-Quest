@@ -14,6 +14,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: isDead
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   - m_Name: isRunning
     m_Type: 4
     m_DefaultFloat: 0
@@ -21,12 +27,6 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: isAttacking
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: isDead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -251,7 +251,7 @@ AnimatorStateMachine:
     m_Position: {x: -240, y: -276, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110236829}
-    m_Position: {x: -240, y: -408, z: 0}
+    m_Position: {x: -240, y: -348, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102519268412051532}
     m_Position: {x: 612, y: 228, z: 0}
