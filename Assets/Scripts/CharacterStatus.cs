@@ -21,10 +21,10 @@ public class CharacterStatus : MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
-    public bool RunningStatus
+    public int MovingStatus
     {
-        get { return myAnimator.GetBool("isRunning"); }
-        set { myAnimator.SetBool("isRunning", value); }
+        get { return myAnimator.GetInteger("isMoving"); }
+        set { myAnimator.SetInteger("isMoving", value); }
     }
 
     public bool AttackingStatus

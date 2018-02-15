@@ -46,7 +46,7 @@ public class Weapon : MonoBehaviour
         if (weaponHolder.AttackingStatus && currentAnimatorState.fullPathHash != lastAnimatorState)
         {
             lastAnimatorState = currentAnimatorState.fullPathHash;
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
             Hittable hitTarget = collision.collider.GetComponent<Hittable>();
             if (hitTarget)
                 hitTarget.Hit(damage);
