@@ -55,14 +55,14 @@ public class CharacterStatus : MonoBehaviour
         //The character is not attacking and combo needs to start
         if (!AttackingStatus)
         {
-            Debug.Log(AttackStates[0] + "FIRST PRESS");
+            //Debug.Log(AttackStates[0] + "FIRST PRESS");
             myAnimator.Play(AttackStates[0], 0);
         }
         //If character is already attacking, input is registered to act when current animation is finished
         else
         {
             myAnimator.SetTrigger("comboButtonPressed");
-            Debug.Log("COMBO PRESS");
+            //Debug.Log("COMBO PRESS");
         }
     }
 }

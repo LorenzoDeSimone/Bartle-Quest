@@ -37,7 +37,7 @@ public class InputController : MonoBehaviour
         if(Input.GetButtonDown("Attack"))
             myMovingCharacter.Attack();
 
-        if (Input.GetButtonDown("Jump"))
-            myMovingCharacter.Jump();
+        //if (Input.GetButtonDown("Jump"))
+        //    myMovingCharacter.Jump();
     }
 }

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterStatus))]
 
 public class MovingCharacter : MonoBehaviour
 {
     [SerializeField] private float inputDelay = 0.1f;
-    [SerializeField] private float jumpForce = 10f;
+    //[SerializeField] private float jumpForce = 10f;
     [SerializeField] private float raycastLenght = 20f;
 
     public float forwardVel = 12;
@@ -56,11 +56,11 @@ public class MovingCharacter : MonoBehaviour
         myCharacterStatus.RequestAttack();
     }
 
-    public void Jump()
+    /*public void Jump()
     {
         if(Physics.Raycast(transform.position, Vector3.down, raycastLenght, LayerMask.GetMask("Ground")))
             myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
+    }*/
 
     void Update()
     {
