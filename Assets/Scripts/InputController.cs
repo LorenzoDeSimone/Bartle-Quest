@@ -22,7 +22,7 @@ public class InputController : MonoBehaviour
     {
         GetInput();
         myMovingCharacter.Turn(turnInput);
-        myMovingCharacter.Run(forwardInput);
+        myMovingCharacter.Move(forwardInput);
     }
 
     void GetInput()
