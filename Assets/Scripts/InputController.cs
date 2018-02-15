@@ -22,10 +22,6 @@ public class InputController : MonoBehaviour
     {
         GetInput();
         myMovingCharacter.Turn(turnInput);
-    }
-
-    void FixedUpdate()
-    {
         myMovingCharacter.Run(forwardInput);
     }
 
