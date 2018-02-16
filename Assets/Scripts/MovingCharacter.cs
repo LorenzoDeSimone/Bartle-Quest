@@ -17,7 +17,7 @@ public class MovingCharacter : MonoBehaviour
     public float rotateVel = 100;
 
     Quaternion targetRotation;
-    private Rigidbody myRigidbody;
+    //private Rigidbody myRigidbody;
     private CharacterStatus myCharacterStatus;
     private Collider myCollider;
 
@@ -32,7 +32,7 @@ public class MovingCharacter : MonoBehaviour
     void Start ()
     {
         targetRotation = transform.rotation;
-        myRigidbody = GetComponent<Rigidbody>();
+        //myRigidbody = GetComponent<Rigidbody>();
         myCharacterStatus = GetComponent<CharacterStatus>();
         myCollider = GetComponent<Collider>();
 	}
@@ -69,7 +69,7 @@ public class MovingCharacter : MonoBehaviour
             }
             else
             {
-                transform.position += transform.forward * forwardInput * forwardVel * 0.5f * Time.deltaTime;
+                transform.position += transform.forward * forwardInput * forwardVel * 0.3f * Time.deltaTime;
                 myCharacterStatus.MovingStatus = walkingValue;
             }
         }
@@ -89,12 +89,6 @@ public class MovingCharacter : MonoBehaviour
     {
         myCharacterStatus.RequestAttack();
     }
-
-    /*public void Jump()
-    {
-        if(Physics.Raycast(transform.position, Vector3.down, raycastLenght, LayerMask.GetMask("Ground")))
-            myRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }*/
 
     void Update()
     {

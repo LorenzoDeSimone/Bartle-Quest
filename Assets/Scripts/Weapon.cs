@@ -43,7 +43,8 @@ public class Weapon : MonoBehaviour
         AnimatorStateInfo currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
         //Debug.Log(currentAnimatorState.fullPathHash);
 
-        if (weaponHolder.AttackingStatus && currentAnimatorState.fullPathHash != lastAnimatorState)
+        if (weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collision.gameObject) && 
+            currentAnimatorState.fullPathHash != lastAnimatorState)
         {
             lastAnimatorState = currentAnimatorState.fullPathHash;
             //Debug.Log("Hit");
