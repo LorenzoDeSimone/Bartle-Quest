@@ -4855,6 +4855,8 @@ GameObject:
   - component: {fileID: 404565223}
   - component: {fileID: 404565221}
   - component: {fileID: 404565222}
+  - component: {fileID: 404565224}
+  - component: {fileID: 404565227}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4873,6 +4875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32eb8ce60039b0b4cba2a6711d845346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputEpsilon: 0.1
+  runningThreshold: 0.5
   velocity: 5
   turnSpeed: 10
   height: 0.1
@@ -4911,6 +4915,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &404565224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404565220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef938c216e6cc742a1ebe49fd2b9ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackStates:
+  - Attack01
+  - Attack02
 --- !u!4 &404565225
 Transform:
   m_ObjectHideFlags: 0
@@ -4926,6 +4944,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404565227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404565220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc149b144359174c8cb2b842b8f3593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputEpsilon: 0.1
+  runningThreshold: 0.5
+  raycastLenght: 20
+  forwardVel: 12
+  rotateVel: 100
 --- !u!1 &406088051
 GameObject:
   m_ObjectHideFlags: 0

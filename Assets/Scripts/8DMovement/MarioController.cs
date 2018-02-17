@@ -9,6 +9,11 @@ using UnityEngine;
 
 public class MarioController : MonoBehaviour
 {
+    [SerializeField] private float inputEpsilon = 0.1f;
+    [SerializeField] private float runningThreshold = 0.5f;
+
+    CharacterStatus myCharacterStatus;
+
     public float velocity = 5;
     public float turnSpeed = 10;
 
@@ -29,10 +34,13 @@ public class MarioController : MonoBehaviour
     RaycastHit hitInfo;
     bool grounded;
 
+    private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
+
     void Start()
     {
         cam = Camera.main.transform;
         ground = LayerMask.GetMask("Ground");
+        myCharacterStatus = GetComponent<CharacterStatus>();
     }
 
     void Update()
@@ -45,9 +53,6 @@ public class MarioController : MonoBehaviour
         ApplyGravity();
         DrawDebugLines();
 
-        //RAW VALUES, to correct after
-        if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1) return;
-
         Rotate();
         Move();
     }
@@ -57,8 +62,11 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void GetInput()
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        input.x = Input.GetAxis("Horizontal");
+        input.y = Input.GetAxis("Vertical");
+
+        if (Input.GetButtonDown("Attack"))
+            Attack();
     }
 
     /// <summary>
@@ -76,6 +84,12 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void Rotate()
     {
+        if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
+            return;
+
+        if (myCharacterStatus.AttackingStatus)
+            return;
+
         targetRotation = Quaternion.Euler(0, angle, 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
@@ -85,9 +99,23 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        if (groundAngle > maxGroundAngle) return;
+        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus) return;
 
-        transform.position += forward * velocity * Time.deltaTime;
+        //RAW VALUES, to correct after
+        if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
+        {
+            myCharacterStatus.MovingStatus = idleValue;
+        }
+        else if (Mathf.Abs(input.x) < runningThreshold && Mathf.Abs(input.y) < runningThreshold)
+        {
+            myCharacterStatus.MovingStatus = walkingValue;
+            transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x),Mathf.Abs(input.y)) * Time.deltaTime;
+        }
+        else
+        {
+            myCharacterStatus.MovingStatus = runningValue;
+            transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)) * Time.deltaTime;
+        }
     }
 
     /// <summary>
@@ -144,6 +172,11 @@ public class MarioController : MonoBehaviour
         {
             transform.position += Physics.gravity *  Time.deltaTime;
         }
+    }
+
+    public void Attack()
+    {
+        myCharacterStatus.RequestAttack();
     }
 
     /// <summary>

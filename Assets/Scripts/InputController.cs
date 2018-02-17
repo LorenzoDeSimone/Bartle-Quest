@@ -21,8 +21,6 @@ public class InputController : MonoBehaviour
     void Update ()
     {
         GetInput();
-        myMovingCharacter.Turn(turnInput);
-        myMovingCharacter.Move(forwardInput);
     }
 
     void GetInput()
