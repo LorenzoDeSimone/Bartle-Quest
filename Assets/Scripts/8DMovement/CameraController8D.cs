@@ -19,7 +19,7 @@ public class CameraController8D : MonoBehaviour
     Vector3 targetPos;
     bool smoothRotating = false;
 
-    void Update()
+    void LateUpdate()
     {
         MoveWithTarget();
         LookAtTarget();
