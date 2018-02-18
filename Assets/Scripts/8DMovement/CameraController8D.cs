@@ -24,14 +24,18 @@ public class CameraController8D : MonoBehaviour
         MoveWithTarget();
         LookAtTarget();
 
-        if (Input.GetKeyDown(KeyCode.G) && !smoothRotating)
-        {
-            StartCoroutine("RotateAroundTarget", 45);
-        }
-        if (Input.GetKeyDown(KeyCode.H) && !smoothRotating)
-        {
-            StartCoroutine("RotateAroundTarget", -45);
-        }
+        //if (Input.GetAxis("RightHorizontal") > 0.0f)// && !smoothRotating)
+        //{
+            Debug.Log(Input.GetAxis("RightHorizontal"));
+            //Debug.Log(Input.GetAxisRaw("RightHorizontal"));
+
+        //StartCoroutine("RotateAroundTarget", 45);
+        //}
+        //if (Input.GetAxis("RightVertical") > 0.0f)// && !smoothRotating)
+        //{
+        //    Debug.Log(Input.GetAxis("RightVertical"));
+        //StartCoroutine("RotateAroundTarget", -45);
+        //}
     }
 
     /// <summary>
