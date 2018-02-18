@@ -35,6 +35,8 @@ public class MarioController : MonoBehaviour
     bool grounded;
     bool fallHitSet;
 
+    Vector3 fallVelocity;
+
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
 
     void Start()
@@ -156,18 +158,17 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void CheckGround()
     {
-        if (Physics.Raycast(transform.position, -Vector3.up, out hitInfo, height + heightPadding, ground))
+        if (Physics.Raycast(transform.position + Vector3.up * heightPadding * 0.01f, -Vector3.up, out hitInfo, height + heightPadding, ground))
         {
             if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
 
             grounded = true;
+            fallHitSet = false;
+            fallVelocity = Vector3.zero;
         }
         else
-        {
             grounded = false;
-            fallHitSet = false;
-        }
     }
 
     /// <summary>
@@ -183,7 +184,10 @@ public class MarioController : MonoBehaviour
 
         if (!grounded)
         {
-            Vector3 newPosition = transform.position + Physics.gravity * Time.deltaTime;
+            fallVelocity += Physics.gravity;
+            Vector3 newPosition = transform.position + fallVelocity * Time.deltaTime;
+
+            newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
 
             if (!fallHitSet)
             {
