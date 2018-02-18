@@ -11,37 +11,30 @@ public class MarioController : MonoBehaviour
 {
     [SerializeField] private float inputEpsilon = 0.1f;
     [SerializeField] private float runningThreshold = 0.5f;
+    [SerializeField] private float velocity = 5;
+    [SerializeField] private float turnSpeed = 10;
+    [SerializeField] private float height = 0.5f;
+    [SerializeField] private float heightPadding = 0.05f;
+    [SerializeField] private LayerMask ground;
+    [SerializeField] private float maxGroundAngle = 120;
+    [SerializeField] private bool debug;
 
-    CharacterStatus myCharacterStatus;
-
-    public float velocity = 5;
-    public float turnSpeed = 10;
-
-    public float height = 0.5f;
-    public float heightPadding = 0.05f;
-    public LayerMask ground;
-    public float maxGroundAngle = 120;
-    public bool debug;
-
-    Vector2 input;
-    float angle;
-    float groundAngle;
-
-    Quaternion targetRotation;
-    Transform cam;
-
-    Vector3 forward;
-    RaycastHit hitInfo, fallHitInfo;
-    bool grounded;
-    bool fallHitSet;
-
-    Vector3 fallVelocity;
-
+    private bool grounded;
+    private bool fallHitSet;
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
+    private float angle;
+    private float groundAngle;
+    private Vector2 input;
+    private Vector3 forward;
+    private Vector3 fallVelocity;
+    private Quaternion targetRotation;
+    private Transform myCamera;
+    private RaycastHit hitInfo, fallHitInfo;
+    private CharacterStatus myCharacterStatus;
 
     void Start()
     {
-        cam = Camera.main.transform;
+        myCamera = Camera.main.transform;
         ground = LayerMask.GetMask("Ground");
         myCharacterStatus = GetComponent<CharacterStatus>();
     }
@@ -79,7 +72,7 @@ public class MarioController : MonoBehaviour
     {
         angle = Mathf.Atan2(input.x, input.y);
         angle = Mathf.Rad2Deg * angle;
-        angle += cam.eulerAngles.y;
+        angle += myCamera.eulerAngles.y;
     }
 
     /// <summary>
