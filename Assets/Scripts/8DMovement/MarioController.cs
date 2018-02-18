@@ -15,6 +15,7 @@ public class MarioController : MonoBehaviour
     [SerializeField] private float turnSpeed = 10;
     [SerializeField] private float height = 0.5f;
     [SerializeField] private float heightPadding = 0.05f;
+    [SerializeField] private float wallCheckLength = 1f;
     [SerializeField] private LayerMask ground;
     [SerializeField] private float maxGroundAngle = 120;
     [SerializeField] private bool debug;
@@ -95,7 +96,7 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus)
+        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
         {
             myCharacterStatus.MovingStatus = idleValue;
             return;
@@ -146,6 +147,39 @@ public class MarioController : MonoBehaviour
         groundAngle = Vector3.Angle(hitInfo.normal, transform.forward);
     }
 
+    private bool IsBorderOK()
+    {
+        float forwardInput = Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y));
+        Vector3 nextPos = transform.position + transform.forward * wallCheckLength;
+
+        if (debug)
+            Debug.DrawRay(nextPos, -transform.up, Color.red);
+
+        //Checks to avoid falling into the abyss
+        if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, ground))
+        {
+            Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
+
+            //Check to avoid running into the walls
+            Vector3 firstRay = (transform.forward + transform.forward + transform.right) * forwardInput;
+            Vector3 secondRay = (transform.forward + transform.forward - transform.right) * forwardInput;
+
+            if (debug)
+            {
+                Debug.DrawRay(transform.position - epsilonRaycastStart, firstRay.normalized * wallCheckLength, Color.red);
+                Debug.DrawRay(transform.position - epsilonRaycastStart, secondRay.normalized * wallCheckLength, Color.red);
+            }
+            if (Physics.Raycast(transform.position - epsilonRaycastStart, firstRay, wallCheckLength,  ~ground) ||
+                Physics.Raycast(transform.position - epsilonRaycastStart, secondRay, wallCheckLength, ~ground))
+                return false;
+            else
+                return true;
+        }
+        else
+            return false;
+    }
+
+
     /// <summary>
     /// Use a raycast of length height to determine whether or not the player is grounded
     /// </summary>
@@ -183,8 +217,12 @@ public class MarioController : MonoBehaviour
 
             newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
 
+            if (debug)
+                Debug.DrawRay(transform.position, -Vector3.up * 1000, Color.magenta);
+
             if (!fallHitSet)
             {
+
                 if (Physics.Raycast(transform.position, -Vector3.up, out fallHitInfo, Mathf.Infinity, ground))
                     fallHitSet = true;
 
