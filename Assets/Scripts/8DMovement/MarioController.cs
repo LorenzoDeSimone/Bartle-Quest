@@ -16,9 +16,12 @@ public class MarioController : MonoBehaviour
     [SerializeField] private float height = 0.5f;
     [SerializeField] private float heightPadding = 0.05f;
     [SerializeField] private float wallCheckLength = 1f;
-    [SerializeField] private LayerMask ground;
+    [SerializeField] private LayerMask walkableLayerMask;
     [SerializeField] private float maxGroundAngle = 120;
+
     [SerializeField] private bool debug;
+    [SerializeField] private Transform playerModelTransform;
+
 
     private bool grounded;
     private bool fallHitSet;
@@ -36,7 +39,7 @@ public class MarioController : MonoBehaviour
     void Start()
     {
         myCamera = Camera.main.transform;
-        ground = LayerMask.GetMask("Ground");
+        walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
         myCharacterStatus = GetComponent<CharacterStatus>();
     }
 
@@ -156,7 +159,7 @@ public class MarioController : MonoBehaviour
             Debug.DrawRay(nextPos, -transform.up, Color.red);
 
         //Checks to avoid falling into the abyss
-        if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, ground))
+        if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, walkableLayerMask))
         {
             Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
 
@@ -169,8 +172,8 @@ public class MarioController : MonoBehaviour
                 Debug.DrawRay(transform.position - epsilonRaycastStart, firstRay.normalized * wallCheckLength, Color.red);
                 Debug.DrawRay(transform.position - epsilonRaycastStart, secondRay.normalized * wallCheckLength, Color.red);
             }
-            if (Physics.Raycast(transform.position - epsilonRaycastStart, firstRay, wallCheckLength,  ~ground) ||
-                Physics.Raycast(transform.position - epsilonRaycastStart, secondRay, wallCheckLength, ~ground))
+            if (Physics.Raycast(transform.position - epsilonRaycastStart, firstRay, wallCheckLength,  ~walkableLayerMask) ||
+                Physics.Raycast(transform.position - epsilonRaycastStart, secondRay, wallCheckLength, ~walkableLayerMask))
                 return false;
             else
                 return true;
@@ -186,7 +189,7 @@ public class MarioController : MonoBehaviour
     void CheckGround()
     {
         Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
-        if (Physics.Raycast(transform.position + epsilonRaycastStart, -Vector3.up, out hitInfo, height + heightPadding, ground))
+        if (Physics.Raycast(transform.position + epsilonRaycastStart, -Vector3.up, out hitInfo, height + heightPadding, walkableLayerMask))
         {
             if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
@@ -222,9 +225,10 @@ public class MarioController : MonoBehaviour
 
             if (!fallHitSet)
             {
-
-                if (Physics.Raycast(transform.position, -Vector3.up, out fallHitInfo, Mathf.Infinity, ground))
+                if (Physics.Raycast(transform.position, -Vector3.up, out fallHitInfo, Mathf.Infinity, walkableLayerMask))
                     fallHitSet = true;
+
+
 
                 newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
             }
