@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 48930368}
   - component: {fileID: 48930367}
   - component: {fileID: 48930366}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WaterQuadD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16095,7 +16095,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4079537302451384, guid: a1c39403be673584c8b1991eecf2bcfd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4079537302451384, guid: a1c39403be673584c8b1991eecf2bcfd, type: 2}
       propertyPath: m_LocalPosition.z

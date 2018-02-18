@@ -31,8 +31,9 @@ public class MarioController : MonoBehaviour
     Transform cam;
 
     Vector3 forward;
-    RaycastHit hitInfo;
+    RaycastHit hitInfo, fallHitInfo;
     bool grounded;
+    bool fallHitSet;
 
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
 
@@ -99,9 +100,12 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus) return;
+        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus)
+        {
+            myCharacterStatus.MovingStatus = idleValue;
+            return;
+        } 
 
-        //RAW VALUES, to correct after
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
             myCharacterStatus.MovingStatus = idleValue;
@@ -154,13 +158,16 @@ public class MarioController : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, -Vector3.up, out hitInfo, height + heightPadding, ground))
         {
-            if(Vector3.Distance(transform.position, hitInfo.point) < height)
+            if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
 
             grounded = true;
         }
         else
+        {
             grounded = false;
+            fallHitSet = false;
+        }
     }
 
     /// <summary>
@@ -168,9 +175,28 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void ApplyGravity()
     {
-        if(!grounded)
+        if (debug)
         {
-            transform.position += Physics.gravity *  Time.deltaTime;
+            Debug.DrawLine(transform.position + transform.right, transform.position - transform.right, Color.cyan);
+            Debug.DrawLine(transform.position + transform.up, transform.position - transform.up, Color.cyan);
+        }
+
+        if (!grounded)
+        {
+            Vector3 newPosition = transform.position + Physics.gravity * Time.deltaTime;
+
+            if (!fallHitSet)
+            {
+                if (Physics.Raycast(transform.position, -Vector3.up, out fallHitInfo, Mathf.Infinity, ground))
+                    fallHitSet = true;
+
+                newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
+            }
+            else
+            {
+                newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
+            }
+            transform.position = newPosition;// Physics.gravity * Time.deltaTime;
         }
     }
 
