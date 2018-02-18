@@ -158,7 +158,8 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void CheckGround()
     {
-        if (Physics.Raycast(transform.position + Vector3.up * heightPadding * 0.01f, -Vector3.up, out hitInfo, height + heightPadding, ground))
+        Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
+        if (Physics.Raycast(transform.position + epsilonRaycastStart, -Vector3.up, out hitInfo, height + heightPadding, ground))
         {
             if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
