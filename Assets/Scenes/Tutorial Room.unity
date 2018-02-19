@@ -405,8 +405,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 851344278}
   - {fileID: 1724981864}
+  - {fileID: 851344278}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5851,7 +5851,6 @@ GameObject:
   - component: {fileID: 404565221}
   - component: {fileID: 404565222}
   - component: {fileID: 404565224}
-  - component: {fileID: 404565227}
   - component: {fileID: 404565223}
   m_Layer: 0
   m_Name: Player
@@ -5876,7 +5875,7 @@ MonoBehaviour:
   velocity: 5
   turnSpeed: 8
   height: 1
-  heightPadding: 1
+  heightPadding: 0.5
   wallCheckLength: 1
   walkableLayerMask:
     serializedVersion: 2
@@ -5941,22 +5940,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &404565227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 404565220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc149b144359174c8cb2b842b8f3593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputEpsilon: 0.1
-  runningThreshold: 0.5
-  raycastLenght: 20
-  forwardVel: 12
-  rotateVel: 100
 --- !u!1 &405070402
 GameObject:
   m_ObjectHideFlags: 0
@@ -12253,7 +12236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 11655826}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &851344279
 BoxCollider:
@@ -19057,6 +19040,7 @@ GameObject:
   - component: {fileID: 1278033412}
   - component: {fileID: 1278033411}
   - component: {fileID: 1278033416}
+  - component: {fileID: 1278033417}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -19148,7 +19132,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278033410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b82ec212c3ce2246b0707fbfd16e97a, type: 3}
   m_Name: 
@@ -19157,6 +19141,25 @@ MonoBehaviour:
   offsetPos: {x: 0, y: 5, z: -5}
   moveSpeed: 20
   turnSpeed: 10
+--- !u!114 &1278033417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278033410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058a27563b6a56f4ba77f164024d6a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 834829121}
+  distance: 10
+  xSpeed: 50
+  ySpeed: 60
+  yMinLimit: 20
+  yMaxLimit: 90
+  zoomSpeed: 50
+  zoom: 0
 --- !u!1 &1279275048
 GameObject:
   m_ObjectHideFlags: 0
@@ -19985,7 +19988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4079537302451384, guid: a1c39403be673584c8b1991eecf2bcfd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4079537302451384, guid: a1c39403be673584c8b1991eecf2bcfd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -27588,7 +27591,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 11655826}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726576336
 GameObject:

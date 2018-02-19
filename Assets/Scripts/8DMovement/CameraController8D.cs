@@ -44,15 +44,23 @@ public class CameraController8D : MonoBehaviour
 
         Debug.DrawRay(targetPos, directionToTarget, Color.red);
 
+        int horiSign = 1, vertSign = 1;
+
         if (Mathf.Abs(horizontal) > 0.4f)
-        { 
-            movementVector -= (Vector3.Cross(directionToTarget, -transform.up) * horizontal);
+        {
+            if (horizontal < 0f)
+                horiSign = -1;
+
+            movementVector -= (Vector3.Cross(directionToTarget, -transform.up) * horiSign);
             Debug.DrawRay(targetPos, movementVector , Color.green);
         }
 
         if (Mathf.Abs(vertical) > 0.4f)
         {
-            movementVector += (Vector3.Cross(directionToTarget, transform.right) * vertical);
+            if (vertical < 0f)
+                vertSign = -1;
+
+            movementVector += (Vector3.Cross(directionToTarget, transform.right) * horiSign);
             Debug.DrawRay(targetPos, movementVector, Color.green);
         }
 
