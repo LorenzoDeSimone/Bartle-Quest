@@ -13,22 +13,16 @@ public class CameraController8D : MonoBehaviour
     public Vector3 offsetPos;
     public float moveSpeed = 5;
     public float turnSpeed = 10;
-    public float smoothSpeed = 0.5f;
 
     Quaternion targetRotation;
     Vector3 targetPos;
+
     bool smoothRotating = false;
 
     void LateUpdate()
     {
-        MoveWithTarget();
         LookAtTarget();
-
-        //if (Input.GetAxis("RightHorizontal") > 0.0f)// && !smoothRotating)
-        //{
-            Debug.Log(Input.GetAxis("RightHorizontal"));
-            //Debug.Log(Input.GetAxisRaw("RightHorizontal"));
-
+        MoveCamera();
         //StartCoroutine("RotateAroundTarget", 45);
         //}
         //if (Input.GetAxis("RightVertical") > 0.0f)// && !smoothRotating)
@@ -36,16 +30,38 @@ public class CameraController8D : MonoBehaviour
         //    Debug.Log(Input.GetAxis("RightVertical"));
         //StartCoroutine("RotateAroundTarget", -45);
         //}
-    }
+        }
 
-    /// <summary>
-    /// Move the camera to the player position + current camera offset
-    /// Offset is modifiet by the RotateAroundTarget coroutine
-    /// </summary>
-    void MoveWithTarget()
+    void MoveCamera()
     {
         targetPos = target.position + offsetPos;
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+
+        Vector3 directionToTarget = (target.position - targetPos).normalized;
+        Vector3 movementVector = Vector3.zero;
+
+        float horizontal = Input.GetAxis("RightHorizontal");
+        float vertical = Input.GetAxis("RightVertical");
+
+        Debug.DrawRay(targetPos, directionToTarget, Color.red);
+
+        if (Mathf.Abs(horizontal) > 0.4f)
+        { 
+            movementVector -= (Vector3.Cross(directionToTarget, -transform.up) * horizontal);
+            Debug.DrawRay(targetPos, movementVector , Color.green);
+        }
+
+        if (Mathf.Abs(vertical) > 0.4f)
+        {
+            movementVector += (Vector3.Cross(directionToTarget, transform.right) * vertical);
+            Debug.DrawRay(targetPos, movementVector, Color.green);
+        }
+
+        offsetPos += movementVector * turnSpeed * Time.smoothDeltaTime;
+        
+        //transform.position = target.position + offsetPos;
+
+        transform.position = Vector3.Lerp(transform.position, target.position + offsetPos, moveSpeed * Time.smoothDeltaTime);
+
     }
 
     /// <summary>
@@ -53,31 +69,9 @@ public class CameraController8D : MonoBehaviour
     /// </summary>
     void LookAtTarget()
     {
-        targetRotation = Quaternion.LookRotation(target.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        //targetRotation = 
+        transform.rotation = Quaternion.LookRotation(target.position - transform.position);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
-
-    /// <summary>
-    /// This coroutime can only have one instance running at a time
-    /// Determined by 'smoothRotating'
-    /// </summary>
-    IEnumerator RotateAroundTarget(float angle)
-    {
-        Vector3 vel = Vector3.zero;
-        Vector3 targetOffsetPos = Quaternion.Euler(0, angle, 0) * offsetPos;
-        float dist = Vector3.Distance(offsetPos, targetOffsetPos);
-
-        smoothRotating = true;
-        while(dist > 0.02f)
-        {
-            offsetPos = Vector3.SmoothDamp(offsetPos, targetOffsetPos, ref vel, smoothSpeed);
-            dist = Vector3.Distance(offsetPos, targetOffsetPos);
-            yield return null;
-        }
-
-        smoothRotating = false;
-        offsetPos = targetOffsetPos;
-    }
-    
-
+   
 }
