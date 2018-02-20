@@ -15,7 +15,6 @@ public class Cam : MonoBehaviour
     private float y = .0f;
     public bool zoom;
 
-
     void Start()
     {
         Vector3 angles = transform.eulerAngles;
