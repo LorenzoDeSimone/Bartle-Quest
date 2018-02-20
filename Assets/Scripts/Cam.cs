@@ -16,6 +16,7 @@ public class Cam : MonoBehaviour
     public bool zoom;
     private float standardDistance;
     public LayerMask wallLayerMask;
+    private bool lerping;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class Cam : MonoBehaviour
             float horizontal = Input.GetAxis("RightHorizontal");
             float vertical = Input.GetAxis("RightVertical");
 
-            if (Mathf.Abs(horizontal) > 0.4f)
+            if (Mathf.Abs(horizontal) > 0.5f)
                 x += (float)(horizontal * xSpeed * 0.02);
 
             if (zoom)
@@ -41,7 +42,7 @@ public class Cam : MonoBehaviour
             }
             else
             {
-                if (Mathf.Abs(vertical) > 0.4f)
+                if (Mathf.Abs(vertical) > 0.5f)
                     y += (float)(vertical * zoomSpeed * 0.02);
             }
 
@@ -53,8 +54,8 @@ public class Cam : MonoBehaviour
             //Check walls
             RaycastHit hitInfo;
             Debug.DrawRay(position, target.position - position, Color.green);
-            if(Physics.Raycast(target.position, (position - target.position).normalized, out hitInfo, Vector3.Distance(target.position, position), wallLayerMask))
-            { 
+            if (Physics.Raycast(target.position, (position - target.position).normalized, out hitInfo, Vector3.Distance(target.position, position), wallLayerMask))
+            {
                 //Debug.DrawRay(target.position, position - target.position, Color.red);   
                 position = hitInfo.point;
                 distance = Vector3.Distance(target.position, hitInfo.point);
@@ -62,14 +63,32 @@ public class Cam : MonoBehaviour
                 Debug.DrawLine(hitInfo.point + transform.up, hitInfo.point - transform.up, Color.cyan);
             }
             else
-                distance = Mathf.Lerp(distance, standardDistance, Time.deltaTime * 2);
-
+            {
+                //if (!lerping)
+                //{
+                //    lerping = true;
+                //StartCoroutine(LerpBackToNormal(distance));
+                if (Mathf.Abs(distance - standardDistance) > 0.1f)
+                    distance = Mathf.Lerp(distance, standardDistance, Time.deltaTime * 2);
+                else
+                    distance = standardDistance;
+                //}
+            }
             transform.rotation = rotation;
             transform.position = position;
-
         }
     }
 
+    IEnumerator LerpBackToNormal(float initialDistance)
+    {
+        while(Mathf.Abs(distance - standardDistance) > 0.2f)
+        {
+            distance = Mathf.Lerp(initialDistance, standardDistance, Time.deltaTime * 2);
+            yield return null;
+        }
+        distance = standardDistance;
+        lerping = false;
+    }
 
 
     private int ClampAngle(float angle, float min, float max)
