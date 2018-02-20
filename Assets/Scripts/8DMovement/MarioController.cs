@@ -218,25 +218,28 @@ public class MarioController : MonoBehaviour
             fallVelocity += Physics.gravity;
             Vector3 newPosition = transform.position + fallVelocity * Time.deltaTime;
 
-            newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
-
             if (debug)
                 Debug.DrawRay(transform.position, -Vector3.up * 1000, Color.magenta);
 
             if (!fallHitSet)
             {
                 if (Physics.Raycast(transform.position, -Vector3.up, out fallHitInfo, Mathf.Infinity, walkableLayerMask))
+                {
                     fallHitSet = true;
-
-
-
-                newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
+                    newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
+                }
             }
             else
             {
                 newPosition.y = Mathf.Max(newPosition.y, fallHitInfo.point.y);
             }
-            transform.position = newPosition;// Physics.gravity * Time.deltaTime;
+
+            transform.position = newPosition;
+        }
+        else
+        {
+            //transform.position = Vector3.Lerp(transform.position, hitInfo.point + Vector3.up * height, 10 * Time.deltaTime);
+            transform.position =  hitInfo.point + Vector3.up * height;
         }
     }
 
