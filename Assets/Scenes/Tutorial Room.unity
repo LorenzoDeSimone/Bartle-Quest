@@ -453,6 +453,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -554,6 +558,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -994,6 +1002,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -1288,6 +1300,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -1333,6 +1349,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -1502,6 +1522,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -1552,6 +1576,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -2286,6 +2314,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -2496,6 +2528,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -2605,7 +2641,7 @@ GameObject:
   - component: {fileID: 166008095}
   - component: {fileID: 166008094}
   - component: {fileID: 166008093}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2761,6 +2797,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -2861,6 +2901,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -3134,6 +3178,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -3504,6 +3552,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -3842,6 +3894,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -4388,6 +4444,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -4438,6 +4498,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -4738,7 +4802,7 @@ GameObject:
   - component: {fileID: 330887189}
   - component: {fileID: 330887188}
   - component: {fileID: 330887187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5236,6 +5300,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -5981,7 +6049,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   maxGroundAngle: 150
-  debug: 1
+  debug: 0
   playerModelTransform: {fileID: 834829121}
 --- !u!95 &404565222
 Animator:
@@ -6470,6 +6538,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -6582,6 +6654,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -6638,6 +6714,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -6688,6 +6768,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -7496,6 +7580,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -7567,7 +7655,7 @@ GameObject:
   - component: {fileID: 516101892}
   - component: {fileID: 516101891}
   - component: {fileID: 516101890}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7687,6 +7775,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -7792,6 +7884,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -7847,6 +7943,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -8003,6 +8103,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -8418,6 +8522,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -8527,7 +8635,7 @@ GameObject:
   - component: {fileID: 601855566}
   - component: {fileID: 601855565}
   - component: {fileID: 601855564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8706,6 +8814,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -9156,6 +9268,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -9211,6 +9327,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -9367,6 +9487,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -9643,6 +9767,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -9693,6 +9821,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -10119,6 +10251,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -10327,6 +10463,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -10377,6 +10517,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -10532,6 +10676,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -10582,6 +10730,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -10817,6 +10969,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -11002,6 +11158,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -11052,6 +11212,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -11455,6 +11619,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -11559,7 +11727,7 @@ GameObject:
   - component: {fileID: 804881148}
   - component: {fileID: 804881147}
   - component: {fileID: 804881146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12308,6 +12476,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -12594,7 +12766,7 @@ GameObject:
   - component: {fileID: 863073731}
   - component: {fileID: 863073730}
   - component: {fileID: 863073729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12845,6 +13017,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -13412,7 +13588,7 @@ GameObject:
   - component: {fileID: 903556272}
   - component: {fileID: 903556271}
   - component: {fileID: 903556270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13847,6 +14023,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -14260,6 +14440,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -14965,6 +15149,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -15372,6 +15560,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -16499,7 +16691,7 @@ GameObject:
   - component: {fileID: 1110108268}
   - component: {fileID: 1110108267}
   - component: {fileID: 1110108266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16832,7 +17024,7 @@ GameObject:
   - component: {fileID: 1126919666}
   - component: {fileID: 1126919665}
   - component: {fileID: 1126919664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17304,7 +17496,7 @@ GameObject:
   - component: {fileID: 1152163210}
   - component: {fileID: 1152163209}
   - component: {fileID: 1152163208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17423,6 +17615,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -17727,7 +17923,7 @@ GameObject:
   - component: {fileID: 1180277392}
   - component: {fileID: 1180277391}
   - component: {fileID: 1180277390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17911,6 +18107,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -18071,6 +18271,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -18544,7 +18748,7 @@ GameObject:
   - component: {fileID: 1220553921}
   - component: {fileID: 1220553920}
   - component: {fileID: 1220553919}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18830,6 +19034,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -18942,6 +19150,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -19051,7 +19263,7 @@ GameObject:
   - component: {fileID: 1261684190}
   - component: {fileID: 1261684189}
   - component: {fileID: 1261684188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19216,6 +19428,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -19411,12 +19627,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 834829121}
   distance: 10
-  xSpeed: 50
-  ySpeed: 60
+  xSpeed: 60
+  ySpeed: 120
   yMinLimit: 20
   yMaxLimit: 90
-  zoomSpeed: 50
+  zoomSpeed: 60
   zoom: 0
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &1279275048
 GameObject:
   m_ObjectHideFlags: 0
@@ -19783,7 +20002,7 @@ GameObject:
   - component: {fileID: 1340541998}
   - component: {fileID: 1340541997}
   - component: {fileID: 1340541996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20695,7 +20914,7 @@ GameObject:
   - component: {fileID: 1389386960}
   - component: {fileID: 1389386959}
   - component: {fileID: 1389386958}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20897,6 +21116,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -21047,6 +21270,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -21669,6 +21896,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -21849,6 +22080,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -21900,6 +22135,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -21950,6 +22189,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -22047,6 +22290,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -22207,6 +22454,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -22267,6 +22518,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -22364,7 +22619,7 @@ GameObject:
   - component: {fileID: 1456979014}
   - component: {fileID: 1456979013}
   - component: {fileID: 1456979012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22675,6 +22930,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -22920,7 +23179,7 @@ GameObject:
   - component: {fileID: 1471112345}
   - component: {fileID: 1471112344}
   - component: {fileID: 1471112343}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23202,6 +23461,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -23349,6 +23612,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -24375,6 +24642,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -24584,7 +24855,7 @@ GameObject:
   - component: {fileID: 1571291231}
   - component: {fileID: 1571291230}
   - component: {fileID: 1571291229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24997,6 +25268,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -25754,6 +26029,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -25809,6 +26088,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -25960,6 +26243,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -26414,6 +26701,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -27134,7 +27425,7 @@ GameObject:
   - component: {fileID: 1706898150}
   - component: {fileID: 1706898149}
   - component: {fileID: 1706898148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27414,7 +27705,7 @@ GameObject:
   - component: {fileID: 1715041131}
   - component: {fileID: 1715041130}
   - component: {fileID: 1715041129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27676,6 +27967,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -27962,7 +28257,7 @@ GameObject:
   - component: {fileID: 1729962324}
   - component: {fileID: 1729962323}
   - component: {fileID: 1729962322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29007,6 +29302,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -29564,6 +29863,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -29670,6 +29973,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -29720,6 +30027,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -30167,7 +30478,7 @@ GameObject:
   - component: {fileID: 1890033430}
   - component: {fileID: 1890033429}
   - component: {fileID: 1890033428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlockS02D (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30506,6 +30817,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -30556,6 +30871,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -30852,7 +31171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1924459557}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31313,6 +31632,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -31512,6 +31835,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -31590,6 +31917,10 @@ Prefab:
     - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
       propertyPath: m_Name
       value: DarkWallBlock (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
@@ -32963,6 +33294,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -33325,6 +33660,10 @@ Prefab:
       propertyPath: m_Name
       value: LightWallBlock (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
   m_IsPrefabParent: 0
@@ -33565,6 +33904,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -33704,6 +34047,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
@@ -33894,6 +34241,10 @@ Prefab:
       propertyPath: m_Name
       value: DarkWallBlock (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1938536011644248, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec9d7bf4fa66724a95f34d0f7ca5452, type: 2}
   m_IsPrefabParent: 0
@@ -33939,6 +34290,10 @@ Prefab:
     - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
       propertyPath: m_Name
       value: LightWallBlock (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494814919326902, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973c847408d9a0d43b7fbfec6212d654, type: 2}
