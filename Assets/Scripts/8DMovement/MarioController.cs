@@ -199,7 +199,7 @@ public class MarioController : MonoBehaviour
             cameraForward.Normalize();
             cameraRight.Normalize();
 
-            forward = cameraForward * input.y + cameraRight * input.x;
+            forward = (cameraForward * input.y + cameraRight * input.x).normalized;
             //Debug.DrawRay(transform.position, forward * 2, Color.red);
         }
         else
