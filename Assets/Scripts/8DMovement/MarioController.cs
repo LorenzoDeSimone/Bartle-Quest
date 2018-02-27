@@ -22,6 +22,7 @@ public class MarioController : MonoBehaviour
     [SerializeField] private bool debug;
     [SerializeField] private Transform playerModelTransform;
 
+
     private bool grounded;
     private bool fallHitSet;
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
@@ -34,12 +35,14 @@ public class MarioController : MonoBehaviour
     private Transform myCamera;
     private RaycastHit hitInfo, fallHitInfo;
     private CharacterStatus myCharacterStatus;
+    private Cam myCameraScript;
 
     void Start()
     {
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
         myCharacterStatus = GetComponent<CharacterStatus>();
+        myCameraScript = myCamera.GetComponent<Cam>();
     }
 
     void Update()
@@ -53,7 +56,11 @@ public class MarioController : MonoBehaviour
         DrawDebugLines();
 
         Rotate();
+        //if(myCameraScript.IsInLockTargetStatus())
+        //    TargetLockMove();
+        //else
         Move();
+ 
     }
 
     /// <summary>
@@ -83,21 +90,44 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void Rotate()
     {
-        if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
-            return;
+        if (myCameraScript.IsInLockTargetStatus())
+        {
+            Vector3 sameYTarget = new Vector3(myCameraScript.GetTarget().position.x, transform.position.y, myCameraScript.GetTarget().position.z);
+            targetRotation = Quaternion.LookRotation(sameYTarget - transform.position, Vector3.up);
+        }
+        else
+        {
+            if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
+                return;
 
-        if (myCharacterStatus.AttackingStatus)
-            return;
+            if (myCharacterStatus.AttackingStatus)
+                return;
 
-        targetRotation = Quaternion.Euler(0, angle, 0);
+            targetRotation = Quaternion.Euler(0, angle, 0);
+        }
+
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
+
+    void TargetLockMove()
+    {
+        if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
+        {
+            myCharacterStatus.MovingStatus = idleValue;
+        }
+        else
+        {
+            myCharacterStatus.MovingStatus = runningValue;
+
+            transform.position += forward * velocity * Time.deltaTime;
+        }
     }
 
     /// <summary>
     /// This player only moves along its own forward axis
     /// </summary>
     void Move()
-    {
+    { 
         if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
         {
             myCharacterStatus.MovingStatus = idleValue;
@@ -132,8 +162,34 @@ public class MarioController : MonoBehaviour
             return;
         }
 
-        forward = Vector3.Cross(hitInfo.normal, -transform.right);
+        if(myCameraScript.IsInLockTargetStatus())
+        {
+            //Vector3 inputVector = new Vector3(input.x, 0f, input.y);
+            Vector3 inputVector = myCamera.transform.TransformDirection(input.x, 0, input.y);
 
+            //Debug.DrawRay(hitInfo.point     , hitInfo.normal, Color.green);
+            Debug.DrawRay(transform.position, myCamera.transform.right *5, Color.red);
+            //Debug.Log(Vector3.Cross(myCamera.forward, new Vector3(input.x, 0f, input.y)));
+            //Debug.Log(Vector3.Dot(myCamera.forward, -transform.right));
+
+            //forward = new Vector3(inputVector.x, inputVector.y, inputVector.z) * (myCamera.transform.rotation.y+ 0.1f) 0.;//Vector3.Cross(hitInfo.normal, new Vector3(input.x, 0f, input.y));
+
+            //Debug.Log(input);
+            forward = inputVector;//-Vector3.Cross(hitInfo.normal, myCamera.transform.right);
+
+            //Debug.DrawRay(transform.position, forward * 5, Color.blue);
+            //Debug.DrawRay(transform.position, hitInfo.normal * 5, Color.magenta);
+
+        }
+        else
+        {
+            //Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.green);
+            //Debug.DrawRay(hitInfo.point, -transform.right, Color.yellow);
+
+            //Debug.DrawRay(transform.position,Vector3.Cross(hitInfo.normal, -transform.right), Color.red);
+
+            forward = Vector3.Cross(hitInfo.normal, -transform.right);
+        }
     }
 
     /// <summary>
@@ -256,8 +312,8 @@ public class MarioController : MonoBehaviour
     {
         if (!debug) return;
 
-        Debug.DrawLine(transform.position, transform.position + forward * height * 2, Color.blue);
-        Debug.DrawLine(transform.position, transform.position - Vector3.up * height, Color.green);
+        //Debug.DrawLine(transform.position, transform.position + forward * height * 2, Color.blue);
+        //Debug.DrawLine(transform.position, transform.position - Vector3.up * height, Color.green);
     }
 
 }

@@ -65,7 +65,7 @@ public class Cam : MonoBehaviour
         distance = distanceBetween + lockCamMinDistance;
         Vector3 idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -distance);
 
-        Debug.DrawRay(defaultTarget.position, idealCameraPos - cameraFocusPoint, Color.green);
+        //Debug.DrawRay(defaultTarget.position, idealCameraPos - cameraFocusPoint, Color.green);
 
         //Check walls
         if (Physics.Raycast(defaultTarget.position, (idealCameraPos - cameraFocusPoint).normalized,
@@ -113,13 +113,28 @@ public class Cam : MonoBehaviour
 
     }
 
-    bool IsTargetPressed()
+    public Transform GetTarget()
+    {
+        return target;
+    }
+
+    public Transform GetDefaultTarget()
+    {
+        return defaultTarget;
+    }
+
+    public bool IsInLockTargetStatus()
+    {
+        return !defaultTarget.Equals(target);
+    }
+
+    public bool IsTargetPressed()
     {
         return Input.GetButtonDown("TargetLock");
         //!Physics.Raycast(transform.position, (transform.position - GetCameraFocusPoint()).normalized, Mathf.Infinity, wallLayerMask);
     }
 
-    bool IsTargetReleased()
+    public bool IsTargetReleased()
     {
         if (target.Equals(defaultTarget))
             return true;
