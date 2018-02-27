@@ -59,7 +59,7 @@ public class MarioController : MonoBehaviour
         //if(myCameraScript.IsInLockTargetStatus())
         //    TargetLockMove();
         //else
-        Move();
+            Move();
  
     }
 
@@ -111,6 +111,21 @@ public class MarioController : MonoBehaviour
 
     void TargetLockMove()
     {
+
+        float vel = 0f;
+
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+        {
+            vel = input.x;
+        }
+        else
+            vel = input.y;
+
+        int sign = 1;
+
+        if (vel < 0)
+            sign = -1;
+
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
             myCharacterStatus.MovingStatus = idleValue;
@@ -119,7 +134,7 @@ public class MarioController : MonoBehaviour
         {
             myCharacterStatus.MovingStatus = runningValue;
 
-            transform.position += forward * velocity * Time.deltaTime;
+            transform.position += forward * velocity * sign * Time.deltaTime;
         }
     }
 
@@ -127,12 +142,15 @@ public class MarioController : MonoBehaviour
     /// This player only moves along its own forward axis
     /// </summary>
     void Move()
-    { 
+    {
+
+        //Debug.Log(Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)));
+
         if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
         {
             myCharacterStatus.MovingStatus = idleValue;
             return;
-        } 
+        }
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
@@ -150,45 +168,60 @@ public class MarioController : MonoBehaviour
         }
     }
 
+    private Vector3 GetForwardFromInputVector()
+    {
+        Vector3 inputVector = (myCamera.transform.TransformDirection(input)).normalized;
+        float sumXZ = inputVector.y + inputVector.z;
+
+        inputVector.y = 0f;
+        inputVector.z = 0f;
+        
+
+        return inputVector;
+    }
+
     /// <summary>
     /// If the player is not grounded, forward will be equal to transform forward
     /// Use a cross product to determine the new forward vector
     /// </summary>
     void CalculateForward()
     {
-        if (!grounded)
-        {
-            forward = transform.forward;
-            return;
-        }
 
         if(myCameraScript.IsInLockTargetStatus())
         {
             //Vector3 inputVector = new Vector3(input.x, 0f, input.y);
-            Vector3 inputVector = myCamera.transform.TransformDirection(input.x, 0, input.y);
+            Vector3 inputVector;
+            //if(myCamera.transform.rotation.x < myCameraScript.yMaxLimit * 0.5f)
+            inputVector = (myCamera.transform.TransformDirection(input)).normalized;
+            Debug.Log(inputVector.y + inputVector.z);
+            //else
+            //    inputVector = (myCamera.transform.TransformDirection(input.x, 0f, input.y)).normalized;
+            //inputVector.y = 0f;
 
             //Debug.DrawRay(hitInfo.point     , hitInfo.normal, Color.green);
-            Debug.DrawRay(transform.position, myCamera.transform.right *5, Color.red);
+            //Debug.Log(inputVector);
+            Debug.DrawRay(transform.position, inputVector * 2, Color.red);
             //Debug.Log(Vector3.Cross(myCamera.forward, new Vector3(input.x, 0f, input.y)));
             //Debug.Log(Vector3.Dot(myCamera.forward, -transform.right));
-
             //forward = new Vector3(inputVector.x, inputVector.y, inputVector.z) * (myCamera.transform.rotation.y+ 0.1f) 0.;//Vector3.Cross(hitInfo.normal, new Vector3(input.x, 0f, input.y));
-
             //Debug.Log(input);
-            forward = inputVector;//-Vector3.Cross(hitInfo.normal, myCamera.transform.right);
-
+            forward = inputVector;//-Vector3.Cross(hitInfo.normal, myCamera.transform.right);   
+            //forward = Vector3.Cross(hitInfo.normal, inputVector);
+            //Debug.DrawRay(transform.position, Vector3.Cross(hitInfo.normal, inputVector), Color.green);
             //Debug.DrawRay(transform.position, forward * 5, Color.blue);
             //Debug.DrawRay(transform.position, hitInfo.normal * 5, Color.magenta);
-
         }
         else
         {
+            if (!grounded)
+            {
+                forward = transform.forward;
+                return;
+            }
             //Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.green);
             //Debug.DrawRay(hitInfo.point, -transform.right, Color.yellow);
-
             //Debug.DrawRay(transform.position,Vector3.Cross(hitInfo.normal, -transform.right), Color.red);
-
-            forward = Vector3.Cross(hitInfo.normal, -transform.right);
+            forward = transform.forward;//Vector3.Cross(hitInfo.normal, -transform.right);
         }
     }
 
