@@ -57,37 +57,85 @@ public class Cam : MonoBehaviour
     {
         Quaternion rotation = Quaternion.Euler(y, x, 0);
         Vector3 position;
-        if (target.Equals(defaultTarget))
-            position = target.position + rotation * new Vector3(0.0f, 0.0f, -distance);
-        else
+        transform.rotation = rotation;
+
+        //Check walls
+        RaycastHit hitInfo;
+        Vector3 cameraFocusPoint = GetCameraFocusPoint();
+        float distanceBetween = Vector3.Distance(defaultTarget.position, target.position);//0 if target is the player
+        distance = distanceBetween + lockCamMinDistance;
+        Vector3 idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -distance);
+
+        Debug.DrawRay(defaultTarget.position, idealCameraPos - cameraFocusPoint, Color.green);
+
+        if (Physics.Raycast(defaultTarget.position, (idealCameraPos - cameraFocusPoint).normalized,
+            out hitInfo, Vector3.Distance(defaultTarget.position, idealCameraPos), wallLayerMask))
+        {
+
+            if (Physics.Raycast(cameraFocusPoint, (idealCameraPos - cameraFocusPoint).normalized,
+                out hitInfo, Vector3.Distance(defaultTarget.position, idealCameraPos), wallLayerMask))
+            //Debug.DrawRay(target.position, position - target.position, Color.red); 
+            {
+                //if (Vector3.Distance(transform.position, hitInfo.point) < 0.1f)
+                    position = hitInfo.point;
+                //else
+                //    position = Vector3.Lerp(transform.position, hitInfo.point, Time.deltaTime * 10);
+            }
+            else
+            {
+                //if (Vector3.Distance(transform.position, idealCameraPos) < 0.1f)
+                    position = idealCameraPos;
+                //else
+                //    position = Vector3.Lerp(transform.position, idealCameraPos, Time.deltaTime * 10);
+            }
+
+            distance = Vector3.Distance(cameraFocusPoint, hitInfo.point);
+            Debug.DrawLine(hitInfo.point + transform.right, hitInfo.point - transform.right, Color.cyan);
+            Debug.DrawLine(hitInfo.point + transform.up, hitInfo.point - transform.up, Color.cyan);
+        }
+        else// if (!target.Equals(defaultTarget))
+            position = idealCameraPos;
+        //else
+        //    position = Vector3.Lerp(transform.position, idealCameraPos, Time.deltaTime * 10);
+
+        transform.position = position;
+    }
+
+    Vector3 GetCameraFocusPoint()
+    {
+        if (!defaultTarget.Equals(target))
         {
             Vector3 middlePoint = new Vector3((defaultTarget.position.x + target.position.x) * 0.5f, (defaultTarget.position.y + target.position.y) * 0.5f,
-                                                                                                     (defaultTarget.position.z + target.position.z) * 0.5f);
-            float distanceBetween = Vector3.Distance(defaultTarget.position, target.position);
-            distance = distanceBetween + lockCamMinDistance;
-            position = middlePoint + rotation * new Vector3(0.0f, 0.0f, -distance);
+                                                                                                    (defaultTarget.position.z + target.position.z) * 0.5f);
+            return middlePoint;
         }
-        transform.rotation = rotation;
-        transform.position = position;
+        else
+            return defaultTarget.position;
     }
 
     void UpdateTarget()
     {
-        if (Input.GetButtonDown("TargetLock"))
+        if (IsTargetPressed())
         {
             Transform lockTarget = defaultTargetManager.GetNearestTarget();
             if (lockTarget != null)
             {
-                distance += Vector3.Distance(defaultTarget.position, lockTarget.position);
+                //distance += Vector3.Distance(defaultTarget.position, lockTarget.position);
                 target = lockTarget;
             }
         }
-        else if (IsTargetReleased())// || Vector3.Distance(target, defaultTarget) > max)
+        else if (IsTargetReleased())
         {
             target = defaultTarget;
-            distance = standardDistance;
+            //distance = standardDistance;
         }
 
+    }
+
+    bool IsTargetPressed()
+    {
+        return Input.GetButtonDown("TargetLock");
+        //!Physics.Raycast(transform.position, (transform.position - GetCameraFocusPoint()).normalized, Mathf.Infinity, wallLayerMask);
     }
 
     bool IsTargetReleased()
@@ -95,7 +143,8 @@ public class Cam : MonoBehaviour
         if (target.Equals(defaultTarget))
             return true;
         else
-            return (Input.GetButtonUp("TargetLock") || Vector3.Distance(target.position, defaultTarget.position) > maxTargetDistance);
+            return (Input.GetButtonUp("TargetLock") || Vector3.Distance(target.position, defaultTarget.position) > maxTargetDistance);// || 
+                                                                                                                                      //Physics.Raycast(transform.position, (transform.position - GetCameraFocusPoint()).normalized, Mathf.Infinity, wallLayerMask));
     }
 
     void LateUpdate()
@@ -186,7 +235,7 @@ public class Cam : MonoBehaviour
 
     IEnumerator LerpBackToNormal(float initialDistance)
     {
-        while(Mathf.Abs(distance - standardDistance) > 0.01f)
+        while (Mathf.Abs(distance - standardDistance) > 0.01f)
         {
             distance = Mathf.Lerp(initialDistance, standardDistance, Time.deltaTime * 10);
             Debug.Log("lerping");
