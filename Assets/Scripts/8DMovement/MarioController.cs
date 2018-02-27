@@ -189,27 +189,18 @@ public class MarioController : MonoBehaviour
 
         if(myCameraScript.IsInLockTargetStatus())
         {
-            //Vector3 inputVector = new Vector3(input.x, 0f, input.y);
-            Vector3 inputVector;
-            //if(myCamera.transform.rotation.x < myCameraScript.yMaxLimit * 0.5f)
-            inputVector = (myCamera.transform.TransformDirection(input)).normalized;
-            Debug.Log(inputVector.y + inputVector.z);
-            //else
-            //    inputVector = (myCamera.transform.TransformDirection(input.x, 0f, input.y)).normalized;
-            //inputVector.y = 0f;
 
-            //Debug.DrawRay(hitInfo.point     , hitInfo.normal, Color.green);
-            //Debug.Log(inputVector);
-            Debug.DrawRay(transform.position, inputVector * 2, Color.red);
-            //Debug.Log(Vector3.Cross(myCamera.forward, new Vector3(input.x, 0f, input.y)));
-            //Debug.Log(Vector3.Dot(myCamera.forward, -transform.right));
-            //forward = new Vector3(inputVector.x, inputVector.y, inputVector.z) * (myCamera.transform.rotation.y+ 0.1f) 0.;//Vector3.Cross(hitInfo.normal, new Vector3(input.x, 0f, input.y));
-            //Debug.Log(input);
-            forward = inputVector;//-Vector3.Cross(hitInfo.normal, myCamera.transform.right);   
-            //forward = Vector3.Cross(hitInfo.normal, inputVector);
-            //Debug.DrawRay(transform.position, Vector3.Cross(hitInfo.normal, inputVector), Color.green);
-            //Debug.DrawRay(transform.position, forward * 5, Color.blue);
-            //Debug.DrawRay(transform.position, hitInfo.normal * 5, Color.magenta);
+            Vector3 cameraForward = myCamera.forward;
+            Vector3 cameraRight = myCamera.right;
+
+            cameraForward.y = 0f;
+            cameraRight.y = 0f;
+
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+
+            forward = cameraForward * input.y + cameraRight * input.x;
+            //Debug.DrawRay(transform.position, forward * 2, Color.red);
         }
         else
         {
