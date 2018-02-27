@@ -22,7 +22,6 @@ public class MarioController : MonoBehaviour
     [SerializeField] private bool debug;
     [SerializeField] private Transform playerModelTransform;
 
-
     private bool grounded;
     private bool fallHitSet;
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
