@@ -19,6 +19,8 @@ public class CharacterStatus : MonoBehaviour
     void Start()
     {
         myAnimator = GetComponent<Animator>();
+        if (myAnimator == null)
+            Debug.LogError("No animator!");
     }
 
     public int MovingStatus
