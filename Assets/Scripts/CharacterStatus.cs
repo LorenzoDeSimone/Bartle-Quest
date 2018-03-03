@@ -43,8 +43,9 @@ public class CharacterStatus : MonoBehaviour
 
     public bool DeathStatus
     {
-        get { return myAnimator.GetBool("isDead"); }
-        set { myAnimator.SetBool("isDead", value); }
+        get { return myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death"); }
+        set { if(!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+                myAnimator.SetTrigger("isDead"); }
     }
 
     public void RequestAttack()
