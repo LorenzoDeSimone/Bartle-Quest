@@ -5,12 +5,15 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour
 {
+    [SerializeField]
+    private State startingState;
+    [SerializeField]
+    private State remainInState;
 
-    public State currentState;
+    private State currentState;
+
     public EnemyStats enemyStats;
     public Transform eyes;
-    public State remainState;
-
 
     [HideInInspector]
     public NavMeshAgent navMeshAgent;
@@ -23,8 +26,12 @@ public class StateController : MonoBehaviour
     [HideInInspector]
     public float stateTimeElapsed;
 
-    private bool aiActive;
+    private bool aiActive = true;
 
+    void Start()
+    {
+        currentState = startingState;
+    }
 
     void Awake()
     {
@@ -47,8 +54,8 @@ public class StateController : MonoBehaviour
 
     void Update()
     {
-        //if (!aiActive)
-        //    return;
+        if (!aiActive)
+            return;
         currentState.UpdateState(this);
     }
 
@@ -63,7 +70,7 @@ public class StateController : MonoBehaviour
 
     public void TransitionToState(State nextState)
     {
-        if (nextState != remainState)
+        if (!nextState.Equals(remainInState))
         {
             currentState = nextState;
             OnExitState();
