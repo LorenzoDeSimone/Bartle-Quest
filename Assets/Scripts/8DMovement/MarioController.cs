@@ -47,6 +47,9 @@ public class MarioController : MonoBehaviour
 
     void Update()
     {
+        if (myCharacterStatus.DeathStatus)
+            return;
+
         GetInput();
         CalculateDirection();
         CalculateForward();

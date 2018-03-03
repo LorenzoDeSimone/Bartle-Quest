@@ -16,7 +16,7 @@ public class TargetManager : MonoBehaviour
         if (collider.gameObject.GetComponent<Target>() != null)
         {
             nearTargets.Add(collider.gameObject.transform);
-            Debug.Log("IN");
+            //Debug.Log("IN");
         }
     }
 
@@ -25,7 +25,7 @@ public class TargetManager : MonoBehaviour
         if (collider.gameObject.GetComponent<Target>() != null)
         {
             nearTargets.Remove(collider.gameObject.transform);
-            Debug.Log("OUT");
+            //Debug.Log("OUT");
         }
     }
 

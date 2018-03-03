@@ -36,21 +36,25 @@ public class Weapon : MonoBehaviour
             lastAnimatorState = -1;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerStay(Collider collider)
     {
 
         //Hits only if it is the first collision in the current animator state
         AnimatorStateInfo currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
         //Debug.Log(currentAnimatorState.fullPathHash);
+        //if (!weaponHolder.gameObject.Equals(collider.gameObject))
+        //    Debug.Log(weaponHolder.gameObject.name +" Hits");
 
-        if (weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collision.gameObject) && 
+        if (weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collider.gameObject) && 
             currentAnimatorState.fullPathHash != lastAnimatorState)
         {
             lastAnimatorState = currentAnimatorState.fullPathHash;
-            //Debug.Log("Hit");
-            Hittable hitTarget = collision.collider.GetComponent<Hittable>();
+            Hittable hitTarget = collider.GetComponent<Hittable>();
             if (hitTarget)
+            {
+                Debug.Log(weaponHolder.gameObject.name + " Hits");
                 hitTarget.Hit(damage);
+            }
         }
     }
 }
