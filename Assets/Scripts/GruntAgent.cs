@@ -9,6 +9,7 @@ public class GruntAgent : MonoBehaviour
     Transform destination;
     NavMeshAgent navMeshAgent;
     private CharacterStatus myCharacterStatus;
+    private bool atkCoroutineStarted = false;
 
     // Use this for initialization
     void Start ()
@@ -19,7 +20,13 @@ public class GruntAgent : MonoBehaviour
         if (navMeshAgent == null)
             Debug.LogError("No nav mesh agent!");
         else
+        {
             SetDestination();
+            //if (myCharacterStatus != null)
+            //    StartCoroutine(AttackRoutine());
+            //else
+            //    Debug.Log("No character status");
+        }
 	}
 	
     private void SetDestination()
@@ -34,10 +41,24 @@ public class GruntAgent : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (!atkCoroutineStarted)
+        {
+            StartCoroutine(AttackRoutine());
+            atkCoroutineStarted = true;
+        }
+
         if (myCharacterStatus.DeathStatus)
-            return;
+           return;
 
         SetDestination();
-        //myCharacterStatus.RequestAttack();
     }
+
+    private IEnumerator AttackRoutine()
+    {
+        while (!myCharacterStatus.DeathStatus)
+        {
+            myCharacterStatus.RequestAttack();
+            yield return new WaitForSeconds(2f);
+        }
+    } 
 }
