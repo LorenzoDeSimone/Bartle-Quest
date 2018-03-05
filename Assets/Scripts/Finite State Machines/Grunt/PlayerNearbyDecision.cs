@@ -16,7 +16,7 @@ public class PlayerNearbyDecision : Decision
 
     private bool Look(StateController controller)
     {
-        Debug.Log(Vector3.Distance(controller.transform.position, controller.chaseTarget.position));
+        //Debug.Log(Vector3.Distance(controller.transform.position, controller.chaseTarget.position));
         if (Vector3.Distance(controller.transform.position, controller.chaseTarget.position) <  closeDistance)
             return true;
         else
