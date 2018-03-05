@@ -9,5 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adbd5b196de93df449a39b617453c850, type: 3}
-  m_Name: LookDecision
+  m_Name: Player Nearby
   m_EditorClassIdentifier: 
+  closeDistance: 6

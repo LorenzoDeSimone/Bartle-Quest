@@ -2489,8 +2489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingState: {fileID: 11400000, guid: e660ebfe6b71ac3469abbac1e4e30459, type: 2}
   remainInState: {fileID: 11400000, guid: c7d679b645feff843aa671c812a21233, type: 2}
+  chaseTarget: {fileID: 433655261}
   enemyStats: {fileID: 11400000, guid: aa0a2fce0b74140498b3e7fe970fc557, type: 2}
-  eyes: {fileID: 1337298652}
   navMeshAgent: {fileID: 0}
   wayPointList:
   - {fileID: 1277891698}
@@ -2498,7 +2498,6 @@ MonoBehaviour:
   - {fileID: 387206625}
   - {fileID: 721354080}
   nextWayPoint: 0
-  chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
 --- !u!114 &437677726
 MonoBehaviour:
@@ -2556,7 +2555,6 @@ Transform:
   m_Children:
   - {fileID: 1420463302}
   - {fileID: 1655327854}
-  - {fileID: 1337298652}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -6695,34 +6693,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 245814329}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1337298651
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1337298652}
-  m_Layer: 0
-  m_Name: Eyes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1337298652
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1337298651}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 1.5, z: 1.299}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 437677729}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1355185165
