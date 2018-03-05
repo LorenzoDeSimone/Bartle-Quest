@@ -10,10 +10,11 @@ public class StateController : MonoBehaviour
     [SerializeField]
     private State remainInState;
 
+    public Transform chaseTarget;
+
     private State currentState;
 
     public EnemyStats enemyStats;
-    public Transform eyes;
 
     [HideInInspector]
     public NavMeshAgent navMeshAgent;
@@ -21,8 +22,7 @@ public class StateController : MonoBehaviour
     public List<Transform> wayPointList;
     [HideInInspector]
     public int nextWayPoint;
-    [HideInInspector]
-    public Transform chaseTarget;
+
     [HideInInspector]
     public float stateTimeElapsed;
 
@@ -59,14 +59,15 @@ public class StateController : MonoBehaviour
         currentState.UpdateState(this);
     }
 
-    void OnDrawGizmos()
+    
+    /*void OnDrawGizmos()
     {
         if (currentState != null && eyes != null)
         {
             Gizmos.color = currentState.sceneGizmoColor;
             Gizmos.DrawWireSphere(eyes.position, enemyStats.lookSphereCastRadius);
         }
-    }
+    }*/
 
     public void TransitionToState(State nextState)
     {
