@@ -62,8 +62,7 @@ public class Cam : MonoBehaviour
         RaycastHit hitInfo;
         Vector3 cameraFocusPoint = GetCameraFocusPoint();
         float distanceBetween = Vector3.Distance(defaultTarget.position, target.position);//0 if target is the player
-        distance = distanceBetween + lockCamMinDistance;
-        Vector3 idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -distance);
+        Vector3 idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -(distanceBetween * 0.5f + lockCamMinDistance));
 
         //Debug.DrawRay(defaultTarget.position, idealCameraPos - cameraFocusPoint, Color.green);
 
@@ -74,17 +73,26 @@ public class Cam : MonoBehaviour
 
             if (Physics.Raycast(cameraFocusPoint, (idealCameraPos - cameraFocusPoint).normalized,
                 out hitInfo, Vector3.Distance(defaultTarget.position, idealCameraPos), wallLayerMask))
+            {
+                distance = Vector3.Distance(cameraFocusPoint, hitInfo.point);
                 position = hitInfo.point;//We want the point hit by the cameraFocus, not the character
+            }
             else
+            {
+                distance = Mathf.Lerp(distance, distanceBetween * 0.5f + lockCamMinDistance, Time.deltaTime * 10);
+                idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -distance);
                 position = idealCameraPos;
-
-            distance = Vector3.Distance(cameraFocusPoint, hitInfo.point);
+            }
+            //distance = Vector3.Distance(cameraFocusPoint, hitInfo.point);
             //Debug.DrawLine(hitInfo.point + transform.right, hitInfo.point - transform.right, Color.cyan);
             //Debug.DrawLine(hitInfo.point + transform.up, hitInfo.point - transform.up, Color.cyan);
         }
         else
+        {
+            distance = Mathf.Lerp(distance, distanceBetween * 0.5f + lockCamMinDistance, Time.deltaTime * 10);
+            idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -distance);
             position = idealCameraPos;
-
+        }
         transform.position = position;
     }
 

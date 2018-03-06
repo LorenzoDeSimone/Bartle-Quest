@@ -2163,7 +2163,6 @@ MonoBehaviour:
   AttackStates:
   - Attack01
   - Attack02
-  FallingState: 
 --- !u!95 &386062850
 Animator:
   serializedVersion: 3
@@ -2618,7 +2617,6 @@ MonoBehaviour:
   AttackStates:
   - Attack01
   - Attack02
-  FallingState: 
 --- !u!95 &437677728
 Animator:
   serializedVersion: 3
@@ -4382,6 +4380,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
+        type: 2}
+      propertyPath: AttackStates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4262930400273424, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -4435,6 +4438,16 @@ Prefab:
     - target: {fileID: 4221842455585508, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
+        type: 2}
+      propertyPath: AttackStates.Array.data[2]
+      value: 1h_sword_attack_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
+        type: 2}
+      propertyPath: AttackStates.Array.data[1]
+      value: 1h_sword_attack_01 1 bis
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
