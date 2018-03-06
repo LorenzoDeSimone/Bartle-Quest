@@ -9,11 +9,16 @@ public class CharacterStatus : MonoBehaviour
 
     [SerializeField]
     private string[] AttackStates;
+
+    [SerializeField]
+    private string FallingState;
+
     private int comboCounter = -1;
 
     private bool nextAttackButtonPressed = false;
 
     private Animator myAnimator;
+    
 
     // Use this for initialization
     void Start()
@@ -27,6 +32,19 @@ public class CharacterStatus : MonoBehaviour
     {
         get { return myAnimator.GetInteger("isMoving"); }
         set { myAnimator.SetInteger("isMoving", value); }
+    }
+
+    public bool GroundedStatus
+    {
+        get { return myAnimator.GetBool("isGrounded"); }
+        set
+        {
+            myAnimator.SetBool("isGrounded", value);
+            if(!GroundedStatus && !myAnimator.GetCurrentAnimatorStateInfo(0).IsName(FallingState))
+            {
+                myAnimator.Play(FallingState, 0);
+            }
+        }
     }
 
     public bool AttackingStatus
