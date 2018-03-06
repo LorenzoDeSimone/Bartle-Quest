@@ -10,9 +10,6 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField]
     private string[] AttackStates;
 
-    [SerializeField]
-    private string FallingState;
-
     private int comboCounter = -1;
 
     private bool nextAttackButtonPressed = false;
@@ -39,16 +36,10 @@ public class CharacterStatus : MonoBehaviour
         get { return myAnimator.GetBool("isGrounded"); }
         set
         {
-
             if (GroundedStatus != value && !value)
                 myAnimator.SetTrigger("isFalling");
 
             myAnimator.SetBool("isGrounded", value);
-
-            /*if (!GroundedStatus && !myAnimator.GetCurrentAnimatorStateInfo(0).IsName(FallingState))
-            {
-                myAnimator.Play(FallingState, 0);
-            }*/
         }
     }
 
