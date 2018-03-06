@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691921017068622, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4691921017068622, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
       propertyPath: m_LocalPosition.y
@@ -189,11 +189,15 @@ Prefab:
     - target: {fileID: 114806616725994912, guid: 588b3849a9b45d7499b0da53d612e0fc,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027671233375348, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
       propertyPath: m_LocalPosition.x
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059760595690746, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
@@ -2196,6 +2200,9 @@ MonoBehaviour:
   heightPadding: 0.5
   wallCheckLength: 1
   walkableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
   maxGroundAngle: 150
@@ -4419,11 +4426,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4510424728670372, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4034498844767212, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4221842455585508, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_RootOrder

@@ -17,6 +17,8 @@ public class MarioController : MonoBehaviour
     [SerializeField] private float heightPadding = 0.05f;
     [SerializeField] private float wallCheckLength = 1f;
     [SerializeField] private LayerMask walkableLayerMask;
+    [SerializeField] private LayerMask wallLayerMask;
+
     [SerializeField] private float maxGroundAngle = 120;
 
     [SerializeField] private bool debug;
@@ -40,6 +42,7 @@ public class MarioController : MonoBehaviour
     {
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
+        wallLayerMask = LayerMask.GetMask("Wall");
         myCharacterStatus = GetComponent<CharacterStatus>();
         myCameraScript = myCamera.GetComponent<Cam>();
     }
@@ -140,6 +143,25 @@ public class MarioController : MonoBehaviour
         }
     }
 
+    void ClampInput(float threshold)
+    {
+        if(Mathf.Abs(input.x) > threshold)
+        {
+            if (input.x < 0f)
+                input.x = -threshold;
+            else
+                input.x = threshold;
+        }
+
+        if (Mathf.Abs(input.y) > threshold)
+        {
+            if (input.y < 0f)
+                input.y = -threshold;
+            else
+                input.y = threshold;
+        }
+    }
+
     /// <summary>
     /// This player only moves along its own forward axis
     /// </summary>
@@ -147,6 +169,7 @@ public class MarioController : MonoBehaviour
     {
 
         //Debug.Log(Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)));
+
         
         if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
         {
@@ -154,12 +177,14 @@ public class MarioController : MonoBehaviour
             return;
         }
 
-        
+        if (myCameraScript.IsInLockTargetStatus())
+            ClampInput(runningThreshold);
+
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
             myCharacterStatus.MovingStatus = idleValue;
         }
-        else if (Mathf.Abs(input.x) < runningThreshold && Mathf.Abs(input.y) < runningThreshold)
+        else if (Mathf.Abs(input.x) <= runningThreshold && Mathf.Abs(input.y) <= runningThreshold)
         {
             myCharacterStatus.MovingStatus = walkingValue;
             transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x),Mathf.Abs(input.y)) * Time.deltaTime;
@@ -243,13 +268,11 @@ public class MarioController : MonoBehaviour
         //Checks to avoid falling into the abyss
         if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, walkableLayerMask))
         {
-            Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
-
-            //Check to avoid running into the walls;
+            //Check to avoid running into the walls
             if (debug)
-                Debug.DrawRay(transform.position, forward* wallCheckLength, Color.red);
+                Debug.DrawRay(transform.position, forward * wallCheckLength, Color.red);
 
-            if (Physics.Raycast(transform.position, forward, wallCheckLength, ~walkableLayerMask))
+            if (Physics.Raycast(transform.position, forward, wallCheckLength, wallLayerMask))
                 return false;
             else
                 return true;
