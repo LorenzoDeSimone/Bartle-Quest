@@ -23,7 +23,6 @@ public class MarioController : MonoBehaviour
     [SerializeField] private Transform playerModelTransform;
 
 
-    private bool grounded;
     private bool fallHitSet;
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
     private float angle;
@@ -148,13 +147,14 @@ public class MarioController : MonoBehaviour
     {
 
         //Debug.Log(Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)));
-
+        
         if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
         {
             myCharacterStatus.MovingStatus = idleValue;
             return;
         }
 
+        
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
             myCharacterStatus.MovingStatus = idleValue;
@@ -207,7 +207,7 @@ public class MarioController : MonoBehaviour
         }
         else
         {
-            if (!grounded)
+            if (!myCharacterStatus.GroundedStatus)
             {
                 forward = transform.forward;
                 return;
@@ -224,7 +224,7 @@ public class MarioController : MonoBehaviour
     /// </summary>
     void CalculateGroundAngle()
     {
-        if(!grounded)
+        if(!myCharacterStatus.GroundedStatus)
         {
             groundAngle = 90;
             return;
@@ -235,7 +235,7 @@ public class MarioController : MonoBehaviour
     private bool IsBorderOK()
     {
         float forwardInput = Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y));
-        Vector3 nextPos = transform.position + transform.forward * wallCheckLength;
+        Vector3 nextPos = transform.position + forward * wallCheckLength;
 
         if (debug)
             Debug.DrawRay(nextPos, -transform.up, Color.red);
@@ -245,17 +245,11 @@ public class MarioController : MonoBehaviour
         {
             Vector3 epsilonRaycastStart = Vector3.up * heightPadding * 0.01f;
 
-            //Check to avoid running into the walls
-            Vector3 firstRay = (transform.forward + transform.forward + transform.right) * forwardInput;
-            Vector3 secondRay = (transform.forward + transform.forward - transform.right) * forwardInput;
-
+            //Check to avoid running into the walls;
             if (debug)
-            {
-                Debug.DrawRay(transform.position - epsilonRaycastStart, firstRay.normalized * wallCheckLength, Color.red);
-                Debug.DrawRay(transform.position - epsilonRaycastStart, secondRay.normalized * wallCheckLength, Color.red);
-            }
-            if (Physics.Raycast(transform.position - epsilonRaycastStart, firstRay, wallCheckLength,  ~walkableLayerMask) ||
-                Physics.Raycast(transform.position - epsilonRaycastStart, secondRay, wallCheckLength, ~walkableLayerMask))
+                Debug.DrawRay(transform.position, forward* wallCheckLength, Color.red);
+
+            if (Physics.Raycast(transform.position, forward, wallCheckLength, ~walkableLayerMask))
                 return false;
             else
                 return true;
@@ -276,12 +270,12 @@ public class MarioController : MonoBehaviour
             if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
 
-            grounded = true;
+            myCharacterStatus.GroundedStatus = true;
             fallHitSet = false;
             fallVelocity = Vector3.zero;
         }
         else
-            grounded = false;
+            myCharacterStatus.GroundedStatus = false;
     }
 
     /// <summary>
@@ -295,7 +289,7 @@ public class MarioController : MonoBehaviour
             Debug.DrawLine(transform.position + transform.up, transform.position - transform.up, Color.cyan);
         }
 
-        if (!grounded)
+        if (!myCharacterStatus.GroundedStatus)
         {
             fallVelocity += Physics.gravity;
             Vector3 newPosition = transform.position + fallVelocity * Time.deltaTime;

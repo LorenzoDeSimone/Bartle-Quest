@@ -52,7 +52,7 @@ public class Weapon : MonoBehaviour
             Hittable hitTarget = collision.collider.GetComponent<Hittable>();
             if (hitTarget)
             {
-                Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
+                //Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
                 hitTarget.Hit(damage);
             }
         }
