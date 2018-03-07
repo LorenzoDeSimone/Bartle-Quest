@@ -15,7 +15,6 @@ public class CharacterStatus : MonoBehaviour
     private bool nextAttackButtonPressed = false;
 
     private Animator myAnimator;
-    
 
     // Use this for initialization
     void Start()
@@ -23,6 +22,17 @@ public class CharacterStatus : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
+    }
+
+    void Update()
+    {
+        ShieldUpStatus = Input.GetButton("TargetLock");
+    }
+
+    public bool ShieldUpStatus
+    {
+        get { return myAnimator.GetBool("isShieldUp"); }
+        set { myAnimator.SetBool("isShieldUp", value); }
     }
 
     public int MovingStatus
