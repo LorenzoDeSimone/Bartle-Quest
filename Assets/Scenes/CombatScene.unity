@@ -197,7 +197,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1059760595690746, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713589452034602, guid: 588b3849a9b45d7499b0da53d612e0fc,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 588b3849a9b45d7499b0da53d612e0fc, type: 2}
@@ -4383,7 +4388,7 @@ Prefab:
     - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
       propertyPath: AttackStates.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4262930400273424, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4442,12 +4447,12 @@ Prefab:
     - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
       propertyPath: AttackStates.Array.data[2]
-      value: 1h_sword_attack_02
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
       propertyPath: AttackStates.Array.data[1]
-      value: 1h_sword_attack_01 1 bis
+      value: 1h_sword_attack_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}

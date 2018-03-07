@@ -64,7 +64,7 @@ public class MarioController : MonoBehaviour
         //if(myCameraScript.IsInLockTargetStatus())
         //    TargetLockMove();
         //else
-            Move();
+        Move();
  
     }
 
@@ -102,7 +102,11 @@ public class MarioController : MonoBehaviour
         }
         else
         {
+
             if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
+                return;
+
+            if (myCharacterStatus.ShieldUpStatus)
                 return;
 
             if (myCharacterStatus.AttackingStatus)
@@ -177,7 +181,7 @@ public class MarioController : MonoBehaviour
             return;
         }
 
-        if (myCameraScript.IsInLockTargetStatus())
+        if (myCharacterStatus.ShieldUpStatus)
             ClampInput(runningThreshold);
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
@@ -215,7 +219,7 @@ public class MarioController : MonoBehaviour
     void CalculateForward()
     {
 
-        if(myCameraScript.IsInLockTargetStatus())
+        if(myCharacterStatus.GroundedStatus)
         {
 
             Vector3 cameraForward = myCamera.forward;
