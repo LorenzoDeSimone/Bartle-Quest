@@ -919,8 +919,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4510424728670372}
-  - component: {fileID: 114861639833910718}
   - component: {fileID: 135687100363594856}
+  - component: {fileID: 114968643199205572}
   m_Layer: 0
   m_Name: TargetScan
   m_TagString: Untagged
@@ -2289,6 +2289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackStates:
   - 1h_sword_attack_01
+  - 1h_sword_attack_01 bis
   - 1h_sword_attack_02
 --- !u!114 &114413071463445476
 MonoBehaviour:
@@ -2341,8 +2342,7 @@ MonoBehaviour:
     m_Bits: 0
   maxGroundAngle: 150
   debug: 0
-  playerModelTransform: {fileID: 0}
---- !u!114 &114861639833910718
+--- !u!114 &114968643199205572
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930711471646432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed6c71cb5897ae41a125f62ff098ed1, type: 3}
+  m_Script: {fileID: 11500000, guid: f7167b7877ac3f84fbc7fde818d1432c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135687100363594856
@@ -2363,7 +2363,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137051125715865354
 SkinnedMeshRenderer:
