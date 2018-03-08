@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterStatus))]
+[RequireComponent(typeof(PlayerStatus))]
 
 public class Hittable : MonoBehaviour
 {
@@ -10,12 +10,12 @@ public class Hittable : MonoBehaviour
     private int maxHealth = 1;
     private int currHealth;
 
-    private CharacterStatus myCharacterStatus;
+    private PlayerStatus myCharacterStatus;
 
     // Use this for initialization
     void Start ()
     {
-        myCharacterStatus = GetComponent<CharacterStatus>();
+        myCharacterStatus = GetComponent<PlayerStatus>();
         currHealth = maxHealth;
     }
 

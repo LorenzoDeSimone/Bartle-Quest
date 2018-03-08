@@ -4,9 +4,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 
-public class CharacterStatus : MonoBehaviour
+public class PlayerStatus : MonoBehaviour
 {
-
     [SerializeField]
     private string[] AttackStates;
     
@@ -74,59 +73,15 @@ public class CharacterStatus : MonoBehaviour
 
     public void RequestAttack()
     {
-        AnimatorStateInfo currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
-        //if (AttackingStatus  && currentAnimatorState.fullPathHash != lastAnimatorState)
-
-            //The character is not attacking and combo needs to start
+        //The character is not attacking and combo needs to start
         if (!AttackingStatus)
-        {
-            //Debug.Log(AttackStates[0] + "FIRST PRESS");
-            //StartCoroutine(ReturnToIdle());
             myAnimator.SetTrigger("firstAttack");
-            //currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
-            //lastAnimatorState = currentAnimatorState.fullPathHash;
-        }
-        //If character is already attacking, input is registered to act when current animation is finished
-        //If the button is pressed during last attack state, trigger combo should not be set
-        /*else if(myAnimator.GetCurrentAnimatorStateInfo(0).IsName(AttackStates[AttackStates.Length-1]))
-        {
-            myAnimator.ResetTrigger("comboButtonPressed");
-        }*/
-        else if (AttackingStatus)
-        {
-            //lastAnimatorState = currentAnimatorState.fullPathHash;
+        else
             myAnimator.SetTrigger("comboButtonPressed");
-            //currAnimationLenght = myAnimator.GetCurrentAnimatorStateInfo(0).length;
-            //Debug.Log("COMBO PRESS");
-        }
-    }
-
-    /*
-    void Update()
-    {
-        if(AttackingStatus && myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.25f)
-            myAnimator.SetBool("comboButtonPressed", false);
-
-        AnimatorStateInfo currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
-        if (currentAnimatorState.fullPathHash != lastAnimatorState)
-            myAnimator.SetBool("comboButtonPressed", false);
-
-    }*/
-
-    private IEnumerator ReturnToIdle()
-    {
-        while(true)
-        {
-            //Debug.Log(myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-            if (AttackingStatus && myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f)
-                myAnimator.SetTrigger("returnToIdle");
-            yield return null;
-        }
     }
 
     public void DisableTransitionsToFalse()
     {
         myAnimator.SetBool("disableTransitions", false);
-        Debug.Log("q");
     }
 }
