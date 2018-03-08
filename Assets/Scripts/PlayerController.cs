@@ -7,23 +7,21 @@ using UnityEngine;
 /// 2. stop and face current direction when input is absent
 /// </summary>
 
-public class MarioController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float inputEpsilon = 0.1f;
     [SerializeField] private float runningThreshold = 0.5f;
-    [SerializeField] private float velocity = 5;
-    [SerializeField] private float turnSpeed = 10;
-    [SerializeField] private float height = 0.5f;
-    [SerializeField] private float heightPadding = 0.05f;
+    [SerializeField] private float velocity = 6f;
+    [SerializeField] private float turnSpeed = 8f;
+    [SerializeField] private float height = 1f;
+    [SerializeField] private float heightPadding = 0.5f;
     [SerializeField] private float wallCheckLength = 1f;
     [SerializeField] private LayerMask walkableLayerMask;
     [SerializeField] private LayerMask wallLayerMask;
 
-    [SerializeField] private float maxGroundAngle = 120;
+    [SerializeField] private float maxGroundAngle = 150;
 
     [SerializeField] private bool debug;
-    [SerializeField] private Transform playerModelTransform;
-
 
     private bool fallHitSet;
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
@@ -36,7 +34,7 @@ public class MarioController : MonoBehaviour
     private Transform myCamera;
     private RaycastHit hitInfo, fallHitInfo;
     private CharacterStatus myCharacterStatus;
-    private Cam myCameraScript;
+    private PlayerCamera myCameraScript;
 
     void Start()
     {
@@ -44,7 +42,7 @@ public class MarioController : MonoBehaviour
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
         wallLayerMask = LayerMask.GetMask("Wall");
         myCharacterStatus = GetComponent<CharacterStatus>();
-        myCameraScript = myCamera.GetComponent<Cam>();
+        myCameraScript = myCamera.GetComponent<PlayerCamera>();
     }
 
     void Update()
@@ -76,8 +74,16 @@ public class MarioController : MonoBehaviour
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
+        UpdateShieldStatus();
+
         if (Input.GetButtonDown("Attack"))
             Attack();
+    }
+
+    void UpdateShieldStatus()
+    {
+        myCharacterStatus.ShieldUpStatus = Input.GetButton("TargetLock") && 
+                                           myCharacterStatus.GroundedStatus;
     }
 
     /// <summary>

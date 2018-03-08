@@ -2,33 +2,33 @@
 using UnityEngine;
 
 
-public class Cam : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
-    public Transform target;
-    private Transform defaultTarget;
-
-    private TargetManager defaultTargetManager;
-
-    public float distance = 10.0f;
-    public float xSpeed = 250.0f;
-    public float ySpeed = 120.0f;
-    public float yMinLimit = -20f;
-    public float yMaxLimit = 80f;
-    public float zoomSpeed = 120.0f;
-    private float x = 0.0f;
-    private float y = .0f;
-    public float lockDistance = 8f;
-    private float standardDistance;
-    public LayerMask wallLayerMask;
-    private bool lerping;
+    [SerializeField] private Transform target;
+    [SerializeField] private float distance = 10.0f;
+    [SerializeField] private float xSpeed = 250.0f;
+    [SerializeField] private float ySpeed = 120.0f;
+    [SerializeField] private float yMinLimit = -20f;
+    [SerializeField] private float yMaxLimit = 80f;
+    [SerializeField] private float zoomSpeed = 120.0f;
+    [SerializeField] private float x = 0.0f;
+    [SerializeField] private float y = 0.0f;
+    [SerializeField] private float lockDistance = 8f;
     [SerializeField] private float lockCamMinDistance = 3f;
     [SerializeField] private float maxTargetDistance = 10f;
+    [SerializeField] private LayerMask wallLayerMask;
+
+    private Transform player;
+    private TargetManager defaultTargetManager;
+    private float standardDistance;
+    private CharacterStatus myCharacterStatus;
 
     void Start()
     {
         Vector3 angles = transform.eulerAngles;
-        defaultTarget = target;
-        defaultTargetManager = target.GetComponent<TargetManager>();
+        player = target;
+        defaultTargetManager = player.GetComponent<TargetManager>();
+        myCharacterStatus = player.GetComponent<CharacterStatus>();
         x = angles.y;
         y = angles.x;
         standardDistance = distance;
@@ -48,11 +48,6 @@ public class Cam : MonoBehaviour
         y = ClampAngle(y, yMinLimit, yMaxLimit);
     }
 
-    bool IsRightStickPressed()
-    {
-        return true;
-    }
-
     void UpdatePosition()
     {
         Quaternion rotation = Quaternion.Euler(y, x, 0);
@@ -61,18 +56,18 @@ public class Cam : MonoBehaviour
 
         RaycastHit hitInfo;
         Vector3 cameraFocusPoint = GetCameraFocusPoint();
-        float distanceBetween = Vector3.Distance(defaultTarget.position, target.position);//0 if target is the player
+        float distanceBetween = Vector3.Distance(player.position, target.position);//0 if target is the player
         Vector3 idealCameraPos = cameraFocusPoint + rotation * new Vector3(0.0f, 0.0f, -(distanceBetween * 0.5f + lockCamMinDistance));
 
         //Debug.DrawRay(defaultTarget.position, idealCameraPos - cameraFocusPoint, Color.green);
 
         //Check walls
-        if (Physics.Raycast(defaultTarget.position, (idealCameraPos - cameraFocusPoint).normalized,
-            out hitInfo, Vector3.Distance(defaultTarget.position, idealCameraPos), wallLayerMask))
+        if (Physics.Raycast(player.position, (idealCameraPos - cameraFocusPoint).normalized,
+            out hitInfo, Vector3.Distance(player.position, idealCameraPos), wallLayerMask))
         {
 
             if (Physics.Raycast(cameraFocusPoint, (idealCameraPos - cameraFocusPoint).normalized,
-                out hitInfo, Vector3.Distance(defaultTarget.position, idealCameraPos), wallLayerMask))
+                out hitInfo, Vector3.Distance(player.position, idealCameraPos), wallLayerMask))
             {
                 distance = Vector3.Distance(cameraFocusPoint, hitInfo.point);
                 position = hitInfo.point;//We want the point hit by the cameraFocus, not the character
@@ -98,14 +93,14 @@ public class Cam : MonoBehaviour
 
     Vector3 GetCameraFocusPoint()
     {
-        if (!defaultTarget.Equals(target))
+        if (!player.Equals(target))
         {
-            Vector3 middlePoint = new Vector3((defaultTarget.position.x + target.position.x) * 0.5f, (defaultTarget.position.y + target.position.y) * 0.5f,
-                                                                                                    (defaultTarget.position.z + target.position.z) * 0.5f);
+            Vector3 middlePoint = new Vector3((player.position.x + target.position.x) * 0.5f, (player.position.y + target.position.y) * 0.5f,
+                                                                                                    (player.position.z + target.position.z) * 0.5f);
             return middlePoint;
         }
         else
-            return defaultTarget.position;
+            return player.position;
     }
 
     void UpdateTarget()
@@ -117,7 +112,7 @@ public class Cam : MonoBehaviour
                 target = lockTarget;
         }
         else if (IsTargetReleased())
-            target = defaultTarget;
+            target = player;
 
     }
 
@@ -128,27 +123,25 @@ public class Cam : MonoBehaviour
 
     public Transform GetDefaultTarget()
     {
-        return defaultTarget;
+        return player;
     }
 
     public bool IsInLockTargetStatus()
     {
-        return !defaultTarget.Equals(target);
+        return !player.Equals(target);
     }
 
     public bool IsTargetPressed()
     {
         return Input.GetButtonDown("TargetLock");
-        //!Physics.Raycast(transform.position, (transform.position - GetCameraFocusPoint()).normalized, Mathf.Infinity, wallLayerMask);
     }
 
     public bool IsTargetReleased()
     {
-        if (target.Equals(defaultTarget))
+        if (target.Equals(player))
             return true;
         else
-            return (Input.GetButtonUp("TargetLock") || Vector3.Distance(target.position, defaultTarget.position) > maxTargetDistance);// || 
-                                                                                                                                      //Physics.Raycast(transform.position, (transform.position - GetCameraFocusPoint()).normalized, Mathf.Infinity, wallLayerMask));
+            return (Input.GetButtonUp("TargetLock") || Vector3.Distance(target.position, player.position) > maxTargetDistance);
     }
 
     void LateUpdate()
