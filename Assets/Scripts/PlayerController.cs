@@ -82,8 +82,9 @@ public class PlayerController : MonoBehaviour
 
     void UpdateShieldStatus()
     {
-        myCharacterStatus.ShieldUpStatus = Input.GetButton("TargetLock") && 
-                                           myCharacterStatus.GroundedStatus;
+        myCharacterStatus.ShieldUpStatus =  Input.GetButton("TargetLock")     && 
+                                            myCharacterStatus.GroundedStatus  &&
+                                           !myCharacterStatus.AttackingStatus;
     }
 
     /// <summary>

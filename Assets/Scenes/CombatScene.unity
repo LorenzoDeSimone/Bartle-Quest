@@ -4431,13 +4431,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 135687100363594856, guid: 15c0c3221d278df419545bc6b87d9c17,
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
-      propertyPath: m_Radius
-      value: 15
+      propertyPath: AttackStates.Array.data[0]
+      value: Attack01
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114861639833910718, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
+        type: 2}
+      propertyPath: AttackStates.Array.data[1]
+      value: Attack02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
+        type: 2}
+      propertyPath: AttackStates.Array.data[2]
+      value: Attack03
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &899169205 stripped
@@ -8593,22 +8602,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 1.0000004, z: 0.9999999}
   m_Center: {x: 0.000000029802322, y: -0.000000059604645, z: 0.06666666}
---- !u!1 &1625489082 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1930711471646432, guid: 15c0c3221d278df419545bc6b87d9c17,
-    type: 2}
-  m_PrefabInternal: {fileID: 899169203}
---- !u!114 &1625489083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1625489082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7167b7877ac3f84fbc7fde818d1432c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1631537040
 GameObject:
   m_ObjectHideFlags: 0
