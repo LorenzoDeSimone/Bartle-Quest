@@ -9,12 +9,10 @@ public class CharacterStatus : MonoBehaviour
 
     [SerializeField]
     private string[] AttackStates;
-
-    private int comboCounter = -1;
-
-    private bool nextAttackButtonPressed = false;
-
+    
     private Animator myAnimator;
+
+    private bool shieldUpThisFrame;
 
     // Use this for initialization
     void Start()
@@ -22,11 +20,6 @@ public class CharacterStatus : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
-    }
-
-    void Update()
-    {
-        ShieldUpStatus = Input.GetButton("TargetLock");
     }
 
     public bool ShieldUpStatus
@@ -83,7 +76,7 @@ public class CharacterStatus : MonoBehaviour
         if (!AttackingStatus)
         {
             //Debug.Log(AttackStates[0] + "FIRST PRESS");
-            myAnimator.Play(AttackStates[0], 0);
+            myAnimator.SetTrigger("firstAttack");
         }
         //If character is already attacking, input is registered to act when current animation is finished
         else
