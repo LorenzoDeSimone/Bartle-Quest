@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion targetRotation;
     private Transform myCamera;
     private RaycastHit hitInfo, fallHitInfo;
-    private CharacterStatus myCharacterStatus;
+    private PlayerStatus myPlayerStatus;
     private PlayerCamera myCameraScript;
 
     void Start()
@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
         wallLayerMask = LayerMask.GetMask("Wall");
-        myCharacterStatus = GetComponent<CharacterStatus>();
+        myPlayerStatus = GetComponent<PlayerStatus>();
         myCameraScript = myCamera.GetComponent<PlayerCamera>();
     }
 
     void Update()
     {
-        if (myCharacterStatus.DeathStatus)
+        if (myPlayerStatus.DeathStatus)
             return;
 
         GetInput();
@@ -82,9 +82,9 @@ public class PlayerController : MonoBehaviour
 
     void UpdateShieldStatus()
     {
-        myCharacterStatus.ShieldUpStatus =  Input.GetButton("TargetLock")     && 
-                                            myCharacterStatus.GroundedStatus  &&
-                                           !myCharacterStatus.AttackingStatus;
+        myPlayerStatus.ShieldUpStatus =  Input.GetButton("TargetLock")     && 
+                                            myPlayerStatus.GroundedStatus  &&
+                                           !myPlayerStatus.AttackingStatus;
     }
 
     /// <summary>
@@ -113,10 +113,10 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
                 return;
 
-            if (myCharacterStatus.ShieldUpStatus)
+            if (myPlayerStatus.ShieldUpStatus)
                 return;
 
-            if (myCharacterStatus.AttackingStatus)
+            if (myPlayerStatus.AttackingStatus)
                 return;
 
             targetRotation = Quaternion.Euler(0, angle, 0);
@@ -144,11 +144,11 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
-            myCharacterStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = idleValue;
         }
         else
         {
-            myCharacterStatus.MovingStatus = runningValue;
+            myPlayerStatus.MovingStatus = runningValue;
 
             transform.position += forward * velocity * sign * Time.deltaTime;
         }
@@ -182,27 +182,27 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)));
 
         
-        if (groundAngle > maxGroundAngle || myCharacterStatus.AttackingStatus || !IsBorderOK())
+        if (groundAngle > maxGroundAngle || myPlayerStatus.AttackingStatus || !IsBorderOK())
         {
-            myCharacterStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = idleValue;
             return;
         }
 
-        if (myCharacterStatus.ShieldUpStatus)
+        if (myPlayerStatus.ShieldUpStatus)
             ClampInput(runningThreshold);
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
-            myCharacterStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = idleValue;
         }
         else if (Mathf.Abs(input.x) <= runningThreshold && Mathf.Abs(input.y) <= runningThreshold)
         {
-            myCharacterStatus.MovingStatus = walkingValue;
+            myPlayerStatus.MovingStatus = walkingValue;
             transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x),Mathf.Abs(input.y)) * Time.deltaTime;
         }
         else
         {
-            myCharacterStatus.MovingStatus = runningValue;
+            myPlayerStatus.MovingStatus = runningValue;
             transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)) * Time.deltaTime;
         }
     }
@@ -226,7 +226,7 @@ public class PlayerController : MonoBehaviour
     void CalculateForward()
     {
 
-        if(myCharacterStatus.GroundedStatus)
+        if(myPlayerStatus.GroundedStatus)
         {
 
             Vector3 cameraForward = myCamera.forward;
@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (!myCharacterStatus.GroundedStatus)
+            if (!myPlayerStatus.GroundedStatus)
             {
                 forward = transform.forward;
                 return;
@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void CalculateGroundAngle()
     {
-        if(!myCharacterStatus.GroundedStatus)
+        if(!myPlayerStatus.GroundedStatus)
         {
             groundAngle = 90;
             return;
@@ -304,12 +304,12 @@ public class PlayerController : MonoBehaviour
             if (Vector3.Distance(transform.position, hitInfo.point) < height)
                 transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
 
-            myCharacterStatus.GroundedStatus = true;
+            myPlayerStatus.GroundedStatus = true;
             fallHitSet = false;
             fallVelocity = Vector3.zero;
         }
         else
-            myCharacterStatus.GroundedStatus = false;
+            myPlayerStatus.GroundedStatus = false;
     }
 
     /// <summary>
@@ -323,7 +323,7 @@ public class PlayerController : MonoBehaviour
             Debug.DrawLine(transform.position + transform.up, transform.position - transform.up, Color.cyan);
         }
 
-        if (!myCharacterStatus.GroundedStatus)
+        if (!myPlayerStatus.GroundedStatus)
         {
             fallVelocity += Physics.gravity;
             Vector3 newPosition = transform.position + fallVelocity * Time.deltaTime;
@@ -355,7 +355,7 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        myCharacterStatus.RequestAttack();
+        myPlayerStatus.RequestAttack();
     }
 
     /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(CharacterStatus))]
+[RequireComponent(typeof(PlayerStatus))]
 
 public class MovingCharacter : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class MovingCharacter : MonoBehaviour
 
     Quaternion targetRotation;
     //private Rigidbody myRigidbody;
-    private CharacterStatus myCharacterStatus;
+    private PlayerStatus myCharacterStatus;
     private Collider myCollider;
 
     private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
@@ -33,7 +33,7 @@ public class MovingCharacter : MonoBehaviour
     {
         targetRotation = transform.rotation;
         //myRigidbody = GetComponent<Rigidbody>();
-        myCharacterStatus = GetComponent<CharacterStatus>();
+        myCharacterStatus = GetComponent<PlayerStatus>();
         myCollider = GetComponent<Collider>();
 	}
 
