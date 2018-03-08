@@ -69,18 +69,19 @@ public class CharacterStatus : MonoBehaviour
 
     public void RequestAttack()
     {
-        //Debug.Log("Attack requested");
-        //nextAttackButtonPressed = false;
-
         //The character is not attacking and combo needs to start
-        if (!AttackingStatus)
+        if (!AttackingStatus && !myAnimator.GetAnimatorTransitionInfo(0).IsName("AnyState -> "+ AttackStates[0]))
         {
             //Debug.Log(AttackStates[0] + "FIRST PRESS");
             myAnimator.SetTrigger("firstAttack");
         }
         //If character is already attacking, input is registered to act when current animation is finished
-        else
+        //If the button is pressed during last attack state, trigger combo should not be set
+        else if(myAnimator.GetCurrentAnimatorStateInfo(0).IsName(AttackStates[AttackStates.Length-1]))
         {
+            myAnimator.ResetTrigger("comboButtonPressed");
+        }
+        else{
             myAnimator.SetTrigger("comboButtonPressed");
             //Debug.Log("COMBO PRESS");
         }
