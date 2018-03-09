@@ -23,14 +23,13 @@ public class CharacterStatus : MonoBehaviour
     private HashSet<GameObject> hitEnemies;
 
     // Use this for initialization
-    void Start()
+    protected void Start()
     {
         hitEnemies = new HashSet<GameObject>();
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
     }
-
 
     public bool ShieldUpStatus
     {
