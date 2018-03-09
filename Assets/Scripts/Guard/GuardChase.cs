@@ -10,6 +10,7 @@ public class GuardChase : GuardState
     {
         Initialization(animator);
 
+        Rotate();
         navMeshAgent.destination = myGuardStatus.target.position;
         navMeshAgent.isStopped = false;
 
@@ -18,9 +19,6 @@ public class GuardChase : GuardState
 
     protected override void CheckTransitions()
     {
-        if (IsPlayerInSight())
-            myFSM.SetBool("playerInSight", true);
-        else
-            myFSM.SetBool("playerInSight", false);
+        myFSM.SetBool("playerInSight", IsTargetInSight());
     }
 }

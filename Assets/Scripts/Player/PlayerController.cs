@@ -210,7 +210,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 GetForwardFromInputVector()
     {
         Vector3 inputVector = (myCamera.transform.TransformDirection(input)).normalized;
-        float sumXZ = inputVector.y + inputVector.z;
 
         inputVector.y = 0f;
         inputVector.z = 0f;
@@ -270,7 +269,6 @@ public class PlayerController : MonoBehaviour
 
     private bool IsBorderOK()
     {
-        float forwardInput = Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y));
         Vector3 nextPos = transform.position + forward * wallCheckLength;
 
         if (debug)

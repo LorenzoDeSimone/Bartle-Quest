@@ -28,10 +28,7 @@ public class GuardPatrol : GuardState
 
     protected override void CheckTransitions()
     {
-        if (IsPlayerInSight())
-            myFSM.SetBool("playerInSight", true);
-        else
-            myFSM.SetBool("playerInSight", false);
+        myFSM.SetBool("playerInSight", IsTargetInSight());
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
