@@ -20,11 +20,12 @@ public class CharacterStatus : MonoBehaviour
     private float currAnimationLenght;
     private int lastAnimatorState;
 
-    public bool canWeaponHit = true;
+    private HashSet<GameObject> hitEnemies;
 
     // Use this for initialization
     void Start()
     {
+        hitEnemies = new HashSet<GameObject>();
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
@@ -88,10 +89,19 @@ public class CharacterStatus : MonoBehaviour
         }
     }
 
-    public bool WeaponHitStatus
+    public bool CanWeaponHit(GameObject enemy)
     {
-        get{ return canWeaponHit; }
-        set{ canWeaponHit = value;}
+        return !hitEnemies.Contains(enemy);
+    }
+
+    public void AddHitEnemy(GameObject enemy)
+    {
+        hitEnemies.Add(enemy);
+    }
+
+    public void RemoveAllHitEnemies()
+    {
+        hitEnemies.Clear();
     }
 
     public bool AttackingStatus
