@@ -23,13 +23,53 @@ public abstract class GuardState : State
         }
     }
 
+    protected void Rotate()
+    {
+        Vector3 sameYTarget = new Vector3(myGuardStatus.target.position.x, myGuardStatus.transform.position.y, myGuardStatus.target.position.z);
+        Quaternion targetRotation = Quaternion.LookRotation(sameYTarget - myGuardStatus.transform.position, Vector3.up);
+        myGuardStatus.transform.rotation = Quaternion.Slerp(myGuardStatus.transform.rotation, targetRotation, myGuardStatus.turnSpeed * Time.deltaTime);
+    }
+
+    private Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
+    {
+        if(!angleIsGlobal)
+        {
+            angleInDegrees += myFSM.transform.eulerAngles.y;
+        }
+        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+    }
+
     //List of utility functions to be used during transition checks
-    protected bool IsPlayerInSight()
+    protected bool IsTargetInSight()
     {
         if (!initDone)
             return false;
 
-        return Vector3.Distance(myGuardStatus.transform.position, myGuardStatus.target.position) < 2f;
-    }
+        Vector3 viewAngleA = DirFromAngle(-myGuardStatus.viewAngle * 0.5f, false);
+        Vector3 viewAngleB = DirFromAngle(myGuardStatus.viewAngle * 0.5f, false);
 
+        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleA * myGuardStatus.viewRadius, Color.red);
+        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleB * myGuardStatus.viewRadius, Color.red);
+
+        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
+        //Debug.Log(targetColliders.Length);
+        if(distance <= myGuardStatus.distanceForInstantChase)
+            return true;
+        else if (Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position) <= myGuardStatus.viewRadius)
+        {
+
+            Vector3 directionToTarget = myGuardStatus.target.position - myFSM.transform.position;
+            //Checks if the target is within the angle of sight
+            if (Vector3.Angle(myFSM.transform.forward, directionToTarget) < myGuardStatus.viewAngle * 0.5f)
+            {
+                float distanceToTarget = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
+                if (!Physics.Raycast(myFSM.transform.position, directionToTarget,
+                                    distanceToTarget, LayerMask.GetMask("Wall")))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
