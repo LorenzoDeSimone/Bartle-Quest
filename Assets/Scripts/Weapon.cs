@@ -55,7 +55,9 @@ public class Weapon : MonoBehaviour
         {
             Shield hitShield = collision.collider.GetComponent<Shield>();
             if (hitShield && hitShield.GetShieldHolder().ShieldUpStatus)
-                weaponHolder.AddHitEnemy(hitShield.GetShieldHolder().gameObject);
+            {
+                weaponHolder.AddHitEnemy(hitShield.GetShieldHolder().gameObject, true);
+            }
             else
             {
                 //lastAnimatorState = currentAnimatorState.fullPathHash;

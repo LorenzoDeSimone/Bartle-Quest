@@ -94,14 +94,17 @@ public class CharacterStatus : MonoBehaviour
         return !hitEnemies.Contains(enemy);
     }
 
-    public void AddHitEnemy(GameObject enemy)
+    public void AddHitEnemy(GameObject enemy, bool shieldHit = false)
     {
         hitEnemies.Add(enemy);
+        if (shieldHit)
+            myAnimator.SetTrigger("attackBlocked");
     }
 
     public void RemoveAllHitEnemies()
     {
         hitEnemies.Clear();
+        myAnimator.ResetTrigger("attackBlocked");
     }
 
     public bool AttackingStatus
