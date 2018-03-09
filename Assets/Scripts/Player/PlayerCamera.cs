@@ -21,14 +21,14 @@ public class PlayerCamera : MonoBehaviour
     private Transform player;
     private TargetManager defaultTargetManager;
     private float standardDistance;
-    private PlayerStatus myPlayerStatus;
+    private CharacterStatus myPlayerStatus;
 
     void Start()
     {
         Vector3 angles = transform.eulerAngles;
         player = target;
         defaultTargetManager = player.GetComponent<TargetManager>();
-        myPlayerStatus = player.GetComponent<PlayerStatus>();
+        myPlayerStatus = player.GetComponent<CharacterStatus>();
         x = angles.y;
         y = angles.x;
         standardDistance = distance;

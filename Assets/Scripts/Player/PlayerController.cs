@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion targetRotation;
     private Transform myCamera;
     private RaycastHit hitInfo, fallHitInfo;
-    private PlayerStatus myPlayerStatus;
+    private CharacterStatus myPlayerStatus;
     private PlayerCamera myCameraScript;
 
     void Start()
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
         wallLayerMask = LayerMask.GetMask("Wall");
-        myPlayerStatus = GetComponent<PlayerStatus>();
+        myPlayerStatus = GetComponent<CharacterStatus>();
         myCameraScript = myCamera.GetComponent<PlayerCamera>();
     }
 

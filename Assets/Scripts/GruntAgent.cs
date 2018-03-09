@@ -8,14 +8,14 @@ public class GruntAgent : MonoBehaviour
     [SerializeField]
     Transform destination;
     NavMeshAgent navMeshAgent;
-    private PlayerStatus myCharacterStatus;
+    private CharacterStatus myCharacterStatus;
     private bool atkCoroutineStarted = false;
 
     // Use this for initialization
     void Start ()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        myCharacterStatus = GetComponent<PlayerStatus>();
+        myCharacterStatus = GetComponent<CharacterStatus>();
 
         if (navMeshAgent == null)
             Debug.LogError("No nav mesh agent!");
