@@ -9555,6 +9555,7 @@ MonoBehaviour:
   canDie: 1
   AttackStates:
   - Attack01
+  - Attack02
 --- !u!114 &1927549539
 MonoBehaviour:
   m_ObjectHideFlags: 0
