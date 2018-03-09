@@ -50,16 +50,16 @@ public class Weapon : MonoBehaviour
         //if (weaponHolder.gameObject.name.Equals("Guard"))
         //    Debug.Log(currentAnimatorState.fullPathHash != lastAnimatorState);
             
-        if (weaponHolder.canWeaponHit && weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collision.collider.gameObject)) 
+        if (weaponHolder.CanWeaponHit(collision.gameObject) && weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collision.collider.gameObject)) 
             //currentAnimatorState.fullPathHash != lastAnimatorState)
         {
             //lastAnimatorState = currentAnimatorState.fullPathHash;
             Hittable hitTarget = collision.collider.GetComponent<Hittable>();
             if (hitTarget)
             {
-                weaponHolder.canWeaponHit = false;
+                weaponHolder.AddHitEnemy(collision.gameObject);
                 Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
-                //hitTarget.Hit(damage);
+                hitTarget.Hit(damage);
             }
         }
     }
