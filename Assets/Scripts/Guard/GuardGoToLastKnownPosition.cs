@@ -11,6 +11,7 @@ public class GuardGoToLastKnownPosition : GuardState
     {
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
+        navMeshAgent.speed = myGuardStatus.runSpeed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -32,12 +33,12 @@ public class GuardGoToLastKnownPosition : GuardState
             myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
             myFSM.SetInteger("targetInSight", GuardState.targetInSight);
         }
-        else
-        {
-            bool lastKnownTargetPositionReached = navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending;
+        
+        bool lastKnownTargetPositionReached = navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending;
 
-            if (lastKnownTargetPositionReached)
-                myFSM.SetTrigger("lastKnownPositionReached");
-        }
+        if (lastKnownTargetPositionReached)
+            myFSM.SetTrigger("lastKnownPositionReached"); 
     }
 }
+
+

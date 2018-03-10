@@ -10,6 +10,7 @@ public class GuardChase : GuardState
     {
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
+        navMeshAgent.speed = myGuardStatus.runSpeed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

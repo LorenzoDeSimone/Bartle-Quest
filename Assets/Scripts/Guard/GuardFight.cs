@@ -12,6 +12,7 @@ public class GuardFight : GuardState
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
         timefromLastAttack = 0;
+        navMeshAgent.speed = myGuardStatus.runSpeed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

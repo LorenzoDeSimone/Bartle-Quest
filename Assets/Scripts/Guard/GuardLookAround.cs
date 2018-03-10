@@ -6,7 +6,7 @@ public class GuardLookAround : GuardState
 {
     private float elapsedTime;
     private Quaternion currentTargetRotation;
-    private Vector3[] lookAroundRandomDirections = new Vector3[3];
+    private Vector3[] lookAroundRandomDirections = new Vector3[2];
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -14,8 +14,8 @@ public class GuardLookAround : GuardState
         Initialization(animator);
         CalculateRandomDirections();
         elapsedTime = 0f;
-        myGuardStatus.MovingStatus = CharacterStatus.movingWalkValue;
-
+        myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
+        navMeshAgent.speed = myGuardStatus.runSpeed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,20 +28,15 @@ public class GuardLookAround : GuardState
 
     private void CalculateRandomDirections()
     {
-        for (int i = 0; i < 3; i++)
-        {
             float randValue = Random.Range(0f, 1f);
-            //Debug.Log(randValue);
-            if (randValue <= 0.3333f)
-            {
-                Vector3 newDir = new Vector3(-myGuardStatus.transform.forward.x, -myGuardStatus.transform.forward.y, -myGuardStatus.transform.forward.z);
-                lookAroundRandomDirections[i] = newDir;
-            }         
-            else if (randValue <= 0.6666f)
-                lookAroundRandomDirections[i] = -myGuardStatus.transform.right;
-            else
-                lookAroundRandomDirections[i] = myGuardStatus.transform.right;
-        }
+        //Debug.Log(randValue);     
+        if (randValue <= 0.5f)
+            lookAroundRandomDirections[0] = -myGuardStatus.transform.right;
+        else
+            lookAroundRandomDirections[0] = myGuardStatus.transform.right;
+
+        lookAroundRandomDirections[1] = myGuardStatus.transform.forward;
+
     }
 
     private void LookAround()
@@ -60,12 +55,10 @@ public class GuardLookAround : GuardState
             myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
             //Debug.Log(lookAroundRandomDirections);
             navMeshAgent.isStopped = true;
-            if (percentageElapsedTime <= 0.50f)
+            if (percentageElapsedTime <= 0.6f)
                 RotateTowards(myGuardStatus.transform.position + lookAroundRandomDirections[0]);
-            else if (percentageElapsedTime <= 0.75f)
-                RotateTowards(myGuardStatus.transform.position + lookAroundRandomDirections[1]);
             else
-                RotateTowards(myGuardStatus.transform.position + lookAroundRandomDirections[2]);
+                RotateTowards(myGuardStatus.transform.position + lookAroundRandomDirections[1]);
         }
     }
 

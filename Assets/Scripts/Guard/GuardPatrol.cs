@@ -5,23 +5,39 @@ using UnityEngine;
 
 public class GuardPatrol : GuardState
 {
+    private float elapsedTime;
+    private float waypointWait;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingWalkValue;
+        navMeshAgent.speed = myGuardStatus.walkSpeed;
+        elapsedTime = 0f;
+        waypointWait = -1;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         navMeshAgent.destination = myGuardStatus.wayPoints[myGuardStatus.nextWayPoint].position;
         navMeshAgent.isStopped = false;
 
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending)
         {
-            myGuardStatus.nextWayPoint = (myGuardStatus.nextWayPoint + 1) % myGuardStatus.wayPoints.Length;
+            if(waypointWait < 0)
+                waypointWait = Random.Range(myGuardStatus.waypointWaitMin, myGuardStatus.waypointWaitMax);
+
+            elapsedTime += Time.deltaTime;
+            myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
+            if (elapsedTime >= waypointWait)
+            {
+                elapsedTime = 0f;
+                waypointWait = -1;
+                myGuardStatus.nextWayPoint = (myGuardStatus.nextWayPoint + 1) % myGuardStatus.wayPoints.Length;
+                myGuardStatus.MovingStatus = CharacterStatus.movingWalkValue;
+            }
         }
 
         CheckTransitions();
