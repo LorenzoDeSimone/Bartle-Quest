@@ -9,6 +9,7 @@ public class GuardChase : GuardState
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
+        myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -21,8 +22,21 @@ public class GuardChase : GuardState
         CheckTransitions();
     }
 
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        navMeshAgent.isStopped = true;
+    }
+
     protected override void CheckTransitions()
     {
+        base.CheckTransitions();
+
+        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
+
+        if (distance <= myGuardStatus.attackRadius)
+            myFSM.SetBool("fighting", true);
+
         if (IsTargetInSight(myGuardStatus.chaseViewRadius))
         {
             myGuardStatus.lastTargetPosition = myGuardStatus.target.position;

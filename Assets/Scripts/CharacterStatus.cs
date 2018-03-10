@@ -126,7 +126,6 @@ public class CharacterStatus : MonoBehaviour
             return false;
         }
     }
-
     public bool DeathStatus
     {
         get

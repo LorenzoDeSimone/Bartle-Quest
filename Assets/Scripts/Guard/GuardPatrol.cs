@@ -9,6 +9,7 @@ public class GuardPatrol : GuardState
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
+        myGuardStatus.MovingStatus = CharacterStatus.movingWalkValue;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,6 +29,8 @@ public class GuardPatrol : GuardState
 
     protected override void CheckTransitions()
     {
+        base.CheckTransitions();
+
         if (IsTargetInSight(myGuardStatus.patrolViewRadius))
         {
             myGuardStatus.lastTargetPosition = myGuardStatus.target.position;

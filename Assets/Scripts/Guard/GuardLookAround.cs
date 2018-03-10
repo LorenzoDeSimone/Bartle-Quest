@@ -14,6 +14,8 @@ public class GuardLookAround : GuardState
         Initialization(animator);
         CalculateRandomDirections();
         elapsedTime = 0f;
+        myGuardStatus.MovingStatus = CharacterStatus.movingWalkValue;
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -34,8 +36,7 @@ public class GuardLookAround : GuardState
             {
                 Vector3 newDir = new Vector3(-myGuardStatus.transform.forward.x, -myGuardStatus.transform.forward.y, -myGuardStatus.transform.forward.z);
                 lookAroundRandomDirections[i] = newDir;
-            }
-            
+            }         
             else if (randValue <= 0.6666f)
                 lookAroundRandomDirections[i] = -myGuardStatus.transform.right;
             else
@@ -49,14 +50,15 @@ public class GuardLookAround : GuardState
         float percentageElapsedTime = elapsedTime / myGuardStatus.lookAroundTime;
 
         //CHEATING: goes a little bit closer to true player position
-        if (percentageElapsedTime <= 0.25f)
+        if (percentageElapsedTime <= 0.2f)
         {
             navMeshAgent.destination = myGuardStatus.target.position;
             navMeshAgent.isStopped = false;
         }
         else
         {
-            Debug.Log(lookAroundRandomDirections);
+            myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
+            //Debug.Log(lookAroundRandomDirections);
             navMeshAgent.isStopped = true;
             if (percentageElapsedTime <= 0.50f)
                 RotateTowards(myGuardStatus.transform.position + lookAroundRandomDirections[0]);
@@ -69,7 +71,9 @@ public class GuardLookAround : GuardState
 
     protected override void CheckTransitions()
     {
-        if(elapsedTime>= myGuardStatus.lookAroundTime)
+        base.CheckTransitions();
+
+        if (elapsedTime>= myGuardStatus.lookAroundTime)
             myFSM.SetTrigger("lookAroundDone");
 
         if (IsTargetInSight(myGuardStatus.chaseViewRadius))

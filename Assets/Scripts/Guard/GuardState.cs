@@ -7,10 +7,10 @@ public abstract class GuardState : State
 {
     [HideInInspector] protected NavMeshAgent navMeshAgent;
     [HideInInspector] protected GuardStatus myGuardStatus;
+    [HideInInspector] protected Hittable myHittable;
     [HideInInspector] protected Animator myFSM;
     [HideInInspector] private bool initDone = false;
 
-    protected override abstract void CheckTransitions();
     protected static readonly int targetNotSeen = 0 , targetInSight = 1;
 
     protected void Initialization(Animator animator)
@@ -20,6 +20,7 @@ public abstract class GuardState : State
             initDone = true;
             navMeshAgent = animator.GetComponentInParent<NavMeshAgent>();
             myGuardStatus = animator.GetComponentInParent<GuardStatus>();
+            myHittable = animator.GetComponentInParent<Hittable>();
             myFSM = animator;
         }
     }
@@ -73,5 +74,13 @@ public abstract class GuardState : State
             }
         }
         return false;
+    }
+
+    protected override void CheckTransitions()
+    {
+        if(myGuardStatus.DeathStatus)
+            myFSM.SetTrigger("isDead");
+        else if (myHittable.JustHit)
+            myFSM.SetTrigger("justHit");      
     }
 }
