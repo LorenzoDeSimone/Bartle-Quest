@@ -10,6 +10,7 @@ public class GuardGoToLastKnownPosition : GuardState
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
+        myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -24,6 +25,8 @@ public class GuardGoToLastKnownPosition : GuardState
 
     protected override void CheckTransitions()
     {
+        base.CheckTransitions();
+
         if (IsTargetInSight(myGuardStatus.chaseViewRadius))
         {
             myGuardStatus.lastTargetPosition = myGuardStatus.target.position;

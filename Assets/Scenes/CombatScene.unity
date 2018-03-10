@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -7572,7 +7572,7 @@ Prefab:
     - target: {fileID: 114413071463445476, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
       propertyPath: maxHealth
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114150410993596530, guid: 15c0c3221d278df419545bc6b87d9c17,
         type: 2}
@@ -17313,11 +17313,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canUseShield: 0
-  canMove: 0
-  canFall: 0
-  canAttack: 0
-  canDie: 0
-  AttackStates: []
+  canMove: 1
+  canFall: 1
+  canAttack: 1
+  canDie: 1
+  AttackStates:
+  - Attack01
+  attackRadius: 10
   distanceForInstantChase: 5
   patrolViewRadius: 15
   chaseViewRadius: 30
@@ -17343,7 +17345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8d21938d15ce4386a4a6e2479602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1
+  currHealth: 0
 --- !u!4 &1927549541 stripped
 Transform:
   m_PrefabParentObject: {fileID: 402658, guid: 31adaf37cc1247b4abd10cae46801550, type: 2}
@@ -17361,7 +17364,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

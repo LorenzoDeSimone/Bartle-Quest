@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GuardStatus : CharacterStatus
 {
+    [SerializeField] public float attackRadius = 5f;
     [SerializeField] public float distanceForInstantChase = 5f;
     [SerializeField] public float patrolViewRadius = 15f;
     [SerializeField] public float chaseViewRadius = 20f;
