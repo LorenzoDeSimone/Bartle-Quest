@@ -128,7 +128,7 @@ public class PlayerCamera : MonoBehaviour
 
     public bool IsInLockTargetStatus()
     {
-        return !player.Equals(target);
+        return target !=null && !player.Equals(target);
     }
 
     public bool IsTargetPressed()
@@ -141,7 +141,7 @@ public class PlayerCamera : MonoBehaviour
         if (target.Equals(player))
             return true;
         else
-            return (Input.GetButtonUp("TargetLock") || Vector3.Distance(target.position, player.position) > maxTargetDistance);
+            return (Input.GetButtonUp("TargetLock") || target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
     }
 
     void LateUpdate()

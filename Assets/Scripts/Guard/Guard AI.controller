@@ -101,6 +101,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732649de2bab76e448cd233f50e54690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114251287936630374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5201e7a5b7662c458f0b28237b60192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114342725073366650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +178,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8780020c26079a44ea04d6d2a78af8e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114927945604530070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99a42cffbf5cc941980b2da080f7a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 0}
+  myGuardStatus: {fileID: 0}
+  myHittable: {fileID: 0}
+  myFSM: {fileID: 0}
+  initDone: 0
 --- !u!1101 &1101010144695202538
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -557,7 +584,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114251287936630374}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

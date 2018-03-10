@@ -37,11 +37,14 @@ public class TargetManager : MonoBehaviour
         float currDist;
         foreach (Transform t in nearTargets)
         {
-            currDist = Vector3.Distance(t.position, transform.position);
-            if (currDist < minDist)
+            if (t != null)
             {
-                minDist = currDist;
-                nearestTarget = t;
+                currDist = Vector3.Distance(t.position, transform.position);
+                if (currDist < minDist)
+                {
+                    minDist = currDist;
+                    nearestTarget = t;
+                }
             }
         }
 
