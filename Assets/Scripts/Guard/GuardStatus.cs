@@ -22,6 +22,7 @@ public class GuardStatus : CharacterStatus
     [SerializeField] public Transform[] wayPoints;
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Vector3 lastTargetPosition;
+    [HideInInspector] public float timeToDisappearAfterDeath = 3f;
 
 
     // Use this for initialization
