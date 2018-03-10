@@ -65,7 +65,8 @@ public class Weapon : MonoBehaviour
                 }
                 //lastAnimatorState = currentAnimatorState.fullPathHash;
                 Hittable hitTarget = collision.collider.GetComponent<Hittable>();
-                if (hitTarget)
+                //Check to avoid "friendly fire"
+                if (hitTarget && !hitTarget.gameObject.layer.Equals(weaponHolder.gameObject.layer))
                 {
                     weaponHolder.AddHitEnemy(collision.gameObject);
                     Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
