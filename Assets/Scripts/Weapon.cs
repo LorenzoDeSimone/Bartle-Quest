@@ -59,17 +59,17 @@ public class Weapon : MonoBehaviour
             }
             else
             {
-                if (!weaponHolder.gameObject.Equals("Guard"))
+                /*if (!weaponHolder.gameObject.Equals("Guard"))
                 {
                     Debug.Log(weaponHolder.gameObject.name + " Hits" + collision.collider.name);
-                }
+                }*/
                 //lastAnimatorState = currentAnimatorState.fullPathHash;
                 Hittable hitTarget = collision.collider.GetComponent<Hittable>();
                 //Check to avoid "friendly fire"
                 if (hitTarget && !hitTarget.gameObject.layer.Equals(weaponHolder.gameObject.layer))
                 {
                     weaponHolder.AddHitEnemy(collision.gameObject);
-                    Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
+                    //Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
                     hitTarget.Hit(damage);
                 }
             }
