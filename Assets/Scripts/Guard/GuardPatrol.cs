@@ -6,14 +6,14 @@ using UnityEngine;
 public class GuardPatrol : GuardState
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-    //
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Initialization(animator);
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Initialization(animator);
 
         navMeshAgent.destination = myGuardStatus.wayPoints[myGuardStatus.nextWayPoint].position;
         navMeshAgent.isStopped = false;
@@ -28,7 +28,13 @@ public class GuardPatrol : GuardState
 
     protected override void CheckTransitions()
     {
-        myFSM.SetBool("playerInSight", IsTargetInSight());
+        if (IsTargetInSight(myGuardStatus.patrolViewRadius))
+        {
+            myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
+            myFSM.SetInteger("targetInSight", GuardState.targetInSight);
+        }
+        else
+            myFSM.SetInteger("targetInSight", GuardState.targetNotSeen);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
