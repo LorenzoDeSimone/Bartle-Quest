@@ -13,6 +13,7 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] private bool canDie;
 
     [SerializeField] private string[] AttackStates;
+    public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
 
     private Animator myAnimator;
 

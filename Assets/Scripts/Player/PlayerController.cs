@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool debug;
 
     private bool fallHitSet;
-    private static readonly int idleValue = 0, walkingValue = 1, runningValue = 2;
     private float angle;
     private float groundAngle;
     private Vector2 input;
@@ -144,11 +143,11 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
-            myPlayerStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
         }
         else
         {
-            myPlayerStatus.MovingStatus = runningValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingRunValue;
 
             transform.position += forward * velocity * sign * Time.deltaTime;
         }
@@ -184,7 +183,7 @@ public class PlayerController : MonoBehaviour
         
         if (groundAngle > maxGroundAngle || myPlayerStatus.AttackingStatus || !IsBorderOK())
         {
-            myPlayerStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
             return;
         }
 
@@ -193,16 +192,16 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(input.x) < inputEpsilon && Mathf.Abs(input.y) < inputEpsilon)
         {
-            myPlayerStatus.MovingStatus = idleValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
         }
         else if (Mathf.Abs(input.x) <= runningThreshold && Mathf.Abs(input.y) <= runningThreshold)
         {
-            myPlayerStatus.MovingStatus = walkingValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingWalkValue;
             transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x),Mathf.Abs(input.y)) * Time.deltaTime;
         }
         else
         {
-            myPlayerStatus.MovingStatus = runningValue;
+            myPlayerStatus.MovingStatus = CharacterStatus.movingRunValue;
             transform.position += forward * velocity * Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y)) * Time.deltaTime;
         }
     }

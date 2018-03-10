@@ -11,6 +11,7 @@ public abstract class GuardState : State
     [HideInInspector] private bool initDone = false;
 
     protected override abstract void CheckTransitions();
+    protected static readonly int targetNotSeen = 0 , targetInSight = 1;
 
     protected void Initialization(Animator animator)
     {
@@ -23,9 +24,9 @@ public abstract class GuardState : State
         }
     }
 
-    protected void Rotate()
+    protected void RotateTowards(Vector3 target)
     {
-        Vector3 sameYTarget = new Vector3(myGuardStatus.target.position.x, myGuardStatus.transform.position.y, myGuardStatus.target.position.z);
+        Vector3 sameYTarget = new Vector3(target.x, myGuardStatus.transform.position.y, target.z);
         Quaternion targetRotation = Quaternion.LookRotation(sameYTarget - myGuardStatus.transform.position, Vector3.up);
         myGuardStatus.transform.rotation = Quaternion.Slerp(myGuardStatus.transform.rotation, targetRotation, myGuardStatus.turnSpeed * Time.deltaTime);
     }
@@ -40,7 +41,7 @@ public abstract class GuardState : State
     }
 
     //List of utility functions to be used during transition checks
-    protected bool IsTargetInSight()
+    protected bool IsTargetInSight(float viewRadius)
     {
         if (!initDone)
             return false;
@@ -48,16 +49,17 @@ public abstract class GuardState : State
         Vector3 viewAngleA = DirFromAngle(-myGuardStatus.viewAngle * 0.5f, false);
         Vector3 viewAngleB = DirFromAngle(myGuardStatus.viewAngle * 0.5f, false);
 
-        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleA * myGuardStatus.viewRadius, Color.red);
-        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleB * myGuardStatus.viewRadius, Color.red);
+        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleA * viewRadius, Color.red);
+        Debug.DrawLine(myFSM.transform.position, myFSM.transform.position + viewAngleB * viewRadius, Color.red);
 
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
         //Debug.Log(targetColliders.Length);
-        if(distance <= myGuardStatus.distanceForInstantChase)
-            return true;
-        else if (Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position) <= myGuardStatus.viewRadius)
-        {
 
+        //If the target is running and is near the guard, it will chase regardless of direction
+        if(distance <= myGuardStatus.distanceForInstantChase && myGuardStatus.target.GetComponent<CharacterStatus>().MovingStatus == CharacterStatus.movingRunValue)
+            return true;
+        else if (Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position) <= viewRadius)
+        {
             Vector3 directionToTarget = myGuardStatus.target.position - myFSM.transform.position;
             //Checks if the target is within the angle of sight
             if (Vector3.Angle(myFSM.transform.forward, directionToTarget) < myGuardStatus.viewAngle * 0.5f)
