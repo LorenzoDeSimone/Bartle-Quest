@@ -16,7 +16,7 @@ public class GuardGoToLastKnownPosition : GuardState
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        RotateTowards(myGuardStatus.target.position);
+        //RotateTowards(myGuardStatus.target.position);
         navMeshAgent.destination = myGuardStatus.lastTargetPosition;
         navMeshAgent.isStopped = false;
 

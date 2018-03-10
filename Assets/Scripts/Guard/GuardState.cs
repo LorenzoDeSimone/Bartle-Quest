@@ -19,6 +19,7 @@ public abstract class GuardState : State
         {
             initDone = true;
             navMeshAgent = animator.GetComponentInParent<NavMeshAgent>();
+            navMeshAgent.updateRotation = true;
             myGuardStatus = animator.GetComponentInParent<GuardStatus>();
             myHittable = animator.GetComponentInParent<Hittable>();
             myFSM = animator;

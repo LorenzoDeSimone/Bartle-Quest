@@ -17,12 +17,13 @@ public class GuardFight : GuardState
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        RotateTowards(myGuardStatus.target.position);
 
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
 
         if (distance <= navMeshAgent.stoppingDistance && !myGuardStatus.DeathStatus)
         {
+            navMeshAgent.isStopped = true;
+            RotateTowards(myGuardStatus.target.position);
             myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
             myGuardStatus.RequestAttack();
         }
