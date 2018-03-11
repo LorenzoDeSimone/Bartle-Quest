@@ -28,21 +28,11 @@ public class Weapon : MonoBehaviour
                 Debug.LogError("The weapon holder as no animator.");
         }
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        //If attacking is finished, last animator state reset
-        //if (!weaponHolder.AttackingStatus)
-        //    weaponHolder.canWeaponHit = true;// lastAnimatorState = -1;
-    }
 
     void OnCollisionStay(Collision collision)
     {
 
         //Hits only if it is the first collision in the current animator state
-        //AnimatorStateInfo currentAnimatorState = myAnimator.GetCurrentAnimatorStateInfo(0);
-        //Debug.Log(currentAnimatorState.fullPathHash);
 
         //Debug.Log(weaponHolder.gameObject.name +" Hits" + collision.collider.name);
 
@@ -53,9 +43,12 @@ public class Weapon : MonoBehaviour
             //currentAnimatorState.fullPathHash != lastAnimatorState)
         {
             Shield hitShield = collision.collider.GetComponent<Shield>();
-            if (hitShield && hitShield.GetShieldHolder().ShieldUpStatus)
+            if (hitShield && hitShield.GetShieldHolder()!=null && hitShield.GetShieldHolder().ShieldUpStatus)
             {
+                if (weaponHolder.CanWeaponHit(hitShield.GetShieldHolder().gameObject))
+                    hitShield.ActivateBlockEffect();
                 weaponHolder.AddHitEnemy(hitShield.GetShieldHolder().gameObject, true);
+                weaponHolder.AttackBlocked();
             }
             else
             {
