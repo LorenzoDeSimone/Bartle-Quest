@@ -12,6 +12,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private int damage = 1;
 
+    [SerializeField]
+    private GameObject WeaponHitEffect;
+
     private Animator myAnimator;
     private int lastAnimatorState = -1;
 
@@ -64,6 +67,12 @@ public class Weapon : MonoBehaviour
                     weaponHolder.AddHitEnemy(collision.gameObject);
                     //Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
                     hitTarget.Hit(damage);
+                    if (WeaponHitEffect != null)
+                    {
+                        Debug.Log("aaa");
+                        GameObject hitEffect = Instantiate(WeaponHitEffect, collision.contacts[0].point, collision.collider.transform.rotation);
+                        hitEffect.transform.parent = collision.gameObject.transform;
+                    }
                 }
             }
         }
