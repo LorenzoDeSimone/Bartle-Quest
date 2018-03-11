@@ -15,6 +15,7 @@ public class GuardFight : GuardState
         timefromLastAttack = 0;
         navMeshAgent.speed = myGuardStatus.runSpeed;
         elapsedTime = 0;
+        myFSM.SetBool("fighting", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -67,9 +68,10 @@ public class GuardFight : GuardState
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
 
         if (distance > myGuardStatus.attackRadius)
+        {
             myFSM.SetBool("fighting", false);
-
-        if (IsTargetInSight(myGuardStatus.chaseViewRadius))
+        } 
+        /*if (IsTargetInSight(myGuardStatus.chaseViewRadius))
         {
             myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
             myFSM.SetInteger("targetInSight", GuardState.targetInSight);
@@ -77,6 +79,6 @@ public class GuardFight : GuardState
         else
         {
             myFSM.SetInteger("targetInSight", GuardState.targetNotSeen);
-        }
+        }*/
     }
 }

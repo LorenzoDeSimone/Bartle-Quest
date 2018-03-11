@@ -49,9 +49,12 @@ public class Weapon : MonoBehaviour
             if (hitShield && hitShield.GetShieldHolder()!=null && hitShield.GetShieldHolder().ShieldUpStatus)
             {
                 if (weaponHolder.CanWeaponHit(hitShield.GetShieldHolder().gameObject))
+                {
                     hitShield.ActivateBlockEffect();
+                    weaponHolder.AttackBlocked();
+                }
+
                 weaponHolder.AddHitEnemy(hitShield.GetShieldHolder().gameObject, true);
-                weaponHolder.AttackBlocked();
             }
             else
             {

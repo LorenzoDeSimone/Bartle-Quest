@@ -15,6 +15,9 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] private string[] AttackStates;
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
 
+    [SerializeField] private bool isNPC;
+    [SerializeField] private Animator AIManager;
+
     private Animator myAnimator;
 
     private bool shieldUpThisFrame;
@@ -30,6 +33,8 @@ public class CharacterStatus : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
+        if(isNPC && AIManager==null)
+            Debug.LogError("No AI Manager for an NPC!");
     }
 
     public bool ShieldUpStatus
@@ -162,13 +167,29 @@ public class CharacterStatus : MonoBehaviour
         if (!AttackingStatus)
             return;
         else
+        {
+            if(isNPC)
+                FSM.SetTrigger("attackBlocked");
+
             myAnimator.SetTrigger("attackBlocked");
+        }
     }
 
     //Method used in animation event
     public void DisableTransitionsToFalse()
     {
         myAnimator.SetBool("disableTransitions", false);
+    }
+
+    public Animator FSM
+    {
+        get
+        {
+            if (isNPC)
+                return AIManager;
+            else
+                return null;
+        }
     }
 
 }

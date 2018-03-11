@@ -76,9 +76,9 @@ public abstract class GuardState : State
 
     protected override void CheckTransitions()
     {
-        if(myGuardStatus.DeathStatus)
+        if (myGuardStatus.DeathStatus)
             myFSM.SetTrigger("isDead");
         else if (myHittable.JustHit)
-            myFSM.SetTrigger("justHit");      
+            myFSM.SetTrigger("justHit");
     }
 }
