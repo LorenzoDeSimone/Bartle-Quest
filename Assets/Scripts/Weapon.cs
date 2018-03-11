@@ -69,7 +69,6 @@ public class Weapon : MonoBehaviour
                     hitTarget.Hit(damage);
                     if (WeaponHitEffect != null)
                     {
-                        Debug.Log("aaa");
                         GameObject hitEffect = Instantiate(WeaponHitEffect, collision.contacts[0].point, collision.collider.transform.rotation);
                         hitEffect.transform.parent = collision.gameObject.transform;
                     }
