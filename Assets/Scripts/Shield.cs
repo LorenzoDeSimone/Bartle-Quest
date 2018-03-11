@@ -15,6 +15,5 @@ public class Shield : MonoBehaviour
     public void ActivateBlockEffect()
     {
         blockEffect.GetComponent<ParticleSystem>().Play();
-        Debug.Log("www");
     }
 }
