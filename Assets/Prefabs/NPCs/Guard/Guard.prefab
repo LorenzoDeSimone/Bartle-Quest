@@ -2053,14 +2053,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564785477316146}
-  m_Mesh: {fileID: 4300000, guid: d0e9233f7d6cd6845a61375480397b5a, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 2558e7e237c24df42bc4f64f181b8b26, type: 3}
 --- !u!33 &33226209071685234
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896529835254024}
-  m_Mesh: {fileID: 4300000, guid: 4c7be9afe307e2147ba49a73fd2b0c92, type: 3}
+  m_Mesh: {fileID: 4300000, guid: df46d3bcc706da54fb456e26d3a9a6f7, type: 3}
 --- !u!54 &54189424340113198
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2101,8 +2101,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3635414, y: 3.1852033, z: 0.5370621}
-  m_Center: {x: 0.000000040534317, y: 0.10525137, z: 0.039786424}
+  m_Size: {x: 1.3635414, y: 1.9919863, z: 0.5370621}
+  m_Center: {x: 0.00000007585403, y: 0.70186216, z: 0.039786436}
 --- !u!65 &65914215261707924
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2124,7 +2124,7 @@ Animator:
   m_GameObject: {fileID: 1926739505367722}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03638d30ee691a04cb24ac3ae2c98228, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2194,7 +2194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8d21938d15ce4386a4a6e2479602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 5
   currHealth: 0
 --- !u!114 &114335884271598576
 MonoBehaviour:
@@ -2308,7 +2308,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: bf70d89dc023c4f4e80d5cf40becae97, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f49facc24bce13043b5c01c1e8fd8b5f, type: 3}
   m_Bones:
   - {fileID: 4396574649196660}
   - {fileID: 4825404705785780}

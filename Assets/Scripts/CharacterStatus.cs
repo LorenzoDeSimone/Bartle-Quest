@@ -157,6 +157,14 @@ public class CharacterStatus : MonoBehaviour
             myAnimator.SetTrigger("comboButtonPressed");
     }
 
+    public void AttackBlocked()
+    {
+        if (!AttackingStatus)
+            return;
+        else
+            myAnimator.SetTrigger("attackBlocked");
+    }
+
     //Method used in animation event
     public void DisableTransitionsToFalse()
     {
