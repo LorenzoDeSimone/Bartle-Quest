@@ -9,6 +9,9 @@ public class GuardStatus : CharacterStatus
     [SerializeField] public float patrolViewRadius = 15f;
     [SerializeField] public float chaseViewRadius = 20f;
 
+    [SerializeField] public GameObject DeathFade;
+    [SerializeField] public float timeToDisappearAfterDeath = 1.5f;
+
     [SerializeField] public float walkSpeed = 2f;
     [SerializeField] public float runSpeed = 4f;
 
@@ -22,7 +25,6 @@ public class GuardStatus : CharacterStatus
     [SerializeField] public Transform[] wayPoints;
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Vector3 lastTargetPosition;
-    [HideInInspector] public float timeToDisappearAfterDeath = 3f;
 
 
     // Use this for initialization
