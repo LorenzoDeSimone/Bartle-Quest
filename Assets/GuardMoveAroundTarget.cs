@@ -15,12 +15,12 @@ public class GuardMoveAroundTarget : GuardState
         //Percentage of going nowhere around character
         if (utilityRandom <= 0.5f)
         {
-            Debug.Log("I stay and fight");
+            //Debug.Log("I stay and fight");
             myFSM.SetTrigger("moveAroundTargetDone");
         }
         else
         {
-            Debug.Log("I go back a little");
+            //Debug.Log("I go back a little");
             //Same number used to get a random distance for the agent to go back
             utilityRandom = 1 + utilityRandom * 0.5f;
 

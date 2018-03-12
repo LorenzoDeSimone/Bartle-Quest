@@ -4,40 +4,44 @@ using UnityEngine;
 
 public class GuardFight : GuardState
 {
-    float timefromLastAttack;
-    float elapsedTime;
+    private float timefromLastAttack;
+    private float elapsedTime;
+    private float timeToWaitBeforeAttack;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
-        timefromLastAttack = 0;
         navMeshAgent.speed = myGuardStatus.runSpeed;
-        elapsedTime = 0;
         myFSM.SetBool("fighting", true);
+
+        timeToWaitBeforeAttack = Random.Range(0f, 2f);
+        elapsedTime = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        elapsedTime += Time.deltaTime;
-
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
 
+        //Actual fighting case
         if (distance <= navMeshAgent.stoppingDistance && !myGuardStatus.DeathStatus)
         {
+            elapsedTime += Time.deltaTime;
             navMeshAgent.isStopped = true;
             RotateTowards(myGuardStatus.target.position);
             myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
-            if (elapsedTime > 2f)
+            if (elapsedTime > timeToWaitBeforeAttack)
             {
                 elapsedTime = 0f;
                 myGuardStatus.RequestAttack();
+                myFSM.SetTrigger("newCombo");
             }
         }
         else
         {
+            elapsedTime = 0f;
             navMeshAgent.destination = myGuardStatus.target.position;
             navMeshAgent.isStopped = false;
             myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
