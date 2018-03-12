@@ -11,6 +11,7 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] private bool canFall;
     [SerializeField] private bool canAttack;
     [SerializeField] private bool canDie;
+    [SerializeField] private bool canCollectItems;
 
     [SerializeField] private string[] AttackStates;
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
@@ -35,6 +36,11 @@ public class CharacterStatus : MonoBehaviour
             Debug.LogError("No animator!");
         if(isNPC && AIManager==null)
             Debug.LogError("No AI Manager for an NPC!");
+    }
+
+    public bool CanCollectItems
+    {
+        get { return canCollectItems; }
     }
 
     public bool ShieldUpStatus

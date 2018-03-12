@@ -69,7 +69,7 @@ public class Weapon : MonoBehaviour
                 {
                     weaponHolder.AddHitEnemy(collision.gameObject);
                     //Debug.Log(weaponHolder.gameObject.name + " hits " + collision.gameObject);
-                    hitTarget.Hit(damage);
+                    hitTarget.UpdateHealth(-damage);
                     if (WeaponHitEffect != null)
                     {
                         GameObject hitEffect = Instantiate(WeaponHitEffect, collision.contacts[0].point, collision.collider.transform.rotation);

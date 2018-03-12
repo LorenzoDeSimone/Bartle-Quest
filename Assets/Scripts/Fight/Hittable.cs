@@ -29,13 +29,13 @@ public class Hittable : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        justHit = previousUpdateHealth != currHealth;
+        justHit = previousUpdateHealth < currHealth;
         previousUpdateHealth = currHealth;
 	}
 
-    public void Hit (int damage)
+    public void UpdateHealth (int deltaHealth)
     {
-        currHealth -= damage;
+        currHealth += deltaHealth;
         if (currHealth <= 0)
             Die();
     }
