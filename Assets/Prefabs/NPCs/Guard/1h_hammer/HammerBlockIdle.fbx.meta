@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 430a76fa3f885cf46a06102501c86942
+guid: 354e762c5275e5245a20c88c25e2ed1f
 labels:
 - Animation
 - Fantasy
 - Hero
-- Sword
+- Hammer
 - Shard
 - Saga
-timeCreated: 1470160454
+timeCreated: 1470160452
 licenseType: Store
 ModelImporter:
   serializedVersion: 22
@@ -126,7 +126,7 @@ ModelImporter:
     400108: biped:mr:spine_01_jnt
     400110: biped:mr:spine_02_jnt
     400112: //RootNode
-    7400000: 1h_sword_block_idle
+    7400000: 1h_hammer_block_idle
     9500000: //RootNode
     11100000: //RootNode
   externalObjects: {}
@@ -157,7 +157,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 1h_sword_block_idle
+      name: 1h_hammer_block_idle
       takeName: Take 001
       firstFrame: 0
       lastFrame: 60
