@@ -9,7 +9,7 @@ public class Hittable : MonoBehaviour
     [SerializeField]
     private int maxHealth = 1;
     private int previousUpdateHealth;
-    [SerializeField] private int currHealth;
+    [SerializeField] private int currentHealth;
     private bool justHit;
 
     private CharacterStatus myCharacterStatus;
@@ -20,23 +20,33 @@ public class Hittable : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         myCharacterStatus = GetComponent<CharacterStatus>();
-        currHealth = previousUpdateHealth = maxHealth;
+        currentHealth = previousUpdateHealth = maxHealth;
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
-        justHit = previousUpdateHealth < currHealth;
-        previousUpdateHealth = currHealth;
-	}
+        justHit = previousUpdateHealth > currentHealth;
+        previousUpdateHealth = currentHealth;
+    }
+
+    public int MaxHealth
+    {
+        get { return maxHealth; }
+    }
+
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
+    }
 
     public void UpdateHealth (int deltaHealth)
     {
-        currHealth += deltaHealth;
-        if (currHealth <= 0)
+        currentHealth += deltaHealth;
+        if (currentHealth <= 0)
             Die();
     }
 

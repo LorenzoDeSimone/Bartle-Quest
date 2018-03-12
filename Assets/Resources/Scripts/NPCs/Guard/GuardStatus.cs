@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GuardStatus : CharacterStatus
 {
+    [SerializeField] public GameObject DeathFade;
+    [SerializeField] private Transform characterMotionRoot;
+
     [SerializeField] public float attackRadius = 5f;
     [SerializeField] public float distanceForInstantChase = 5f;
     [SerializeField] public float patrolViewRadius = 15f;
     [SerializeField] public float chaseViewRadius = 20f;
 
-    [SerializeField] public GameObject DeathFade;
     [SerializeField] public float timeToDisappearAfterDeath = 1.5f;
 
     [SerializeField] public float walkSpeed = 2f;
@@ -26,10 +28,10 @@ public class GuardStatus : CharacterStatus
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Vector3 lastTargetPosition;
 
-
     // Use this for initialization
     protected new void Start ()
     {
         base.Start();
-	}
+        HealthBar.CreateHealthBar(characterMotionRoot, GetComponent<Hittable>());
+    }
 }
