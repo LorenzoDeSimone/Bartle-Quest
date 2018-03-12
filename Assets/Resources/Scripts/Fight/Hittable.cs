@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class Hittable : MonoBehaviour
 {
-    [SerializeField]
-    private int maxHealth = 1;
+    [SerializeField] private int maxHealth = 1;
     private int previousUpdateHealth;
-    [SerializeField] private int currentHealth;
+    private int currentHealth;
     private bool justHit;
 
     private CharacterStatus myCharacterStatus;
@@ -45,7 +44,7 @@ public class Hittable : MonoBehaviour
 
     public void UpdateHealth (int deltaHealth)
     {
-        currentHealth += deltaHealth;
+        currentHealth = Mathf.Clamp(currentHealth + deltaHealth, 0, maxHealth);
         if (currentHealth <= 0)
             Die();
     }
