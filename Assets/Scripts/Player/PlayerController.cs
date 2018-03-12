@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
             forward = (cameraForward * input.y + cameraRight * input.x).normalized;
             //Debug.DrawRay(transform.position, forward * 2, Color.red);
         }
-        else
+        /*else
         {
             if (!myPlayerStatus.GroundedStatus)
             {
@@ -250,7 +250,7 @@ public class PlayerController : MonoBehaviour
             //Debug.DrawRay(hitInfo.point, -transform.right, Color.yellow);
             //Debug.DrawRay(transform.position,Vector3.Cross(hitInfo.normal, -transform.right), Color.red);
             forward = transform.forward;//Vector3.Cross(hitInfo.normal, -transform.right);
-        }
+        }*/
     }
 
     /// <summary>
