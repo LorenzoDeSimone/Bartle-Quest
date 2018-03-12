@@ -23,7 +23,7 @@ public class CharacterStatus : MonoBehaviour
     private bool shieldUpThisFrame;
     private float currAnimationLenght;
     private int lastAnimatorState;
-
+    
     private HashSet<GameObject> hitEnemies;
 
     // Use this for initialization
@@ -73,6 +73,7 @@ public class CharacterStatus : MonoBehaviour
         }
     }
 
+
     public bool GroundedStatus
     {
         get
@@ -87,8 +88,11 @@ public class CharacterStatus : MonoBehaviour
             if (!canMove)
                 return;
 
-            if (GroundedStatus != value && !value)
+            if (myAnimator.GetBool("isGrounded") && !value)
+            {
+                //Debug.Log("aa");
                 myAnimator.SetTrigger("isFalling");
+            }
 
             myAnimator.SetBool("isGrounded", value);
         }

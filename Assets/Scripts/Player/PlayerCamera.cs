@@ -28,7 +28,7 @@ public class PlayerCamera : MonoBehaviour
         Vector3 angles = transform.eulerAngles;
         player = target;
         defaultTargetManager = player.GetComponent<TargetManager>();
-        myPlayerStatus = player.GetComponent<CharacterStatus>();
+        myPlayerStatus = player.GetComponentInParent<CharacterStatus>();
         x = angles.y;
         y = angles.x;
         standardDistance = distance;
@@ -138,10 +138,10 @@ public class PlayerCamera : MonoBehaviour
 
     public bool IsTargetReleased()
     {
-        if (target.Equals(player))
+        if (player.Equals(target))
             return true;
         else
-            return (Input.GetButtonUp("TargetLock") || target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
+            return (Input.GetButtonUp("TargetLock") ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
     }
 
     void LateUpdate()
