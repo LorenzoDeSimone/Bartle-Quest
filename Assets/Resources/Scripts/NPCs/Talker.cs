@@ -25,12 +25,11 @@ public class Talker : MonoBehaviour
     }
 
     private bool dialogueInitialized;
-
     void Update()
     {
         if (dialogueInitialized)
             return;
-
+        Debug.Log("WAAA");
         GameObject Canvas = GameObject.Find("CanvasPlayerUI");
         Canvas.GetComponent<DialogueManager>().InitDialogue(this);
         dialogueInitialized = true;
