@@ -29,7 +29,7 @@ public class Talker : MonoBehaviour
     {
         if (dialogueInitialized)
             return;
-        Debug.Log("WAAA");
+
         GameObject Canvas = GameObject.Find("CanvasPlayerUI");
         Canvas.GetComponent<DialogueManager>().InitDialogue(this);
         dialogueInitialized = true;
