@@ -148,7 +148,7 @@ public class CharacterStatus : MonoBehaviour
             if (!canDie)
                 return false;
 
-            return myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death");
+            return myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") || myAnimator.GetAnimatorTransitionInfo(0).IsName("AnyState -> Death");
         }
         set
         {
