@@ -40,19 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 5
+  fileIndex: 0
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 62679
+  currentID: 21577
   autosave: 1
   previewPanning: 0
-  currentDiag: 5
+  currentDiag: 0
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Let's kill the moonlight! ZZAAAP!
+    - text: Would you be so kind to eat us? We want to die.
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -70,19 +70,19 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: -560
-      y: -250
+      x: -750
+      y: -400
       width: 316
-      height: 99
+      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 2
+  - commentCount: 3
     s_comment:
-    - text: '...What?'
+    - text: You're creeping me out.
       extraData: ExtraData
       inputSetIndex: 1
       outputNodeIndex: 3
@@ -97,10 +97,10 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: Do you want to destroy the moon?
+    - text: Err... Aren't you afraid of death?
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 6
+      outputNodeIndex: 2
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -112,13 +112,28 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
+    - text: What the hell! How can you even write on your phone?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 89
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: -500
-      y: -10
+      x: -310
+      y: -400
       width: 316
-      height: 130
+      height: 150
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -127,7 +142,8 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: Let's build a road from the highest mountain to the deepest sea!
+    - text: We'd rather die young and be remembered in a painting than slowly rot
+        in basket and be thrown away.
       extraData: ExtraData
       inputSetIndex: 2
       outputNodeIndex: 4
@@ -135,20 +151,20 @@ MonoBehaviour:
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 2
     rect:
       serializedVersion: 2
-      x: 90
-      y: 70
-      width: 316
-      height: 123
+      x: 110
+      y: -400
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -157,10 +173,40 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: The roar of the lion! The roar of the lion will make the capital younger!
-        Do you want to come with me!?
+    - text: It's a rather curious statement for someone who just swiped right to a
+        bunch of fruits in a dating app.
       extraData: ExtraData
       inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    rect:
+      serializedVersion: 2
+      x: 110
+      y: -580
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: That's a deep man. How can I help?
+      extraData: ExtraData
+      inputSetIndex: 4
       outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
@@ -173,31 +219,16 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 3
-    rect:
-      serializedVersion: 2
-      x: -140
-      y: -270
-      width: 316
-      height: 136
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: I will crush the skull of the greatest sea monster!
+    - text: I never thought I could get life lessons from a basket of fruit.
       extraData: ExtraData
       inputSetIndex: 4
-      outputNodeIndex: 7
+      outputNodeIndex: 6
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 281
-        y: 49
+        y: 80
         width: 30
         height: 18
       sprites: {fileID: 0}
@@ -206,145 +237,71 @@ MonoBehaviour:
     ID: 4
     rect:
       serializedVersion: 2
-      x: 390
-      y: -130
+      x: -320
+      y: -190
       width: 316
-      height: 110
+      height: 141
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 1
-  - commentCount: 2
+  - commentCount: 1
     s_comment:
-    - text: '...Roar?'
+    - text: Use that knife. Kill us. Eat us.
       extraData: ExtraData
       inputSetIndex: 5
-      outputNodeIndex: 8
+      outputNodeIndex: 7
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: ROAR!
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 10
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 5
     rect:
       serializedVersion: 2
-      x: 280
-      y: -600
-      width: 316
-      height: 119
+      x: 100
+      y: -20
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 1
+    isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: The light. Only the light! Zzzaap, and gone, forever!
+    - text: We learned how to speak and type watching TV. Life never ceases to amaze.
+        Nevertheless, we need your help.
       extraData: ExtraData
       inputSetIndex: 6
-      outputNodeIndex: 2
+      outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 6
     rect:
       serializedVersion: 2
-      x: -340
-      y: 220
-      width: 316
-      height: 110
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: That is talking!
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 7
-    rect:
-      serializedVersion: 2
-      x: 640
-      y: 30
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Not enough young myrmidon! BOOM!
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: 9
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 8
-    rect:
-      serializedVersion: 2
-      x: 500
-      y: -340
-      width: 316
-      height: 110
+      x: 100
+      y: -230
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -353,74 +310,74 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 2
     s_comment:
-    - text: ROAR!
+    - text: Ok, fine... I'll be as gentle as possible. (Use knife)
       extraData: ExtraData
-      inputSetIndex: 9
-      outputNodeIndex: 10
+      inputSetIndex: 7
+      outputNodeIndex: 8
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: YOU ARE A WEIRDO!
+    - text: I have no choice, I'll devour you.
       extraData: ExtraData
-      inputSetIndex: 9
-      outputNodeIndex: 13
+      inputSetIndex: 7
+      outputNodeIndex: 9
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 9
+    ID: 7
     rect:
       serializedVersion: 2
-      x: 670
-      y: -710
-      width: 316
-      height: 119
+      x: 390
+      y: 180
+      width: 300
+      height: 100
     pTag: 
     expand: 0
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 84a9114ab28f94e469a62b9feae04bf0, type: 3}
     vars: []
     varKeys: []
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: ROAR! Let's kill the moonlight! We will meet at 6 o'clock, I'll come and
-        get you with my biplane! SWOOSH
+    - text: (You feel healthy but you've never felt so guilty after eating a fruit
+        in your entire life.)
       extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: 11
+      inputSetIndex: 8
+      outputNodeIndex: 10
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 10
+    ID: 8
     rect:
       serializedVersion: 2
-      x: 900
-      y: -410
-      width: 316
-      height: 136
+      x: 850
+      y: -370
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -429,44 +386,10 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: 'That is talking!
-
-        (You meet with this strange man with long mustaches. He is weaing fake wings,
-        a long golden wig and a pair of sandals. He''s a great pilot... and a great
-        kisser.)'
+    - text: (You smash the fruit with your teeths. You feel empty, as if you assimilated
+        its nihilism.)
       extraData: ExtraData
-      inputSetIndex: 11
-      outputNodeIndex: 12
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 11
-    rect:
-      serializedVersion: 2
-      x: 840
-      y: -190
-      width: 316
-      height: 162
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: (After you shared some intimacy, he starts shooting in the air with his
-        shotgun, aiming for invisible demons. What a weirdo.)
-      extraData: ExtraData
-      inputSetIndex: 12
+      inputSetIndex: 9
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -479,13 +402,13 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 12
+    ID: 9
     rect:
       serializedVersion: 2
-      x: 1270
-      y: -180
-      width: 316
-      height: 136
+      x: 830
+      y: -50
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -494,34 +417,34 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Yes I am indeed. ZZZAP!
+    - text: Exit
       extraData: ExtraData
-      inputSetIndex: 13
-      outputNodeIndex: 10
+      inputSetIndex: 10
+      outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 13
+    ID: 10
     rect:
       serializedVersion: 2
-      x: 1100
-      y: -600
-      width: 316
-      height: 99
+      x: 1000
+      y: -200
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 0
+    isPlayer: 1
   S_actionNodes: []
 --- !u!1001 &100100000
 Prefab:
