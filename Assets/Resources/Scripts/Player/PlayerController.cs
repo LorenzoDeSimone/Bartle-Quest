@@ -68,6 +68,10 @@ public class PlayerController : MonoBehaviour
         int absVerticalAxisRaw = (int) Mathf.Abs(Input.GetAxisRaw("Vertical"));
         if (absVerticalAxisRaw > previousFrameVerticalRaw)
             dialogueManager.HightLightChoice((int)Mathf.Sign(input.y));
+
+        if (Input.GetButtonDown("A"))
+            dialogueManager.DialogueChoiceConfirmed();
+
         previousFrameVerticalRaw = absVerticalAxisRaw;
     }
 
