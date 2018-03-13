@@ -3175,12 +3175,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 97946783}
-  m_Father: {fileID: 313209335}
-  m_RootOrder: 2
+  m_Father: {fileID: 1351385604}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 700, y: 205.00003}
+  m_AnchoredPosition: {x: 700, y: 130.00003}
   m_SizeDelta: {x: 350, y: 120}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &282718643
@@ -3618,12 +3618,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1209372064}
-  m_Father: {fileID: 313209335}
-  m_RootOrder: 1
+  m_Father: {fileID: 1351385604}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 700, y: 75}
+  m_AnchoredPosition: {x: 700, y: 0}
   m_SizeDelta: {x: 350, y: 120}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &309698990
@@ -3669,7 +3669,7 @@ GameObject:
   - component: {fileID: 313209335}
   - component: {fileID: 313209336}
   m_Layer: 5
-  m_Name: DialoguePanel
+  m_Name: DialogueUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3686,9 +3686,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1351385604}
-  - {fileID: 309698989}
-  - {fileID: 282718642}
-  - {fileID: 1633307420}
   m_Father: {fileID: 579632067}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5818,7 +5815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e00ef8b81853a439617a710c8353ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 313209334}
+  dialoguePanel: {fileID: 1351385603}
   nameField: {fileID: 1090472510}
   dialogueField: {fileID: 1027946337}
   choiceFields:
@@ -12786,7 +12783,7 @@ GameObject:
   - component: {fileID: 1351385606}
   - component: {fileID: 1351385605}
   m_Layer: 5
-  m_Name: TextPanel
+  m_Name: DialoguePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12804,6 +12801,9 @@ RectTransform:
   m_Children:
   - {fileID: 1090472509}
   - {fileID: 1027946336}
+  - {fileID: 309698989}
+  - {fileID: 282718642}
+  - {fileID: 1633307420}
   m_Father: {fileID: 313209335}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15692,12 +15692,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2077453608}
-  m_Father: {fileID: 313209335}
-  m_RootOrder: 3
+  m_Father: {fileID: 1351385604}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 700, y: 335}
+  m_AnchoredPosition: {x: 700, y: 260}
   m_SizeDelta: {x: 350, y: 120}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1633307421

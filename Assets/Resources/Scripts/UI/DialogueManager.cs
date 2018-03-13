@@ -52,6 +52,7 @@ public class DialogueManager : MonoBehaviour
         //TO DO:
         //Go to the correct dialogue part thanks to info in talker
         Time.timeScale = 0f;
+
         StartCoroutine(DialogueRoutine());
     }
 
@@ -75,6 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         string fullText = nodeData.comments[nodeData.commentIndex];
         dialogueField.text = fullText;
+        dialoguePanel.SetActive(true);
         VD.Next();
     }
 
@@ -113,23 +115,16 @@ public class DialogueManager : MonoBehaviour
     {
         while (VD.isActive && !ended)
         {
-            yield return new WaitUntil(CanGoOn);
-
-            if (VD.nodeData.isPlayer) // If it's a player node, let's show all of the available options as buttons
-            {
+            if (VD.nodeData.isPlayer)// If it's a player node, let's show all of the available options as buttons
                 PlayerNode(VD.nodeData);
-            }
             else
-            {
-                yield return new WaitUntil(CanGoOn);
                 NPCNode(VD.nodeData);
-            }
-
-            //It is here only to be sure that the panel is visible only after the text is correct
-            dialoguePanel.SetActive(true);
 
             if (VD.nodeData.isEnd) // If it's the end, let's just call EndDialogue
                 EndDialogue();
+
+            if(!canGoOn)
+                yield return new WaitUntil(CanGoOn);
         }
     }
 
@@ -138,6 +133,5 @@ public class DialogueManager : MonoBehaviour
         VD.EndDialogue();
         Time.timeScale = 1f;
         isDialogueOn = false;
-        dialoguePanel.SetActive(false);
     }
 }
