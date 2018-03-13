@@ -21,8 +21,18 @@ public class Talker : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        GameObject Canvas = GameObject.Find("CanvasPlayerUI");
-        Canvas.GetComponent<DialogueManager>().InitDialogue(this);
+
     }
 
+    private bool dialogueInitialized;
+
+    void Update()
+    {
+        if (dialogueInitialized)
+            return;
+
+        GameObject Canvas = GameObject.Find("CanvasPlayerUI");
+        Canvas.GetComponent<DialogueManager>().InitDialogue(this);
+        dialogueInitialized = true;
+    }
 }

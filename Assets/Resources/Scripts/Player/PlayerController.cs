@@ -16,12 +16,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float height = 1f;
     [SerializeField] private float heightPadding = 0.5f;
     [SerializeField] private float wallCheckLength = 1f;
+    [SerializeField] private float maxGroundAngle = 150;
     [SerializeField] private LayerMask walkableLayerMask;
     [SerializeField] private LayerMask wallLayerMask;
-
-    [SerializeField] private float maxGroundAngle = 150;
-
     [SerializeField] private bool debug;
+    [SerializeField] private DialogueManager dialogueManager;
 
     private bool fallHitSet;
     private float angle;
@@ -35,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private CharacterStatus myPlayerStatus;
     private PlayerCamera myCameraScript;
 
+    private int previousFrameVerticalRaw = 0;
+
     void Start()
     {
         myCamera = Camera.main.transform;
@@ -46,23 +47,60 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        GetInput();
+
+        if (IsGamePaused())
+        {
+            //Dialogue controls
+            if (DialogueManager.IsDialogueOn)
+                GameDialogueUpdate();
+            else //Actual pause
+                GamePausedUpdate();
+        }
+        else
+        {
+            GameUnPausedUpdate();
+        }
+    }
+
+    private void GameDialogueUpdate()
+    {
+        int absVerticalAxisRaw = (int) Mathf.Abs(Input.GetAxisRaw("Vertical"));
+        if (absVerticalAxisRaw > previousFrameVerticalRaw)
+            dialogueManager.HightLightChoice((int)Mathf.Sign(input.y));
+        previousFrameVerticalRaw = absVerticalAxisRaw;
+    }
+
+    private void GamePausedUpdate()
+    {
+
+    }
+
+    private void GameUnPausedUpdate()
+    {
         if (myPlayerStatus.DeathStatus)
             return;
 
-        GetInput();
+        if (Input.GetButtonDown("X"))
+            Attack();
+
+        UpdateShieldStatus();
+
         CalculateDirection();
         CalculateForward();
         CalculateGroundAngle();
         CheckGround();
         ApplyGravity();
         DrawDebugLines();
-
         Rotate();
-        //if(myCameraScript.IsInLockTargetStatus())
-        //    TargetLockMove();
-        //else
         Move();
- 
+    }
+
+    private bool IsGamePaused()
+    {
+        //Debug.Log("actual " +Time.timeScale);
+        //Debug.Log("default " + defaultTimeScale);
+        return Time.timeScale < 1f;
     }
 
     /// <summary>
@@ -72,18 +110,13 @@ public class PlayerController : MonoBehaviour
     {
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
-
-        UpdateShieldStatus();
-
-        if (Input.GetButtonDown("Attack"))
-            Attack();
     }
 
     void UpdateShieldStatus()
     {
-        myPlayerStatus.ShieldUpStatus =  Input.GetButton("TargetLock")     && 
-                                            myPlayerStatus.GroundedStatus  &&
-                                           !myPlayerStatus.AttackingStatus;
+        myPlayerStatus.ShieldUpStatus =  Input.GetButton("LB")           && 
+                                         myPlayerStatus.GroundedStatus   &&
+                                         !myPlayerStatus.AttackingStatus;
     }
 
     /// <summary>
