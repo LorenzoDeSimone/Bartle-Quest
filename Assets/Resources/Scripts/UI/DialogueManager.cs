@@ -52,6 +52,7 @@ public class DialogueManager : MonoBehaviour
         //TO DO:
         //Go to the correct dialogue part thanks to info in talker
         Time.timeScale = 0f;
+        dialoguePanel.SetActive(true);
 
         StartCoroutine(DialogueRoutine());
     }
@@ -76,7 +77,6 @@ public class DialogueManager : MonoBehaviour
     {
         string fullText = nodeData.comments[nodeData.commentIndex];
         dialogueField.text = fullText;
-        dialoguePanel.SetActive(true);
         VD.Next();
     }
 
@@ -111,6 +111,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void DialogueChoiceConfirmed()
+    {
+        VD.nodeData.commentIndex = currentChoiceIndex;
+        VD.Next();
+        ToggleChoice(choiceFields[currentChoiceIndex], false);
+        currentChoiceIndex = 0;
+        ToggleChoice(choiceFields[0], true);
+        canGoOn = true;
+    }
+
     IEnumerator DialogueRoutine()
     {
         while (VD.isActive && !ended)
@@ -130,6 +140,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        dialoguePanel.SetActive(false);
         VD.EndDialogue();
         Time.timeScale = 1f;
         isDialogueOn = false;
