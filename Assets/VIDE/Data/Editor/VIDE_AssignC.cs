@@ -311,7 +311,7 @@ public class VIDE_AssignC : Editor
 
         if (!d.diags.Contains(d.assignedDialogue))
         {
-            Debug.LogError("'" + d.assignedDialogue + "' dialogue not found!");
+            //Debug.LogError("'" + d.assignedDialogue + "' dialogue not found!");
             return;
         }
 
