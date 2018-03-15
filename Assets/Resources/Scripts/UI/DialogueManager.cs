@@ -7,6 +7,7 @@ using VIDE_Data;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject interactionPopup;
     [SerializeField] private Text nameField;
     [SerializeField] private Text dialogueField;
 
@@ -53,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         //Go to the correct dialogue part thanks to info in talker
         Time.timeScale = 0f;
         dialoguePanel.SetActive(true);
-
+        interactionPopup.SetActive(false);
         StartCoroutine(DialogueRoutine());
     }
 
@@ -141,6 +142,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialoguePanel.SetActive(false);
+        interactionPopup.SetActive(true);
         VD.EndDialogue();
         Time.timeScale = 1f;
         isDialogueOn = false;

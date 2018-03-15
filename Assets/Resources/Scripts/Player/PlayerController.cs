@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask walkableLayerMask;
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private bool debug;
+
     [SerializeField] private DialogueManager dialogueManager;
 
     private bool fallHitSet;
@@ -80,6 +81,23 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void InteractionInput()
+    {
+        Debug.Log(myCameraScript.interactionManager.GetNearestTarget());
+
+        Transform currentInteractionTarget = myCameraScript.interactionManager.GetNearestTarget();
+        if (currentInteractionTarget != null)
+        {
+            string[] buttonNames = { "A", "B", "Y" };
+
+            foreach (string buttonName in buttonNames)
+            {
+                if (Input.GetButtonDown(buttonName))
+                    currentInteractionTarget.GetComponent<Target>().Interact(buttonName);
+            }
+        }
+    }
+
     private void GameUnPausedUpdate()
     {
         if (myPlayerStatus.DeathStatus)
@@ -87,6 +105,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("X"))
             Attack();
+
+        InteractionInput();
 
         UpdateShieldStatus();
 

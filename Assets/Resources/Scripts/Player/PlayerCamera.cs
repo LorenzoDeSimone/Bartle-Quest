@@ -19,7 +19,8 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private LayerMask wallLayerMask;
 
     private Transform player;
-    private TargetManager defaultTargetManager;
+    private TargetManager targetManager;
+    public InteractionManager interactionManager;
     private float standardDistance;
     private CharacterStatus myPlayerStatus;
 
@@ -27,7 +28,8 @@ public class PlayerCamera : MonoBehaviour
     {
         Vector3 angles = transform.eulerAngles;
         player = target;
-        defaultTargetManager = player.GetComponent<TargetManager>();
+        targetManager = player.GetComponentInChildren<TargetManager>();
+        interactionManager = player.GetComponentInChildren<InteractionManager>();
         myPlayerStatus = player.GetComponentInParent<CharacterStatus>();
         x = angles.y;
         y = angles.x;
@@ -113,7 +115,7 @@ public class PlayerCamera : MonoBehaviour
     {
         if (IsTargetPressed())
         {
-            Transform lockTarget = defaultTargetManager.GetNearestTarget();
+            Transform lockTarget = targetManager.GetNearestTarget();
             if (lockTarget != null)
                 target = lockTarget;
         }
