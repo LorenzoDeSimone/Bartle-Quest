@@ -28,7 +28,7 @@ public class InteractionManager : TargetManager
     {
 
         Target t = collider.gameObject.GetComponent<Target>();
-        if (t != null && Vector3.Distance(transform.position, t.transform.position) <= Vector3.Distance(transform.position , GetNearestTarget().position))
+        if (t != null && !t.IsEnemy && Vector3.Distance(transform.position, t.transform.position) <= Vector3.Distance(transform.position , GetNearestTarget().position))
         {
             interactionPopup.SetActive(true);
             buttonSlot.sprite = t.Buttonimage;

@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     private void InteractionInput()
     {
-        Debug.Log(myCameraScript.interactionManager.GetNearestTarget());
+        //Debug.Log(myCameraScript.interactionManager.GetNearestTarget());
 
         Transform currentInteractionTarget = myCameraScript.interactionManager.GetNearestTarget();
         if (currentInteractionTarget != null)

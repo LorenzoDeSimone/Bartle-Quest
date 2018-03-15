@@ -20,7 +20,7 @@ public class PlayerCamera : MonoBehaviour
 
     private Transform player;
     private TargetManager targetManager;
-    public InteractionManager interactionManager;
+    [HideInInspector] public InteractionManager interactionManager;
     private float standardDistance;
     private CharacterStatus myPlayerStatus;
 
