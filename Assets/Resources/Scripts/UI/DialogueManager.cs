@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
 
     private Talker currentTalker;
 
-    private bool canGoOn = true;
+    private bool canGoOn;
     private bool ended;
 
     private static bool isDialogueOn;
@@ -39,6 +39,7 @@ public class DialogueManager : MonoBehaviour
             return;
 
         isDialogueOn = true;
+        canGoOn = true;
         currentChoiceIndex = 0;
         ToggleChoice(choiceFields[currentChoiceIndex], true);
 

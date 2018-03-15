@@ -30,14 +30,10 @@ public class Target : MonoBehaviour
 
     public void Interact(string buttonName)
     {
-        Debug.Log("yahooo1");
-
         if (this.buttonName.Equals(buttonName))
         {
-            Debug.Log("yahooo2");
             if (dialogueInteraction)
             {
-                Debug.Log("yahooo3");
                 GameObject Canvas = GameObject.Find("CanvasPlayerUI");
                 Canvas.GetComponent<DialogueManager>().InitDialogue(GetComponent<Talker>());
             }
