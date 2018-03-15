@@ -34,6 +34,12 @@ public class PlayerCamera : MonoBehaviour
         standardDistance = distance;
     }
 
+    public Transform CurrentTarget
+    {
+        get { return target; }
+    }
+
+
     private void GetCameraInput()
     {
         float horizontal = Input.GetAxis("RightHorizontal");

@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour {
+public class Target : MonoBehaviour
+{
+    [SerializeField] private bool isEnemy;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public bool IsEnemy
+    {
+        get { return  isEnemy; }
+        set { isEnemy = value; }
+    }
+
 }

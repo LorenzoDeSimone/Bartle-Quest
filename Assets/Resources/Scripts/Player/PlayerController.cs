@@ -118,9 +118,13 @@ public class PlayerController : MonoBehaviour
 
     void UpdateShieldStatus()
     {
+        Target target = myCameraScript.CurrentTarget.GetComponent<Target>();
+        bool cameraTargetIsEnemy = target != null && target.IsEnemy;
+
         myPlayerStatus.ShieldUpStatus =  Input.GetButton("LB")           && 
                                          myPlayerStatus.GroundedStatus   &&
-                                         !myPlayerStatus.AttackingStatus;
+                                         !myPlayerStatus.AttackingStatus &&
+                                         cameraTargetIsEnemy;
     }
 
     /// <summary>
