@@ -27,11 +27,11 @@ public class Talker : MonoBehaviour
     private bool dialogueInitialized;
     void Update()
     {
-        if (dialogueInitialized)
+        /*if (dialogueInitialized)
             return;
 
         GameObject Canvas = GameObject.Find("CanvasPlayerUI");
         Canvas.GetComponent<DialogueManager>().InitDialogue(this);
-        dialogueInitialized = true;
+        dialogueInitialized = true;*/
     }
 }

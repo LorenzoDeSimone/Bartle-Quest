@@ -257,6 +257,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1211982068974790
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4412039116229036}
+  - component: {fileID: 135770015740469986}
+  - component: {fileID: 114341665303870926}
+  m_Layer: 0
+  m_Name: InteractionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1218327999386500
 GameObject:
   m_ObjectHideFlags: 1
@@ -1337,7 +1354,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1335830266756852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1, z: -12}
+  m_LocalPosition: {x: -19, y: 1, z: -24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4869192598941632}
@@ -1555,6 +1572,19 @@ Transform:
   m_Father: {fileID: 4099436788186844}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4412039116229036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211982068974790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4510424728670372}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4455704641577468
 Transform:
   m_ObjectHideFlags: 1
@@ -1619,7 +1649,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4412039116229036}
   m_Father: {fileID: 4262930400273424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2243,7 +2274,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103435663340986}
-  m_Mesh: {fileID: 4300000, guid: 8d96eeb76259c7c47bf226f68b13ec4d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5c40f3e68ece52a4e9b8f5abac074e86, type: 3}
 --- !u!33 &33828696213444998
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2330,8 +2361,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.4, z: 1.6}
-  m_Center: {x: 0, y: -0, z: 1.65}
+  m_Size: {x: 0.1, y: 0.4, z: 2.2}
+  m_Center: {x: 0, y: -0, z: 1.8}
 --- !u!95 &95195637778295648
 Animator:
   serializedVersion: 3
@@ -2377,7 +2408,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 803a9d702988c6e48a97a7f4f032ddbc, type: 3}
   m_Controller: {fileID: 9100000, guid: 81e3921eb961add4b9cc8a69898772a6, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -2399,10 +2430,25 @@ MonoBehaviour:
   canFall: 1
   canAttack: 1
   canDie: 1
+  canCollectItems: 1
   AttackStates:
   - Attack01
   - Attack02
   - Attack03
+  isNPC: 0
+  AIManager: {fileID: 0}
+--- !u!114 &114341665303870926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211982068974790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fbc7e908afaa24588c5d336c7e1672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPopup: {fileID: 0}
 --- !u!114 &114413071463445476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2414,8 +2460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d8d21938d15ce4386a4a6e2479602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currHealth: 0
+  maxHealth: 5
 --- !u!114 &114815747172026246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2449,14 +2494,15 @@ MonoBehaviour:
   height: 1
   heightPadding: 0.5
   wallCheckLength: 1
+  maxGroundAngle: 150
   walkableLayerMask:
     serializedVersion: 2
     m_Bits: 256
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  maxGroundAngle: 150
   debug: 0
+  dialogueManager: {fileID: 0}
 --- !u!114 &114857452381267168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2492,6 +2538,18 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135770015740469986
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211982068974790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137051125715865354
 SkinnedMeshRenderer:

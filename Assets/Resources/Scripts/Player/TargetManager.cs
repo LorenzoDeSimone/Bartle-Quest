@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
-    private HashSet<Transform> nearTargets;
+    protected HashSet<Transform> nearTargets;
 
-    void Start()
+    protected void Start()
     {
         nearTargets = new HashSet<Transform>();
     }
 
-    void OnTriggerEnter(Collider collider)
+    protected void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.GetComponent<Target>() != null)
         {
@@ -20,9 +20,9 @@ public class TargetManager : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider collider)
+    protected void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.GetComponent<Target>() != null)
+            if (collider.gameObject.GetComponent<Target>() != null)
         {
             nearTargets.Remove(collider.gameObject.transform);
             //Debug.Log("OUT");
