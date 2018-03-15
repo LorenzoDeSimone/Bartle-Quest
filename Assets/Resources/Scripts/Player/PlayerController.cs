@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     private void GameDialogueUpdate()
     {
+        myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
         int absVerticalAxisRaw = (int) Mathf.Abs(Input.GetAxisRaw("Vertical"));
         if (absVerticalAxisRaw > previousFrameVerticalRaw)
             dialogueManager.HightLightChoice((int)Mathf.Sign(input.y));
@@ -144,7 +145,7 @@ public class PlayerController : MonoBehaviour
         myPlayerStatus.ShieldUpStatus =  Input.GetButton("LB")           && 
                                          myPlayerStatus.GroundedStatus   &&
                                          !myPlayerStatus.AttackingStatus &&
-                                         cameraTargetIsEnemy;
+                                         (cameraTargetIsEnemy || myCameraScript.CurrentTarget.Equals(transform));
     }
 
     /// <summary>

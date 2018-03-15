@@ -39,7 +39,6 @@ public class InteractionManager : TargetManager
     new void OnTriggerExit(Collider collider)
     {
         base.OnTriggerExit(collider);
-        if(nearTargets.Count == 0)
-            interactionPopup.SetActive(false);
+        interactionPopup.SetActive(false);
     }
 }
