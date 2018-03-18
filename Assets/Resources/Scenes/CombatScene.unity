@@ -3995,9 +3995,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  text: Talk to B
-  buttonName: B
-  buttonImage: {fileID: 21300000, guid: 98e11ffcf55c66c4eb32b73e7905512d, type: 3}
+  text: Talk to A
+  buttonName: A
+  buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
   dialogueInteraction: 1
 --- !u!114 &304387016
 MonoBehaviour:
@@ -4010,8 +4010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0136994c3e84b8e43b1eed69e59a2727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: Maja
-  talkerName: Maja
+  dialogueName: PrisonScroll
+  talkerName: Scroll
 --- !u!65 &304387017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20067,8 +20067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0136994c3e84b8e43b1eed69e59a2727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueName: Basket
-  talkerName: Basket
+  dialogueName: PrisonScroll
+  talkerName: Scroll
 --- !u!23 &1489447226
 MeshRenderer:
   m_ObjectHideFlags: 0
