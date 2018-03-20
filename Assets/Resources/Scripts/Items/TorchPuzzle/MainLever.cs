@@ -8,6 +8,7 @@ public class MainLever : Interactable
 
     private Animation animation;
     private bool canInteract = true;
+
     void Start()
     {
         animation = GetComponent<Animation>();
