@@ -8,7 +8,7 @@ public class TorchColumn : MonoBehaviour
 
     private static float rotationEpsilon = 0.01f;
     public bool clockwise;
-    private bool canRotate = true;
+    public bool canRotate = true;
 
     public void Rotate()
     {
