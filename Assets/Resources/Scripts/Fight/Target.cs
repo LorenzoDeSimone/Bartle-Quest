@@ -9,8 +9,7 @@ public class Target : MonoBehaviour
     [SerializeField] private string text;
     [SerializeField] private string buttonName;
     [SerializeField] private Sprite buttonImage;
-
-    [SerializeField] private bool dialogueInteraction;
+    [SerializeField] private Interactable interactable;
 
     public string Text
     {
@@ -31,13 +30,6 @@ public class Target : MonoBehaviour
     public void Interact(string buttonName)
     {
         if (this.buttonName.Equals(buttonName))
-        {
-            if (dialogueInteraction)
-            {
-                GameObject Canvas = GameObject.Find("CanvasPlayerUI");
-                Canvas.GetComponent<DialogueManager>().InitDialogue(GetComponent<Talker>());
-            }
-            //else -> Future interaction types here
-        }
+            interactable.Interact();  
     }
 }

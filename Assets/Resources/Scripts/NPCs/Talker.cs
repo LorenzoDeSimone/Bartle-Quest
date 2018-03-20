@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Talker : MonoBehaviour
+public class Talker : Interactable
 {
     [HideInInspector] public static bool isPossibleToTalk = true;
     [SerializeField] private string dialogueName;
@@ -24,14 +24,9 @@ public class Talker : MonoBehaviour
 
     }
 
-    private bool dialogueInitialized;
-    void Update()
+    public override void Interact()
     {
-        /*if (dialogueInitialized)
-            return;
-
         GameObject Canvas = GameObject.Find("CanvasPlayerUI");
         Canvas.GetComponent<DialogueManager>().InitDialogue(this);
-        dialogueInitialized = true;*/
     }
 }
