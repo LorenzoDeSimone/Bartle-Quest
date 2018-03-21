@@ -7,7 +7,7 @@ public class Torch : MonoBehaviour
     public enum TORCH_STATUS { UNLIT, RED, BLUE};
 
     [SerializeField] private bool isActive = false;
-    [SerializeField] private TORCH_STATUS status;
+    [SerializeField] public TORCH_STATUS status;
 
     public Color redLight, blueLight;
     public Gradient redGradient, blueGradient;
