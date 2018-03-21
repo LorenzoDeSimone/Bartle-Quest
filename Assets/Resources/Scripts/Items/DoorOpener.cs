@@ -10,9 +10,14 @@ public class DoorOpener : Interactable
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private string dialogueName;
 
+    [SerializeField] private GameObject[] Enemies;
+
     public override void Interact()
     {
-        foreach(ExplodingDoor d in doorsToOpen)
+        if (!CanInteract())
+            return;
+
+        foreach (ExplodingDoor d in doorsToOpen)
         {
             if(d)
                 d.Explode();
@@ -28,9 +33,21 @@ public class DoorOpener : Interactable
         }
     }
 
+    public new bool CanInteract()
+    {
+        foreach(GameObject go in Enemies)
+        {
+            if (go != null)
+                return false;
+        }
+        return true;
+    }
+
     private IEnumerator StartDialogueWithNPC(Talker npcTalker)
     {
         yield return new WaitForSeconds(1f);
         dialogueManager.InitDialogue(npcTalker);
     }
+
+    
 }
