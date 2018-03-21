@@ -11,11 +11,13 @@ public class Talker : Interactable
     public string TalkerName
     {
         get { return talkerName; }
+        set { talkerName = value; }
     }
 
     public string DialogueName
     {
         get { return dialogueName; }
+        set { dialogueName = value; }
     }
 
     // Use this for initialization

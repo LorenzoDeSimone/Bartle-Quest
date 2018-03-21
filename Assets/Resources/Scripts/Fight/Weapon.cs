@@ -18,6 +18,10 @@ public class Weapon : MonoBehaviour
     private Animator myAnimator;
     private int lastAnimatorState = -1;
 
+    public MeshFilter meshFilter
+    {
+        get { return GetComponent<MeshFilter>(); }
+    }
 
     // Use this for initialization
     void Start ()
