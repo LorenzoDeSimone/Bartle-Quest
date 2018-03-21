@@ -44,7 +44,7 @@ MonoBehaviour:
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 72181
+  currentID: 51024
   autosave: 1
   previewPanning: 0
   currentDiag: 8
@@ -52,8 +52,8 @@ MonoBehaviour:
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: (You see a burned scroll. It is lying on the rests of what you presume
-        is a previous prisoner)
+    - text: 'You read these words carved into the altar: "When all the flames of the
+        skull will be bursting with the colour of blood, the path will be shown."'
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -71,34 +71,19 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: -530
-      y: -110
+      x: -560
+      y: -50
       width: 316
-      height: 123
+      height: 149
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 2
+  - commentCount: 1
     s_comment:
-    - text: (Exit)
-      extraData: ExtraData
-      inputSetIndex: 1
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: (Read the scroll)
+    - text: <Exit>
       extraData: ExtraData
       inputSetIndex: 1
       outputNodeIndex: -1
@@ -116,10 +101,10 @@ MonoBehaviour:
     ID: 1
     rect:
       serializedVersion: 2
-      x: -130
-      y: -110
+      x: -100
+      y: -20
       width: 316
-      height: 119
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
