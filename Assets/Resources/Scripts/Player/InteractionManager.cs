@@ -26,13 +26,17 @@ public class InteractionManager : TargetManager
 
     void OnTriggerStay(Collider collider)
     {
+        Interactable i = collider.GetComponent<Interactable>();
+        if (i != null && !i.CanInteract())
+            return;
 
         Target t = collider.gameObject.GetComponent<Target>();
         if (t != null && !t.IsEnemy && Vector3.Distance(transform.position, t.transform.position) <= Vector3.Distance(transform.position , GetNearestTarget().position))
         {
+
             interactionPopup.SetActive(true);
             buttonSlot.sprite = t.Buttonimage;
-            textSlot.text = t.Text;
+            textSlot.text = t.Text;  
         }
     }
 

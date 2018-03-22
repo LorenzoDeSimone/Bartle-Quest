@@ -35,4 +35,8 @@ public class ColumnLever : Interactable
         column.clockwise = !column.clockwise;
     }
 
+    public override bool CanInteract()
+    {
+        return true;
+    }
 }

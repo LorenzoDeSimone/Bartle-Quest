@@ -43,6 +43,11 @@ public class MainLever : Interactable
         }
     }
 
+    public override bool CanInteract()
+    {
+        return true;
+    }
+
     private IEnumerator Pull()
     {
         //Pull

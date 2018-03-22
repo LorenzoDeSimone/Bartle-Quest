@@ -29,7 +29,7 @@ public class Target : MonoBehaviour
 
     public void Interact(string buttonName)
     {
-        if (this.buttonName.Equals(buttonName))
+        if (this.buttonName.Equals(buttonName) && interactable.CanInteract())
             interactable.Interact();  
     }
 }

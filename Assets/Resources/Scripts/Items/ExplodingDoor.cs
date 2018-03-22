@@ -12,5 +12,8 @@ public class ExplodingDoor : MonoBehaviour
         explosion.gameObject.SetActive(true);
         explosion.Play();
         gameObject.SetActive(false);
+
+        if(GetComponent<Interactable>())
+            GetComponent<Interactable>().enabled = false;
     }
 }

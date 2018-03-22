@@ -14,9 +14,6 @@ public class DoorOpener : Interactable
 
     public override void Interact()
     {
-        if (!CanInteract())
-            return;
-
         foreach (ExplodingDoor d in doorsToOpen)
         {
             if(d)
@@ -33,7 +30,7 @@ public class DoorOpener : Interactable
         }
     }
 
-    public new bool CanInteract()
+    public override bool CanInteract()
     {
         foreach(GameObject go in Enemies)
         {

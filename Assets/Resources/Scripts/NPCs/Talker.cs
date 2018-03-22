@@ -26,6 +26,11 @@ public class Talker : Interactable
 
     }
 
+    public override bool CanInteract()
+    {
+        return true;
+    }
+
     public override void Interact()
     {
         GameObject Canvas = GameObject.Find("CanvasPlayerUI");
