@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerPrisonDetonator : MonoBehaviour
 {
     [SerializeField] private ExplodingDoor door;
+    [SerializeField] private GameObject[] guards;
     [SerializeField] private GameObject debris;
     [SerializeField] private Transform finalPlayerTransform;
     [SerializeField] private Transform player;
@@ -17,6 +18,9 @@ public class PlayerPrisonDetonator : MonoBehaviour
         {
             door.Explode();
             debris.SetActive(true);
+            foreach (GameObject guard in guards)
+                guard.SetActive(true);
+
             StartCoroutine(MovePlayer(player.transform.position));
         }
     }

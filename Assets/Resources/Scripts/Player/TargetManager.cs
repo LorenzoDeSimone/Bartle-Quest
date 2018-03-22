@@ -29,7 +29,7 @@ public class TargetManager : MonoBehaviour
         }
     }
 
-    public Transform GetNearestTarget()
+    public Transform GetNearestTarget(bool enemyOnly = false)
     {
         float minDist = Mathf.Infinity;
         Transform nearestTarget = null;
@@ -40,13 +40,16 @@ public class TargetManager : MonoBehaviour
             if (t != null)
             {
                 Target target = t.GetComponent<Target>();
-                if (target != null && target.enabled)
+                if (!enemyOnly || (enemyOnly && target.IsEnemy))
                 {
-                    currDist = Vector3.Distance(t.position, transform.position);
-                    if (currDist < minDist)
+                    if (target != null && target.enabled)
                     {
-                        minDist = currDist;
-                        nearestTarget = t;
+                        currDist = Vector3.Distance(t.position, transform.position);
+                        if (currDist < minDist)
+                        {
+                            minDist = currDist;
+                            nearestTarget = t;
+                        }
                     }
                 }
             }

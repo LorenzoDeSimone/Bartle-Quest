@@ -114,7 +114,7 @@ public class PlayerCamera : MonoBehaviour
     {
         if (IsTargetPressed())
         {
-            Transform lockTarget = targetManager.GetNearestTarget();
+            Transform lockTarget = targetManager.GetNearestTarget(true);
             if (lockTarget != null)
                 target = lockTarget;
         }

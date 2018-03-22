@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIPlayerHealth : MonoBehaviour
 {
-    [SerializeField] private Hittable playerHittable;
+    [SerializeField] public Hittable playerHittable;
     [SerializeField] private Image[] UIHearts;
     [SerializeField] private Color Full;
     [SerializeField] private Color Empty;
