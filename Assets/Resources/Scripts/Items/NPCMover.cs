@@ -16,6 +16,8 @@ public class NPCMover : MonoBehaviour
             NPC.rotation = NPCFinalTransform.rotation;
             NPC.GetComponent<Talker>().enabled = false;
             NPC.GetComponent<Target>().enabled = false;
+
+            BartleStatistics.Instance().IncrementExplorer();
         }
     }
 }

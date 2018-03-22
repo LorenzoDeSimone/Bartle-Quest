@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fb400ea7ea0b84b82393e30b6d524a, type: 3}
   m_Name: DefaultWeapon
   m_EditorClassIdentifier: 
-  mesh: {fileID: 4300000, guid: 51d8631f48cb4b04ab20db921ae46211, type: 3}
+  mesh: {fileID: 4300000, guid: 8ebeaed167e99614fad496a12f4c3004, type: 3}
   damage: 1
