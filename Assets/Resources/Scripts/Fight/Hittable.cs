@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Hittable : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 1;
+    [SerializeField] private int maxHealth = 5;
     private int previousUpdateHealth;
     private int currentHealth;
     private bool justHit;
@@ -35,6 +35,7 @@ public class Hittable : MonoBehaviour
     public int MaxHealth
     {
         get { return maxHealth; }
+        set { maxHealth = value; }
     }
 
     public int CurrentHealth

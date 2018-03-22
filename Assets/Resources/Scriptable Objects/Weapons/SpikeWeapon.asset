@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fb400ea7ea0b84b82393e30b6d524a, type: 3}
+  m_Name: SpikeWeapon
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 4300000, guid: 4150759bfa6abd046bda636e4421fbec, type: 3}
+  damage: 2

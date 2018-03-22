@@ -45,7 +45,6 @@ public class PauseAndDeathManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float newAlpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeOutTime);
-            Debug.Log(newAlpha);
             DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
             yield return null;
         }        

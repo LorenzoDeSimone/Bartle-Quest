@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     private CharacterStatus weaponHolder;
 
     [SerializeField]
-    private int damage = 1;
+    public int damage = 1;
 
     [SerializeField]
     private GameObject WeaponHitEffect;
@@ -18,17 +18,10 @@ public class Weapon : MonoBehaviour
     private Animator myAnimator;
     private int lastAnimatorState = -1;
 
-    public MeshFilter meshFilter
-    {
-        get { return GetComponent<MeshFilter>(); }
-    }
-
     // Use this for initialization
     void Start ()
     {
-        if (weaponHolder == null)
-            Debug.LogError("This weapon has no holder.");
-        else
+        if (weaponHolder != null)
         {
             myAnimator = weaponHolder.GetComponent<Animator>();
             if (myAnimator == null)
@@ -38,7 +31,8 @@ public class Weapon : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-
+        if (!weaponHolder)
+            return;
         //Hits only if it is the first collision in the current animator state
 
         //Debug.Log(weaponHolder.gameObject.name +" Hits" + collision.collider.name);

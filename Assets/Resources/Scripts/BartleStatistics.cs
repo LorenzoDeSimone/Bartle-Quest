@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BodyGear : MonoBehaviour {
+public class BartleStatistics : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
