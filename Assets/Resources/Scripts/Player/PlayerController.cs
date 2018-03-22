@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask walkableLayerMask;
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private bool debug;
-
     [SerializeField] private DialogueManager dialogueManager;
 
     private bool fallHitSet;
@@ -108,7 +107,6 @@ public class PlayerController : MonoBehaviour
             Attack();
 
         InteractionInput();
-
         UpdateShieldStatus();
 
         CalculateDirection();

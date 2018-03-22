@@ -1,13 +1,11 @@
 fileFormatVersion: 2
 guid: fbbfcd251acb5824798ec6df5aafe31c
-timeCreated: 1516580482
-licenseType: Store
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Armature
-    100002: BannerD
-    100004: //RootNode
+    100002: //RootNode
+    100004: BannerD
     100006: Bone
     100008: Bone.001
     100010: Bone.002
@@ -18,8 +16,8 @@ ModelImporter:
     100020: Bone.006
     100022: Bone.006_end
     400000: Armature
-    400002: BannerD
-    400004: //RootNode
+    400002: //RootNode
+    400004: BannerD
     400006: Bone
     400008: Bone.001
     400010: Bone.002
@@ -32,8 +30,6 @@ ModelImporter:
     2100000: MainMaterial
     4300000: BannerD
     7400000: BannerWave
-    7400002: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction.001
-    7400004: Armature|BannerWave
     9500000: //RootNode
     13700000: BannerD
   externalObjects: {}

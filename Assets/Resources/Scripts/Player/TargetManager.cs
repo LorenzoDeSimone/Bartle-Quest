@@ -22,7 +22,7 @@ public class TargetManager : MonoBehaviour
 
     protected void OnTriggerExit(Collider collider)
     {
-            if (collider.gameObject.GetComponent<Target>() != null)
+        if (collider.gameObject.GetComponent<Target>() != null)
         {
             nearTargets.Remove(collider.gameObject.transform);
             //Debug.Log("OUT");
@@ -54,5 +54,4 @@ public class TargetManager : MonoBehaviour
 
         return nearestTarget;
     }
-
 }

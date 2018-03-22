@@ -41,7 +41,6 @@ public class PlayerCamera : MonoBehaviour
         get { return target; }
     }
 
-
     private void GetCameraInput()
     {
         float horizontal = Input.GetAxis("RightHorizontal");

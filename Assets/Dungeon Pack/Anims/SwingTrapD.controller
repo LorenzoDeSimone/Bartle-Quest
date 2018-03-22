@@ -28,7 +28,11 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SwingTrap
+<<<<<<< HEAD
   m_Speed: 0.4
+=======
+  m_Speed: 1
+>>>>>>> d8b428b93145aef1a58144928364be5edb6aaa2c
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

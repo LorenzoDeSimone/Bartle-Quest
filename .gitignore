@@ -7,14 +7,13 @@ UnityGenerated/
 Library/
 Assets/AssetStoreTools*
 Assets/MutinyBros/*
-Assets/DragonTerrorBringer/*
+
+=======
 *.ogg
 *.ogg.meta
 *.ogv
 *.ogv.meta
 *.vs
-
-
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
