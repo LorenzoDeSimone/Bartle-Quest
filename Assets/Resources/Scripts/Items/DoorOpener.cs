@@ -11,9 +11,20 @@ public class DoorOpener : Interactable
     [SerializeField] private string dialogueName;
 
     [SerializeField] private GameObject[] Enemies;
+    private Animation animation;
+
+    private bool leverPulled = false;
+
+    void Start()
+    {
+        animation = GetComponent<Animation>();
+    }
 
     public override void Interact()
     {
+        animation.Play();
+        leverPulled = true;
+        GetComponent<Target>().enabled = false;
         foreach (ExplodingDoor d in doorsToOpen)
         {
             if(d)
@@ -32,6 +43,9 @@ public class DoorOpener : Interactable
 
     public override bool CanInteract()
     {
+        if (leverPulled)
+            return false;
+
         foreach(GameObject go in Enemies)
         {
             if (go != null)

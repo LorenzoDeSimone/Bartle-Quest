@@ -24,25 +24,40 @@ public class InteractionManager : TargetManager
         }
     }
 
-    void OnTriggerStay(Collider collider)
+    void Update()
     {
-        Interactable i = collider.GetComponent<Interactable>();
-        if (i != null && (!i.CanInteract() || !i.enabled))
+        if (DialogueManager.IsDialogueOn)
             return;
 
-        Target t = collider.gameObject.GetComponent<Target>();
-        if (t != null && !t.IsEnemy && Vector3.Distance(transform.position, t.transform.position) <= Vector3.Distance(transform.position , GetNearestTarget().position))
+        Transform nearestTarget= GetNearestTarget();
+        if (nearestTarget == null)
+            interactionPopup.SetActive(false);
+        else
         {
+            Interactable i = nearestTarget.GetComponent<Interactable>();
+            if (i != null && (!i.CanInteract() || !i.enabled))
+                return;
 
-            interactionPopup.SetActive(true);
-            buttonSlot.sprite = t.Buttonimage;
-            textSlot.text = t.Text;  
+            Target t = nearestTarget.gameObject.GetComponent<Target>();
+            if (t != null && !t.IsEnemy)
+            {
+                interactionPopup.SetActive(true);
+                buttonSlot.sprite = t.Buttonimage;
+                textSlot.text = t.Text;
+            }
         }
     }
 
-    new void OnTriggerExit(Collider collider)
-    {
-        base.OnTriggerExit(collider);
-        interactionPopup.SetActive(false);
-    }
+    /*
+   new void OnTriggerEnter(Collider collider)
+   {
+       base.OnTriggerEnter(collider);
+   }
+
+   
+   new void OnTriggerExit(Collider collider)
+   {
+       base.OnTriggerExit(collider);
+       interactionPopup.SetActive(false);
+   }*/
 }
