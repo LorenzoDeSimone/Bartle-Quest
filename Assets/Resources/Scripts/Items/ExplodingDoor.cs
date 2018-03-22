@@ -13,7 +13,7 @@ public class ExplodingDoor : MonoBehaviour
         explosion.Play();
         gameObject.SetActive(false);
 
-        if(GetComponent<Interactable>())
-            GetComponent<Interactable>().enabled = false;
+        if(GetComponent<Target>())
+            GetComponent<Target>().enabled = false;
     }
 }

@@ -39,11 +39,15 @@ public class TargetManager : MonoBehaviour
         {
             if (t != null)
             {
-                currDist = Vector3.Distance(t.position, transform.position);
-                if (currDist < minDist)
+                Target target = t.GetComponent<Target>();
+                if (target != null && target.enabled)
                 {
-                    minDist = currDist;
-                    nearestTarget = t;
+                    currDist = Vector3.Distance(t.position, transform.position);
+                    if (currDist < minDist)
+                    {
+                        minDist = currDist;
+                        nearestTarget = t;
+                    }
                 }
             }
         }

@@ -23,6 +23,7 @@ public class PlayerPrisonDetonator : MonoBehaviour
 
     IEnumerator MovePlayer(Vector3 startPosition)
     {
+
         while(elapsedTime < time)
         {
             elapsedTime += Time.deltaTime;

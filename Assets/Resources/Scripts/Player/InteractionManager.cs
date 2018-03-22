@@ -27,7 +27,7 @@ public class InteractionManager : TargetManager
     void OnTriggerStay(Collider collider)
     {
         Interactable i = collider.GetComponent<Interactable>();
-        if (i != null && !i.CanInteract())
+        if (i != null && (!i.CanInteract() || !i.enabled))
             return;
 
         Target t = collider.gameObject.GetComponent<Target>();
