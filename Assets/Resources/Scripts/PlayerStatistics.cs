@@ -7,30 +7,38 @@ public class PlayerStatistics : MonoBehaviour
     //These are the real values that represent the player statistics
     //every method that wants to change character's equip permamently
     //should update through this class
+    private static PlayerStatistics instance;
 
     [SerializeField] private WeaponInfo weapon;
     [SerializeField] private int maxHealth;
     private GameObject player;
 
-    
     [SerializeField] private Weapon playerWeaponSlot;
     //[SerializeField] private Shield playerShieldSlot;
+
+    public static PlayerStatistics Instance()
+    {
+        if (instance == null)
+            instance = FindObjectOfType<PlayerStatistics>();
+
+        return instance;
+    }
 
     public WeaponInfo PlayerWeaponInfo
     {
         set
         {
-            weapon = value;
+            Instance().weapon = value;
             ChangePlayerWeapon();
         }
 
-        get { return weapon; }
+        get { return Instance().weapon; }
     }
 
     //Equips players with items he/she gathered so far
     void Awake()
     {
-        player = FindObjectOfType<PlayerController>().gameObject;
+        Instance().player = FindObjectOfType<PlayerController>().gameObject;
         LoadPlayerStatistics();
     }
 
@@ -42,12 +50,18 @@ public class PlayerStatistics : MonoBehaviour
 
     public void ChangePlayerMaxHealth()
     {
-        player.GetComponent<Hittable>().MaxHealth = maxHealth;
+        Instance().player.GetComponent<Hittable>().MaxHealth = Instance().maxHealth;
     }
 
-    public void ChangePlayerWeapon()
+    private void ChangePlayerWeapon()
     {
-        playerWeaponSlot.GetComponent<MeshFilter>().mesh = weapon.mesh;
-        playerWeaponSlot.damage = weapon.damage;
+        Instance().playerWeaponSlot.GetComponent<MeshFilter>().mesh = Instance().weapon.mesh;
+        Instance().playerWeaponSlot.damage = Instance().weapon.damage;
+    }
+
+    public void ChangePlayerWeapon(WeaponInfo weapon)
+    {
+        PlayerWeaponInfo = weapon;
+        ChangePlayerWeapon();
     }
 }

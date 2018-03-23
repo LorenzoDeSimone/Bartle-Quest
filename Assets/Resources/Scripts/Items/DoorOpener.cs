@@ -56,7 +56,7 @@ public class DoorOpener : Interactable
 
     private IEnumerator StartDialogueWithNPC(Talker npcTalker)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         dialogueManager.InitDialogue(npcTalker);
     }
 
