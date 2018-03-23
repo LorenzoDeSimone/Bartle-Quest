@@ -13,8 +13,7 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private int maxHealth;
     private GameObject player;
 
-    [SerializeField] private Weapon playerWeaponSlot;
-    //[SerializeField] private Shield playerShieldSlot;
+    private EquipSlots playerEquipSlots;
 
     public static PlayerStatistics Instance()
     {
@@ -36,9 +35,10 @@ public class PlayerStatistics : MonoBehaviour
     }
 
     //Equips players with items he/she gathered so far
-    void Start()
+    void Awake()
     {
         Instance().player = FindObjectOfType<PlayerController>().gameObject;
+        Instance().playerEquipSlots = Instance().player.GetComponent<EquipSlots>();
         LoadPlayerStatistics();
     }
 
@@ -55,8 +55,8 @@ public class PlayerStatistics : MonoBehaviour
 
     private void ChangePlayerWeapon()
     {
-        Instance().playerWeaponSlot.GetComponent<MeshFilter>().mesh = Instance().weapon.mesh;
-        Instance().playerWeaponSlot.damage = Instance().weapon.damage;
+        Instance().playerEquipSlots.weapon.GetComponent<MeshFilter>().mesh = Instance().weapon.mesh;
+        Instance().playerEquipSlots.weapon.damage = Instance().weapon.damage;
     }
 
     public void ChangePlayerWeapon(WeaponInfo weapon)
