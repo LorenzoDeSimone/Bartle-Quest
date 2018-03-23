@@ -12,6 +12,8 @@ public class PauseAndDeathManager : MonoBehaviour
     private float fadeInTime = 0.5f;
     private float fadeOutTime = 1f;
 
+    private bool pauseButtonToggle = false;
+
     // Use this for initialization
     void Start()
     {
@@ -24,6 +26,28 @@ public class PauseAndDeathManager : MonoBehaviour
     {
         if (uIPlayerHealth.playerHittable.CurrentHealth == 0)
             StartCoroutine(FadeOut());
+        else
+            PauseManagement();
+    }
+
+    private void PauseManagement()
+    {
+        if (Input.GetButtonDown("Start") && !pauseButtonToggle)
+        {
+            pauseButtonToggle = true;
+            Time.timeScale = 0f;
+            DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, 0.8f);
+            DeathAndPauseScreen.GetComponentInChildren<Text>(true).gameObject.SetActive(true);
+            FindObjectOfType<PlayerController>().GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal;
+        }
+        else if (Input.GetButtonDown("Start") && pauseButtonToggle)
+        {
+            pauseButtonToggle = false;
+            Time.timeScale = 1f;
+            DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, 0);
+            DeathAndPauseScreen.GetComponentInChildren<Text>(true).gameObject.SetActive(false);
+            FindObjectOfType<PlayerController>().GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
+        }
     }
 
     IEnumerator FadeIn()
@@ -37,6 +61,7 @@ public class PauseAndDeathManager : MonoBehaviour
             yield return null;
         }
     }
+
 
     IEnumerator FadeOut()
     {

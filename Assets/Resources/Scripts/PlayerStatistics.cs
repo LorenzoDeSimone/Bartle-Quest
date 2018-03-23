@@ -36,7 +36,7 @@ public class PlayerStatistics : MonoBehaviour
     }
 
     //Equips players with items he/she gathered so far
-    void Awake()
+    void Start()
     {
         Instance().player = FindObjectOfType<PlayerController>().gameObject;
         LoadPlayerStatistics();

@@ -56,6 +56,10 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 0f;
         dialoguePanel.SetActive(true);
         interactionPopup.SetActive(false);
+
+        if (currentTalker.GetComponent<Animator>())
+            currentTalker.GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
+
         StartCoroutine(DialogueRoutine());
     }
 
@@ -147,5 +151,8 @@ public class DialogueManager : MonoBehaviour
         VD.EndDialogue();
         Time.timeScale = 1f;
         isDialogueOn = false;
+
+        if (currentTalker.GetComponent<Animator>())
+            currentTalker.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal;
     }
 }
