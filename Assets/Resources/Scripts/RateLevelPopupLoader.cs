@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : Interactable
+public class RateLevelPopupLoader : Interactable
 {
-    [SerializeField] private string nextScene;
+    [SerializeField] RateLevelPopup rateLevelPopup;
 
     public override bool CanInteract()
     {
@@ -14,7 +15,8 @@ public class SceneLoader : Interactable
 
     public override void Interact()
     {
-        PauseAndDeathManager.Instance().LoadScene(nextScene);
+        Time.timeScale = 0f;
+        rateLevelPopup.gameObject.SetActive(true);
     }
 }
 
