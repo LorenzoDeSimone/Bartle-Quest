@@ -14,6 +14,8 @@ public class PauseAndDeathManager : MonoBehaviour
 
     private bool pauseButtonToggle = false;
 
+    private static PauseAndDeathManager instance;
+
     // Use this for initialization
     void Start()
     {
@@ -21,13 +23,36 @@ public class PauseAndDeathManager : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
+    public static PauseAndDeathManager Instance()
+    {
+        if (instance == null)
+            instance = FindObjectOfType<PauseAndDeathManager>();
+
+        return instance;
+    }
+
     // Update is called once per frame
     void Update ()
     {
-        if (uIPlayerHealth.playerHittable.CurrentHealth == 0)
-            StartCoroutine(FadeOut());
+        if (IsPlayerDead())
+        {
+            ResetPlayerInfo();
+            StartCoroutine(FadeOut(SceneManager.GetActiveScene().name));
+        }
         else
             PauseManagement();
+    }
+
+    private void ResetPlayerInfo()
+    {
+        PlayerChoices.Instance().Rollback();
+        PlayerStatistics.Instance().Rollback();
+        BartleStatistics.Instance().Rollback();
+    }
+
+    private bool IsPlayerDead()
+    {
+        return uIPlayerHealth.playerHittable.CurrentHealth == 0;
     }
 
     private void PauseManagement()
@@ -63,7 +88,7 @@ public class PauseAndDeathManager : MonoBehaviour
     }
 
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOut(string sceneName)
     {
         elapsedTime = 0;
         while (elapsedTime < fadeOutTime)
@@ -73,6 +98,11 @@ public class PauseAndDeathManager : MonoBehaviour
             DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
             yield return null;
         }        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        StartCoroutine(FadeOut(sceneName));
     }
 }

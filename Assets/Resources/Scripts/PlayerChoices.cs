@@ -7,6 +7,13 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool helpedSpikeWithoutReward = false;
 
     private static PlayerChoices instance;
+    private static PlayerChoices rollbackInstance; 
+
+    void Awake()
+    {
+        Instance();
+        rollbackInstance = (PlayerChoices)instance.MemberwiseClone();
+    }
 
     public static PlayerChoices Instance()
     {
@@ -14,6 +21,11 @@ public class PlayerChoices : MonoBehaviour
             instance = FindObjectOfType<PlayerChoices>();
 
         return instance;
+    }
+
+    public void Rollback()
+    {
+        instance = rollbackInstance;
     }
 
     public bool HelpedSpikeWithoutReward

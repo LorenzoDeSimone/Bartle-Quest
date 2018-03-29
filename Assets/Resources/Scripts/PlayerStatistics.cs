@@ -8,6 +8,7 @@ public class PlayerStatistics : MonoBehaviour
     //every method that wants to change character's equip permamently
     //should update through this class
     private static PlayerStatistics instance;
+    private static PlayerStatistics rollbackInstance;
 
     [SerializeField] private WeaponInfo weapon;
     [SerializeField] private int maxHealth;
@@ -40,6 +41,13 @@ public class PlayerStatistics : MonoBehaviour
         Instance().player = FindObjectOfType<PlayerController>().gameObject;
         Instance().playerEquipSlots = Instance().player.GetComponent<EquipSlots>();
         LoadPlayerStatistics();
+
+        rollbackInstance = (PlayerStatistics)instance.MemberwiseClone();
+    }
+
+    public void Rollback()
+    {
+        instance = rollbackInstance;
     }
 
     private void LoadPlayerStatistics()
