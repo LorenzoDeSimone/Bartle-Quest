@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RateLevelPopup : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class RateLevelPopup : MonoBehaviour
         }
         else if(Input.GetButtonDown("A"))
         {
+            PlayerChoices.Instance().AddLevelRating(SceneManager.GetActiveScene().name, rateValue);
             Time.timeScale = 1f;
             PauseAndDeathManager.Instance().LoadScene(nextScene);
         }

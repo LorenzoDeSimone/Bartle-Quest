@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerChoices : MonoBehaviour
 {
+    [SerializeField] private Dictionary<string, float> levelRatings;
+
     [SerializeField] private bool helpedSpikeWithoutReward = false;
 
     private static PlayerChoices instance;
@@ -18,10 +20,23 @@ public class PlayerChoices : MonoBehaviour
     public static PlayerChoices Instance()
     {
         if (instance == null)
+        {
             instance = FindObjectOfType<PlayerChoices>();
-
+            instance.levelRatings = new Dictionary<string, float>();
+        }
         return instance;
     }
+
+    /*
+    void Update()
+    {
+        foreach (string s in levelRatings.Keys)
+        {
+            float v;
+            levelRatings.TryGetValue(s,out v);
+            Debug.Log(s + "| |" + v);
+        }
+    }*/
 
     public void Rollback()
     {
@@ -32,5 +47,10 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().helpedSpikeWithoutReward = value; }
         get { return Instance().helpedSpikeWithoutReward;  }
+    }
+
+    public void AddLevelRating(string levelName, float levelRating)
+    {
+        Instance().levelRatings.Add(levelName,levelRating);
     }
 }

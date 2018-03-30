@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void GamePausedUpdate()
     {
-
+        myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
     }
 
     private void InteractionInput()
