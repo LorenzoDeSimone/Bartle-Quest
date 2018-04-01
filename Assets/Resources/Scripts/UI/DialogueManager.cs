@@ -33,6 +33,11 @@ public class DialogueManager : MonoBehaviour
         return canGoOn;
     }
 
+    public void ChangeDisplayedTalkerName(string name)
+    {
+        nameField.text = name;
+    }
+
     public void InitDialogue(Talker talker)
     {
         if (!Talker.isPossibleToTalk || isDialogueOn)
