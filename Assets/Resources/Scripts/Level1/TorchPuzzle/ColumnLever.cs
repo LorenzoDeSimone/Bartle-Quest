@@ -16,8 +16,6 @@ public class ColumnLever : Interactable
 
     public override void Interact()
     {
-        if (animation.isPlaying)
-            return;
 
         if (animationSpeed == 1)
         {
@@ -37,6 +35,6 @@ public class ColumnLever : Interactable
 
     public override bool CanInteract()
     {
-        return true;
+        return !animation.isPlaying;
     }
 }

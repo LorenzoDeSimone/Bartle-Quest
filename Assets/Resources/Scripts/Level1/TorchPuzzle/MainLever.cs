@@ -16,36 +16,22 @@ public class MainLever : Interactable
 
     public override void Interact()
     {
-        if (!canInteract)
-            return;
-
         canInteract = false;
-
-        /*
-        if (animationSpeed == 1)
-        {
-            animation["PullLever"].time = animation["PullLever"].length;
-            animationSpeed = -1f;
-        }
-        else
-        {
-            animation["PullLever"].time = 0f;
-            animationSpeed = 1;
-        }*/
-
-        //animation["PullLever"].speed = animationSpeed;
-        //animationSpeed -= animationSpeed; 
-        //animation.Play();
+        StartCoroutine(Cooldown());
         StartCoroutine(Pull());
         foreach (TorchColumn t in columns)
-        {
             t.Rotate();
-        }
     }
 
     public override bool CanInteract()
     {
-        return true;
+        return canInteract;
+    }
+
+    private IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(TorchColumn.rotationTime);
+        canInteract = true;
     }
 
     private IEnumerator Pull()
@@ -66,7 +52,7 @@ public class MainLever : Interactable
             yield return null;
 
         animation["PullLever"].speed = 1f;
-        canInteract = true;
+        //canInteract = true;
     }
 }
 
