@@ -10,6 +10,8 @@ using System.Threading;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.Net;
+using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Auth.OAuth2.Responses;
 
 public class GoogleDataSender : MonoBehaviour
 {
@@ -36,12 +38,20 @@ public class GoogleDataSender : MonoBehaviour
         ClientSecrets secrets = new ClientSecrets();
         secrets.ClientId = "600335507946-p7tu2i1b1tg3nraotghai04voc4oro3v.apps.googleusercontent.com";
         secrets.ClientSecret = "NUx7sbtlkKr0D2NTtLaU9_H1";
-
-        credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+        
+        /*credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
             secrets,
             Scopes,
             "user",
             CancellationToken.None).Result;
+            */
+
+        var token = new TokenResponse { RefreshToken = "1/1omuKKwslccR8r7Ak5MtkzqF7SV4wGtA446fP7rHsUM" };
+
+        credential = new UserCredential(
+        new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer { ClientSecrets = secrets }),
+        "user",
+        token);
 
         // Create Google Sheets API service.
         var service = new SheetsService(new BaseClientService.Initializer()

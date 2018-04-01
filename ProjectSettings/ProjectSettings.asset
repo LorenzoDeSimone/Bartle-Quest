@@ -639,7 +639,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: d6e35b40-2b1f-4691-9645-b0a79dd127e4
   projectName: Bartle Quest
   organizationId: lorenzo-de-simone
