@@ -140,7 +140,7 @@ public class PlayerCamera : MonoBehaviour
 
     public bool IsTargetPressed()
     {
-        return Input.GetButtonDown("LB");
+        return Input.GetAxisRaw("LT") > 0f && !IsInLockTargetStatus();
     }
 
     public bool IsTargetReleased()
@@ -148,7 +148,7 @@ public class PlayerCamera : MonoBehaviour
         if (player.Equals(target))
             return true;
         else
-            return (Input.GetButtonUp("LB") ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
+            return (Input.GetAxisRaw("LT") < 1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
     }
 
     void LateUpdate()
@@ -156,17 +156,6 @@ public class PlayerCamera : MonoBehaviour
         UpdateTarget();
         GetCameraInput();
         UpdatePosition();
-    }
-
-    bool IsTriggerDown()
-    {
-        return Input.GetButton("LB");
-    }
-
-
-    bool IsTriggerToggled()
-    {
-        return Input.GetButtonDown("LB");
     }
 
     private int ClampAngle(float angle, float min, float max)

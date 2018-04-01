@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
-        wallLayerMask = LayerMask.GetMask("Wall");
+        wallLayerMask = LayerMask.GetMask("Wall") | LayerMask.GetMask("Obstacle") | LayerMask.GetMask("NPC");
         myPlayerStatus = GetComponent<CharacterStatus>();
         myCameraScript = myCamera.GetComponent<PlayerCamera>();
     }
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
             cameraTargetIsEnemy = target != null && target.IsEnemy;
         }
 
-        myPlayerStatus.ShieldUpStatus =  Input.GetButton("LB")           && 
+        myPlayerStatus.ShieldUpStatus =  Input.GetAxisRaw("LT") > 0f     && 
                                          myPlayerStatus.GroundedStatus   &&
                                          !myPlayerStatus.AttackingStatus &&
                                          (cameraTargetIsEnemy || myCameraScript.CurrentTarget.Equals(transform));

@@ -17,8 +17,8 @@ TagManager:
   - Stairs
   - Wall
   - Player
-  - Enemy
-  - 
+  - NPC
+  - Obstacle
   - 
   - 
   - 
