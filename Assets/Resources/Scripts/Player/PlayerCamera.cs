@@ -109,7 +109,6 @@ public class PlayerCamera : MonoBehaviour
         else
             return player.position;
     }
-
     void UpdateTarget()
     {
         if (IsTargetPressed())

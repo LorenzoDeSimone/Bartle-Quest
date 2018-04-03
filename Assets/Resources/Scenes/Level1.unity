@@ -1828,6 +1828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: SpikeEscaped
   talkerName: Spike
+  actualTalkerAnimator: {fileID: 515707322}
 --- !u!114 &57509739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2455,7 +2456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a761cfd5f9124d43b757d271b956405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateLevelPopup: {fileID: 0}
+  rateLevelPopup: {fileID: 387280866}
 --- !u!114 &89619221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6122,6 +6123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: PrisonScroll
   talkerName: 
+  actualTalkerAnimator: {fileID: 0}
 --- !u!114 &257174557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12923,7 +12925,7 @@ RectTransform:
   - {fileID: 1985055884}
   - {fileID: 2070273748}
   m_Father: {fileID: 1637273843}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -15049,7 +15051,7 @@ RectTransform:
   m_Children:
   - {fileID: 262554232}
   m_Father: {fileID: 1637273843}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15703,6 +15705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: SpikeInprisoned
   talkerName: Spike
+  actualTalkerAnimator: {fileID: 0}
 --- !u!114 &515707317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24109,7 +24112,6 @@ Transform:
   m_LocalPosition: {x: -28.01, y: -35, z: -22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1669227115}
   - {fileID: 1148166407}
   m_Father: {fileID: 1970669277}
   m_RootOrder: 0
@@ -36329,6 +36331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: PrisonGuard
   talkerName: 
+  actualTalkerAnimator: {fileID: 0}
 --- !u!23 &734859452 stripped
 MeshRenderer:
   m_PrefabParentObject: {fileID: 2306528, guid: f9e50d1de3e44b84b97df37ec751d2d1,
@@ -47490,7 +47493,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2104362115
+  randomSeed: -581753769
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -58972,7 +58975,7 @@ RectTransform:
   m_Children:
   - {fileID: 1425896841}
   m_Father: {fileID: 1637273843}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -59068,7 +59071,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421658, guid: b495c7cb9271e854898f661764d0ddde, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.003
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 421658, guid: b495c7cb9271e854898f661764d0ddde, type: 2}
       propertyPath: m_LocalPosition.z
@@ -60607,7 +60610,7 @@ RectTransform:
   m_Children:
   - {fileID: 670862693}
   m_Father: {fileID: 1637273843}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -88361,7 +88364,7 @@ Prefab:
     - target: {fileID: 224464479246927596, guid: 0b51ef6e5c68daa4f85280d800077cd6,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224464479246927596, guid: 0b51ef6e5c68daa4f85280d800077cd6,
         type: 2}
@@ -96279,11 +96282,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1281899688}
   - {fileID: 1189729999}
   - {fileID: 472093559}
   - {fileID: 387280863}
   - {fileID: 1077983003}
+  - {fileID: 1281899688}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96605,77 +96608,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 487410, guid: e8b16054dc249934ca92f88f9b41b0c6, type: 2}
   m_PrefabInternal: {fileID: 302946707}
---- !u!1 &1669227114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1669227115}
-  - component: {fileID: 1669227118}
-  - component: {fileID: 1669227117}
-  - component: {fileID: 1669227116}
-  m_Layer: 10
-  m_Name: RateLevelPopupLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1669227115
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669227114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 636434476}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1669227116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669227114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a761cfd5f9124d43b757d271b956405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rateLevelPopup: {fileID: 387280866}
---- !u!114 &1669227117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669227114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caab493cc02599b40b5c59b86f6c0b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnemy: 0
-  text: Go to the next Level
-  buttonName: A
-  buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
-  interactable: {fileID: 1717575581}
---- !u!65 &1669227118
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669227114}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1676489653
 GameObject:
   m_ObjectHideFlags: 0
@@ -101245,12 +101177,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 459860, guid: c37c40b2ce214634392ef23989f4087d, type: 2}
   m_PrefabInternal: {fileID: 1868489583}
---- !u!114 &1717575581 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114467461350344606, guid: eedc66f03a07b42418199a09446d50f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1136307816}
-  m_Script: {fileID: 11500000, guid: 9a761cfd5f9124d43b757d271b956405, type: 3}
 --- !u!1001 &1719733864
 Prefab:
   m_ObjectHideFlags: 0
@@ -115173,6 +115099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: PrisonAltar
   talkerName: Altar
+  actualTalkerAnimator: {fileID: 0}
 --- !u!114 &1876581189
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -57,7 +57,7 @@ public class PauseAndDeathManager : MonoBehaviour
 
     private void PauseManagement()
     {
-        if (Input.GetButtonDown("Start") && !pauseButtonToggle)
+        if (Time.timeScale > 0f && Input.GetButtonDown("Start") && !pauseButtonToggle)
         {
             pauseButtonToggle = true;
             Time.timeScale = 0f;

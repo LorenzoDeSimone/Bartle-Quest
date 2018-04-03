@@ -7,6 +7,7 @@ public class Talker : Interactable
     [HideInInspector] public static bool isPossibleToTalk = true;
     [SerializeField] private string dialogueName;
     [SerializeField] private string talkerName;
+    [SerializeField] private Animator actualTalkerAnimator;
 
     public string TalkerName
     {
@@ -18,6 +19,17 @@ public class Talker : Interactable
     {
         get { return dialogueName; }
         set { dialogueName = value; }
+    }
+
+    public Animator ActualTalkerAnimator
+    {
+        get
+        {
+            if (actualTalkerAnimator)
+                return actualTalkerAnimator;
+            else
+                return GetComponent<Animator>();
+        }
     }
 
     // Use this for initialization

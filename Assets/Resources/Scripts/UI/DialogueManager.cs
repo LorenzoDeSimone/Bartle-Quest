@@ -62,8 +62,8 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
         interactionPopup.SetActive(false);
 
-        if (currentTalker.GetComponent<Animator>())
-            currentTalker.GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
+        if (currentTalker.ActualTalkerAnimator)
+            currentTalker.ActualTalkerAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
 
         StartCoroutine(DialogueRoutine());
     }
@@ -157,7 +157,7 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1f;
         isDialogueOn = false;
 
-        if (currentTalker.GetComponent<Animator>())
-            currentTalker.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal;
+        if (currentTalker.ActualTalkerAnimator)
+            currentTalker.ActualTalkerAnimator.updateMode = AnimatorUpdateMode.Normal;
     }
 }
