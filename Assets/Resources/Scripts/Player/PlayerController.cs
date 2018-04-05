@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
             cameraTargetIsEnemy = target != null && target.IsEnemy;
         }
 
-        myPlayerStatus.ShieldUpStatus =  Input.GetAxisRaw("LT") > 0f     && 
+        myPlayerStatus.ShieldUpStatus =  Input.GetAxis("LT") > 0.1f      && 
                                          myPlayerStatus.GroundedStatus   &&
                                          !myPlayerStatus.AttackingStatus &&
                                          (cameraTargetIsEnemy || myCameraScript.CurrentTarget.Equals(transform));

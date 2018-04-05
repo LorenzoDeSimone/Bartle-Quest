@@ -15,25 +15,26 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float y = 0.0f;
     [SerializeField] private float lockDistance = 8f;
     [SerializeField] private float lockCamMinDistance = 3f;
-    [SerializeField] private float maxTargetDistance = 10f;
     [SerializeField] private LayerMask wallLayerMask;
+    [SerializeField] private TargetManager targetManager;
+    private float maxTargetDistance = 10f;
 
     private Transform player;
-    private TargetManager targetManager;
     [HideInInspector] public InteractionManager interactionManager;
     private float standardDistance;
     private CharacterStatus myPlayerStatus;
+    private float lastFrameLTtriggerValue = 0f;
 
     void Start()
     {
         Vector3 angles = transform.eulerAngles;
         player = target;
-        targetManager = player.GetComponentInChildren<TargetManager>();
         interactionManager = player.GetComponentInChildren<InteractionManager>();
         myPlayerStatus = player.GetComponentInParent<CharacterStatus>();
         x = angles.y;
         y = angles.x;
         standardDistance = distance;
+        maxTargetDistance = targetManager.GetComponent<SphereCollider>().radius * 1.5f;
     }
 
     public Transform CurrentTarget
@@ -139,7 +140,7 @@ public class PlayerCamera : MonoBehaviour
 
     public bool IsTargetPressed()
     {
-        return Input.GetAxisRaw("LT") > 0f && !IsInLockTargetStatus();
+        return Input.GetAxis("LT") > Mathf.Max(0.1f, lastFrameLTtriggerValue) && !IsInLockTargetStatus();
     }
 
     public bool IsTargetReleased()
@@ -147,14 +148,16 @@ public class PlayerCamera : MonoBehaviour
         if (player.Equals(target))
             return true;
         else
-            return (Input.GetAxisRaw("LT") < 1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
+            return (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
     }
 
     void LateUpdate()
     {
+        //Debug.Log(target);
         UpdateTarget();
         GetCameraInput();
         UpdatePosition();
+        lastFrameLTtriggerValue = Input.GetAxis("LT");
     }
 
     private int ClampAngle(float angle, float min, float max)
