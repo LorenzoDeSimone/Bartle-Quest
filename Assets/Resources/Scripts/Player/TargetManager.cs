@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
+    [SerializeField] private LayerMask targetUnreachableMask;
     protected HashSet<Transform> nearTargets;
 
     protected void Start()
     {
         nearTargets = new HashSet<Transform>();
+        targetUnreachableMask = LayerMask.GetMask("Ground");
     }
 
     protected void OnTriggerEnter(Collider collider)
@@ -47,8 +49,12 @@ public class TargetManager : MonoBehaviour
                         currDist = Vector3.Distance(t.position, transform.position);
                         if (currDist < minDist)
                         {
-                            minDist = currDist;
-                            nearestTarget = t;
+                            //if (!Physics.Raycast(transform.position, (t.position - transform.position).normalized,
+                            //currDist, targetUnreachableMask))
+                            //{
+                                minDist = currDist;
+                                nearestTarget = t;
+                            //}
                         }
                     }
                 }
