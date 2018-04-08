@@ -1,21 +1,81 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class LordOfTheDeadTeleport : LordOfTheDeadsState
 {
-
-    private Transform GetRandomPoint()
+    private int GetRandomIndex()
     {
-        return myStatus.teleportPoints[Random.Range(0, myStatus.teleportPoints.Length - 1)];
+        return Random.Range(0, myStatus.teleportPoints.Length - 1);
     }
 
-	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    private void SummonSkeletons()
+    {
+        Vector3 currentDirection = myStatus.target.transform.forward;
+
+        for (int i = 0; i < myStatus.skeletonToSummon; i++)
+        {
+            UnityEngine.Object Skeleton;
+            if (Random.Range(0f, 1f) < 0.5f)
+                Skeleton = Resources.Load("Prefabs/NPCs/Skeleton/SkeletonHammerSlave");
+            else
+                Skeleton = Resources.Load("Prefabs/NPCs/Skeleton/SkeletonSwordSlave");
+
+            GameObject skeletonGO = (GameObject)Instantiate(Skeleton);
+            GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
+            skeletonGO.GetComponent<DeathNotifier>().SetFloatingSkull(myStatus.floatingSkullLights[i]);
+            LitFloatingSkull(i);
+
+            skeletonStatus.target = myStatus.target;
+            skeletonStatus.transform.position = myStatus.target.transform.position +
+                                                currentDirection * skeletonStatus.GetComponent<NavMeshAgent>().stoppingDistance;
+            currentDirection = Quaternion.Euler(0f, 90f, 0f) * currentDirection;
+        }
+    }
+
+    private void LitFloatingSkull(int i)
+    {
+        myStatus.floatingSkullLights[i].gameObject.SetActive(true);
+    }
+
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialization(animator);
-        myStatus.transform.position = GetRandomPoint().position;
-        myFSM.SetTrigger("teleportDone");
+        SummonSkeletons();
+        myStatus.skeletonToSummon++;
+        int randomIndex = GetRandomIndex();
+        myStatus.transform.position = myStatus.teleportPoints[randomIndex].position;
+        myStatus.GetComponent<Hittable>().Invincible = true;
+    }
+
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        RotateTowards(myStatus.target.position);
         CheckTransitions();
-	}
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        myStatus.GetComponent<Hittable>().Invincible = false;
+    }
+
+    private bool FloatingSkullsLeft()
+    {
+        foreach(ParticleSystem t in myStatus.floatingSkullLights)
+        {
+            if (t.gameObject.active)
+                return true;
+        }
+        return false;
+    }
+
+    protected override void CheckTransitions()
+    {
+        base.CheckTransitions();
+        if(!FloatingSkullsLeft())
+            myFSM.SetTrigger("teleportDone");
+    }
 }

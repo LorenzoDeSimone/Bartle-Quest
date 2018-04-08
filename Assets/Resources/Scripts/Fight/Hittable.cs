@@ -9,13 +9,20 @@ public class Hittable : MonoBehaviour
     [SerializeField] private int maxHealth = 5;
     private int previousUpdateHealth;
     private int currentHealth;
-    private bool justHit;
+    private bool justHit    = false;
+    private bool invincible = false;
 
     private CharacterStatus myCharacterStatus;
 
     public bool JustHit
     {
         get { return justHit; }
+    }
+
+    public bool Invincible
+    {
+        set { invincible = value; }
+        get { return invincible; }
     }
 
     // Use this for initialization

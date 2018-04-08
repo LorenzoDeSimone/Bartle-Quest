@@ -5,11 +5,20 @@ using UnityEngine;
 public class LordOfTheDeadsStatus : EnemyStatus
 {
     [SerializeField] public Transform[] teleportPoints;
-    [SerializeField] public Transform[] floatingSkulls;
+    [SerializeField] public ParticleSystem[] floatingSkullLights;
     [SerializeField] private MeshRenderer head;
     [SerializeField] private MeshRenderer weapon;
     [SerializeField] private SkinnedMeshRenderer body;
     [SerializeField] private Material stone;
+    [SerializeField] public int skeletonToSummon = 2;
+    [SerializeField] public int deltaHPToTeleport = 4;
+    [SerializeField] public HashSet<Transform> currentSkeletons;
+
+    protected new void Start()
+    {
+        base.Start();
+        currentSkeletons = new HashSet<Transform>();
+    }
 
     public bool PetrifiedStatus
     {
@@ -26,12 +35,8 @@ public class LordOfTheDeadsStatus : EnemyStatus
                 Destroy(GetComponent<Hittable>());
                 Destroy(healthBarGO);
                 myAnimator.speed = 0f;
-                foreach (Transform t in floatingSkulls)
-                {
-                    t.GetComponent<AnimationScript>().enabled = false;
-                    Destroy(t.GetComponentInChildren<ParticleSystem>());
-                    Destroy(t.GetComponentInChildren<Light>());
-                }
+                foreach (ParticleSystem t in floatingSkullLights)
+                    Destroy(t);
             }
         }
     }

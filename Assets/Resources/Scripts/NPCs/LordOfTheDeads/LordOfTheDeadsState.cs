@@ -10,7 +10,6 @@ public class LordOfTheDeadsState : State
     [HideInInspector] private bool initDone = false;
     protected float stoppingDistance = 3.5f;
     protected int lastHealth = 0;
-    private readonly float deltaHPToTeleport = 3;
 
     protected void Initialization(Animator animator)
     {
@@ -38,7 +37,7 @@ public class LordOfTheDeadsState : State
         {
             myFSM.SetTrigger("justHit");
             myFSM.SetInteger("hitTaken", myFSM.GetInteger("hitTaken") + 1);
-            if (myFSM.GetInteger("hitTaken") >= deltaHPToTeleport)
+            if (myFSM.GetInteger("hitTaken") >= myStatus.deltaHPToTeleport)
             {
                 myFSM.SetInteger("hitTaken", 0);
                 myFSM.SetTrigger("teleport");
