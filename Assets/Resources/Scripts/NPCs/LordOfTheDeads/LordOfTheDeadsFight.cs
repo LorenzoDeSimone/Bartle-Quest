@@ -12,7 +12,6 @@ public class LordOfTheDeadsFight : LordOfTheDeadsState
     {
         Initialization(animator);
         myStatus.MovingStatus = CharacterStatus.movingIdleValue;
-        myFSM.SetBool("fighting", true);
         timeToWaitBeforeAttack = Random.Range(0f, 2f);
         elapsedTime = 0;
         lastHealth = myHittable.CurrentHealth;

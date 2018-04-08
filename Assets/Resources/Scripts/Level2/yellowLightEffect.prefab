@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 199610667504687238}
   - component: {fileID: 114085631047804678}
   - component: {fileID: 65923008999462630}
+  - component: {fileID: 114598230747662164}
   m_Layer: 0
   m_Name: yellowLightEffect
   m_TagString: Untagged
@@ -66,6 +67,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108d31e72dcc3ce4ca06ddbc706292a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114598230747662164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854477859760252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93b20f5d3412794a848d1c972aa9491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponHolder: {fileID: 0}
+  damage: 0
+  WeaponHitEffect: {fileID: 1854477859760252}
 --- !u!198 &198345103659603402
 ParticleSystem:
   m_ObjectHideFlags: 1

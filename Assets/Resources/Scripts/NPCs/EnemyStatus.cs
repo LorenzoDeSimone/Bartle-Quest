@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyStatus : CharacterStatus
 {
@@ -11,11 +9,12 @@ public class EnemyStatus : CharacterStatus
     [SerializeField] public float walkSpeed = 2f;
     [SerializeField] public float runSpeed = 4f;
     [SerializeField] public float turnSpeed = 5f;
+    protected GameObject healthBarGO;
 
     // Use this for initialization
     protected new void Start()
     {
         base.Start();
-        HealthBar.CreateHealthBar(characterMotionRoot, GetComponent<Hittable>());
+        healthBarGO = HealthBar.CreateHealthBar(characterMotionRoot, GetComponent<Hittable>());
     }
 }

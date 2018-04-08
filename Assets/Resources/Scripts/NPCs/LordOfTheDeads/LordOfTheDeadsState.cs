@@ -36,7 +36,6 @@ public class LordOfTheDeadsState : State
 
         if (myHittable.JustHit)
         {
-            Debug.Log("AAA");
             myFSM.SetTrigger("justHit");
             myFSM.SetInteger("hitTaken", myFSM.GetInteger("hitTaken") + 1);
             if (myFSM.GetInteger("hitTaken") >= deltaHPToTeleport)

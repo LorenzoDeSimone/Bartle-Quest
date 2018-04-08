@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     private static Vector3 Scale = new Vector3(1.8f, 0.8f, 1f);
 
 
-    public static void CreateHealthBar(Transform objectToFollow, Hittable hittable)
+    public static GameObject CreateHealthBar(Transform objectToFollow, Hittable hittable)
     {
         GameObject Canvas = GameObject.Find("Canvas");
 
@@ -28,6 +28,7 @@ public class HealthBar : MonoBehaviour
         myHealthBar.transform.localPosition = Vector3.zero;
         myHealthBar.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         myHealthBar.transform.localScale = Scale;
+        return healthBarGO;
     }
 
     void Start()

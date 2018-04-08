@@ -6,9 +6,11 @@ public class Stone : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.GetComponent<SacredFlames>())
+        SacredFlames sacredFlames = collision.collider.GetComponent<SacredFlames>();
+        Weapon weapon = collision.collider.GetComponent<Weapon>();
+        if (sacredFlames && weapon && weapon.weaponHolder.AttackingStatus)
         {
-            GetComponent<GuardStatus>().DeathStatus = true;
+            GetComponent<LordOfTheDeadsStatus>().PetrifiedStatus = true;
         }
     }
 }

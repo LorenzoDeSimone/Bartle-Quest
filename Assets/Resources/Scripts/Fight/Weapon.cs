@@ -7,7 +7,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
-    private CharacterStatus weaponHolder;
+    public CharacterStatus weaponHolder;
 
     [SerializeField]
     public int damage = 1;
