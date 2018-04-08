@@ -15,6 +15,7 @@ public class WeaponBlesser : MonoBehaviour
         go.transform.SetParent(playerWeapon);
         go.transform.localPosition = new Vector3(0f, 0f, 1.5f);
         go.transform.localRotation = Quaternion.Euler(-25f, 90f, 0f);
+        PlayerChoices.Instance().BlessedSword = true;
     }
 
     public void ChangeGhostDialogue(string dialogueName)

@@ -7,6 +7,7 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private Dictionary<string, float> levelRatings;
 
     [SerializeField] private bool helpedSpikeWithoutReward = false;
+    [SerializeField] private bool blessedSowrd = false;
 
     private static PlayerChoices instance;
     private static PlayerChoices rollbackInstance; 
@@ -47,6 +48,12 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().helpedSpikeWithoutReward = value; }
         get { return Instance().helpedSpikeWithoutReward;  }
+    }
+
+    public bool BlessedSword
+    {
+        set { Instance().blessedSowrd = value; }
+        get { return Instance().blessedSowrd; }
     }
 
     public void AddLevelRating(string levelName, float levelRating)
