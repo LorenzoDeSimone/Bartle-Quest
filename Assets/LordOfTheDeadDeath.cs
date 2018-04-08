@@ -11,4 +11,19 @@ public class LordOfTheDeadDeath : LordOfTheDeadsState
     {
         Initialization(animator);
     }
+
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        elapsedTime += Time.deltaTime;
+
+        if (elapsedTime >= myStatus.timeToDisappearAfterDeath)
+        {
+            myStatus.DeathFade.SetActive(true);
+            myStatus.DeathFade.transform.parent = null;
+            Destroy(myStatus.gameObject);
+        }
+        //gameObject.GetComponent<MeshRenderer>().material = myMaterial;
+    }
+
+    protected override void CheckTransitions() { }
 }

@@ -36235,11 +36235,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 497474, guid: ccd44a6808791dc4383ded3fbb2af2a9, type: 2}
   m_PrefabInternal: {fileID: 450706590}
---- !u!95 &721913757 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95607025336381226, guid: 29a2e27310020284c98bc6048b97ce12,
-    type: 2}
-  m_PrefabInternal: {fileID: 1496143196}
 --- !u!1 &729909376
 GameObject:
   m_ObjectHideFlags: 0
@@ -89357,16 +89352,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 384631963}
     m_Modifications:
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: wayPoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: AttackStates.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4117735464172936, guid: 29a2e27310020284c98bc6048b97ce12, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.27
@@ -89419,80 +89404,10 @@ Prefab:
       propertyPath: wayPoints.Array.data[1]
       value: 
       objectReference: {fileID: 704260173}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: wayPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: wayPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1950425477702524, guid: 29a2e27310020284c98bc6048b97ce12, type: 2}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: isNPC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: AIManager
-      value: 
-      objectReference: {fileID: 721913757}
-    - target: {fileID: 114887738396418888, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: AttackStates.Array.data[1]
-      value: Attack02
-      objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: AttackStates.Array.data[2]
-      value: Attack03
-      objectReference: {fileID: 0}
-    - target: {fileID: 195954111823560966, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 4.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1950425477702524, guid: 29a2e27310020284c98bc6048b97ce12, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: HealthBarPrefab
-      value: 
-      objectReference: {fileID: 1188084817691144, guid: b978a337010d32a4bb377d71ad1a3d4f,
-        type: 2}
-    - target: {fileID: 114354618553690096, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: characterMotionRoot
-      value: 
-      objectReference: {fileID: 1903325010}
-    - target: {fileID: 114335884271598576, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: isEnemy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114314196830368936, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: maxHealth
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 33226209071685234, guid: 29a2e27310020284c98bc6048b97ce12,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 2ecd9880f2f42cc4593ce89a3d05d2a3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29a2e27310020284c98bc6048b97ce12, type: 2}
   m_IsPrefabParent: 0
@@ -115653,11 +115568,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e343d9d7c559b8a42b2777837bdb0fbd, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1903325010 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4396574649196660, guid: 29a2e27310020284c98bc6048b97ce12,
-    type: 2}
-  m_PrefabInternal: {fileID: 1496143196}
 --- !u!1 &1903517373
 GameObject:
   m_ObjectHideFlags: 0
