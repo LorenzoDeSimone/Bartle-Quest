@@ -47,7 +47,6 @@ public abstract class GuardState : State
     {
         if (!initDone)
             return false;
-
         Vector3 viewAngleA = DirFromAngle(-myGuardStatus.viewAngle * 0.5f, false);
         Vector3 viewAngleB = DirFromAngle(myGuardStatus.viewAngle * 0.5f, false);
 

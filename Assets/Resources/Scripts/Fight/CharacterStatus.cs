@@ -19,7 +19,7 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] private bool isNPC;
     [SerializeField] private Animator AIManager;
 
-    private Animator myAnimator;
+    protected Animator myAnimator;
 
     private bool shieldUpThisFrame;
     private float currAnimationLenght;
@@ -141,6 +141,7 @@ public class CharacterStatus : MonoBehaviour
             return false;
         }
     }
+
     public bool DeathStatus
     {
         get
@@ -178,8 +179,10 @@ public class CharacterStatus : MonoBehaviour
             return;
         else
         {
-            if(isNPC)
+            if (isNPC)
+            {
                 FSM.SetTrigger("attackBlocked");
+            }
 
             myAnimator.SetTrigger("attackBlocked");
         }

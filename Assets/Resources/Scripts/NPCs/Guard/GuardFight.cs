@@ -68,7 +68,7 @@ public class GuardFight : GuardState
     protected override void CheckTransitions()
     {
         base.CheckTransitions();
-
+        
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
 
         if (distance > myGuardStatus.attackRadius)
