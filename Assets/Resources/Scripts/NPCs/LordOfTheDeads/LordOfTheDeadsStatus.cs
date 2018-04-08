@@ -13,6 +13,9 @@ public class LordOfTheDeadsStatus : EnemyStatus
     [SerializeField] public int skeletonToSummon = 2;
     [SerializeField] public int deltaHitToTeleport = 5;
     [SerializeField] public HashSet<Transform> currentSkeletons;
+    [SerializeField] public Transform door;
+    [SerializeField] public FriendlyGhostDialogue friendlyGhosts;
+    [SerializeField] public DialogueManager dialogueManager;
 
     protected new void Start()
     {

@@ -15,12 +15,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choiceFields;
 
     private Talker currentTalker;
-
     private bool canGoOn;
     private bool ended;
-
     private static bool isDialogueOn;
-
     private int currentChoiceIndex = 0;
 
     public static bool IsDialogueOn

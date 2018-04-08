@@ -72,4 +72,11 @@ public class PlayerStatistics : MonoBehaviour
         PlayerWeaponInfo = weapon;
         ChangePlayerWeapon();
     }
+
+    public void GiveHealthBonus(int bonus)
+    {
+        Instance().maxHealth += bonus;
+        ChangePlayerMaxHealth();
+        Instance().player.GetComponent<Hittable>().CurrentHealth = Instance().maxHealth;
+    }
 }

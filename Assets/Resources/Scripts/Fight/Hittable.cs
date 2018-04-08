@@ -47,6 +47,7 @@ public class Hittable : MonoBehaviour
 
     public int CurrentHealth
     {
+        set { currentHealth = value; }
         get { return currentHealth; }
     }
 

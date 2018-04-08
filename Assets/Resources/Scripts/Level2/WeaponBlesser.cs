@@ -10,6 +10,9 @@ public class WeaponBlesser : MonoBehaviour
 
     public void BlessWeapon()
     {
+        if (PlayerChoices.Instance().BlessedSword)
+            return;
+
         GameObject go = Instantiate<GameObject>(lightEffect);
         go.GetComponent<Weapon>().weaponHolder = playerWeapon.GetComponent<Weapon>().weaponHolder;
         go.transform.SetParent(playerWeapon);

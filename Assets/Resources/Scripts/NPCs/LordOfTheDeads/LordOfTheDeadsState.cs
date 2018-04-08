@@ -43,10 +43,20 @@ public class LordOfTheDeadsState : State
                 myFSM.SetTrigger("teleport");
             }
         }
- 
+
         if (myStatus.DeathStatus)
+        {
+            myStatus.door.GetComponent<ExplodingDoor>().Explode();
             myFSM.SetTrigger("isDead");
+            myStatus.friendlyGhosts.gameObject.SetActive(true);
+            myStatus.friendlyGhosts.SpawnDialogue("Level2AchieverEnd");
+        }
         else if (myStatus.PetrifiedStatus)
+        {
+            myStatus.door.GetComponent<ExplodingDoor>().Explode();
             myFSM.SetTrigger("isPetrified");
+            myStatus.friendlyGhosts.gameObject.SetActive(true);
+            myStatus.friendlyGhosts.SpawnDialogue("Level2ExplorerEnd");
+        }
     }
 }
