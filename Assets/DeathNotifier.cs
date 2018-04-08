@@ -13,6 +13,7 @@ public class DeathNotifier : MonoBehaviour
 
     void OnDestroy()
     {
-        lordFloatingSkullParticle.gameObject.SetActive(false);
+        if(lordFloatingSkullParticle)
+            lordFloatingSkullParticle.gameObject.SetActive(false);
     }
 }

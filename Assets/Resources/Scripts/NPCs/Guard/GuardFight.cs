@@ -14,8 +14,8 @@ public class GuardFight : GuardState
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
         navMeshAgent.speed = myGuardStatus.runSpeed;
+        navMeshAgent.destination = myGuardStatus.target.position;
         myFSM.SetBool("fighting", true);
-
         timeToWaitBeforeAttack = Random.Range(0f, 2f);
         elapsedTime = 0;
     }
@@ -24,7 +24,6 @@ public class GuardFight : GuardState
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
-
         //Actual fighting case
         if (distance <= navMeshAgent.stoppingDistance && !myGuardStatus.DeathStatus)
         {
