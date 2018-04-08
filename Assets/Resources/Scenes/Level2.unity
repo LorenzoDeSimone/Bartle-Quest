@@ -659,6 +659,8 @@ MonoBehaviour:
   - Level2GhostAchieverChoice
   - Level2GhostAfterBless
   - Level2GhostExplorerChoice
+  - LordOfTheDeadsAchiever
+  - LordOfTheDeadsExplorer
   - Maja
   - MrCube
   - NPCOnly
@@ -28386,7 +28388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
-  maxHealth: 5
+  maxHealth: 6
 --- !u!114 &565785533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57082,7 +57084,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 389534924
+  randomSeed: -86456145
   InitialModule:
     serializedVersion: 3
     enabled: 1

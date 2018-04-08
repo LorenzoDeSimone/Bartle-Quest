@@ -31,6 +31,11 @@ public class LordOfTheDeadTeleport : LordOfTheDeadsState
             skeletonStatus.target = myStatus.target;
             skeletonStatus.transform.position = myStatus.target.transform.position +
                                                 currentDirection * skeletonStatus.GetComponent<NavMeshAgent>().stoppingDistance;
+
+            UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffect");
+            GameObject spawnEffectGO = (GameObject)Instantiate(spawnEffect);
+            spawnEffectGO.transform.position = skeletonStatus.transform.position;
+
             currentDirection = Quaternion.Euler(0f, 90f, 0f) * currentDirection;
         }
     }
@@ -47,7 +52,15 @@ public class LordOfTheDeadTeleport : LordOfTheDeadsState
         SummonSkeletons();
         myStatus.skeletonToSummon++;
         int randomIndex = GetRandomIndex();
+
+        UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffect");
+        GameObject spawnEffectGO = (GameObject)Instantiate(spawnEffect);
+        spawnEffectGO.transform.position = myStatus.transform.position;
+
         myStatus.transform.position = myStatus.teleportPoints[randomIndex].position;
+        spawnEffectGO = (GameObject)Instantiate(spawnEffect);
+        spawnEffectGO.transform.position = myStatus.transform.position;
+
         myStatus.GetComponent<Hittable>().Invincible = true;
     }
 

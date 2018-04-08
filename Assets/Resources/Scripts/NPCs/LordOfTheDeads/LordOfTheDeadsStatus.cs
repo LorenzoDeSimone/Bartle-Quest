@@ -11,7 +11,7 @@ public class LordOfTheDeadsStatus : EnemyStatus
     [SerializeField] private SkinnedMeshRenderer body;
     [SerializeField] private Material stone;
     [SerializeField] public int skeletonToSummon = 2;
-    [SerializeField] public int deltaHPToTeleport = 4;
+    [SerializeField] public int deltaHitToTeleport = 5;
     [SerializeField] public HashSet<Transform> currentSkeletons;
 
     protected new void Start()
@@ -36,7 +36,13 @@ public class LordOfTheDeadsStatus : EnemyStatus
                 Destroy(healthBarGO);
                 myAnimator.speed = 0f;
                 foreach (ParticleSystem t in floatingSkullLights)
-                    Destroy(t);
+                {
+                    if (t)
+                    {
+                        t.GetComponentInParent<AnimationScript>().enabled = false;
+                        Destroy(t);
+                    }
+                }
             }
         }
     }

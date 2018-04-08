@@ -11,7 +11,7 @@ public class WeaponBlesser : MonoBehaviour
     public void BlessWeapon()
     {
         GameObject go = Instantiate<GameObject>(lightEffect);
-        lightEffect.GetComponent<Weapon>().weaponHolder = playerWeapon.GetComponent<Weapon>().weaponHolder;
+        go.GetComponent<Weapon>().weaponHolder = playerWeapon.GetComponent<Weapon>().weaponHolder;
         go.transform.SetParent(playerWeapon);
         go.transform.localPosition = new Vector3(0f, 0f, 1.5f);
         go.transform.localRotation = Quaternion.Euler(-25f, 90f, 0f);
