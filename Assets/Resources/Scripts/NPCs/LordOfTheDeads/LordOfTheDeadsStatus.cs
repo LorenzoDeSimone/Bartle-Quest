@@ -15,7 +15,6 @@ public class LordOfTheDeadsStatus : EnemyStatus
     [SerializeField] public HashSet<Transform> currentSkeletons;
     [SerializeField] public Transform door;
     [SerializeField] public FriendlyGhostDialogue friendlyGhosts;
-    [SerializeField] public DialogueManager dialogueManager;
 
     protected new void Start()
     {

@@ -24,14 +24,18 @@ public class AnimationScript : MonoBehaviour {
     public float scaleSpeed;
     public float scaleRate;
     private float scaleTimer;
+    private float startY;
+    private float timeOffset;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        startY = transform.position.y;
+        timeOffset = Random.Range(0f, 5f);
+    }
+
+    // Update is called once per frame
+    void Update ()
     {   
         if(isAnimated)
         {
@@ -43,23 +47,9 @@ public class AnimationScript : MonoBehaviour {
 
             if (isFloating)
             {
-                floatTimer += Time.deltaTime;
-                Vector3 moveDir = new Vector3(0.0f, floatSpeed, 0.0f);
-                transform.Translate(moveDir);
-
-                if (goingUp && floatTimer >= floatRate)
-                {
-                    goingUp = false;
-                    floatTimer = 0;
-                    floatSpeed = -floatSpeed;
-                }
-
-                else if(!goingUp && floatTimer >= floatRate)
-                {
-                    goingUp = true;
-                    floatTimer = 0;
-                    floatSpeed = +floatSpeed;
-                }
+                transform.position = new Vector3(transform.position.x,
+                                                 startY + floatRate * Mathf.Sin(floatSpeed * Time.time + timeOffset),
+                                                 transform.position.z);
             }
 
             if(isScaling)
