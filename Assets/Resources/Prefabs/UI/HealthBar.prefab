@@ -146,6 +146,7 @@ MonoBehaviour:
   characterToFollow: {fileID: 0}
   characterHittable: {fileID: 0}
   healthBar: {fileID: 114217363034535188}
+  hpText: {fileID: 114499582707997056}
   height: 3
 --- !u!114 &114499582707997056
 MonoBehaviour:
