@@ -8,7 +8,8 @@ public class PlayerChoices : MonoBehaviour
 
     [SerializeField] private bool helpedSpikeWithoutReward = false;
     [SerializeField] private bool blessedSowrd = false;
-
+    [SerializeField] private bool canSeeEnemyHP = false;
+    
     private static PlayerChoices instance;
     private static PlayerChoices rollbackInstance; 
 
@@ -55,6 +56,13 @@ public class PlayerChoices : MonoBehaviour
         set { Instance().blessedSowrd = value; }
         get { return Instance().blessedSowrd; }
     }
+
+    public bool CanSeeEnemyHP
+    {
+        set { Instance().canSeeEnemyHP = value; }
+        get { return Instance().canSeeEnemyHP; }
+    }
+
 
     public void AddLevelRating(string levelName, float levelRating)
     {

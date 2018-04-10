@@ -8,8 +8,10 @@ public class HealthBar : MonoBehaviour
     public Transform characterToFollow;
     public Hittable characterHittable;
     public Image healthBar;
+    public Text hpText;
+
     public float height = 2f;
-    private static Vector3 Scale = new Vector3(1.8f, 0.8f, 1f);
+    private static Vector3 Scale = new Vector3(1f, 1f, 1f);
 
 
     public static GameObject CreateHealthBar(Transform objectToFollow, Hittable hittable)
@@ -28,6 +30,9 @@ public class HealthBar : MonoBehaviour
         myHealthBar.transform.localPosition = Vector3.zero;
         myHealthBar.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         myHealthBar.transform.localScale = Scale;
+
+        myHealthBar.hpText.gameObject.SetActive(PlayerChoices.Instance().CanSeeEnemyHP);
+
         return healthBarGO;
     }
 
@@ -43,6 +48,8 @@ public class HealthBar : MonoBehaviour
         {
             transform.position = characterToFollow.transform.position + Vector3.up * height;
             healthBar.fillAmount = (float)characterHittable.CurrentHealth / (float)characterHittable.MaxHealth;
+            if (PlayerChoices.Instance().CanSeeEnemyHP)
+                hpText.text = characterHittable.CurrentHealth + "/" + characterHittable.MaxHealth;
         }
         else
             Destroy(gameObject);
