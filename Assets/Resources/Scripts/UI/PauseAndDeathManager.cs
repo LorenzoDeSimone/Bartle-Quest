@@ -35,10 +35,7 @@ public class PauseAndDeathManager : MonoBehaviour
     void Update ()
     {
         if (IsPlayerDead())
-        {
-            ResetPlayerInfo();
-            StartCoroutine(FadeOut(SceneManager.GetActiveScene().name));
-        }
+            ReloadScene();
         else
             PauseManagement();
     }
@@ -99,6 +96,14 @@ public class PauseAndDeathManager : MonoBehaviour
             yield return null;
         }        
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ReloadScene()
+    {
+        Time.timeScale = 1f;
+        DeathAndPauseScreen.GetComponentInChildren<Text>(true).gameObject.SetActive(false);
+        ResetPlayerInfo();
+        StartCoroutine(FadeOut(SceneManager.GetActiveScene().name));
     }
 
     public void LoadScene(string sceneName)

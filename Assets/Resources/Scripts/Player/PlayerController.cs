@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
     private void GamePausedUpdate()
     {
         myPlayerStatus.MovingStatus = CharacterStatus.movingIdleValue;
+        if (Input.GetButtonDown("Y"))
+            PauseAndDeathManager.Instance().ReloadScene();
     }
 
     private void InteractionInput()
