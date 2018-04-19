@@ -67,6 +67,7 @@ public class PlayerStatistics : MonoBehaviour
     private void LoadPlayerStatistics()
     {
         ChangePlayerMaxHealth();
+        ChangePlayerHead();
         ChangePlayerWeapon();
     }
 

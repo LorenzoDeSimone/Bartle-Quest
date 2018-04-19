@@ -36014,7 +36014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
-  head: {fileID: 0}
+  head: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
   maxHealth: 6
 --- !u!1001 &713085153
 Prefab:
@@ -57559,7 +57559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 149967141}
-  head: {fileID: 0}
+  head: {fileID: 1401494318}
 --- !u!1001 &1127877430
 Prefab:
   m_ObjectHideFlags: 0
@@ -76890,6 +76890,7 @@ Prefab:
       objectReference: {fileID: 4300000, guid: 51d8631f48cb4b04ab20db921ae46211, type: 3}
     m_RemovedComponents:
     - {fileID: 114816037216475010, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
+    - {fileID: 114278730779860150, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1401494317 stripped
@@ -76898,6 +76899,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1401494316}
   m_Script: {fileID: 11500000, guid: f7167b7877ac3f84fbc7fde818d1432c, type: 3}
+--- !u!4 &1401494318 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4206062828509204, guid: 15c0c3221d278df419545bc6b87d9c17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1401494316}
 --- !u!1 &1403538090
 GameObject:
   m_ObjectHideFlags: 0
