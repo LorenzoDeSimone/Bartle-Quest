@@ -11,6 +11,8 @@ public class PlayerStatistics : MonoBehaviour
     private static PlayerStatistics rollbackInstance;
 
     [SerializeField] private WeaponInfo weapon;
+    [SerializeField] private HeadInfo head;
+
     [SerializeField] private int maxHealth;
     private GameObject player;
 
@@ -34,6 +36,18 @@ public class PlayerStatistics : MonoBehaviour
 
         get { return Instance().weapon; }
     }
+
+    public HeadInfo PlayerHeadInfo
+    {
+        set
+        {
+            Instance().head = value;
+            ChangePlayerHead();
+        }
+
+        get { return Instance().head; }
+    }
+
 
     //Equips players with items he/she gathered so far
     void Awake()
@@ -71,6 +85,17 @@ public class PlayerStatistics : MonoBehaviour
     {
         PlayerWeaponInfo = weapon;
         ChangePlayerWeapon();
+    }
+
+    private void ChangePlayerHead()
+    {
+        Instance().playerEquipSlots.head.GetComponent<MeshFilter>().mesh = Instance().head.mesh;
+    }
+
+    public void ChangePlayerHead(HeadInfo head)
+    {
+        PlayerHeadInfo = head;
+        ChangePlayerHead();
     }
 
     public void GiveHealthBonus(int bonus)
