@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LabDoor : MonoBehaviour
 {
-    [SerializeField] private LabDoorOrnament heart;
+    [SerializeField] private ColouredProp heart;
     private PlayerCandle.CANDLE_COLOUR heartColour;
 
-    [SerializeField] private LabDoorOrnament stars;
+    [SerializeField] private ColouredProp stars;
     private PlayerCandle.CANDLE_COLOUR starsColour;
 
-    [SerializeField] private LabDoorOrnament crown;
+    [SerializeField] private ColouredProp crown;
     private PlayerCandle.CANDLE_COLOUR crownColour;
 
     public Material redMaterial, yellowMaterial, blueMaterial, orangeMaterial, greenMaterial, purpleMaterial;
@@ -32,7 +32,7 @@ public class LabDoor : MonoBehaviour
 
     public void ChangeMaterial(string ornamentName)
     {
-        LabDoorOrnament ornament = GetOrnamentFromName(ornamentName);
+        ColouredProp ornament = GetOrnamentFromName(ornamentName);
         MeshRenderer[] meshRenderers = ornament.GetComponentsInChildren<MeshRenderer>();
         Material m;
         if (enumToMaterial.TryGetValue(playerCandle.CurrentColour, out m))
@@ -50,11 +50,11 @@ public class LabDoor : MonoBehaviour
     {
         //I know...
         return heart.currentColour.Equals(PlayerCandle.CANDLE_COLOUR.YELLOW) &&
-               stars.currentColour.Equals(PlayerCandle.CANDLE_COLOUR.BLUE)   &&
-               crown.currentColour.Equals(PlayerCandle.CANDLE_COLOUR.RED);
+               stars.currentColour.Equals(PlayerCandle.CANDLE_COLOUR.PURPLE) &&
+               crown.currentColour.Equals(PlayerCandle.CANDLE_COLOUR.ORANGE);
     }
 
-    private LabDoorOrnament GetOrnamentFromName(string name)
+    private ColouredProp GetOrnamentFromName(string name)
     {
         if (name.Equals("heart"))
             return heart;

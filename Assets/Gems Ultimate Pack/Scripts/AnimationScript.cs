@@ -24,7 +24,7 @@ public class AnimationScript : MonoBehaviour {
     public float scaleSpeed;
     public float scaleRate;
     private float scaleTimer;
-    private float startY;
+    public float startY;
     private float timeOffset;
 
     // Use this for initialization

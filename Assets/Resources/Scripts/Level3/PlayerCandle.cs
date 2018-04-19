@@ -9,17 +9,26 @@ public class PlayerCandle : MonoBehaviour
     private CANDLE_COLOUR currentColour = CANDLE_COLOUR.UNLIT;
     private Dictionary<CANDLE_COLOUR, Color> enumToColour;
     private Dictionary<CANDLE_COLOUR, Gradient> enumToGradient;
+    private AnimationScript animationScript;
 
     [SerializeField] private ParticleSystem candleParticleSystem;
     [SerializeField] private Light candleLight;
     [SerializeField] private float candleLightIntensity;
+    [SerializeField] private Transform player;
 
     public Color redLight, yellowLight, blueLight, orangeLight, greenLight, purpleLight;
     public Gradient redGradient, yellowGradient, blueGradient, orangeGradient, greenGradient, purpleGradient;
 
     void Start()
     {
+        animationScript = GetComponent<AnimationScript>();
         InitDictionaries();
+    }
+
+    void Update()
+    {
+        animationScript.startY = player.position.y + 2.6f;
+        transform.position = new Vector3(player.position.x, transform.position.y, player.position.z);
     }
 
     public CANDLE_COLOUR CurrentColour
@@ -98,9 +107,4 @@ public class PlayerCandle : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
 }
