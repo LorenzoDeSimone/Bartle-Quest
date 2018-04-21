@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 195994740182404470}
   - component: {fileID: 114711661643214430}
   - component: {fileID: 114143933509292050}
+  - component: {fileID: 114384635878833540}
   m_Layer: 0
   m_Name: SkeletonHammer
   m_TagString: Untagged
@@ -2136,6 +2137,18 @@ MonoBehaviour:
   damage: 1
   WeaponHitEffect: {fileID: 1443241384248244, guid: 4aad79d467b7f944eb53e6945cfb87cc,
     type: 2}
+--- !u!114 &114384635878833540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294470903177078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e923b3838c5539f42b03ab6283520a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonSpawner: {fileID: 0}
 --- !u!114 &114429651401136458
 MonoBehaviour:
   m_ObjectHideFlags: 1

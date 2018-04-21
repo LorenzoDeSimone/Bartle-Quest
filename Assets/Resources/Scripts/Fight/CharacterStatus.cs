@@ -47,14 +47,14 @@ public class CharacterStatus : MonoBehaviour
     {
         get
         {
-            if (!canUseShield)
+            if (!canUseShield || !myAnimator)
                 return false;
 
             return myAnimator.GetBool("isShieldUp");
         }
         set
         {
-            if (!canUseShield)
+            if (!canUseShield || !myAnimator)
                 return;
 
             myAnimator.SetBool("isShieldUp", value);
@@ -65,14 +65,14 @@ public class CharacterStatus : MonoBehaviour
     {
         get
         {
-            if (!canMove)
+            if (!canMove || !myAnimator)
                 return -1;
 
             return myAnimator.GetInteger("isMoving");
         }
         set
         {
-            if (!canMove)
+            if (!canMove || !myAnimator)
                 return;
 
             myAnimator.SetInteger("isMoving", value);
@@ -84,14 +84,14 @@ public class CharacterStatus : MonoBehaviour
     {
         get
         {
-            if (!canMove)
+            if (!canMove || !myAnimator)
                 return true;
 
             return myAnimator.GetBool("isGrounded");
         }
         set
         {
-            if (!canMove)
+            if (!canMove || !myAnimator)
                 return;
 
             if (myAnimator.GetBool("isGrounded") && !value)
@@ -127,7 +127,7 @@ public class CharacterStatus : MonoBehaviour
         //Checks if the character is in one of the states labelled as attackStates in the animator
         get
         {
-            if (!canAttack)
+            if (!canAttack || !myAnimator)
                 return false;
 
             if (myAnimator.GetAnimatorTransitionInfo(0).IsName("AnyState -> " + AttackStates[0]))
@@ -146,14 +146,14 @@ public class CharacterStatus : MonoBehaviour
     {
         get
         {
-            if (!canDie)
+            if (!canDie || !myAnimator)
                 return false;
 
             return myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") || myAnimator.GetAnimatorTransitionInfo(0).IsName("AnyState -> Death");
         }
         set
         {
-            if (!canDie)
+            if (!canDie || !myAnimator)
                 return;
 
             if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
@@ -163,7 +163,7 @@ public class CharacterStatus : MonoBehaviour
 
     public void RequestAttack()
     {
-        if (!canAttack)
+        if (!canAttack || !myAnimator)
             return;
 
         //The character is not attacking and combo needs to start
