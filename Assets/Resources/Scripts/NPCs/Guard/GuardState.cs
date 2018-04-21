@@ -45,8 +45,9 @@ public abstract class GuardState : State
     //List of utility functions to be used during transition checks
     protected bool IsTargetInSight(float viewRadius)
     {
-        if (!initDone)
+        if (!initDone || !myGuardStatus.target)
             return false;
+
         Vector3 viewAngleA = DirFromAngle(-myGuardStatus.viewAngle * 0.5f, false);
         Vector3 viewAngleB = DirFromAngle(myGuardStatus.viewAngle * 0.5f, false);
 

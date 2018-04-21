@@ -36,10 +36,8 @@ public class Weapon : MonoBehaviour
         //Hits only if it is the first collision in the current animator state
 
         //Debug.Log(weaponHolder.gameObject.name +" Hits" + collision.collider.name);
-
-        //if (weaponHolder.gameObject.name.Equals("Guard"))
-        //    Debug.Log(currentAnimatorState.fullPathHash != lastAnimatorState);
-
+    
+ 
         if (weaponHolder.CanWeaponHit(collision.gameObject) && weaponHolder.AttackingStatus && !weaponHolder.gameObject.Equals(collision.collider.gameObject)) 
             //currentAnimatorState.fullPathHash != lastAnimatorState)
         {

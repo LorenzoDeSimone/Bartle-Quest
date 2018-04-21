@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,25 +12,46 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform player, helperNpc;
 
-    private int enemiesAlive, enemiesKilled;
+    private HashSet<Transform> enemiesAlive;
+    private int enemiesKilled;
     
     void Start()
     {
+        enemiesAlive = new HashSet<Transform>();
         StartCoroutine(TimedSpawner());
+    }
+
+    public Transform GetNearestTarget(Vector3 position)
+    {
+        float closestDist = Mathf.Infinity;
+        Transform closestEnemy = null;
+        float dist;
+
+        foreach(Transform currEnemy in enemiesAlive)
+        {
+            dist = Vector3.Distance(currEnemy.position, position);
+            if(dist < closestDist)
+            {
+                closestDist = dist;
+                closestEnemy = currEnemy;
+            }
+        }
+
+        return closestEnemy;
     }
 
     private IEnumerator TimedSpawner()
     {
-        while (enemiesKilled + enemiesAlive < enemyToKill)
+        while (enemiesKilled + enemiesAlive.Count < enemyToKill)
         {
             SummonEnemies();
-            yield return new WaitForSeconds(Random.Range(minSec, maxSec));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(minSec, maxSec));
         }
     }
 
-    public void NotifyEnemyKill()
+    public void NotifyEnemyKill(Transform enemy)
     {
-        enemiesAlive--;
+        enemiesAlive.Remove(enemy);
         enemiesKilled++;
     }
 
@@ -37,12 +59,12 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 currentDirection = Vector3.right;
 
-        int skeletonToSummon = maxEnemiesAlive - enemiesAlive;
+        int skeletonToSummon = maxEnemiesAlive - enemiesAlive.Count;
 
         for (int i = 0; i < skeletonToSummon; i++)
         {
             UnityEngine.Object Skeleton;
-            if (Random.Range(0f, 1f) < 0.5f)
+            if (UnityEngine.Random.Range(0f, 1f) < 0.5f)
                 Skeleton = Resources.Load("Prefabs/NPCs/Skeleton/SkeletonHammer");
             else
                 Skeleton = Resources.Load("Prefabs/NPCs/Skeleton/SkeletonSword");
@@ -51,12 +73,12 @@ public class EnemySpawner : MonoBehaviour
             GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
 
-            if (PlayerChoices.Instance().HelpedSpikeWithoutReward && Random.Range(0f, 1f) < 0.5f)
+            if (PlayerChoices.Instance().HelpedSpikeWithoutReward && UnityEngine.Random.Range(0f, 1f) < 0.5f)
                 skeletonStatus.target = helperNpc;
             else
                 skeletonStatus.target = player;
 
-            Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position +
+            Vector3 spawnPosition = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length - 1)].position +
                                                 currentDirection * agent.stoppingDistance;
 
             agent.Warp(spawnPosition);
@@ -67,7 +89,7 @@ public class EnemySpawner : MonoBehaviour
             spawnEffectGO.transform.position = skeletonStatus.transform.position;
 
             currentDirection = Quaternion.Euler(0f, 90f, 0f) * currentDirection;
-            enemiesAlive++;
+            enemiesAlive.Add(skeletonStatus.transform);
         }
     }
 }

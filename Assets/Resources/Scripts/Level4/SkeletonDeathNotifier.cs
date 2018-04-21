@@ -14,6 +14,6 @@ public class SkeletonDeathNotifier : MonoBehaviour
     void OnDestroy()
     {
         if(skeletonSpawner)
-            skeletonSpawner.NotifyEnemyKill();
+            skeletonSpawner.NotifyEnemyKill(transform);
     }
 }

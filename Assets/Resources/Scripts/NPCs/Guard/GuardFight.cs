@@ -14,7 +14,8 @@ public class GuardFight : GuardState
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
         navMeshAgent.speed = myGuardStatus.runSpeed;
-        navMeshAgent.destination = myGuardStatus.target.position;
+        if (myGuardStatus.target)
+            navMeshAgent.destination = myGuardStatus.target.position;
         myFSM.SetBool("fighting", true);
         timeToWaitBeforeAttack = Random.Range(0f, 2f);
         elapsedTime = 0;
@@ -23,6 +24,9 @@ public class GuardFight : GuardState
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (myGuardStatus.target == null)
+            return;
+
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
         //Actual fighting case
         if (distance <= navMeshAgent.stoppingDistance && !myGuardStatus.DeathStatus)

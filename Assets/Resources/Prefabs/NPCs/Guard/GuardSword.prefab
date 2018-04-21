@@ -1013,11 +1013,8 @@ GameObject:
   - component: {fileID: 33500918477541308}
   - component: {fileID: 23051890349396514}
   - component: {fileID: 54154770945763826}
-  - component: {fileID: 65737495058041746}
   - component: {fileID: 114628257415358608}
   - component: {fileID: 65332158812127636}
-  - component: {fileID: 65857986866605666}
-  - component: {fileID: 65245128932763082}
   m_Layer: 0
   m_Name: weapon_hammer_bronze_5
   m_TagString: Untagged
@@ -1747,7 +1744,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1551655607689644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.263667, y: 0.1716632, z: -38.904373}
+  m_LocalPosition: {x: 1.7180595, y: 0.257289, z: 54.309296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4860678598163818}
@@ -2094,18 +2091,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &65245128932763082
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950814612488642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65332158812127636
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2118,18 +2103,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12045486, y: 0.65356994, z: 2.1306458}
   m_Center: {x: -0.000051702085, y: -0.030720836, z: 1.0653191}
---- !u!65 &65737495058041746
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950814612488642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65744161601565438
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2140,20 +2113,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 1}
+  m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!65 &65857986866605666
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950814612488642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95028205693451772
 Animator:
   serializedVersion: 3
@@ -2429,7 +2390,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 4.5
+  m_StoppingDistance: 4.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
