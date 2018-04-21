@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 114537598283126182}
   - component: {fileID: 114876511300080076}
   - component: {fileID: 114973997037760174}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SkeletonSwordSlave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

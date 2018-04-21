@@ -9,6 +9,8 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool helpedSpikeWithoutReward = false;
     [SerializeField] private bool blessedSowrd = false;
     [SerializeField] private bool canSeeEnemyHP = false;
+    [SerializeField] private bool hasWeirdHat = false;
+
 
     [SerializeField] private bool isMale = true;
 
@@ -63,6 +65,12 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().canSeeEnemyHP = value; }
         get { return Instance().canSeeEnemyHP; }
+    }
+
+    public bool HasWeirdHat
+    {
+        set { Instance().hasWeirdHat = value; }
+        get { return Instance().hasWeirdHat; }
     }
 
     public bool IsMale

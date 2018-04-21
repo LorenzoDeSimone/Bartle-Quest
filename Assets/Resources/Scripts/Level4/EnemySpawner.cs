@@ -15,9 +15,13 @@ public class EnemySpawner : MonoBehaviour
     private HashSet<Transform> enemiesAlive;
     private int enemiesKilled;
     
-    void Start()
+    void Awake()
     {
         enemiesAlive = new HashSet<Transform>();
+    }
+
+    public void StartEnemySpawning()
+    {
         StartCoroutine(TimedSpawner());
     }
 
@@ -72,7 +76,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject skeletonGO = (GameObject)Instantiate(Skeleton);
             GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
-
+            
             if (PlayerChoices.Instance().HelpedSpikeWithoutReward && UnityEngine.Random.Range(0f, 1f) < 0.5f)
                 skeletonStatus.target = helperNpc;
             else
@@ -84,7 +88,7 @@ public class EnemySpawner : MonoBehaviour
             agent.Warp(spawnPosition);
             skeletonStatus.GetComponent<SkeletonDeathNotifier>().SkeletonSpawner = this;
 
-            UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffect");
+            UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffectGrey");
             GameObject spawnEffectGO = (GameObject)Instantiate(spawnEffect);
             spawnEffectGO.transform.position = skeletonStatus.transform.position;
 

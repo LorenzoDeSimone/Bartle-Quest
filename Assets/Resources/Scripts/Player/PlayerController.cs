@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         myCamera = Camera.main.transform;
         walkableLayerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Stairs");
-        wallLayerMask = LayerMask.GetMask("Wall") | LayerMask.GetMask("Obstacle") | LayerMask.GetMask("NPC");
+        wallLayerMask = LayerMask.GetMask("Wall") | LayerMask.GetMask("Obstacle") | LayerMask.GetMask("NPC") | LayerMask.GetMask("Ally");
         myPlayerStatus = GetComponent<CharacterStatus>();
         myCameraScript = myCamera.GetComponent<PlayerCamera>();
     }
