@@ -49,7 +49,7 @@ public class SpellCaster : MonoBehaviour
     {
         coolDownReady = false;
         Hittable hittable;
-        UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffectGrey");
+        UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffectRed");
         GameObject spawnEffectGO = (GameObject)Instantiate(spawnEffect);
         spawnEffectGO.transform.position = transform.position;
 
