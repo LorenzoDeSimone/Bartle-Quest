@@ -14,8 +14,8 @@ public class GuardFight : GuardState
         Initialization(animator);
         myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
         navMeshAgent.speed = myGuardStatus.runSpeed;
-        if (myGuardStatus.target)
-            navMeshAgent.destination = myGuardStatus.target.position;
+        if (myGuardStatus.Target)
+            navMeshAgent.destination = myGuardStatus.Target.position;
         myFSM.SetBool("fighting", true);
         timeToWaitBeforeAttack = Random.Range(0f, 2f);
         elapsedTime = 0;
@@ -24,16 +24,16 @@ public class GuardFight : GuardState
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (myGuardStatus.target == null)
+        if (myGuardStatus.Target == null)
             return;
 
-        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
+        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.Target.position);
         //Actual fighting case
         if (distance <= navMeshAgent.stoppingDistance && !myGuardStatus.DeathStatus)
         {
             elapsedTime += Time.deltaTime;
             navMeshAgent.isStopped = true;
-            RotateTowards(myGuardStatus.target.position);
+            RotateTowards(myGuardStatus.Target.position);
             myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
             if (elapsedTime > timeToWaitBeforeAttack)
             {
@@ -45,7 +45,7 @@ public class GuardFight : GuardState
         else
         {
             elapsedTime = 0f;
-            navMeshAgent.destination = myGuardStatus.target.position;
+            navMeshAgent.destination = myGuardStatus.Target.position;
             navMeshAgent.isStopped = false;
             myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
         }
@@ -72,7 +72,7 @@ public class GuardFight : GuardState
     {
         base.CheckTransitions();
         
-        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.target.position);
+        float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.Target.position);
 
         if (distance > myGuardStatus.attackRadius)
         {

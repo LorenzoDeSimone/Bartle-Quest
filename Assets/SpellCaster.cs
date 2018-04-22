@@ -25,11 +25,18 @@ public class SpellCaster : MonoBehaviour
 
         playerController = GetComponent<PlayerController>();	
 	}
-	
+
+    public void SpellEnabled()
+    {
+        PlayerChoices.Instance().CanUseExplosionSpell = true;
+        cooldownBar.SetActive(true);
+        enabled = true;
+    }
+
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("B") && IsExplosionSpellReady())
+        if (Input.GetButtonDown("B") && Time.timeScale > 0 && IsExplosionSpellReady())
             ExplosionSpell();
     }
 

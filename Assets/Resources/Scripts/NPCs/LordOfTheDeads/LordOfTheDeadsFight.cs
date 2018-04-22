@@ -20,14 +20,14 @@ public class LordOfTheDeadsFight : LordOfTheDeadsState
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        float distance = Vector3.Distance(myFSM.transform.position, myStatus.target.position);
+        float distance = Vector3.Distance(myFSM.transform.position, myStatus.Target.position);
         //Actual fighting case
         if (distance <= stoppingDistance)
         {
             elapsedTime += Time.deltaTime;
             myStatus.MovingStatus = CharacterStatus.movingIdleValue;
 
-            RotateTowards(myStatus.target.position);
+            RotateTowards(myStatus.Target.position);
             if (elapsedTime > timeToWaitBeforeAttack)
             {
                 elapsedTime = 0f;

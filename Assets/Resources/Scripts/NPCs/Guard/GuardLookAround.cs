@@ -47,7 +47,7 @@ public class GuardLookAround : GuardState
         //CHEATING: goes a little bit closer to true player position
         if (percentageElapsedTime <= 0.2f)
         {
-            navMeshAgent.destination = myGuardStatus.target.position;
+            navMeshAgent.destination = myGuardStatus.Target.position;
             navMeshAgent.isStopped = false;
         }
         else
@@ -71,7 +71,7 @@ public class GuardLookAround : GuardState
 
         if (IsTargetInSight(myGuardStatus.chaseViewRadius))
         {
-            myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
+            myGuardStatus.lastTargetPosition = myGuardStatus.Target.position;
             myFSM.SetInteger("targetInSight", GuardState.targetInSight);
         }
         else

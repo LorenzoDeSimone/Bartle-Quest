@@ -30,7 +30,7 @@ public class GuardGoToLastKnownPosition : GuardState
 
         if (IsTargetInSight(myGuardStatus.chaseViewRadius))
         {
-            myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
+            myGuardStatus.lastTargetPosition = myGuardStatus.Target.position;
             myFSM.SetInteger("targetInSight", GuardState.targetInSight);
         }
         

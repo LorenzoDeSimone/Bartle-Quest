@@ -12,12 +12,23 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform player, helperNpc;
 
+    [SerializeField] private ExplodingDoor door;
+
     private HashSet<Transform> enemiesAlive;
     private int enemiesKilled;
     
     void Awake()
     {
         enemiesAlive = new HashSet<Transform>();
+    }
+
+    void Update()
+    {
+        if (enemiesKilled >= enemyToKill)
+        {
+            door.Explode();
+            enabled = false;
+        }
     }
 
     public void StartEnemySpawning()
@@ -78,9 +89,9 @@ public class EnemySpawner : MonoBehaviour
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
             
             if (PlayerChoices.Instance().HelpedSpikeWithoutReward && UnityEngine.Random.Range(0f, 1f) < 0.5f)
-                skeletonStatus.target = helperNpc;
+                skeletonStatus.Target = helperNpc;
             else
-                skeletonStatus.target = player;
+                skeletonStatus.Target = player;
 
             Vector3 spawnPosition = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length - 1)].position +
                                                 currentDirection * agent.stoppingDistance;

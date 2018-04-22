@@ -13,7 +13,7 @@ public class LordOfTheDeadTeleport : LordOfTheDeadsState
 
     private void SummonSkeletons()
     {
-        Vector3 currentDirection = myStatus.target.transform.forward;
+        Vector3 currentDirection = myStatus.Target.transform.forward;
 
         for (int i = 0; i < myStatus.skeletonToSummon; i++)
         {
@@ -28,8 +28,8 @@ public class LordOfTheDeadTeleport : LordOfTheDeadsState
             skeletonGO.GetComponent<DeathNotifier>().SetFloatingSkull(myStatus.floatingSkullLights[i]);
             LitFloatingSkull(i);
 
-            skeletonStatus.target = myStatus.target;
-            skeletonStatus.transform.position = myStatus.target.transform.position +
+            skeletonStatus.Target = myStatus.Target;
+            skeletonStatus.transform.position = myStatus.Target.transform.position +
                                                 currentDirection * skeletonStatus.GetComponent<NavMeshAgent>().stoppingDistance;
 
             UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffect");
@@ -66,7 +66,7 @@ public class LordOfTheDeadTeleport : LordOfTheDeadsState
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        RotateTowards(myStatus.target.position);
+        RotateTowards(myStatus.Target.position);
         CheckTransitions();
     }
 

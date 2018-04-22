@@ -49,7 +49,7 @@ public class GuardPatrol : GuardState
 
         if (IsTargetInSight(myGuardStatus.patrolViewRadius))
         {
-            myGuardStatus.lastTargetPosition = myGuardStatus.target.position;
+            myGuardStatus.lastTargetPosition = myGuardStatus.Target.position;
             myFSM.SetInteger("targetInSight", GuardState.targetInSight);
         }
         else

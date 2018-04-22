@@ -9,6 +9,10 @@ public class EnemyStatus : CharacterStatus
     [SerializeField] public float walkSpeed = 2f;
     [SerializeField] public float runSpeed = 4f;
     [SerializeField] public float turnSpeed = 5f;
+    [SerializeField] private bool attackPlayerIfNoTarget = true;
+
+    private static Transform player = null;
+
     protected GameObject healthBarGO;
 
     // Use this for initialization
@@ -16,5 +20,20 @@ public class EnemyStatus : CharacterStatus
     {
         base.Start();
         healthBarGO = HealthBar.CreateHealthBar(characterMotionRoot, GetComponent<Hittable>());
+        if(player == null)
+            player = FindObjectOfType<PlayerController>().transform;
+    }
+
+    public Transform Target
+    {
+        get
+        {
+            if (target == null && attackPlayerIfNoTarget)
+                return player;
+            else
+                return target;
+        }
+
+        set { target = value; }
     }
 }
