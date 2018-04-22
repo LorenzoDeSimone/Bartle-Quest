@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1637273838}
-  talker: {fileID: 0}
+  talker: {fileID: 57509737}
   oneShot: 1
 --- !u!1001 &62998506
 Prefab:
@@ -36353,7 +36353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  text: Examine door
+  text: Examine Door
   buttonName: A
   buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
   interactable: {fileID: 734859451}
@@ -57940,6 +57940,11 @@ Prefab:
         type: 2}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114493981159968664, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: text
+      value: Go to the next level
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eedc66f03a07b42418199a09446d50f6, type: 2}
@@ -115433,7 +115438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  text: Examine altar
+  text: Examine Altar
   buttonName: A
   buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
   interactable: {fileID: 1876581188}
