@@ -902,12 +902,12 @@ GameObject:
   - component: {fileID: 4607340088769662}
   - component: {fileID: 95060435303702446}
   - component: {fileID: 54231725730568336}
-  - component: {fileID: 65716413358575112}
   - component: {fileID: 114554842999697854}
   - component: {fileID: 195720147903841536}
   - component: {fileID: 114934925400383278}
   - component: {fileID: 114334460695754308}
   - component: {fileID: 114143484185094830}
+  - component: {fileID: 136280734334452408}
   m_Layer: 12
   m_Name: SkeletonSword
   m_TagString: Untagged
@@ -2030,18 +2030,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.120454915, y: 0.47177717, z: 2.0298858}
   m_Center: {x: -0.000052110106, y: -0.0218385, z: 1.0148702}
---- !u!65 &65716413358575112
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1898158217173214}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &95060435303702446
 Animator:
   serializedVersion: 3
@@ -2166,6 +2154,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 10
   patrolViewRadius: 15
@@ -2204,6 +2193,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
+--- !u!136 &136280734334452408
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898158217173214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137148816890622686
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

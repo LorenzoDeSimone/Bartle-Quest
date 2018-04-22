@@ -995,11 +995,11 @@ GameObject:
   - component: {fileID: 4117735464172936}
   - component: {fileID: 95168189178161950}
   - component: {fileID: 54189424340113198}
-  - component: {fileID: 65914215261707924}
   - component: {fileID: 114335884271598576}
   - component: {fileID: 114354618553690096}
   - component: {fileID: 114314196830368936}
   - component: {fileID: 195954111823560966}
+  - component: {fileID: 136916768115996630}
   m_Layer: 12
   m_Name: GuardHammer
   m_TagString: Untagged
@@ -2116,18 +2116,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.8, z: 0.5}
   m_Center: {x: 0, y: 1.1, z: 0.04}
---- !u!65 &65914215261707924
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950425477702524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &95134995249755152
 Animator:
   serializedVersion: 3
@@ -2254,6 +2242,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 5
   patrolViewRadius: 15
@@ -2293,6 +2282,19 @@ MonoBehaviour:
   damage: 1
   WeaponHitEffect: {fileID: 1443241384248244, guid: 4aad79d467b7f944eb53e6945cfb87cc,
     type: 2}
+--- !u!136 &136916768115996630
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950425477702524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137771321479996390
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

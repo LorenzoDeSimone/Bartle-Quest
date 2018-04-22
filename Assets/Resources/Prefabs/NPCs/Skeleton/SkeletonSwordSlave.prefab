@@ -525,12 +525,12 @@ GameObject:
   - component: {fileID: 4333056235395716}
   - component: {fileID: 95589447758153006}
   - component: {fileID: 54997004477904598}
-  - component: {fileID: 65463263839804638}
   - component: {fileID: 114187669265532448}
   - component: {fileID: 195136201649762388}
   - component: {fileID: 114537598283126182}
   - component: {fileID: 114876511300080076}
   - component: {fileID: 114973997037760174}
+  - component: {fileID: 136429070085309770}
   m_Layer: 12
   m_Name: SkeletonSwordSlave
   m_TagString: Untagged
@@ -2030,18 +2030,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.120454915, y: 0.47177717, z: 2.0298858}
   m_Center: {x: -0.00005163327, y: -0.0218385, z: 1.0148702}
---- !u!65 &65463263839804638
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1536539185205824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &95174063885120982
 Animator:
   serializedVersion: 3
@@ -2123,6 +2111,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 10
   patrolViewRadius: 15
@@ -2204,6 +2193,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lordFloatingSkullParticle: {fileID: 0}
+--- !u!136 &136429070085309770
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536539185205824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137518214413778426
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

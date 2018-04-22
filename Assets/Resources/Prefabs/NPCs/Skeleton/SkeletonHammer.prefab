@@ -292,12 +292,12 @@ GameObject:
   - component: {fileID: 4828553078536590}
   - component: {fileID: 95090982929379576}
   - component: {fileID: 54637798371175396}
-  - component: {fileID: 65178585972575560}
   - component: {fileID: 114429651401136458}
   - component: {fileID: 195994740182404470}
   - component: {fileID: 114711661643214430}
   - component: {fileID: 114143933509292050}
   - component: {fileID: 114384635878833540}
+  - component: {fileID: 136044628227728490}
   m_Layer: 12
   m_Name: SkeletonHammer
   m_TagString: Untagged
@@ -2019,18 +2019,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &65178585972575560
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1294470903177078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!65 &65617031424912980
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2179,6 +2167,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 10
   patrolViewRadius: 15
@@ -2217,6 +2206,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
+--- !u!136 &136044628227728490
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294470903177078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137560955926836664
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

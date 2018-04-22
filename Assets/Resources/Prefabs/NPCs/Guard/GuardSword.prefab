@@ -623,11 +623,11 @@ GameObject:
   - component: {fileID: 4733628705657608}
   - component: {fileID: 95028205693451772}
   - component: {fileID: 54462597944555846}
-  - component: {fileID: 65744161601565438}
   - component: {fileID: 114996951146970030}
   - component: {fileID: 114383310559623928}
   - component: {fileID: 114138971965436884}
   - component: {fileID: 195659955364638716}
+  - component: {fileID: 136698670843429516}
   m_Layer: 12
   m_Name: GuardSword
   m_TagString: Untagged
@@ -2103,18 +2103,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12045486, y: 0.65356994, z: 2.1306458}
   m_Center: {x: -0.000051702085, y: -0.030720836, z: 1.0653191}
---- !u!65 &65744161601565438
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1551655607689644}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &95028205693451772
 Animator:
   serializedVersion: 3
@@ -2236,6 +2224,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 5
   patrolViewRadius: 15
@@ -2279,6 +2268,19 @@ MonoBehaviour:
   buttonName: 
   buttonImage: {fileID: 0}
   interactable: {fileID: 0}
+--- !u!136 &136698670843429516
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551655607689644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137130701638652328
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

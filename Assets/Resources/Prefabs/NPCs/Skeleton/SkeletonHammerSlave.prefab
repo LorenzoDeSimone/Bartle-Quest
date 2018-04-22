@@ -111,12 +111,12 @@ GameObject:
   - component: {fileID: 4751559870169422}
   - component: {fileID: 95468016675179376}
   - component: {fileID: 54878636207899902}
-  - component: {fileID: 65736264024286152}
   - component: {fileID: 114977081496753666}
   - component: {fileID: 195830028388118694}
   - component: {fileID: 114880083935634552}
   - component: {fileID: 114835444775153302}
   - component: {fileID: 114303947451416106}
+  - component: {fileID: 136719252627210038}
   m_Layer: 12
   m_Name: SkeletonHammerSlave
   m_TagString: Untagged
@@ -2043,18 +2043,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.8, z: 0.5}
   m_Center: {x: 0, y: 1.1, z: 0.04}
---- !u!65 &65736264024286152
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1095065992890778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!95 &95468016675179376
 Animator:
   serializedVersion: 3
@@ -2202,6 +2190,7 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 4
   turnSpeed: 8
+  attackPlayerIfNoTarget: 1
   attackRadius: 10
   distanceForInstantChase: 10
   patrolViewRadius: 15
@@ -2217,6 +2206,19 @@ MonoBehaviour:
   - {fileID: 0}
   nextWayPoint: 0
   lastTargetPosition: {x: 0, y: 0, z: 0}
+--- !u!136 &136719252627210038
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095065992890778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!137 &137632643053894556
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
