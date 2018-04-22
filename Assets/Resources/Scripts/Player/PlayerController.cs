@@ -280,7 +280,6 @@ public class PlayerController : MonoBehaviour
         inputVector.y = 0f;
         inputVector.z = 0f;
         
-
         return inputVector;
     }
 

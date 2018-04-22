@@ -15,14 +15,14 @@ public class SpikeTargetUpdater : MonoBehaviour
 
     void Update()
     {
-        guardStatus.target = enemySpawner.GetNearestTarget(transform.position);
+        guardStatus.target = enemySpawner.GetNearestEnemy(transform.position);
     }
 
     private IEnumerator ChangeTarget()
     {
         while (enabled)
         {
-            guardStatus.target = enemySpawner.GetNearestTarget(transform.position);
+            guardStatus.target = enemySpawner.GetNearestEnemy(transform.position);
             yield return new WaitUntil(() => guardStatus.target == null);
         }
     }

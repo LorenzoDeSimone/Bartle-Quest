@@ -421,7 +421,8 @@ GameObject:
   - component: {fileID: 114413071463445476}
   - component: {fileID: 114825509934844246}
   - component: {fileID: 54729387503674140}
-  - component: {fileID: 114278730779860150}
+  - component: {fileID: 114327342724143434}
+  - component: {fileID: 114050625470510200}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -1367,8 +1368,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1335830266756852}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -28, y: 1.2572889, z: 26}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 6, y: 1, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510424728670372}
@@ -1378,7 +1379,7 @@ Transform:
   - {fileID: 4221842455585508}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4263421078375206
 Transform:
   m_ObjectHideFlags: 1
@@ -2415,6 +2416,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114050625470510200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335830266756852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7007529eda3bc4181057b06382f393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDownReady: 1
+  cooldownSeconds: 5
+  spellDamage: 2
+  interactionManager: {fileID: 114405207843713946}
+  cooldownBar: {fileID: 0}
 --- !u!114 &114150410993596530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2438,7 +2455,7 @@ MonoBehaviour:
   - Attack03
   isNPC: 0
   AIManager: {fileID: 0}
---- !u!114 &114278730779860150
+--- !u!114 &114327342724143434
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2450,6 +2467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114815747172026246}
+  head: {fileID: 4206062828509204}
 --- !u!114 &114405207843713946
 MonoBehaviour:
   m_ObjectHideFlags: 1

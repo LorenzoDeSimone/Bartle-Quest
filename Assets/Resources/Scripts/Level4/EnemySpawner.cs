@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(TimedSpawner());
     }
 
-    public Transform GetNearestTarget(Vector3 position)
+    public Transform GetNearestEnemy(Vector3 position)
     {
         float closestDist = Mathf.Infinity;
         Transform closestEnemy = null;

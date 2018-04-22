@@ -10,6 +10,7 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool blessedSowrd = false;
     [SerializeField] private bool canSeeEnemyHP = false;
     [SerializeField] private bool hasWeirdHat = false;
+    [SerializeField] private bool canUseExplosionSpell = false;
 
 
     [SerializeField] private bool isMale = true;
@@ -72,6 +73,13 @@ public class PlayerChoices : MonoBehaviour
         set { Instance().hasWeirdHat = value; }
         get { return Instance().hasWeirdHat; }
     }
+
+    public bool CanUseExplosionSpell
+    {
+        set { Instance().canUseExplosionSpell = value; }
+        get { return Instance().canUseExplosionSpell; }
+    }
+  
 
     public bool IsMale
     {

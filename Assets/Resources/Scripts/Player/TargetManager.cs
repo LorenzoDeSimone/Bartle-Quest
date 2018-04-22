@@ -13,6 +13,11 @@ public class TargetManager : MonoBehaviour
         targetUnreachableMask = LayerMask.GetMask("Ground");
     }
 
+    public HashSet<Transform> NearTargets
+    {
+        get { return nearTargets; }
+    }
+
     protected void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.GetComponent<Target>() != null)
