@@ -340,8 +340,8 @@ public class PlayerController : MonoBehaviour
             Debug.DrawRay(nextPos, -transform.up, Color.red);
 
         //Checks to avoid falling into the abyss
-        if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, walkableLayerMask))
-        {
+        //if (Physics.Raycast(nextPos, -transform.up, Mathf.Infinity, walkableLayerMask))
+        //{
             //Check to avoid running into the walls
             if (debug)
                 Debug.DrawRay(transform.position, forward * wallCheckLength, Color.red);
@@ -350,9 +350,9 @@ public class PlayerController : MonoBehaviour
                 return false;
             else
                 return true;
-        }
-        else
-            return false;
+        //}
+        //else
+        //    return false;
     }
 
 
