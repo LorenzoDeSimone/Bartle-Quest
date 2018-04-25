@@ -26,7 +26,8 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemiesKilled >= enemyToKill)
         {
-            door.Explode();
+            if(door)
+                door.Explode();
             enabled = false;
         }
     }
