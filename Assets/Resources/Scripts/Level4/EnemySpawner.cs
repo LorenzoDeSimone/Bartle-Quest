@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform player, helperNpc;
 
-    [SerializeField] private ExplodingDoor door;
+    [SerializeField] private ExplodingDoor[] doors;
 
     [SerializeField] private Transform[] barriers;
 
@@ -31,8 +31,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemiesKilled >= enemyToKill)
         {
-            if(door)
-                door.Explode();
+            foreach (ExplodingDoor door in doors)
+            {
+                if (door)
+                    door.Explode();
+            }
 
             foreach (Transform barrier in barriers)
                 barrier.gameObject.SetActive(false);
