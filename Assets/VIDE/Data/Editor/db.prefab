@@ -40,19 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 17
+  fileIndex: 19
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 26412
+  currentID: 10679
   autosave: 1
   previewPanning: 0
-  currentDiag: 17
+  currentDiag: 19
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: (There is an old altar. The light is warm and feels extremely nice.)
+    - text: (You find an old library, full of dusty books and cracked vases.)
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -60,20 +60,20 @@ MonoBehaviour:
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 0
     rect:
       serializedVersion: 2
-      x: -140
-      y: 100
-      width: 316
-      height: 110
+      x: -220
+      y: 140
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -97,11 +97,300 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: <Pray>
+    - text: <Examine the books>
       extraData: ExtraData
       inputSetIndex: 1
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Examine the vases>
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    rect:
+      serializedVersion: 2
+      x: 90
+      y: -10
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: (They smell terribly. Some of them contain weird powders.)
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 260
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: (They are full of maps and annotations about this place.)
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    rect:
+      serializedVersion: 2
+      x: 460
+      y: 10
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: <Exit>
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Read annotations>
+      extraData: ExtraData
+      inputSetIndex: 4
       outputNodeIndex: -1
       outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Read maps>
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: 1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 650
+      y: 160
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '"The Master is asking to rebuild his palace starting from this big temple
+        ruins. They used to be devoted to a god of light. The Master really likes
+        to debunk good deities and cults... "'
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    rect:
+      serializedVersion: 2
+      x: 1260
+      y: 130
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: <Exit>
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Read next page>
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 8
+    rect:
+      serializedVersion: 2
+      x: 1620
+      y: 10
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '"I heard that somewhere near there is a passage to the old prisons. Just
+        mash the powder on an open book page, read it out loud and the path will reveal
+        itself."'
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 9
+    rect:
+      serializedVersion: 2
+      x: 1660
+      y: 190
+      width: 316
+      height: 162
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: <Exit>
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Smash powder and read the pages>
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: 2
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -112,118 +401,44 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: <Examine altar>
+    ID: 10
+    rect:
+      serializedVersion: 2
+      x: 1660
+      y: 430
+      width: 316
+      height: 130
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '"From the entrance, it was possibile to go on forward to face tthe speed
+        trial or to go right, to explore the dark maze."'
       extraData: ExtraData
-      inputSetIndex: 1
+      inputSetIndex: 9
       outputNodeIndex: 4
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 281
-        y: 89
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 1
-    rect:
-      serializedVersion: 2
-      x: 200
-      y: -40
-      width: 316
-      height: 139
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: You traitor! You are nota servant of the Master! You will die!
-      extraData: ExtraData
-      inputSetIndex: 2
-      outputNodeIndex: 3
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
         y: 49
         width: 30
         height: 18
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 3
+    ID: 11
     rect:
       serializedVersion: 2
-      x: 410
-      y: 280
+      x: 1240
+      y: 380
       width: 316
-      height: 110
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: <Start fight>
-      extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: -1
-      outActionIndex: 1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 4
-    rect:
-      serializedVersion: 2
-      x: 800
-      y: 150
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: (You see marks of fangs and swordcuts on the cloths that are on the altar.)
-      extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: 1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 5
-    rect:
-      serializedVersion: 2
-      x: 590
-      y: -60
-      width: 316
-      height: 123
+      height: 136
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -234,7 +449,7 @@ MonoBehaviour:
   - pauseHere: 0
     gameObjectName: CanvasPlayerUI
     methodName: ChangeDisplayedTalkerName
-    nameIndex: 5
+    nameIndex: 7
     methodIndex: 4
     paramIndex: 2
     opts:
@@ -247,14 +462,16 @@ MonoBehaviour:
     - DialogueChoiceConfirmed
     nameOpts:
     - '[No object]'
-    - prop_literature_book_open_1
+    - Barrier (2)
+    - Barrier (1)
+    - Barrier
     - BlockManager
     - Player
     - PlayerHealth
     - CanvasPlayerUI
     - door
-    - talkerColumn
-    - DoorLever (1)
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
     - SpawnManager
     - BlueSwitch (2)
     - door (1)
@@ -262,48 +479,146 @@ MonoBehaviour:
     - DoorLever
     - RedSwitch (1)
     - prop_decor_altar_1
-    - SpawnManager (1)
+    - SpawnManagerNearLever
+    - talkerColumn
     - RedSwitch
+    - Library (8)
     - DontDestroyOnLoad
+    - DoorLever (1)
     - RedSwitch (2)
     - door (1)
     param_bool: 0
-    param_string: Echoing Voice
+    param_string: Old Book
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 140
-      y: 240
-      width: 200
-      height: 160
-    ID: 2
-    outPlayerIndex: 2
+      x: 1000
+      y: 0
+      width: 300
+      height: 50
+    ID: 5
+    outPlayerIndex: 5
     outActionIndex: -1
     more: 0
     ovrStartNode: 0
     renameDialogue: 
   - pauseHere: 0
-    gameObjectName: '[No object]'
-    methodName: '[No method]'
-    nameIndex: 0
-    methodIndex: 0
-    paramIndex: -1
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 7
+    methodIndex: 4
+    paramIndex: 2
     opts:
     - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
     nameOpts:
     - '[No object]'
+    - Barrier (2)
+    - Barrier (1)
+    - Barrier
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - door
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - SpawnManager
+    - BlueSwitch (2)
+    - door (1)
+    - door
+    - DoorLever
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: Old Book
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 370
+      width: 300
+      height: 50
+    ID: 7
+    outPlayerIndex: 9
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: Library (8)
+    methodName: Move
+    nameIndex: 21
+    methodIndex: 13
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_Text
+    - get_Buttonimage
+    - get_IsEnemy
+    - set_IsEnemy
+    - Interact
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
+    - Move
+    nameOpts:
+    - '[No object]'
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - door
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - door (1)
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
     param_bool: 0
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 840
-      y: 320
+      x: 2040
+      y: 380
       width: 200
       height: 144
-    ID: 6
+    ID: 12
     outPlayerIndex: -1
     outActionIndex: -1
     more: 0

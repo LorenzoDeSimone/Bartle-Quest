@@ -25,6 +25,7 @@ public class DoorOpener : Interactable
         animation.Play();
         leverPulled = true;
         GetComponent<Target>().enabled = false;
+
         foreach (ExplodingDoor d in doorsToOpen)
         {
             if(d)

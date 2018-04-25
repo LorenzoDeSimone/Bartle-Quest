@@ -14,12 +14,17 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private ExplodingDoor door;
 
+    [SerializeField] private Transform[] barriers;
+
+
     private HashSet<Transform> enemiesAlive;
     private int enemiesKilled;
     
     void Awake()
     {
         enemiesAlive = new HashSet<Transform>();
+        foreach (Transform barrier in barriers)
+            barrier.gameObject.SetActive(false);
     }
 
     void Update()
@@ -28,12 +33,19 @@ public class EnemySpawner : MonoBehaviour
         {
             if(door)
                 door.Explode();
+
+            foreach (Transform barrier in barriers)
+                barrier.gameObject.SetActive(false);
+
             enabled = false;
         }
     }
 
     public void StartEnemySpawning()
     {
+        foreach (Transform barrier in barriers)
+            barrier.gameObject.SetActive(true);
+
         StartCoroutine(TimedSpawner());
     }
 
