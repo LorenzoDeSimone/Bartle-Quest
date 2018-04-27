@@ -30,6 +30,8 @@ public class Talker : Interactable
             else
                 return GetComponent<Animator>();
         }
+
+        set { actualTalkerAnimator = value; }
     }
 
     // Use this for initialization

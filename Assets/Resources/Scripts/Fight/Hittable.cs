@@ -8,7 +8,7 @@ public class Hittable : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 5;
     private int previousUpdateHealth;
-    private int currentHealth;
+    protected int currentHealth;
     private bool justHit    = false;
     private bool invincible = false;
 
@@ -26,7 +26,7 @@ public class Hittable : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    protected void Start()
     {
         myCharacterStatus = GetComponent<CharacterStatus>();
         currentHealth = previousUpdateHealth = maxHealth;
@@ -51,7 +51,7 @@ public class Hittable : MonoBehaviour
         get { return currentHealth; }
     }
 
-    public void UpdateHealth (int deltaHealth)
+    public virtual void UpdateHealth (int deltaHealth)
     {
         currentHealth = Mathf.Clamp(currentHealth + deltaHealth, 0, maxHealth);
         if (currentHealth <= 0)

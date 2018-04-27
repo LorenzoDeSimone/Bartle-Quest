@@ -20,6 +20,11 @@ public class DialogueManager : MonoBehaviour
     private static bool isDialogueOn;
     private int currentChoiceIndex = 0;
 
+    public Talker GetCurrentTalker()
+    {
+        return currentTalker;
+    }
+
     public static bool IsDialogueOn
     {
         get { return isDialogueOn;}
@@ -154,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1f;
         isDialogueOn = false;
 
-        if (currentTalker.ActualTalkerAnimator)
+        if (currentTalker && currentTalker.ActualTalkerAnimator)
             currentTalker.ActualTalkerAnimator.updateMode = AnimatorUpdateMode.Normal;
     }
 }

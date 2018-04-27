@@ -118,7 +118,6 @@ public class EnemySpawner : MonoBehaviour
             UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffectGrey");
             GameObject spawnEffectGO = (GameObject)Instantiate(spawnEffect);
             spawnEffectGO.transform.position = skeletonStatus.transform.position;
-
             currentDirection = Quaternion.Euler(0f, 90f, 0f) * currentDirection;
             enemiesAlive.Add(skeletonStatus.transform);
         }

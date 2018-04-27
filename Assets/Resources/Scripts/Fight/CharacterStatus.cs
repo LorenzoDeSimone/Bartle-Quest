@@ -17,7 +17,7 @@ public class CharacterStatus : MonoBehaviour
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
 
     [SerializeField] private bool isNPC;
-    [SerializeField] private Animator AIManager;
+    [SerializeField] private Animator aiManager;
 
     protected Animator myAnimator;
 
@@ -27,6 +27,11 @@ public class CharacterStatus : MonoBehaviour
     
     private HashSet<GameObject> hitEnemies;
 
+    public Animator AIManager
+    {
+        get { return aiManager; }
+    }
+
     // Use this for initialization
     protected void Start()
     {
@@ -34,7 +39,7 @@ public class CharacterStatus : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         if (myAnimator == null)
             Debug.LogError("No animator!");
-        if(isNPC && AIManager==null)
+        if(isNPC && aiManager==null)
             Debug.LogError("No AI Manager for an NPC!");
     }
 
@@ -199,7 +204,7 @@ public class CharacterStatus : MonoBehaviour
         get
         {
             if (isNPC)
-                return AIManager;
+                return aiManager;
             else
                 return null;
         }
