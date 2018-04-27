@@ -71,6 +71,7 @@ public class PuzzleGhost : MonoBehaviour
 
             if (CheckRightCombination())
             {
+                BartleStatistics.Instance().IncrementSocializer();
                 Debug.Log("OK!");
                 if(door)
                     door.Explode();
