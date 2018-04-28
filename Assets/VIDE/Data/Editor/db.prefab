@@ -40,19 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 21
+  fileIndex: 24
   loadTag: 
   startID: 0
-  curFocusID: 1
-  currentID: 36521
+  curFocusID: 0
+  currentID: 87688
   autosave: 1
   previewPanning: 0
-  currentDiag: 21
+  currentDiag: 24
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: 'You prisoner of the Master! You shall not pass! '
+    - text: (You see and old book.)
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -70,10 +70,10 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: -450
-      y: -120
+      x: -180
+      y: 30
       width: 316
-      height: 110
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -82,11 +82,11 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 2
     s_comment:
-    - text: <May you please open so I can pass?>
+    - text: <Exit>
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 2
-      outActionIndex: -1
+      outputNodeIndex: -1
+      outActionIndex: 0
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -97,16 +97,16 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: <Oh my, let me pass!>
+    - text: <Open book>
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 4
+      outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 281
-        y: 80
+        y: 69
         width: 30
         height: 18
       sprites: {fileID: 0}
@@ -115,10 +115,10 @@ MonoBehaviour:
     ID: 1
     rect:
       serializedVersion: 2
-      x: -120
-      y: -80
+      x: 180
+      y: -20
       width: 316
-      height: 130
+      height: 119
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -127,9 +127,8 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: 'A well respected talking door like me appreciates good manners, so I
-        will tell you something: there are two levers hidden in the maze. If you pull
-        them both, those skulls will light up and you will be able to pass.'
+    - text: You shall receive one blessing. Would you prefer being able to talk with
+        skeletons or being the fastest explorer ever seen?
       extraData: ExtraData
       inputSetIndex: 2
       outputNodeIndex: 3
@@ -148,18 +147,18 @@ MonoBehaviour:
     rect:
       serializedVersion: 2
       x: -20
-      y: -280
+      y: 290
       width: 316
-      height: 175
+      height: 136
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: <Got it, thanks>
+    - text: <I want to speak with skeletons. Everyone deserves to be heard.>
       extraData: ExtraData
       inputSetIndex: 3
       outputNodeIndex: -1
@@ -167,20 +166,35 @@ MonoBehaviour:
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 281
+        y: 49
+        width: 30
+        height: 18
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 3
+    - text: <I want to be the fastest explorer ever>
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 80
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
     rect:
       serializedVersion: 2
-      x: 270
-      y: 0
+      x: 360
+      y: 310
       width: 316
-      height: 99
+      height: 141
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -189,7 +203,7 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: I will not.
+    - text: So be it.
       extraData: ExtraData
       inputSetIndex: 4
       outputNodeIndex: 5
@@ -204,11 +218,11 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 4
+    ID: 5
     rect:
       serializedVersion: 2
-      x: -420
-      y: 130
+      x: 820
+      y: 270
       width: 316
       height: 99
     pTag: 
@@ -217,73 +231,13 @@ MonoBehaviour:
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 3
+  - commentCount: 1
     s_comment:
     - text: <Exit>
       extraData: ExtraData
       inputSetIndex: 5
       outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: <Please>
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 6
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Comment...
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 5
-    rect:
-      serializedVersion: 2
-      x: -40
-      y: 210
-      width: 316
-      height: 139
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: I said no.
-      extraData: ExtraData
-      inputSetIndex: 6
-      outputNodeIndex: 7
-      outActionIndex: -1
+      outActionIndex: 1
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -297,8 +251,8 @@ MonoBehaviour:
     ID: 6
     rect:
       serializedVersion: 2
-      x: 350
-      y: 190
+      x: 770
+      y: 450
       width: 316
       height: 99
     pTag: 
@@ -306,99 +260,186 @@ MonoBehaviour:
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 0
-  - commentCount: 3
-    s_comment:
-    - text: <Exit>
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: <Pretty please>
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 8
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Comment...
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 7
-    rect:
-      serializedVersion: 2
-      x: 470
-      y: 380
-      width: 316
-      height: 139
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
     isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: Listen, unless you pull both the levers in this maze, I cannot let you
-        pass. Oh gosh, I shouldn't have said that...
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: 3
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 8
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 5
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - prop_decor_altar_1 (1)
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: Echoing Voice
+    param_int: 0
+    param_float: 0
     rect:
       serializedVersion: 2
-      x: 40
-      y: 560
-      width: 316
-      height: 136
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  S_actionNodes: []
+      x: 530
+      y: 110
+      width: 200
+      height: 160
+    ID: 3
+    outPlayerIndex: 2
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: endLevelAltar
+    methodName: set_DialogueName
+    nameIndex: 1
+    methodIndex: 11
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - BlessWeapon
+    - ChangeGhostDialogue
+    - get_Text
+    - get_Buttonimage
+    - get_IsEnemy
+    - set_IsEnemy
+    - Interact
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: Level2AltarAfterBless
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 770
+      y: 580
+      width: 200
+      height: 160
+    ID: 7
+    outPlayerIndex: -1
+    outActionIndex: 2
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: endLevelDoor
+    methodName: Explode
+    nameIndex: 6
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Explode
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1050
+      y: 620
+      width: 200
+      height: 144
+    ID: 8
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

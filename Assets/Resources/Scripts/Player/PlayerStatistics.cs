@@ -16,6 +16,8 @@ public class PlayerStatistics : MonoBehaviour
 
 
     [SerializeField] private int maxHealth;
+    [SerializeField] private float velocity;
+
     private GameObject player;
 
     private EquipSlots playerEquipSlots;
@@ -33,7 +35,7 @@ public class PlayerStatistics : MonoBehaviour
         set
         {
             Instance().weapon = value;
-            ChangePlayerWeapon();
+            ApplyPlayerWeapon();
         }
 
         get { return Instance().weapon; }
@@ -44,7 +46,7 @@ public class PlayerStatistics : MonoBehaviour
         set
         {
             Instance().head = value;
-            ChangePlayerHead();
+            ApplyPlayerHead();
         }
 
         get { return Instance().head; }
@@ -55,7 +57,7 @@ public class PlayerStatistics : MonoBehaviour
         set
         {
             Instance().armour = value;
-            ChangePlayerArmour();
+            ApplyPlayerArmour();
         }
 
         get { return Instance().armour; }
@@ -78,18 +80,24 @@ public class PlayerStatistics : MonoBehaviour
 
     private void LoadPlayerStatistics()
     {
-        ChangePlayerMaxHealth();
-        ChangePlayerHead();
-        ChangePlayerArmour();
-        ChangePlayerWeapon();
+        ApplyPlayerMaxHealth();
+        ApplyPlayerVelocity();
+        ApplyPlayerHead();
+        ApplyPlayerArmour();
+        ApplyPlayerWeapon();
     }
 
-    public void ChangePlayerMaxHealth()
+    public void ApplyPlayerMaxHealth()
     {
         Instance().player.GetComponent<Hittable>().MaxHealth = Instance().maxHealth;
     }
 
-    private void ChangePlayerWeapon()
+    private void ApplyPlayerVelocity()
+    {
+        Instance().player.GetComponent<PlayerController>().velocity = Instance().velocity;
+    }
+
+    private void ApplyPlayerWeapon()
     {
         Instance().playerEquipSlots.weapon.GetComponent<MeshFilter>().mesh = Instance().weapon.mesh;
         Instance().playerEquipSlots.weapon.damage = Instance().weapon.damage;
@@ -98,10 +106,10 @@ public class PlayerStatistics : MonoBehaviour
     public void ChangePlayerWeapon(WeaponInfo weapon)
     {
         PlayerWeaponInfo = weapon;
-        ChangePlayerWeapon();
+        ApplyPlayerWeapon();
     }
 
-    private void ChangePlayerHead()
+    private void ApplyPlayerHead()
     {
         Instance().playerEquipSlots.head.GetComponent<MeshFilter>().mesh = Instance().head.mesh;
     }
@@ -109,10 +117,10 @@ public class PlayerStatistics : MonoBehaviour
     public void ChangePlayerHead(HeadInfo head)
     {
         PlayerHeadInfo = head;
-        ChangePlayerHead();
+        ApplyPlayerHead();
     }
 
-    private void ChangePlayerArmour()
+    private void ApplyPlayerArmour()
     {
         Instance().playerEquipSlots.armour.GetComponent<SkinnedMeshRenderer>().sharedMesh = Instance().armour.mesh;
     }
@@ -120,13 +128,19 @@ public class PlayerStatistics : MonoBehaviour
     public void ChangePlayerArmour(ArmourInfo armour)
     {
         PlayerArmourInfo = armour;
-        ChangePlayerArmour();
+        ApplyPlayerArmour();
     }
 
     public void GiveHealthBonus(int bonus)
     {
         Instance().maxHealth += bonus;
-        ChangePlayerMaxHealth();
+        ApplyPlayerMaxHealth();
         Instance().player.GetComponent<Hittable>().CurrentHealth = Instance().maxHealth;
+    }
+
+    public void GiveVelocityBonus(float multiplier)
+    {
+        Instance().velocity *= multiplier;
+        ApplyPlayerVelocity();
     }
 }

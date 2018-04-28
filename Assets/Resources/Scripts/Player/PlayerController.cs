@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float inputEpsilon = 0.1f;
     [SerializeField] private float runningThreshold = 0.5f;
-    [SerializeField] private float velocity = 6f;
+    [SerializeField] public float velocity = 6f;
     [SerializeField] private float turnSpeed = 8f;
     [SerializeField] private float height = 1f;
     [SerializeField] private float heightPadding = 0.5f;
