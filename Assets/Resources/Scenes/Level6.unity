@@ -18892,7 +18892,7 @@ MonoBehaviour:
   - {fileID: 776639355}
   - {fileID: 967543622}
   - {fileID: 339574628}
-  nextScene: Level4
+  nextScene: Level7
 --- !u!114 &579810355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29478,6 +29478,11 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
         type: 2}

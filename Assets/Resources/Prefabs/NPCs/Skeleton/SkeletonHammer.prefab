@@ -1785,7 +1785,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1294470903177078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8706713, y: 0.25728944, z: 40.032726}
+  m_LocalPosition: {x: 0.101878166, y: 0.257289, z: 44.99449}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4945410448794038}
@@ -1962,7 +1962,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9528ef69654760f4e9836adcbf829000, type: 2}
+  - {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2159,7 +2159,7 @@ MonoBehaviour:
   - Attack02
   - Attack03
   isNPC: 1
-  AIManager: {fileID: 95705523017886010}
+  aiManager: {fileID: 95705523017886010}
   DeathFade: {fileID: 1434447507267570}
   characterMotionRoot: {fileID: 4054544101455336}
   target: {fileID: 0}

@@ -39,7 +39,6 @@ public class GhostHittable : Hittable
     private void StartAttack()
     {
         Destroy(ghostPositions.gameObject);
-        Debug.Log("a");
         BartleStatistics.Instance().IncrementKiller();
 
         foreach (Transform t in ghosts)

@@ -2216,7 +2216,7 @@ MonoBehaviour:
   - Attack02
   - Attack03
   isNPC: 1
-  AIManager: {fileID: 95346485439001202}
+  aiManager: {fileID: 95346485439001202}
   DeathFade: {fileID: 1719956252642154}
   characterMotionRoot: {fileID: 4916574366913666}
   target: {fileID: 0}
