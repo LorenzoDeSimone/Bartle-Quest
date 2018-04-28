@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Transform[] spawnPoints;
 
     [SerializeField] private int enemyToKill, maxEnemiesAlive, minSec = 1, maxSec = 3;
@@ -16,6 +17,9 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform[] barriers;
 
+    [SerializeField] private Talker endFightDialogue;
+
+    private bool fightEnded;
 
     private HashSet<Transform> enemiesAlive;
     private int enemiesKilled;
@@ -29,19 +33,30 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (enemiesKilled >= enemyToKill)
+        if (!fightEnded && enemiesKilled >= enemyToKill)
         {
-            foreach (ExplodingDoor door in doors)
-            {
-                if (door)
-                    door.Explode();
-            }
-
-            foreach (Transform barrier in barriers)
-                barrier.gameObject.SetActive(false);
-
-            enabled = false;
+            fightEnded = true;
+            StartCoroutine(FightEnd());
         }
+    }
+
+    private IEnumerator FightEnd()
+    {
+        yield return new WaitForSeconds(1f);
+
+        foreach (ExplodingDoor door in doors)
+        {
+            if (door)
+                door.Explode();
+        }
+
+        foreach (Transform barrier in barriers)
+            barrier.gameObject.SetActive(false);
+
+        if (endFightDialogue)
+            dialogueManager.InitDialogue(endFightDialogue);
+
+        enabled = false;
     }
 
     public void StartEnemySpawning()

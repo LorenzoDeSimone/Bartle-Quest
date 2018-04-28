@@ -21,7 +21,7 @@ public class CharacterStatus : MonoBehaviour
 
     protected Animator myAnimator;
 
-    private bool shieldUpThisFrame;
+    private bool shieldUpThisFrame, alreadyDead;
     private float currAnimationLenght;
     private int lastAnimatorState;
     
@@ -161,8 +161,12 @@ public class CharacterStatus : MonoBehaviour
             if (!canDie || !myAnimator)
                 return;
 
-            if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+            if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") && !alreadyDead)
+            {
+                alreadyDead = true;//Just needed for eventual animation transition time: avoids multiple death triggers in corner cases
+                GetComponent<Collider>().enabled = false;
                 myAnimator.SetTrigger("isDead");
+            }
         }
     }
 
