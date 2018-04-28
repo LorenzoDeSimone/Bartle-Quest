@@ -11,7 +11,7 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool canSeeEnemyHP = false;
     [SerializeField] private bool hasWeirdHat = false;
     [SerializeField] private bool canUseExplosionSpell = false;
-
+    [SerializeField] private bool canSeeHiddenWalls = false;
 
     [SerializeField] private bool isMale = true;
 
@@ -85,6 +85,13 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().isMale = value; }
         get { return Instance().isMale; }
+    }
+
+
+    public bool CanSeeHiddenWalls
+    {
+        set { Instance().canSeeHiddenWalls = value; }
+        get { return Instance().canSeeHiddenWalls; }
     }
 
     public void AddLevelRating(string levelName, float levelRating)
