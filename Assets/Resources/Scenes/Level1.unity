@@ -36075,6 +36075,9 @@ MonoBehaviour:
   canSeeEnemyHP: 0
   hasWeirdHat: 0
   canUseExplosionSpell: 0
+  canSeeHiddenWalls: 0
+  canSpeakWithSkeletons: 0
+  hasHistorianGhost: 0
   isMale: 1
 --- !u!114 &709689009
 MonoBehaviour:
@@ -36089,7 +36092,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
   head: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
+  armour: {fileID: 11400000, guid: 4f05e520cdf60bb43b30867bdccb0a90, type: 2}
   maxHealth: 6
+  velocity: 6
 --- !u!1001 &713085153
 Prefab:
   m_ObjectHideFlags: 0
@@ -57745,6 +57750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 149967141}
   head: {fileID: 1401494318}
+  armour: {fileID: 0}
 --- !u!1001 &1127877430
 Prefab:
   m_ObjectHideFlags: 0
@@ -96443,8 +96449,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diags:
   - ColourMismatchDialogue
+  - GhostBlue
   - GhostGirl
   - GhostGirlEnd
+  - GhostGreen
+  - GhostRed
+  - GhostYellow
   - LabDoor
   - Level2AchieverEnd
   - Level2Altar
@@ -96458,7 +96468,17 @@ MonoBehaviour:
   - Level3Story2
   - Level4Alone
   - Level4Altar
+  - Level4EndDialogue
   - Level4Spike
+  - Level5Altar
+  - Level5AltarAfterPray
+  - Level5AltarEnd
+  - Level5HatDialogue
+  - Level5Library
+  - Level5NoHatDialogue
+  - Level5OldBook
+  - Level5PrisonCell
+  - Level6End
   - LonelyPrincess1
   - LonelyPrincess2
   - LonelyPrincess3
