@@ -32,4 +32,10 @@ public class Target : MonoBehaviour
         if (this.buttonName.Equals(buttonName) && interactable.CanInteract())
             interactable.Interact();  
     }
+
+    //VIDE call
+    public void Eliminate()
+    {
+        Destroy(gameObject);
+    }
 }

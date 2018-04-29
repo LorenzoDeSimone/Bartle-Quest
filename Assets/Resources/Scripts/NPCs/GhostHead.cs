@@ -6,8 +6,9 @@ public class GhostHead : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Vector3 playerOffset;
-
     [SerializeField] private float speed;
+    [SerializeField] private bool isGilbert;
+
     private AnimationScript animationScript;
 
     private float acceleration = 0;
@@ -15,6 +16,7 @@ public class GhostHead : MonoBehaviour
     void Start()
     {
         animationScript = GetComponent<AnimationScript>();
+        TryToActivate();
     }
 
     // Update is called once per frame
@@ -36,6 +38,27 @@ public class GhostHead : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction, Vector3.up), 0.1f);
         }
 
+        Debug.DrawLine(transform.position, currentTarget, Color.red);
+        //Debug.DrawRay(transform.position, direction * acceleration, Color.red);
         animationScript.startY = transform.position.y;
+    }
+
+    public bool TryToActivate()
+    {
+        if (isGilbert && PlayerChoices.Instance().HasHistorianGhost)
+        {
+            gameObject.SetActive(true);
+            return true;
+        }
+        else if (!isGilbert && !PlayerChoices.Instance().HasHistorianGhost)
+        {
+            gameObject.SetActive(true);
+            return true;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            return false;
+        }
     }
 }

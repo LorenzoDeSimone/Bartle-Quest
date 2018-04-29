@@ -13,6 +13,7 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool canUseExplosionSpell = false;
     [SerializeField] private bool canSeeHiddenWalls = false;
     [SerializeField] private bool canSpeakWithSkeletons = false;
+    [SerializeField] private bool hasHistorianGhost = false;
 
 
     [SerializeField] private bool isMale = true;
@@ -100,6 +101,12 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().canSpeakWithSkeletons = value; }
         get { return Instance().canSpeakWithSkeletons; }
+    }
+
+    public bool HasHistorianGhost
+    {
+        set { Instance().hasHistorianGhost = value; }
+        get { return Instance().hasHistorianGhost; }
     }
 
     public void AddLevelRating(string levelName, float levelRating)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GhostHittable : Hittable
 {
     [SerializeField] private Transform ghostPositions;
-    [SerializeField] private ExplodingDoor door;
+    [SerializeField] private Target talkingHeads;
 
     private static HashSet<Transform> ghosts;
     private static bool someoneAttacked = false;
@@ -31,8 +31,10 @@ public class GhostHittable : Hittable
         if (currentHealth <= 0)
         {
             ghostsKilled++;
-            if (ghostsKilled == ghosts.Count  && door)
-                door.Explode();
+            if (ghostsKilled == ghosts.Count && talkingHeads)
+            {
+                talkingHeads.gameObject.SetActive(true);
+            }
         }
     }
 

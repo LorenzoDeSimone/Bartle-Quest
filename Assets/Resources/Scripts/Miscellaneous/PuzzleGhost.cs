@@ -7,8 +7,9 @@ public class PuzzleGhost : MonoBehaviour
     [SerializeField] private Transform currentGhost;
     [SerializeField] private Transform correctGhost;
     [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private ExplodingDoor door;
-
+    [SerializeField] private string dialogueName;
+    [SerializeField] private Target talkingHeads;
+    [SerializeField] private Transform ghostHead;
 
     private Talker talker;
 
@@ -72,10 +73,8 @@ public class PuzzleGhost : MonoBehaviour
             if (CheckRightCombination())
             {
                 BartleStatistics.Instance().IncrementSocializer();
-                Debug.Log("OK!");
-                if(door)
-                    door.Explode();
                 DisableAllInteractions();
+                talkingHeads.gameObject.SetActive(true);
             }
         }
 
@@ -126,5 +125,4 @@ public class PuzzleGhost : MonoBehaviour
 
         return true;
     }
-
 }
