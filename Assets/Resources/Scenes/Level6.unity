@@ -20650,7 +20650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1051113029}
   playerOffset: {x: 0, y: 3, z: 0}
-  speed: 0.005
+  speed: 0.5
   isGilbert: 0
 --- !u!114 &395448333
 MonoBehaviour:
@@ -36572,6 +36572,21 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
         type: 2}
@@ -101768,7 +101783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1051113029}
   playerOffset: {x: 0, y: 3, z: 0}
-  speed: 0.005
+  speed: 0.5
   isGilbert: 1
 --- !u!114 &1835429753
 MonoBehaviour:

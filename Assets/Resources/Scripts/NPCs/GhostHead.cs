@@ -25,7 +25,7 @@ public class GhostHead : MonoBehaviour
         Vector3 currentTarget = player.position + playerOffset;
         Vector3 direction = (currentTarget - transform.position);
         acceleration += speed * Time.deltaTime; 
-        transform.position += direction * acceleration;
+        transform.position += direction * acceleration * Time.deltaTime;
         //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction, transform.up), 0.1f);
 
         if (Vector3.Distance(transform.position, currentTarget) < 0.5f)
