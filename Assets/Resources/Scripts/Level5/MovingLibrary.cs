@@ -36,7 +36,8 @@ public class MovingLibrary : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-		
+        if (PlayerChoices.Instance().CanSeeHiddenWalls)
+            Destroy(GetComponent<Target>());
 	}
 	
 	// Update is called once per frame
