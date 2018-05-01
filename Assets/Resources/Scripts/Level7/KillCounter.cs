@@ -14,16 +14,18 @@ public class KillCounter : MonoBehaviour
         if (attackStarted)
         {
             nEnemiesKilled++;
-            Debug.Log(nEnemiesToKill);
             if(nEnemiesKilled >= nEnemiesToKill)
             {
                 foreach (Transform t in barriers)
-                    t.gameObject.SetActive(false);
+                {
+                    if(t)
+                        t.gameObject.SetActive(false);
+                }
             }
         }
     }
 
-    public void StartAttack(Transform[] barriers, Transform[] enemiesToDestroy, Transform[] enemiesToActivate)
+    public void StartAttack(Transform[] barriers, Transform[] enemiesToDisable, Transform[] enemiesToActivate)
     {
         if (!attackStarted)
         {
@@ -41,8 +43,11 @@ public class KillCounter : MonoBehaviour
                 t.GetComponent<EnemyStatus>().AIManager.enabled = true;
             }
 
-            foreach (Transform t in enemiesToDestroy)
-                Destroy(t.gameObject);
+            foreach (Transform t in enemiesToDisable)
+            {
+                t.GetComponent<EnemyStatus>().healthBarGO.SetActive(false);
+                t.gameObject.SetActive(false);
+            }
         }
     }
 }

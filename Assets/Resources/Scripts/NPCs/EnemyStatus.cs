@@ -13,7 +13,7 @@ public class EnemyStatus : CharacterStatus
 
     private static Transform player = null;
 
-    protected GameObject healthBarGO;
+    public GameObject healthBarGO;
 
     // Use this for initialization
     protected new void Start()
