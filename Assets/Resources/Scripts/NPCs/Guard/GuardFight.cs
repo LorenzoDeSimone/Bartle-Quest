@@ -25,7 +25,11 @@ public class GuardFight : GuardState
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (myGuardStatus.Target == null)
+        {
+            myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;
+            myFSM.SetBool("fighting", false);
             return;
+        }
 
         float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.Target.position);
         //Actual fighting case

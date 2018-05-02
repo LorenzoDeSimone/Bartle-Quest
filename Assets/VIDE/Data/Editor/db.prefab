@@ -40,20 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 8
+  fileIndex: 24
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 82786
+  currentID: 40069
   autosave: 1
   previewPanning: 0
-  currentDiag: 8
+  currentDiag: 24
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Woah! Finally we are free, thank you! Listen, before we wander off, we'd
-        like to offer you our help in your quest.
+    - text: (You see and old book.)
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -71,8 +70,84 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 110
-      y: 250
+      x: -180
+      y: 30
+      width: 316
+      height: 99
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: <Exit>
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: <Open book>
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 69
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: -20
+      width: 316
+      height: 119
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: You shall receive one blessing. Would you prefer being able to command
+        skeletons or being the fastest explorer ever seen?
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 290
       width: 316
       height: 136
     pTag: 
@@ -83,11 +158,11 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 2
     s_comment:
-    - text: <Interesting, I'd love some company>
+    - text: I want to speak with skeletons. The tongue is sharper than the sword.
       extraData: ExtraData
-      inputSetIndex: 1
+      inputSetIndex: 3
       outputNodeIndex: -1
-      outActionIndex: 1
+      outActionIndex: 3
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -98,28 +173,28 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: <I'd rather be alone...>
+    - text: I want to be the fastest explorer ever
       extraData: ExtraData
-      inputSetIndex: 1
+      inputSetIndex: 3
       outputNodeIndex: -1
-      outActionIndex: 0
+      outActionIndex: 4
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 281
-        y: 80
+        y: 93
         width: 30
         height: 18
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 1
+    ID: 4
     rect:
       serializedVersion: 2
-      x: 510
-      y: 300
+      x: 360
+      y: 310
       width: 316
-      height: 130
+      height: 154
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -128,61 +203,28 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: I'm afraid I did not clarify your position clearly. You have to choose
-        between me, a fine historian, and that ever-talking charlatan of my blue friend.
+    - text: So be it. Farewell adventurer.
       extraData: ExtraData
-      inputSetIndex: 2
-      outputNodeIndex: 4
+      inputSetIndex: 4
+      outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 3
-    rect:
-      serializedVersion: 2
-      x: 470
-      y: 610
-      width: 316
-      height: 149
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: That's the spirit my friend! I know a lot of good jokes about the undeads.
-        You know, I once was the joker of a litch court. Everyone literally DIED of
-        laughs.
-      extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: 4
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 5
     rect:
       serializedVersion: 2
-      x: 830
-      y: 10
-      width: 316
-      height: 149
+      x: 1180
+      y: 320
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -191,28 +233,28 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: <So, I have to choose between one of you two?>
+    - text: <Exit>
       extraData: ExtraData
-      inputSetIndex: 4
+      inputSetIndex: 5
       outputNodeIndex: -1
-      outActionIndex: 2
+      outActionIndex: 1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 6
     rect:
       serializedVersion: 2
-      x: 890
-      y: 320
-      width: 316
-      height: 110
+      x: 1100
+      y: 450
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -223,7 +265,7 @@ MonoBehaviour:
   - pauseHere: 0
     gameObjectName: CanvasPlayerUI
     methodName: ChangeDisplayedTalkerName
-    nameIndex: 11
+    nameIndex: 5
     methodIndex: 5
     paramIndex: 2
     opts:
@@ -237,126 +279,488 @@ MonoBehaviour:
     - DialogueChoiceConfirmed
     nameOpts:
     - '[No object]'
+    - prop_decor_altar_1 (1)
     - BlockManager
     - Player
-    - endLevelDoor
-    - GhostBlue
-    - Position0
-    - DontDestroyOnLoad
-    - Position2
-    - GhostGreen
-    - GhostRed
     - PlayerHealth
     - CanvasPlayerUI
-    - Position3
-    - GhostYellow
-    - Position1
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
     param_bool: 0
-    param_string: Historian Ghost
+    param_string: Echoing Voice
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 220
-      y: 510
+      x: 550
+      y: 30
       width: 200
       height: 160
-    ID: 2
+    ID: 3
     outPlayerIndex: 2
     outActionIndex: -1
     more: 0
     ovrStartNode: 0
     renameDialogue: 
   - pauseHere: 0
-    gameObjectName: CanvasPlayerUI
-    methodName: ChangeDisplayedTalkerName
-    nameIndex: 11
-    methodIndex: 5
+    gameObjectName: endLevelAltar
+    methodName: set_DialogueName
+    nameIndex: 1
+    methodIndex: 11
     paramIndex: 2
     opts:
     - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - GetCurrentTalker
-    - CanGoOn
-    - ChangeDisplayedTalkerName
-    - HightLightChoice
-    - DialogueChoiceConfirmed
+    - BlessWeapon
+    - ChangeGhostDialogue
+    - get_Text
+    - get_Buttonimage
+    - get_IsEnemy
+    - set_IsEnemy
+    - Interact
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
     nameOpts:
     - '[No object]'
+    - endLevelAltar
     - BlockManager
     - Player
-    - endLevelDoor
-    - GhostBlue
-    - Position0
-    - DontDestroyOnLoad
-    - Position2
-    - GhostGreen
-    - GhostRed
     - PlayerHealth
     - CanvasPlayerUI
-    - Position3
-    - GhostYellow
-    - Position1
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
     param_bool: 0
-    param_string: Joker Ghost
+    param_string: Level2AltarAfterBless
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 610
-      y: 70
+      x: 770
+      y: 580
       width: 200
       height: 160
-    ID: 4
-    outPlayerIndex: 3
+    ID: 7
+    outPlayerIndex: -1
+    outActionIndex: 2
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: endLevelDoor
+    methodName: Explode
+    nameIndex: 6
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Explode
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1050
+      y: 590
+      width: 300
+      height: 50
+    ID: 8
+    outPlayerIndex: -1
     outActionIndex: -1
     more: 0
     ovrStartNode: 0
     renameDialogue: 
   - pauseHere: 0
-    gameObjectName: CanvasPlayerUI
-    methodName: ChangeDisplayedTalkerName
-    nameIndex: 11
-    methodIndex: 5
-    paramIndex: 2
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 23
+    methodIndex: 24
+    paramIndex: 0
     opts:
     - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - GetCurrentTalker
-    - CanGoOn
-    - ChangeDisplayedTalkerName
-    - HightLightChoice
-    - DialogueChoiceConfirmed
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - Rollback
+    - ChangePlayerMaxHealth
+    - GiveHealthBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
     nameOpts:
     - '[No object]'
+    - endLevelAltar
     - BlockManager
     - Player
-    - endLevelDoor
-    - GhostBlue
-    - Position0
-    - DontDestroyOnLoad
-    - Position2
-    - GhostGreen
-    - GhostRed
     - PlayerHealth
     - CanvasPlayerUI
-    - Position3
-    - GhostYellow
-    - Position1
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
     param_bool: 0
-    param_string: Historian Ghost
+    param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 1230
-      y: 270
+      x: 730
+      y: 220
+      width: 200
+      height: 144
+    ID: 9
+    outPlayerIndex: -1
+    outActionIndex: 5
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 23
+    methodIndex: 23
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - Rollback
+    - ChangePlayerMaxHealth
+    - GiveHealthBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 730
+      y: 380
+      width: 200
+      height: 144
+    ID: 10
+    outPlayerIndex: -1
+    outActionIndex: 6
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: set_CanSpeakWithSkeletons
+    nameIndex: 23
+    methodIndex: 22
+    paramIndex: 1
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - Rollback
+    - ChangePlayerMaxHealth
+    - GiveHealthBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 1
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 80
       width: 200
       height: 160
-    ID: 7
-    outPlayerIndex: -1
+    ID: 11
+    outPlayerIndex: 4
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: GiveVelocityBonus
+    nameIndex: 23
+    methodIndex: 7
+    paramIndex: 4
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - endLevelAltar
+    - BlockManager
+    - Player
+    - PlayerHealth
+    - CanvasPlayerUI
+    - endLevelDoor
+    - prop_literature_book_open_1
+    - SpawnManagerAltar
+    - Barrier
+    - Barrier (1)
+    - SpawnManager
+    - BlueSwitch (2)
+    - endExplorerDoor
+    - door
+    - DoorLever
+    - Barrier (2)
+    - RedSwitch (1)
+    - prop_decor_altar_1
+    - SpawnManagerNearLever
+    - talkerColumn
+    - RedSwitch
+    - Library (8)
+    - DontDestroyOnLoad
+    - DoorLever (1)
+    - RedSwitch (2)
+    - door (1)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 1.2
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 280
+      width: 200
+      height: 160
+    ID: 12
+    outPlayerIndex: 4
     outActionIndex: -1
     more: 0
     ovrStartNode: 0

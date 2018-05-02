@@ -7,10 +7,8 @@ public class Level7DoorLever : Interactable
 {
     [SerializeField] private Transform prisoners;
     [SerializeField] private Transform prisonersFinalPosition;
-    [SerializeField] private GameObject player;
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] Image DeathAndPauseScreen;
-    [SerializeField] private GameObject[] Enemies;
 
     private float fadeInTime = 0.5f;
     private float fadeOutTime = 1f;
@@ -28,25 +26,23 @@ public class Level7DoorLever : Interactable
     {
         animation.Play();
         leverPulled = true;
+        UpdateArchetypes();
         StartCoroutine(DialogueFade());
+    }
+
+    public void UpdateArchetypes()
+    {
+        if (PlayerChoices.Instance().Lv7AlarmTriggered)
+            BartleStatistics.Instance().IncrementKiller();
+        else if (PlayerChoices.Instance().Lv7SkeletonControlled)
+            BartleStatistics.Instance().IncrementSocializer();
+        else
+            BartleStatistics.Instance().IncrementExplorer();
     }
 
     public override bool CanInteract()
     {
-        if (leverPulled)
-        {
-            return false;
-        }
-
-        /*foreach (GameObject go in Enemies)
-        {
-            if (go != null)
-            {
-                return false;
-            }
-        }*/
-
-        return true;
+        return !leverPulled;
     }
 
     IEnumerator DialogueFade()

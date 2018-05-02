@@ -6,6 +6,7 @@ public class PlayerChoices : MonoBehaviour
 {
     [SerializeField] private Dictionary<string, float> levelRatings;
 
+    [SerializeField] private bool isMale = true;
     [SerializeField] private bool helpedSpikeWithoutReward = false;
     [SerializeField] private bool blessedSowrd = false;
     [SerializeField] private bool canSeeEnemyHP = false;
@@ -14,9 +15,8 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool canSeeHiddenWalls = false;
     [SerializeField] private bool canSpeakWithSkeletons = false;
     [SerializeField] private bool hasHistorianGhost = false;
-
-
-    [SerializeField] private bool isMale = true;
+    [SerializeField] private bool lv7AlarmTriggered = false;
+    [SerializeField] private bool lv7SkeletonControlled = false;
 
     private static PlayerChoices instance;
     private static PlayerChoices rollbackInstance; 
@@ -107,6 +107,18 @@ public class PlayerChoices : MonoBehaviour
     {
         set { Instance().hasHistorianGhost = value; }
         get { return Instance().hasHistorianGhost; }
+    }
+
+    public bool Lv7AlarmTriggered
+    {
+        set { Instance().lv7AlarmTriggered = value; }
+        get { return Instance().lv7AlarmTriggered; }
+    }
+
+    public bool Lv7SkeletonControlled
+    {
+        set { Instance().lv7SkeletonControlled = value; }
+        get { return Instance().lv7SkeletonControlled; }
     }
 
     public void AddLevelRating(string levelName, float levelRating)
