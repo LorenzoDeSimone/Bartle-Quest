@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1065935d8c57ba44b882d3ef68fc0e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 2089581847}
   talker: {fileID: 57509737}
   oneShot: 1
 --- !u!1001 &62998506
@@ -3344,8 +3344,8 @@ MonoBehaviour:
   - {fileID: 784404160}
   - {fileID: 1947959588}
   NPC: {fileID: 515707321}
-  player: {fileID: 0}
-  dialogueManager: {fileID: 0}
+  player: {fileID: 1127258144}
+  dialogueManager: {fileID: 2089581847}
   dialogueName: SpikeEscaped
   Enemies:
   - {fileID: 1353461980}
@@ -12191,6 +12191,11 @@ Prefab:
       propertyPath: playerHittable
       value: 
       objectReference: {fileID: 365215894}
+    - target: {fileID: 114564592093186664, guid: 49223aab68ffdff4c9337354233408c6,
+        type: 2}
+      propertyPath: nextScene
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49223aab68ffdff4c9337354233408c6, type: 2}
   m_IsPrefabParent: 0
@@ -12491,7 +12496,7 @@ MonoBehaviour:
   - {fileID: 2059724459}
   debris: {fileID: 570019253}
   finalPlayerTransform: {fileID: 1993789903}
-  player: {fileID: 0}
+  player: {fileID: 365215898}
 --- !u!65 &414008292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23587,6 +23592,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2343728, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
+    - target: {fileID: 2383942, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
   m_IsPrefabParent: 0
@@ -55884,7 +55897,7 @@ MonoBehaviour:
   weapon: {fileID: 149967141}
   head: {fileID: 1401494318}
   armour: {fileID: 1341900315}
-  shield: {fileID: 0}
+  shield: {fileID: 1401494319}
 --- !u!1001 &1127877430
 Prefab:
   m_ObjectHideFlags: 0
@@ -62362,6 +62375,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2343728, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
+    - target: {fileID: 2383942, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
     m_RemovedComponents:
     - {fileID: 11103646, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
@@ -74759,7 +74780,7 @@ Prefab:
         type: 2}
       propertyPath: dialogueManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2089581847}
     - target: {fileID: 4869192598941632, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
       propertyPath: m_RootOrder
       value: 2
@@ -74806,7 +74827,7 @@ Prefab:
         type: 2}
       propertyPath: cooldownBarImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1501176372}
     m_RemovedComponents:
     - {fileID: 114816037216475010, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
     - {fileID: 114278730779860150, guid: 15c0c3221d278df419545bc6b87d9c17, type: 2}
@@ -74821,6 +74842,11 @@ MonoBehaviour:
 --- !u!4 &1401494318 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4206062828509204, guid: 15c0c3221d278df419545bc6b87d9c17,
+    type: 2}
+  m_PrefabInternal: {fileID: 1401494316}
+--- !u!4 &1401494319 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4273317033221324, guid: 15c0c3221d278df419545bc6b87d9c17,
     type: 2}
   m_PrefabInternal: {fileID: 1401494316}
 --- !u!1 &1403538090
@@ -87404,6 +87430,12 @@ Transform:
   m_Father: {fileID: 458984493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1501176372 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114628318148816932, guid: 49223aab68ffdff4c9337354233408c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 396831958}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1501394109 stripped
 Transform:
   m_PrefabParentObject: {fileID: 459860, guid: c37c40b2ce214634392ef23989f4087d, type: 2}
@@ -112733,6 +112765,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2343728, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
+    - target: {fileID: 2383942, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
   m_IsPrefabParent: 0
@@ -120584,6 +120624,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 465130, guid: 74cc63842ad200c4389e4f95c6ec3c4d, type: 2}
   m_PrefabInternal: {fileID: 2087964973}
+--- !u!114 &2089581847 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114335383483706324, guid: 49223aab68ffdff4c9337354233408c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 396831958}
+  m_Script: {fileID: 11500000, guid: e1e00ef8b81853a439617a710c8353ef, type: 3}
 --- !u!1 &2090726605 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 149552, guid: e7d46d4a49e2b8948a22d8c83a57adc9, type: 2}
@@ -121189,6 +121235,14 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2343728, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
+    - target: {fileID: 2383942, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cdfb1aa3b390a040ba6d4f025902643, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f588b1778db0a94081f6254a6ad7c5b, type: 2}
   m_IsPrefabParent: 0
