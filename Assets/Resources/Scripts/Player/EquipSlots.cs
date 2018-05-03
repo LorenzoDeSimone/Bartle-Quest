@@ -8,4 +8,5 @@ public class EquipSlots : MonoBehaviour
     public Weapon weapon;
     public Transform head;
     public Transform armour;
+    public Transform shield;
 }

@@ -1368,8 +1368,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1335830266756852}
-  m_LocalRotation: {x: -0, y: -0.7096583, z: -0, w: 0.70454603}
-  m_LocalPosition: {x: 3.06, y: 1.0694375, z: -40.074844}
+  m_LocalRotation: {x: -0, y: -0.7082579, z: -0, w: 0.7059538}
+  m_LocalPosition: {x: -14.8, y: 1.2572889, z: 72.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510424728670372}
@@ -2470,6 +2470,7 @@ MonoBehaviour:
   weapon: {fileID: 114815747172026246}
   head: {fileID: 4206062828509204}
   armour: {fileID: 4317305259155628}
+  shield: {fileID: 4273317033221324}
 --- !u!114 &114405207843713946
 MonoBehaviour:
   m_ObjectHideFlags: 1

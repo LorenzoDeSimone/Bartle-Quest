@@ -13,7 +13,7 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private WeaponInfo weapon;
     [SerializeField] private HeadInfo head;
     [SerializeField] private ArmourInfo armour;
-
+    [SerializeField] private ShieldInfo shield;
 
     [SerializeField] private int maxHealth;
     [SerializeField] private float velocity;
@@ -63,6 +63,17 @@ public class PlayerStatistics : MonoBehaviour
         get { return Instance().armour; }
     }
 
+    public ShieldInfo PlayerShieldInfo
+    {
+        set
+        {
+            Instance().shield = value;
+            ApplyPlayerShield();
+        }
+
+        get { return Instance().shield; }
+    }
+
     //Equips players with items he/she gathered so far
     void Awake()
     {
@@ -84,6 +95,7 @@ public class PlayerStatistics : MonoBehaviour
         ApplyPlayerVelocity();
         ApplyPlayerHead();
         ApplyPlayerArmour();
+        ApplyPlayerShield();
         ApplyPlayerWeapon();
     }
 
@@ -123,6 +135,18 @@ public class PlayerStatistics : MonoBehaviour
     private void ApplyPlayerArmour()
     {
         Instance().playerEquipSlots.armour.GetComponent<SkinnedMeshRenderer>().sharedMesh = Instance().armour.mesh;
+    }
+
+
+    public void ChangePlayerShield(ShieldInfo shield)
+    {
+        PlayerShieldInfo = shield;
+        ApplyPlayerShield();
+    }
+
+    private void ApplyPlayerShield()
+    {
+        Instance().playerEquipSlots.shield.GetComponent<MeshFilter>().mesh = Instance().shield.mesh;
     }
 
     public void ChangePlayerArmour(ArmourInfo armour)
