@@ -8,14 +8,21 @@ public class GhostHittable : Hittable
     [SerializeField] private Target talkingHeads;
 
     private static HashSet<Transform> ghosts;
-    private static bool someoneAttacked = false;
-    private static int ghostsKilled = 0;
+    private static bool someoneAttacked;
+    private static int ghostsKilled, ghostsToKill;
 
     protected new void Start()
     {
         base.Start();
-        if (ghosts == null)
+        if (ghosts == null || ghosts.Count == 0)
+        {
+            ghostsKilled = 0;
+            ghostsToKill = 0;
+            someoneAttacked = false;
             ghosts = new HashSet<Transform>();
+        }
+
+        ghostsToKill++;
         ghosts.Add(transform);
     }
 
@@ -31,7 +38,7 @@ public class GhostHittable : Hittable
         if (currentHealth <= 0)
         {
             ghostsKilled++;
-            if (ghostsKilled == ghosts.Count && talkingHeads)
+            if (ghostsKilled == ghostsToKill && talkingHeads)
             {
                 talkingHeads.gameObject.SetActive(true);
             }
@@ -45,5 +52,10 @@ public class GhostHittable : Hittable
 
         foreach (Transform t in ghosts)
             t.GetComponent<EnemyStatus>().AIManager.enabled = true;
+    }
+
+    void OnDestroy()
+    {
+        ghosts.Remove(transform);
     }
 }

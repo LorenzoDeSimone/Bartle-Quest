@@ -25,8 +25,7 @@ public class PuzzleGhost : MonoBehaviour
             nameToGhostPosition = new Dictionary<string, PuzzleGhost>();
 
         talker = GetComponent<Talker>();
-
-        nameToGhostPosition.Add(currentGhost.name, this);
+        nameToGhostPosition[currentGhost.name] = this;
         talker.DialogueName = currentGhost.name;
     }
 
