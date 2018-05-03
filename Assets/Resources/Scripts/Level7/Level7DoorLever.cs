@@ -32,10 +32,10 @@ public class Level7DoorLever : Interactable
 
     public void UpdateArchetypes()
     {
-        if (PlayerChoices.Instance().Lv7AlarmTriggered)
-            BartleStatistics.Instance().IncrementKiller();
-        else if (PlayerChoices.Instance().Lv7SkeletonControlled)
+        if (PlayerChoices.Instance().Lv7SkeletonControlled)
             BartleStatistics.Instance().IncrementSocializer();
+        else if (PlayerChoices.Instance().Lv7AlarmTriggered)
+            BartleStatistics.Instance().IncrementKiller();
         else
             BartleStatistics.Instance().IncrementExplorer();
     }
