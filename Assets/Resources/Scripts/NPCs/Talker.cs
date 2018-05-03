@@ -42,7 +42,7 @@ public class Talker : Interactable
 
     public override bool CanInteract()
     {
-        return true;
+        return dialogueName != null;
     }
 
     public override void Interact()
