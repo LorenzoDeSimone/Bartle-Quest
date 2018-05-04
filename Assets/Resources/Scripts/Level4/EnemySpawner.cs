@@ -8,27 +8,31 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Transform[] spawnPoints;
-
     [SerializeField] private int enemyToKill, maxEnemiesAlive, minSec = 1, maxSec = 3;
-
     [SerializeField] private Transform player, helperNpc;
-
     [SerializeField] private ExplodingDoor[] doors;
-
     [SerializeField] private Transform[] barriers;
-
     [SerializeField] private Talker endFightDialogue;
+    [SerializeField] private bool attackEachOther = false;
+
 
     private bool fightEnded;
 
-    private HashSet<Transform> enemiesAlive;
+    private List<Transform> enemiesAlive;
     private int enemiesKilled;
     
+    public bool FightEnded
+    {
+        get { return fightEnded; }
+    }
+
     void Awake()
     {
-        enemiesAlive = new HashSet<Transform>();
+        enemiesAlive = new List<Transform>();
         foreach (Transform barrier in barriers)
             barrier.gameObject.SetActive(false);
+
+        attackEachOther = PlayerChoices.Instance().CanSpeakWithSkeletons;
     }
 
     void Update()
@@ -118,11 +122,19 @@ public class EnemySpawner : MonoBehaviour
             GameObject skeletonGO = (GameObject)Instantiate(Skeleton);
             GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
-            
+
             if (PlayerChoices.Instance().HelpedSpikeWithoutReward && UnityEngine.Random.Range(0f, 1f) < 0.5f)
                 skeletonStatus.Target = helperNpc;
             else
-                skeletonStatus.Target = player;
+            {
+                if (attackEachOther && enemiesAlive.Count > 0)
+                {
+                    skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count-1)];
+                    Debug.Log(skeletonStatus.target);
+                }
+                else
+                    skeletonStatus.Target = player;
+            }
 
             Vector3 spawnPosition = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length - 1)].position +
                                                 currentDirection * agent.stoppingDistance;

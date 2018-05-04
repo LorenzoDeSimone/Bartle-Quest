@@ -21,9 +21,12 @@ public class FallingFloor : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         if(collider.GetComponent<PlayerController>())
-        {
-            StartCoroutine(ApplyGravity());
-        }
+            Fall();
+    }
+
+    public void Fall()
+    {
+        StartCoroutine(ApplyGravity());
     }
 
     private IEnumerator ApplyGravity()

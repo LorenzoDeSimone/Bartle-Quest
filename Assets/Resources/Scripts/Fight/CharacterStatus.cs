@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
-    [SerializeField] private bool canUseShield;
-    [SerializeField] private bool canMove;
-    [SerializeField] private bool canFall;
-    [SerializeField] private bool canAttack;
-    [SerializeField] private bool canDie;
-    [SerializeField] private bool canCollectItems;
+    [SerializeField] protected bool canUseShield;
+    [SerializeField] protected bool canMove;
+    [SerializeField] protected bool canFall;
+    [SerializeField] protected bool canAttack;
+    [SerializeField] protected bool canDie;
+    [SerializeField] protected bool canCollectItems;
 
     [SerializeField] private string[] AttackStates;
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
