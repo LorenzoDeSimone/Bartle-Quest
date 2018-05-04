@@ -38,10 +38,10 @@ public class GuardChase : GuardState
         if (myGuardStatus.target != null)
         {
             float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.Target.position);
-
             if (distance <= myGuardStatus.attackRadius)
+            {
                 myFSM.SetBool("fighting", true);
-
+            }
         }
         else
             myGuardStatus.MovingStatus = CharacterStatus.movingIdleValue;

@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MasterStatus : GuardStatus {
+public class MasterStatus : GuardStatus
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    protected new void Start()
+    {
+        base.Start();
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

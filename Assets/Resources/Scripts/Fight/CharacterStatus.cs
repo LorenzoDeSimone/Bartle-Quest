@@ -172,7 +172,9 @@ public class CharacterStatus : MonoBehaviour
 
     public void RequestAttack()
     {
-        if (!canAttack || !myAnimator)
+        //Debug.Log("canAttack: " + canAttack + " | myAnimator: " + myAnimator==null);
+
+        if (!canAttack)
             return;
 
         //The character is not attacking and combo needs to start
