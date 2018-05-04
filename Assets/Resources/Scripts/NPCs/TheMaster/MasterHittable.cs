@@ -9,6 +9,7 @@ public class MasterHittable : Hittable
     [SerializeField] private Transform floorToDestroy;
     [SerializeField] private EnemySpawner skeletonSpawner;
     [SerializeField] private float skeletonSummonPerc, floorFallPerc;
+    [SerializeField] private string finalMasterDialogue;
 
 
     private bool skeletonSummoned = false, floorFallen = false , skeletonKilled = false;
@@ -17,7 +18,7 @@ public class MasterHittable : Hittable
     {
         base.UpdateHealth(deltaHealth);
         float healthPerc = ((float) CurrentHealth) / ((float)MaxHealth);
-        Debug.Log(healthPerc);
+
         if (healthPerc <= skeletonSummonPerc && !skeletonSummoned)
         {
             skeletonSummoned = true;
@@ -56,5 +57,12 @@ public class MasterHittable : Hittable
         FallingFloor[] floors = floorToDestroy.GetComponentsInChildren <FallingFloor>();
         foreach(FallingFloor floor in floors)
             floor.Fall();
+    }
+
+    private void OnDestroy()
+    {
+        Talker talker = GetComponent<Talker>();
+        talker.DialogueName = finalMasterDialogue;
+        dialogueManager.InitDialogue(talker);
     }
 }

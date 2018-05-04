@@ -2155,6 +2155,7 @@ MonoBehaviour:
   runSpeed: 4
   turnSpeed: 8
   attackPlayerIfNoTarget: 1
+  healthBarGO: {fileID: 0}
   attackRadius: 10
   distanceForInstantChase: 10
   patrolViewRadius: 15

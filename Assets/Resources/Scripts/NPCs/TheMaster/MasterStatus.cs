@@ -6,6 +6,7 @@ public class MasterStatus : GuardStatus
 {
     [SerializeField] private EnemySpawner skeletonSpawner;
     [SerializeField] private string canSpeakWithSkeletonDialogue, cannotSpeakWithSkeletonDialogue;
+    [SerializeField] private Transform masterHuman;
 
     // Use this for initialization
     protected new void Start()
@@ -43,4 +44,9 @@ public class MasterStatus : GuardStatus
         }
     }
 
+    private void OnDestroy()
+    {
+        masterHuman.transform.position = transform.position;
+        masterHuman.gameObject.SetActive(true);
+    }
 }

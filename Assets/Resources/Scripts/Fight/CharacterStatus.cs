@@ -32,6 +32,13 @@ public class CharacterStatus : MonoBehaviour
         get { return aiManager; }
     }
 
+
+    public bool CanAttack
+    {
+         set { canAttack = value; }
+         get { return canAttack; }
+    }
+
     // Use this for initialization
     protected void Start()
     {

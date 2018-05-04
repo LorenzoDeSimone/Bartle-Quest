@@ -40,19 +40,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 42
+  fileIndex: 46
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 87688
+  currentID: 53024
   autosave: 1
   previewPanning: 0
-  currentDiag: 42
+  currentDiag: 46
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: That hat... Oh my! You have seen my little girl, didn't you? Is she ok?
+    - text: How could it be... Now... You do not know... (He's trying to speak. He
+        is in great pain and will surely die if left alone.)
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -70,10 +71,10 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 100
-      y: 110
+      x: 80
+      y: 100
       width: 316
-      height: 123
+      height: 136
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -82,9 +83,54 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 2
     s_comment:
-    - text: Yes, she misses you so much.
+    - text: This is for the lives you took. <Kill him>
       extraData: ExtraData
       inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You will have a honest trial. Everyone deserves to speak. <Spare him>
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 80
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    rect:
+      serializedVersion: 2
+      x: 510
+      y: 140
+      width: 316
+      height: 154
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: (He passes away...)
+      extraData: ExtraData
+      inputSetIndex: 2
       outputNodeIndex: 3
       outActionIndex: -1
       showmore: 0
@@ -97,147 +143,26 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: I'm sorry... When I met her, she was a ghost already.
-      extraData: ExtraData
-      inputSetIndex: 1
-      outputNodeIndex: 2
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 1
-    rect:
-      serializedVersion: 2
-      x: 470
-      y: 50
-      width: 316
-      height: 130
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: I see...
-      extraData: ExtraData
-      inputSetIndex: 2
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 2
-    rect:
-      serializedVersion: 2
-      x: 590
-      y: 320
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Did you bring her with you?
-      extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: 4
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 3
-    rect:
-      serializedVersion: 2
-      x: 830
-      y: 0
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 2
-    s_comment:
-    - text: She is safe home <Lie>.
-      extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: She is a ghost... She gave me this hat because I read a story for her.
-      extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
     ID: 4
     rect:
       serializedVersion: 2
-      x: 920
-      y: 130
+      x: 1170
+      y: 250
       width: 316
-      height: 143
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 1
+    isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: That's harsh... but thank you for being so kind with her. Here, take this
-        blessing. It will help you in the fight.
+    - text: <Exit>
       extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 6
-      outActionIndex: -1
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: 2
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -251,23 +176,23 @@ MonoBehaviour:
     ID: 5
     rect:
       serializedVersion: 2
-      x: 1020
-      y: 330
+      x: 1510
+      y: 170
       width: 316
-      height: 136
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 0
+    isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: Thank you.
+    - text: (He lies dead on the floor...)
       extraData: ExtraData
-      inputSetIndex: 6
-      outputNodeIndex: -1
-      outActionIndex: 0
+      inputSetIndex: 4
+      outputNodeIndex: 3
+      outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -281,83 +206,23 @@ MonoBehaviour:
     ID: 6
     rect:
       serializedVersion: 2
-      x: 1420
-      y: 340
+      x: 1150
+      y: 40
       width: 316
       height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: Thank you adventurer. (You gain two heart levels.)
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 8
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 7
-    rect:
-      serializedVersion: 2
-      x: 1430
-      y: 520
-      width: 316
-      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: I will make him pay. <Exit>
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 9
-    rect:
-      serializedVersion: 2
-      x: 1820
-      y: 580
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
   S_actionNodes:
   - pauseHere: 0
     gameObjectName: DontDestroyOnLoad
-    methodName: GiveHealthBonus
-    nameIndex: 6
-    methodIndex: 7
-    paramIndex: 3
+    methodName: IncrementKiller
+    nameIndex: 12
+    methodIndex: 35
+    paramIndex: 0
     opts:
     - '[No method]'
     - get_PlayerWeaponInfo
@@ -400,31 +265,241 @@ MonoBehaviour:
     - GetResults
     nameOpts:
     - '[No object]'
+    - MasterDialogueTrigger
     - endLevelDoor
     - PlayerHealth
     - CanvasPlayerUI
     - BlockManager
     - Player
+    - floor_bordered_2m_1 (49)
+    - floor_bordered_2m_1 (201)
+    - floor_bordered_2m_1 (200)
+    - floor_bordered_2m_1 (123)
+    - floor_bordered_2m_1 (184)
     - DontDestroyOnLoad
     - General
+    - floor_bordered_2m_1 (137)
+    - floor_bordered_4m_3 (200)
+    - floor_bordered_2m_1 (98)
+    - floor_bordered_2m_1 (76)
+    - floor_bordered_2m_1 (207)
+    - floor_bordered_2m_1 (55)
+    - floor_bordered_2m_1 (61)
     - Ghost
     - PurpleBarrier
-    - FightStartTrigger
-    - GreenBarrier
+    - floor_bordered_2m_1 (207)
+    - floor_plain_4m_2 (15)
+    - floor_plain_4m_5 (6)
+    - floor_bordered_2m_1 (193)
+    - floor_bordered_4m_3 (282)
+    - floor_bordered_2m_1 (202)
+    - floor_plain_4m_5
+    - floor_bordered_2m_1 (50)
+    - floor_bordered_4m_3 (201)
+    - floor_bordered_4m_3 (269)
+    - floor_bordered_2m_1 (133)
+    - floor_bordered_4m_3 (246)
+    - floor_bordered_2m_1 (195)
+    - floor_bordered_2m_1 (173)
+    - floor_bordered_2m_1 (190)
     - GreenBarrier (1)
+    - floor_bordered_2m_1 (132)
+    - floor_bordered_2m_1 (86)
+    - SpawnManager
+    - floor_bordered_2m_1 (202)
     - GeneralDialogueTrigger
+    - floor_bordered_2m_1 (59)
     param_bool: 0
     param_string: 
-    param_int: 2
+    param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 1800
-      y: 330
+      x: 900
+      y: 50
       width: 200
-      height: 160
-    ID: 8
-    outPlayerIndex: 7
+      height: 144
+    ID: 2
+    outPlayerIndex: 4
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 12
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - MasterDialogueTrigger
+    - endLevelDoor
+    - PlayerHealth
+    - CanvasPlayerUI
+    - BlockManager
+    - Player
+    - floor_bordered_2m_1 (49)
+    - floor_bordered_2m_1 (201)
+    - floor_bordered_2m_1 (200)
+    - floor_bordered_2m_1 (123)
+    - floor_bordered_2m_1 (184)
+    - DontDestroyOnLoad
+    - General
+    - floor_bordered_2m_1 (137)
+    - floor_bordered_4m_3 (200)
+    - floor_bordered_2m_1 (98)
+    - floor_bordered_2m_1 (76)
+    - floor_bordered_2m_1 (207)
+    - floor_bordered_2m_1 (55)
+    - floor_bordered_2m_1 (61)
+    - Ghost
+    - PurpleBarrier
+    - floor_bordered_2m_1 (207)
+    - floor_plain_4m_2 (15)
+    - floor_plain_4m_5 (6)
+    - floor_bordered_2m_1 (193)
+    - floor_bordered_4m_3 (282)
+    - floor_bordered_2m_1 (202)
+    - floor_plain_4m_5
+    - floor_bordered_2m_1 (50)
+    - floor_bordered_4m_3 (201)
+    - floor_bordered_4m_3 (269)
+    - floor_bordered_2m_1 (133)
+    - floor_bordered_4m_3 (246)
+    - floor_bordered_2m_1 (195)
+    - floor_bordered_2m_1 (173)
+    - floor_bordered_2m_1 (190)
+    - GreenBarrier (1)
+    - floor_bordered_2m_1 (132)
+    - floor_bordered_2m_1 (86)
+    - SpawnManager
+    - floor_bordered_2m_1 (202)
+    - GeneralDialogueTrigger
+    - floor_bordered_2m_1 (59)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 890
+      y: 220
+      width: 200
+      height: 144
+    ID: 3
+    outPlayerIndex: 2
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: endLevelDoor
+    methodName: Explode
+    nameIndex: 2
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Explode
+    nameOpts:
+    - '[No object]'
+    - MasterDialogueTrigger
+    - endLevelDoor
+    - PlayerHealth
+    - CanvasPlayerUI
+    - BlockManager
+    - Player
+    - floor_bordered_2m_1 (49)
+    - floor_bordered_2m_1 (201)
+    - floor_bordered_2m_1 (200)
+    - floor_bordered_2m_1 (123)
+    - floor_bordered_2m_1 (184)
+    - DontDestroyOnLoad
+    - General
+    - floor_bordered_2m_1 (137)
+    - floor_bordered_4m_3 (200)
+    - floor_bordered_2m_1 (98)
+    - floor_bordered_2m_1 (76)
+    - floor_bordered_2m_1 (207)
+    - floor_bordered_2m_1 (55)
+    - floor_bordered_2m_1 (61)
+    - Ghost
+    - PurpleBarrier
+    - floor_bordered_2m_1 (207)
+    - floor_plain_4m_2 (15)
+    - floor_plain_4m_5 (6)
+    - floor_bordered_2m_1 (193)
+    - floor_bordered_4m_3 (282)
+    - floor_bordered_2m_1 (202)
+    - floor_plain_4m_5
+    - floor_bordered_2m_1 (50)
+    - floor_bordered_4m_3 (201)
+    - floor_bordered_4m_3 (269)
+    - floor_bordered_2m_1 (133)
+    - floor_bordered_4m_3 (246)
+    - floor_bordered_2m_1 (195)
+    - floor_bordered_2m_1 (173)
+    - floor_bordered_2m_1 (190)
+    - GreenBarrier (1)
+    - floor_bordered_2m_1 (132)
+    - floor_bordered_2m_1 (86)
+    - SpawnManager
+    - floor_bordered_2m_1 (202)
+    - GeneralDialogueTrigger
+    - floor_bordered_2m_1 (59)
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 140
+      width: 200
+      height: 144
+    ID: 7
+    outPlayerIndex: -1
     outActionIndex: -1
     more: 0
     ovrStartNode: 0
