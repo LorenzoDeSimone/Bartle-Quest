@@ -46,7 +46,10 @@ public class MasterStatus : GuardStatus
 
     private void OnDestroy()
     {
-        masterHuman.transform.position = transform.position;
-        masterHuman.gameObject.SetActive(true);
+        if (!masterHuman.Equals(null))
+        {
+            masterHuman.transform.position = transform.position;
+            masterHuman.gameObject.SetActive(true);
+        }
     }
 }

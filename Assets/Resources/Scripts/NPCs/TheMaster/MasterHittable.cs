@@ -32,6 +32,9 @@ public class MasterHittable : Hittable
             BringFloorDown();
             GetComponent<MasterStatus>().RoarStatus = true;
         }
+
+        if(CurrentHealth <= 0)
+            CallDeathDialogue();
     }
 
     protected override void Update()
@@ -59,7 +62,7 @@ public class MasterHittable : Hittable
             floor.Fall();
     }
 
-    private void OnDestroy()
+    private void CallDeathDialogue()
     {
         Talker talker = GetComponent<Talker>();
         talker.DialogueName = finalMasterDialogue;

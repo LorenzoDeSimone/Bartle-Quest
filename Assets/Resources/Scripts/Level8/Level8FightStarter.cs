@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Level8FightStarter : MonoBehaviour
 {
-    [SerializeField] private GameObject master;
+    [SerializeField] private MasterStatus master;
     [SerializeField] private GameObject barrier;
 
 	public void StartFight()
     {
-        master.SetActive(true);
+        master.AIManager.enabled = true;
         barrier.SetActive(true);
     }
-
 }
