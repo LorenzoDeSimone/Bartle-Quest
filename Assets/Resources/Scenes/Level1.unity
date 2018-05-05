@@ -12182,20 +12182,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1015788761122716, guid: 49223aab68ffdff4c9337354233408c6, type: 2}
-      propertyPath: m_Name
-      value: CanvasPlayerUI
-      objectReference: {fileID: 0}
     - target: {fileID: 114677890439168146, guid: 49223aab68ffdff4c9337354233408c6,
         type: 2}
       propertyPath: playerHittable
       value: 
       objectReference: {fileID: 365215894}
-    - target: {fileID: 114564592093186664, guid: 49223aab68ffdff4c9337354233408c6,
-        type: 2}
-      propertyPath: nextScene
-      value: Level2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49223aab68ffdff4c9337354233408c6, type: 2}
   m_IsPrefabParent: 0

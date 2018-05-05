@@ -1409,6 +1409,13 @@ MonoBehaviour:
   - Level7Library2
   - Level7Library3
   - Level7Start
+  - Level8CannotSpeakSkeletons
+  - Level8CanSpeakSkeletons
+  - Level8General
+  - Level8HatDialogue
+  - Level8MasterBeforeFight
+  - Level8MasterDeath
+  - Level8NoHat
   - LonelyPrincess1
   - LonelyPrincess2
   - LonelyPrincess3
@@ -2117,7 +2124,7 @@ MonoBehaviour:
   - {fileID: 114908690328124008}
   - {fileID: 114648878413124418}
   - {fileID: 114698960516055324}
-  nextScene: Level6
+  nextScene: Level5
 --- !u!114 &114585418222676764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4030,7 +4037,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1915.5, y: 1080.4}
+  m_SizeDelta: {x: 10000, y: 5000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224388016413808266
 RectTransform:
