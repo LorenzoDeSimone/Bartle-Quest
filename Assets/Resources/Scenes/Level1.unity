@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  text: Pull floor lever
+  text: Pull Floor Lever
   buttonName: A
   buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
   interactable: {fileID: 115181892}
@@ -10740,7 +10740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  text: Pull wall lever
+  text: Pull Wall Lever
   buttonName: A
   buttonImage: {fileID: 21300000, guid: 6fb0548c9aa98f846a84fe861611cabc, type: 3}
   interactable: {fileID: 315866339}

@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f182296ab72547918b35add6ece95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 10
   ghostPositions: {fileID: 908259708}
   talkingHeads: {fileID: 1830863250}
 --- !u!1001 &75802381
@@ -30452,6 +30452,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eedc66f03a07b42418199a09446d50f6, type: 2}
   m_IsPrefabParent: 0
@@ -31112,7 +31117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f182296ab72547918b35add6ece95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 10
   ghostPositions: {fileID: 908259708}
   talkingHeads: {fileID: 1830863250}
 --- !u!4 &964622282 stripped
@@ -31542,7 +31547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f182296ab72547918b35add6ece95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 10
   ghostPositions: {fileID: 908259708}
   talkingHeads: {fileID: 1830863250}
 --- !u!1001 &1012461344
@@ -64304,7 +64309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7f182296ab72547918b35add6ece95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 10
   ghostPositions: {fileID: 908259708}
   talkingHeads: {fileID: 1830863250}
 --- !u!4 &1445657591 stripped
