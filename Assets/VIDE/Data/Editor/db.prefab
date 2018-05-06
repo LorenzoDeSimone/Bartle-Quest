@@ -40,53 +40,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 59
+  fileIndex: 58
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 62810
+  currentID: 21779
   autosave: 1
   previewPanning: 0
-  currentDiag: 59
+  currentDiag: 58
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Captain, you're finally awake! Our squad has been imprisoned by the Master.
+    - text: Which is more enjoyable to you?
       extraData: ExtraData
       inputSetIndex: 0
-      outputNodeIndex: 3
-      outActionIndex: -1
+      outputNodeIndex: -1
+      outActionIndex: 0
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 0
     rect:
       serializedVersion: 2
-      x: -570
-      y: -120
-      width: 316
-      height: 123
+      x: 10
+      y: -540
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: <Exit>
+    - text: Killing a big monster
       extraData: ExtraData
       inputSetIndex: 1
       outputNodeIndex: -1
-      outActionIndex: -1
+      outActionIndex: 1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Bragging about it to your friends
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 2
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -100,10 +115,10 @@ MonoBehaviour:
     ID: 1
     rect:
       serializedVersion: 2
-      x: 320
-      y: 500
-      width: 316
-      height: 99
+      x: 620
+      y: -500
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -112,29 +127,28 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: Gosh, I hate this place. If only there was a way out, I would kick those
-        guards'asses!
+    - text: Which do you enjoy more in quests?
       extraData: ExtraData
       inputSetIndex: 2
-      outputNodeIndex: 1
+      outputNodeIndex: 3
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 2
+    ID: 6
     rect:
       serializedVersion: 2
-      x: -80
-      y: 300
-      width: 316
-      height: 123
+      x: 240
+      y: -230
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -143,10 +157,2159 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 2
     s_comment:
-    - text: Who is this Master?
+    - text: Getting involved in the storyline
       extraData: ExtraData
       inputSetIndex: 3
-      outputNodeIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: 4
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Getting the rewards at the end
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: 5
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: -230
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Which would you rather be noticed for in an online game?
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 11
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 100
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Your equipment
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: 7
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Your personality
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: 8
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 12
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 90
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Which do you enjoy more in an online game?
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 16
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 390
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Getting the latest gossip
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: 10
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Getting a new item
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: 11
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 17
+    rect:
+      serializedVersion: 2
+      x: 590
+      y: 400
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Which would you rather have, as a player in an online game?
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: 9
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 21
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 760
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: A private channel, over which you and your friend can communicate
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: 13
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Your own house, worth millions of gold coins
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: 14
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 22
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 730
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Which would you enjoy more as an online game player?\r"
+      extraData: ExtraData
+      inputSetIndex: 10
+      outputNodeIndex: 11
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 26
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 1070
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Running your own tavern
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: 16
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Making your own maps of the world, then selling them
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: 17
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 27
+    rect:
+      serializedVersion: 2
+      x: 590
+      y: 1060
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "What's more important in an online game to you?\r"
+      extraData: ExtraData
+      inputSetIndex: 12
+      outputNodeIndex: 13
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 31
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 1410
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: The number of people
+      extraData: ExtraData
+      inputSetIndex: 13
+      outputNodeIndex: -1
+      outActionIndex: 19
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: The number of areas to explore
+      extraData: ExtraData
+      inputSetIndex: 13
+      outputNodeIndex: -1
+      outActionIndex: 20
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 32
+    rect:
+      serializedVersion: 2
+      x: 570
+      y: 1410
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "What's more important to you?\r"
+      extraData: ExtraData
+      inputSetIndex: 14
+      outputNodeIndex: 15
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 36
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 1770
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: The quality of roleplaying in an online game
+      extraData: ExtraData
+      inputSetIndex: 15
+      outputNodeIndex: -1
+      outActionIndex: 22
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: The uniqueness of the features, and game mechanic
+      extraData: ExtraData
+      inputSetIndex: 15
+      outputNodeIndex: -1
+      outActionIndex: 23
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 37
+    rect:
+      serializedVersion: 2
+      x: 580
+      y: 1770
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "You are being chased by a monster in an online game. Do you:\r"
+      extraData: ExtraData
+      inputSetIndex: 16
+      outputNodeIndex: 17
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 41
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 2100
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Ask a friend for help in killing it
+      extraData: ExtraData
+      inputSetIndex: 17
+      outputNodeIndex: -1
+      outActionIndex: 25
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Hide somewhere you know the monster won't follow
+      extraData: ExtraData
+      inputSetIndex: 17
+      outputNodeIndex: -1
+      outActionIndex: 26
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 42
+    rect:
+      serializedVersion: 2
+      x: 570
+      y: 2090
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 'You''re a player in an online game, and about to go into an unknown dungeon.
+        You have your choice of one more person for your party. Do you bring:'
+      extraData: ExtraData
+      inputSetIndex: 18
+      outputNodeIndex: 19
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 46
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 2360
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: A bard, who's a good friend of yours and who's great for entertaining
+        you and your friends
+      extraData: ExtraData
+      inputSetIndex: 19
+      outputNodeIndex: -1
+      outActionIndex: 28
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: A wizard, to identiy the items that you find there
+      extraData: ExtraData
+      inputSetIndex: 19
+      outputNodeIndex: -1
+      outActionIndex: 29
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 47
+    rect:
+      serializedVersion: 2
+      x: 570
+      y: 2380
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 'Someone has PK''ed you (killed you in player vs. player combat). Do you
+        want to:'
+      extraData: ExtraData
+      inputSetIndex: 20
+      outputNodeIndex: 21
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 51
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 2680
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Find out why, and try to convince them not to do it again
+      extraData: ExtraData
+      inputSetIndex: 21
+      outputNodeIndex: -1
+      outActionIndex: 31
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Plot your revenge
+      extraData: ExtraData
+      inputSetIndex: 21
+      outputNodeIndex: -1
+      outActionIndex: 32
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 52
+    rect:
+      serializedVersion: 2
+      x: 590
+      y: 2700
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Which is more exciting?\r"
+      extraData: ExtraData
+      inputSetIndex: 22
+      outputNodeIndex: 23
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 56
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 3080
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: A well-roleplayed scenario
+      extraData: ExtraData
+      inputSetIndex: 23
+      outputNodeIndex: -1
+      outActionIndex: 34
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: A deadly battle
+      extraData: ExtraData
+      inputSetIndex: 23
+      outputNodeIndex: -1
+      outActionIndex: 35
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 57
+    rect:
+      serializedVersion: 2
+      x: 590
+      y: 3080
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Which would you enjoy more?\r"
+      extraData: ExtraData
+      inputSetIndex: 24
+      outputNodeIndex: 25
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 62
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 3360
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Winning a duel with another player
+      extraData: ExtraData
+      inputSetIndex: 25
+      outputNodeIndex: -1
+      outActionIndex: 37
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Getting accepted by a clan (a group of other players)
+      extraData: ExtraData
+      inputSetIndex: 25
+      outputNodeIndex: -1
+      outActionIndex: 38
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 61
+    rect:
+      serializedVersion: 2
+      x: 580
+      y: 3350
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Is it better to be:\r"
+      extraData: ExtraData
+      inputSetIndex: 26
+      outputNodeIndex: 27
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 66
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 3700
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Feared
+      extraData: ExtraData
+      inputSetIndex: 27
+      outputNodeIndex: -1
+      outActionIndex: 40
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Loved
+      extraData: ExtraData
+      inputSetIndex: 27
+      outputNodeIndex: -1
+      outActionIndex: 41
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 67
+    rect:
+      serializedVersion: 2
+      x: 590
+      y: 3700
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather:\r"
+      extraData: ExtraData
+      inputSetIndex: 28
+      outputNodeIndex: 29
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 71
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 4070
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Hear what someone has to say
+      extraData: ExtraData
+      inputSetIndex: 29
+      outputNodeIndex: -1
+      outActionIndex: 43
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Show them the sharp blade of your axe?
+      extraData: ExtraData
+      inputSetIndex: 29
+      outputNodeIndex: -1
+      outActionIndex: 44
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 73
+    rect:
+      serializedVersion: 2
+      x: 620
+      y: 4060
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: In an online game, a new area opens up. Which do you look forward to more?
+      extraData: ExtraData
+      inputSetIndex: 30
+      outputNodeIndex: 31
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 76
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 4480
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Exploring the new area, finding out its history
+      extraData: ExtraData
+      inputSetIndex: 31
+      outputNodeIndex: -1
+      outActionIndex: 46
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Being the first to get the new equipment from the area
+      extraData: ExtraData
+      inputSetIndex: 31
+      outputNodeIndex: -1
+      outActionIndex: 47
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 77
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 4470
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "In an online game, would you rather be known as:\r"
+      extraData: ExtraData
+      inputSetIndex: 32
+      outputNodeIndex: 33
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 81
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 4810
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Someone who can run from any two points in the word, and really knows
+        their way around
+      extraData: ExtraData
+      inputSetIndex: 33
+      outputNodeIndex: -1
+      outActionIndex: 50
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: The person with the best, most unique equipment in the game
+      extraData: ExtraData
+      inputSetIndex: 33
+      outputNodeIndex: -1
+      outActionIndex: 49
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 82
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 4800
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather:\r"
+      extraData: ExtraData
+      inputSetIndex: 34
+      outputNodeIndex: 35
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 86
+    rect:
+      serializedVersion: 2
+      x: 270
+      y: 5140
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Become a hero faster than your friends
+      extraData: ExtraData
+      inputSetIndex: 35
+      outputNodeIndex: -1
+      outActionIndex: 52
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Know more secrets than your friend
+      extraData: ExtraData
+      inputSetIndex: 35
+      outputNodeIndex: -1
+      outActionIndex: 53
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 87
+    rect:
+      serializedVersion: 2
+      x: 620
+      y: 5160
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather:\r"
+      extraData: ExtraData
+      inputSetIndex: 36
+      outputNodeIndex: 37
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 91
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 5580
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Know where to find things
+      extraData: ExtraData
+      inputSetIndex: 37
+      outputNodeIndex: -1
+      outActionIndex: 56
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Know how to get things
+      extraData: ExtraData
+      inputSetIndex: 37
+      outputNodeIndex: -1
+      outActionIndex: 55
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 92
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 5570
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Which would you rather do:\r"
+      extraData: ExtraData
+      inputSetIndex: 38
+      outputNodeIndex: 39
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 96
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 5910
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Solve a riddle no one else has solved
+      extraData: ExtraData
+      inputSetIndex: 39
+      outputNodeIndex: -1
+      outActionIndex: 58
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Getting to a certain experience level faster than anyone else
+      extraData: ExtraData
+      inputSetIndex: 39
+      outputNodeIndex: -1
+      outActionIndex: 59
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 97
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 5890
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "In an online game, would rather join a clan of:\r"
+      extraData: ExtraData
+      inputSetIndex: 40
+      outputNodeIndex: 41
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 101
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 6250
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Scholars
+      extraData: ExtraData
+      inputSetIndex: 41
+      outputNodeIndex: -1
+      outActionIndex: 61
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Assassins
+      extraData: ExtraData
+      inputSetIndex: 41
+      outputNodeIndex: -1
+      outActionIndex: 62
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 102
+    rect:
+      serializedVersion: 2
+      x: 620
+      y: 6270
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather win:\r"
+      extraData: ExtraData
+      inputSetIndex: 42
+      outputNodeIndex: 43
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 106
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 6590
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: A trivia contest
+      extraData: ExtraData
+      inputSetIndex: 43
+      outputNodeIndex: -1
+      outActionIndex: 64
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: An arena battle
+      extraData: ExtraData
+      inputSetIndex: 43
+      outputNodeIndex: -1
+      outActionIndex: 65
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 107
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 6570
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "If you're alone in an area, do you think:\r\r"
+      extraData: ExtraData
+      inputSetIndex: 44
+      outputNodeIndex: 45
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 111
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 6920
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: It's safe to explore
+      extraData: ExtraData
+      inputSetIndex: 45
+      outputNodeIndex: -1
+      outActionIndex: 67
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You'll have to look somewhere else for prey
+      extraData: ExtraData
+      inputSetIndex: 45
+      outputNodeIndex: -1
+      outActionIndex: 68
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 112
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 6900
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "You learn that another player is planning your demise. Do you:\r"
+      extraData: ExtraData
+      inputSetIndex: 46
+      outputNodeIndex: 47
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 116
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 7260
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Go to an area your opponent is unfamiliar with and prepare there
+      extraData: ExtraData
+      inputSetIndex: 47
+      outputNodeIndex: -1
+      outActionIndex: 70
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Attack them before he attacks you
+      extraData: ExtraData
+      inputSetIndex: 47
+      outputNodeIndex: -1
+      outActionIndex: 71
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 117
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 7240
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "You meet a new player. Do you think of them as:\r"
+      extraData: ExtraData
+      inputSetIndex: 48
+      outputNodeIndex: 49
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 121
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 7640
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Someone who can appreciate your knowledge of the game
+      extraData: ExtraData
+      inputSetIndex: 49
+      outputNodeIndex: -1
+      outActionIndex: 73
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: As a potential prey
+      extraData: ExtraData
+      inputSetIndex: 49
+      outputNodeIndex: -1
+      outActionIndex: 74
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 122
+    rect:
+      serializedVersion: 2
+      x: 660
+      y: 7630
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "In an online game, would you rather:\r"
+      extraData: ExtraData
+      inputSetIndex: 50
+      outputNodeIndex: 51
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 126
+    rect:
+      serializedVersion: 2
+      x: 270
+      y: 7960
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Have a sword twice as powerful as any other in the game
+      extraData: ExtraData
+      inputSetIndex: 51
+      outputNodeIndex: -1
+      outActionIndex: 76
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Be the most feared person in the game
+      extraData: ExtraData
+      inputSetIndex: 51
+      outputNodeIndex: -1
+      outActionIndex: 77
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 127
+    rect:
+      serializedVersion: 2
+      x: 650
+      y: 7980
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "In an online game, would you be more prone to brag about:\r"
+      extraData: ExtraData
+      inputSetIndex: 52
+      outputNodeIndex: 53
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 131
+    rect:
+      serializedVersion: 2
+      x: 280
+      y: 8290
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: How many other players you've killed
+      extraData: ExtraData
+      inputSetIndex: 53
+      outputNodeIndex: -1
+      outActionIndex: 80
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Your equipment
+      extraData: ExtraData
+      inputSetIndex: 53
+      outputNodeIndex: -1
+      outActionIndex: 79
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 132
+    rect:
+      serializedVersion: 2
+      x: 670
+      y: 8310
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather have:\r"
+      extraData: ExtraData
+      inputSetIndex: 54
+      outputNodeIndex: 55
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 136
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 8620
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: A spell to damage other players
+      extraData: ExtraData
+      inputSetIndex: 55
+      outputNodeIndex: -1
+      outActionIndex: 82
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: A spell that increases the rate at which you gain experience points
+      extraData: ExtraData
+      inputSetIndex: 55
+      outputNodeIndex: -1
+      outActionIndex: 83
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 137
+    rect:
+      serializedVersion: 2
+      x: 650
+      y: 8610
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Would you rather have:\r"
+      extraData: ExtraData
+      inputSetIndex: 56
+      outputNodeIndex: 57
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 141
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 8960
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Two levels of experience
+      extraData: ExtraData
+      inputSetIndex: 57
+      outputNodeIndex: -1
+      outActionIndex: 86
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: An amulet that increrases the damage you do against other players by 10%
+      extraData: ExtraData
+      inputSetIndex: 57
+      outputNodeIndex: -1
+      outActionIndex: 85
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 142
+    rect:
+      serializedVersion: 2
+      x: 670
+      y: 8990
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "When playing a video game, is it more fun to:\r"
+      extraData: ExtraData
+      inputSetIndex: 58
+      outputNodeIndex: 59
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 145
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 9330
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Have the highest score on the list
+      extraData: ExtraData
+      inputSetIndex: 59
+      outputNodeIndex: -1
+      outActionIndex: 88
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Beat your best friend on-on-one
+      extraData: ExtraData
+      inputSetIndex: 59
+      outputNodeIndex: -1
+      outActionIndex: 89
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 147
+    rect:
+      serializedVersion: 2
+      x: 650
+      y: 9320
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Which profiledo you think describes you better?
+      extraData: ExtraData
+      inputSetIndex: 60
+      outputNodeIndex: 61
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -158,11 +2321,41 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: Who are you?
+    ID: 152
+    rect:
+      serializedVersion: 2
+      x: -60
+      y: 9780
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: Profile 1
       extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: 6
-      outActionIndex: -1
+      inputSetIndex: 61
+      outputNodeIndex: -1
+      outActionIndex: 92
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Profile 2
+      extraData: ExtraData
+      inputSetIndex: 61
+      outputNodeIndex: -1
+      outActionIndex: 93
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -173,341 +2366,5378 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
+    - text: They are both ok
+      extraData: ExtraData
+      inputSetIndex: 61
+      outputNodeIndex: -1
+      outActionIndex: 92
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 89
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 153
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 9750
+      width: 316
+      height: 139
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 1/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 370
+      y: -570
+      width: 300
+      height: 50
+    ID: 2
+    outPlayerIndex: 1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: -610
+      width: 300
+      height: 50
     ID: 3
+    outPlayerIndex: -1
+    outActionIndex: 3
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
     rect:
       serializedVersion: 2
-      x: -130
-      y: -150
-      width: 316
-      height: 119
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: Captain!? The trauma must have caused some amnesia...  The Master is the
-        evil mage we have been fighting so far.
-      extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: 7
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
+      x: 970
+      y: -430
+      width: 300
+      height: 50
     ID: 4
+    outPlayerIndex: -1
+    outActionIndex: 3
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 2/30
+    param_int: 0
+    param_float: 0
     rect:
       serializedVersion: 2
-      x: 270
-      y: -220
-      width: 316
-      height: 136
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 2
-    s_comment:
-    - text: Waking up unconscious in an evil mage prison? Fair enough, I guess...
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 9
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: I'll get us out of here. <Exit>
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 5
-    rect:
-      serializedVersion: 2
-      x: 1170
-      y: -150
-      width: 316
-      height: 143
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: Oh my! You don't even remember your old friend Spike. We fought along
-        many battles before.
-      extraData: ExtraData
-      inputSetIndex: 6
-      outputNodeIndex: 7
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 6
-    rect:
-      serializedVersion: 2
-      x: -90
-      y: 40
-      width: 316
-      height: 136
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Waking up unconscious in an evil mage prison? Fair enough, I guess...
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 7
-    rect:
-      serializedVersion: 2
-      x: 480
-      y: -30
-      width: 316
-      height: 123
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: No need to be my captain. Who knows what sort of spell he cast on you.
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 8
-    rect:
-      serializedVersion: 2
-      x: 670
-      y: 280
-      width: 316
-      height: 123
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Let's find a way out!
-      extraData: ExtraData
-      inputSetIndex: 9
-      outputNodeIndex: 10
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 9
-    rect:
-      serializedVersion: 2
-      x: 1180
-      y: 70
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: <Exit>
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 10
-    rect:
-      serializedVersion: 2
-      x: 1120
-      y: 270
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: 'Since you are still confused, I''ll remind you basic controls.
-
-        With A you attack, with LT you raise your shield ans with START you pause
-        the game. Easy right?'
-      extraData: ExtraData
-      inputSetIndex: 11
-      outputNodeIndex: 12
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 11
-    rect:
-      serializedVersion: 2
-      x: 800
-      y: -290
-      width: 316
-      height: 149
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Got it.
-      extraData: ExtraData
-      inputSetIndex: 12
-      outputNodeIndex: 13
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 12
-    rect:
-      serializedVersion: 2
-      x: 1230
-      y: -370
-      width: 316
-      height: 99
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: I'm sure you will handle the situation perfectly, my captain, as tyou
-        always do.
-      extraData: ExtraData
-      inputSetIndex: 13
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 13
-    rect:
-      serializedVersion: 2
-      x: 1550
+      x: -30
       y: -260
-      width: 316
-      height: 123
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  S_actionNodes: []
+      width: 300
+      height: 50
+    ID: 5
+    outPlayerIndex: 2
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: -270
+      width: 300
+      height: 50
+    ID: 8
+    outPlayerIndex: -1
+    outActionIndex: 6
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: -70
+      width: 300
+      height: 50
+    ID: 9
+    outPlayerIndex: -1
+    outActionIndex: 6
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 3/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 100
+      width: 300
+      height: 50
+    ID: 10
+    outPlayerIndex: 4
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 90
+      width: 300
+      height: 50
+    ID: 13
+    outPlayerIndex: -1
+    outActionIndex: 9
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 260
+      width: 300
+      height: 50
+    ID: 14
+    outPlayerIndex: -1
+    outActionIndex: 9
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 4/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 370
+      width: 300
+      height: 50
+    ID: 15
+    outPlayerIndex: 6
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 420
+      width: 300
+      height: 50
+    ID: 18
+    outPlayerIndex: -1
+    outActionIndex: 12
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 590
+      width: 300
+      height: 50
+    ID: 19
+    outPlayerIndex: -1
+    outActionIndex: 12
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 5/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 720
+      width: 300
+      height: 50
+    ID: 20
+    outPlayerIndex: 8
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 760
+      width: 300
+      height: 50
+    ID: 23
+    outPlayerIndex: -1
+    outActionIndex: 15
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 920
+      width: 300
+      height: 50
+    ID: 24
+    outPlayerIndex: -1
+    outActionIndex: 15
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 6/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 1050
+      width: 300
+      height: 50
+    ID: 25
+    outPlayerIndex: 10
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1090
+      width: 300
+      height: 50
+    ID: 28
+    outPlayerIndex: -1
+    outActionIndex: 18
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1260
+      width: 300
+      height: 50
+    ID: 29
+    outPlayerIndex: -1
+    outActionIndex: 18
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 7/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 1380
+      width: 300
+      height: 50
+    ID: 30
+    outPlayerIndex: 12
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1420
+      width: 300
+      height: 50
+    ID: 33
+    outPlayerIndex: -1
+    outActionIndex: 21
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1580
+      width: 300
+      height: 50
+    ID: 34
+    outPlayerIndex: -1
+    outActionIndex: 21
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 8/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 1750
+      width: 300
+      height: 50
+    ID: 35
+    outPlayerIndex: 14
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1740
+      width: 300
+      height: 50
+    ID: 38
+    outPlayerIndex: -1
+    outActionIndex: 24
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 950
+      y: 1900
+      width: 300
+      height: 50
+    ID: 39
+    outPlayerIndex: -1
+    outActionIndex: 24
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 9/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 2070
+      width: 300
+      height: 50
+    ID: 40
+    outPlayerIndex: 16
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2070
+      width: 300
+      height: 50
+    ID: 43
+    outPlayerIndex: -1
+    outActionIndex: 27
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2240
+      width: 300
+      height: 50
+    ID: 44
+    outPlayerIndex: -1
+    outActionIndex: 27
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 10/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 2360
+      width: 300
+      height: 50
+    ID: 45
+    outPlayerIndex: 18
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2400
+      width: 300
+      height: 50
+    ID: 48
+    outPlayerIndex: -1
+    outActionIndex: 30
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2560
+      width: 300
+      height: 50
+    ID: 49
+    outPlayerIndex: -1
+    outActionIndex: 30
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 11/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -30
+      y: 2670
+      width: 300
+      height: 50
+    ID: 50
+    outPlayerIndex: 20
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2730
+      width: 300
+      height: 50
+    ID: 53
+    outPlayerIndex: -1
+    outActionIndex: 33
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 2900
+      width: 300
+      height: 50
+    ID: 54
+    outPlayerIndex: -1
+    outActionIndex: 33
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 12/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 3060
+      width: 300
+      height: 50
+    ID: 55
+    outPlayerIndex: 22
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 3060
+      width: 300
+      height: 50
+    ID: 58
+    outPlayerIndex: -1
+    outActionIndex: 36
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 3220
+      width: 300
+      height: 50
+    ID: 59
+    outPlayerIndex: -1
+    outActionIndex: 36
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 13/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 3340
+      width: 300
+      height: 50
+    ID: 60
+    outPlayerIndex: 24
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 3390
+      width: 300
+      height: 50
+    ID: 63
+    outPlayerIndex: -1
+    outActionIndex: 39
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 3550
+      width: 300
+      height: 50
+    ID: 64
+    outPlayerIndex: -1
+    outActionIndex: 39
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 14/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -20
+      y: 3680
+      width: 300
+      height: 50
+    ID: 65
+    outPlayerIndex: 26
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 980
+      y: 3730
+      width: 300
+      height: 50
+    ID: 68
+    outPlayerIndex: -1
+    outActionIndex: 42
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 3900
+      width: 300
+      height: 50
+    ID: 69
+    outPlayerIndex: -1
+    outActionIndex: 42
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 15/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4040
+      width: 300
+      height: 50
+    ID: 70
+    outPlayerIndex: 28
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementSocializer
+    nameIndex: 1
+    methodIndex: 34
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 4070
+      width: 300
+      height: 50
+    ID: 72
+    outPlayerIndex: -1
+    outActionIndex: 45
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 4240
+      width: 300
+      height: 50
+    ID: 74
+    outPlayerIndex: -1
+    outActionIndex: 45
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 16/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 4460
+      width: 300
+      height: 50
+    ID: 75
+    outPlayerIndex: 30
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 4420
+      width: 300
+      height: 50
+    ID: 78
+    outPlayerIndex: -1
+    outActionIndex: 48
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 4590
+      width: 300
+      height: 50
+    ID: 79
+    outPlayerIndex: -1
+    outActionIndex: 48
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 17/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 4790
+      width: 300
+      height: 50
+    ID: 80
+    outPlayerIndex: 32
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 4980
+      width: 300
+      height: 50
+    ID: 83
+    outPlayerIndex: -1
+    outActionIndex: 51
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 970
+      y: 4790
+      width: 300
+      height: 50
+    ID: 84
+    outPlayerIndex: -1
+    outActionIndex: 51
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 18/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 5110
+      width: 300
+      height: 50
+    ID: 85
+    outPlayerIndex: 34
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 5170
+      width: 300
+      height: 50
+    ID: 88
+    outPlayerIndex: -1
+    outActionIndex: 54
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 5330
+      width: 300
+      height: 50
+    ID: 89
+    outPlayerIndex: -1
+    outActionIndex: 54
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 19/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 5550
+      width: 300
+      height: 50
+    ID: 90
+    outPlayerIndex: 36
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 5680
+      width: 300
+      height: 50
+    ID: 93
+    outPlayerIndex: -1
+    outActionIndex: 57
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 5500
+      width: 300
+      height: 50
+    ID: 94
+    outPlayerIndex: -1
+    outActionIndex: 57
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 20/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 5860
+      width: 300
+      height: 50
+    ID: 95
+    outPlayerIndex: 38
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 5860
+      width: 300
+      height: 50
+    ID: 98
+    outPlayerIndex: -1
+    outActionIndex: 60
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 6020
+      width: 300
+      height: 50
+    ID: 99
+    outPlayerIndex: -1
+    outActionIndex: 60
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 21/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 6230
+      width: 300
+      height: 50
+    ID: 100
+    outPlayerIndex: 40
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1010
+      y: 6230
+      width: 300
+      height: 50
+    ID: 103
+    outPlayerIndex: -1
+    outActionIndex: 63
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1010
+      y: 6410
+      width: 300
+      height: 50
+    ID: 104
+    outPlayerIndex: -1
+    outActionIndex: 63
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 22/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 6560
+      width: 300
+      height: 50
+    ID: 105
+    outPlayerIndex: 42
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 6580
+      width: 300
+      height: 50
+    ID: 108
+    outPlayerIndex: -1
+    outActionIndex: 66
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 6740
+      width: 300
+      height: 50
+    ID: 109
+    outPlayerIndex: -1
+    outActionIndex: 66
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 23/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 6890
+      width: 300
+      height: 50
+    ID: 110
+    outPlayerIndex: 44
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 6900
+      width: 300
+      height: 50
+    ID: 113
+    outPlayerIndex: -1
+    outActionIndex: 69
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 7070
+      width: 300
+      height: 50
+    ID: 114
+    outPlayerIndex: -1
+    outActionIndex: 69
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 24/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 7230
+      width: 300
+      height: 50
+    ID: 115
+    outPlayerIndex: 46
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1020
+      y: 7230
+      width: 300
+      height: 50
+    ID: 118
+    outPlayerIndex: -1
+    outActionIndex: 72
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1020
+      y: 7400
+      width: 300
+      height: 50
+    ID: 119
+    outPlayerIndex: -1
+    outActionIndex: 72
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 25/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 7630
+      width: 300
+      height: 50
+    ID: 120
+    outPlayerIndex: 48
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementExplorer
+    nameIndex: 1
+    methodIndex: 33
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 7570
+      width: 300
+      height: 50
+    ID: 123
+    outPlayerIndex: -1
+    outActionIndex: 75
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 7760
+      width: 300
+      height: 50
+    ID: 124
+    outPlayerIndex: -1
+    outActionIndex: 75
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 26/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 7960
+      width: 300
+      height: 50
+    ID: 125
+    outPlayerIndex: 50
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 7930
+      width: 300
+      height: 50
+    ID: 128
+    outPlayerIndex: -1
+    outActionIndex: 78
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 8110
+      width: 300
+      height: 50
+    ID: 129
+    outPlayerIndex: -1
+    outActionIndex: 78
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 27/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 8280
+      width: 300
+      height: 50
+    ID: 130
+    outPlayerIndex: 52
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 8450
+      width: 300
+      height: 50
+    ID: 133
+    outPlayerIndex: -1
+    outActionIndex: 81
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1030
+      y: 8290
+      width: 300
+      height: 50
+    ID: 134
+    outPlayerIndex: -1
+    outActionIndex: 81
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 28/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 8590
+      width: 300
+      height: 50
+    ID: 135
+    outPlayerIndex: 54
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 8630
+      width: 300
+      height: 50
+    ID: 138
+    outPlayerIndex: -1
+    outActionIndex: 84
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1050
+      y: 8810
+      width: 300
+      height: 50
+    ID: 139
+    outPlayerIndex: -1
+    outActionIndex: 84
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 29/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 8960
+      width: 300
+      height: 50
+    ID: 140
+    outPlayerIndex: 56
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 9140
+      width: 300
+      height: 50
+    ID: 143
+    outPlayerIndex: -1
+    outActionIndex: 87
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1030
+      y: 8980
+      width: 300
+      height: 50
+    ID: 144
+    outPlayerIndex: -1
+    outActionIndex: 87
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: Question 30/30
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 9280
+      width: 300
+      height: 50
+    ID: 146
+    outPlayerIndex: 58
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementAchiever
+    nameIndex: 1
+    methodIndex: 32
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 9320
+      width: 300
+      height: 50
+    ID: 148
+    outPlayerIndex: -1
+    outActionIndex: 90
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: DontDestroyOnLoad
+    methodName: IncrementKiller
+    nameIndex: 1
+    methodIndex: 35
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - get_PlayerWeaponInfo
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
+    - Rollback
+    - set_HelpedSpikeWithoutReward
+    - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
+    - IncrementAchiever
+    - IncrementExplorer
+    - IncrementSocializer
+    - IncrementKiller
+    - Reset
+    - Rollback
+    - GetResults
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryInputManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 9500
+      width: 300
+      height: 50
+    ID: 149
+    outPlayerIndex: -1
+    outActionIndex: 90
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: QuestionaryManager
+    methodName: ShowResults
+    nameIndex: 3
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - ShowResults
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 10
+      y: 9530
+      width: 300
+      height: 50
+    ID: 150
+    outPlayerIndex: -1
+    outActionIndex: 91
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: CanvasPlayerUI
+    methodName: ChangeDisplayedTalkerName
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - GetAssigned
+    - AssignNew
+    - GetCurrentTalker
+    - CanGoOn
+    - ChangeDisplayedTalkerName
+    - HightLightChoice
+    - DialogueChoiceConfirmed
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryManager
+    - Player
+    param_bool: 0
+    param_string: ' '
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 280
+      y: 9520
+      width: 300
+      height: 50
+    ID: 151
+    outPlayerIndex: 60
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: QuestionaryManager
+    methodName: ChosenDemoProfile
+    nameIndex: 3
+    methodIndex: 2
+    paramIndex: 1
+    opts:
+    - '[No method]'
+    - ShowResults
+    - ChosenDemoProfile
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryManager
+    - Player
+    param_bool: 1
+    param_string: 
+    param_int: 2
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: 9670
+      width: 200
+      height: 160
+    ID: 155
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: QuestionaryManager
+    methodName: ChosenDemoProfile
+    nameIndex: 3
+    methodIndex: 2
+    paramIndex: 1
+    opts:
+    - '[No method]'
+    - ShowResults
+    - ChosenDemoProfile
+    - get_TalkerName
+    - set_TalkerName
+    - get_DialogueName
+    - set_DialogueName
+    - get_ActualTalkerAnimator
+    - CanInteract
+    - Interact
+    nameOpts:
+    - '[No object]'
+    - DontDestroyOnLoad
+    - CanvasPlayerUI
+    - QuestionaryManager
+    - Player
+    param_bool: 0
+    param_string: 
+    param_int: 2
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: 9880
+      width: 200
+      height: 160
+    ID: 154
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: 0
+    renameDialogue: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

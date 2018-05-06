@@ -86,6 +86,8 @@ public class PlayerController : MonoBehaviour
     private void InteractionInput()
     {
         //Debug.Log(myCameraScript.interactionManager.GetNearestTarget());
+        if (!myCameraScript)
+            return;
 
         Transform currentInteractionTarget = myCameraScript.interactionManager.GetNearestTarget();
         if (currentInteractionTarget != null)
@@ -141,7 +143,7 @@ public class PlayerController : MonoBehaviour
     {
         bool cameraTargetIsEnemy = false;
 
-        if (myCameraScript.CurrentTarget != null)
+        if (myCameraScript && myCameraScript.CurrentTarget != null)
         {
             Target target = myCameraScript.CurrentTarget.GetComponent<Target>();
             cameraTargetIsEnemy = target != null && target.IsEnemy;
@@ -150,7 +152,7 @@ public class PlayerController : MonoBehaviour
         myPlayerStatus.ShieldUpStatus =  Input.GetAxis("LT") > 0.1f      && 
                                          myPlayerStatus.GroundedStatus   &&
                                          !myPlayerStatus.AttackingStatus &&
-                                         (cameraTargetIsEnemy || myCameraScript.CurrentTarget.Equals(transform));
+                                         (cameraTargetIsEnemy || (myCameraScript && myCameraScript.CurrentTarget.Equals(transform)));
     }
 
     /// <summary>
@@ -168,7 +170,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Rotate()
     {
-        if (myCameraScript.IsInLockTargetStatus())
+        if (myCameraScript && myCameraScript.IsInLockTargetStatus())
         {
             Vector3 sameYTarget = new Vector3(myCameraScript.GetTarget().position.x, transform.position.y, myCameraScript.GetTarget().position.z);
             targetRotation = Quaternion.LookRotation(sameYTarget - transform.position, Vector3.up);

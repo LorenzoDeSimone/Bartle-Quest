@@ -24,6 +24,12 @@ public class GoogleDataSender : MonoBehaviour
         ServicePointManager.ServerCertificateValidationCallback = MyRemoteCertificateValidationCallback;
     }
 
+    public void SendData(IList<IList<object>> objNeRecords)
+    {
+        var service = AuthorizeGoogleApp();
+        UpdatGoogleSheetinBatch(objNeRecords, SheetId, "A1:A", service);
+    }
+
     public void SendData()
     {
         var service = AuthorizeGoogleApp();

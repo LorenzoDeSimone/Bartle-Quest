@@ -19,7 +19,12 @@ public class PlayerChoices : MonoBehaviour
     [SerializeField] private bool lv7SkeletonControlled = false;
 
     private static PlayerChoices instance;
-    private static PlayerChoices rollbackInstance; 
+    private static PlayerChoices rollbackInstance;
+
+    public Dictionary<string, float> LevelRatings
+    {
+        get { return levelRatings; }
+    }
 
     void Awake()
     {

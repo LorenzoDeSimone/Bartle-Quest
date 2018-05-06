@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Level8.unity
     guid: 157b265fbce540e4c93ab472d188e677
+  - enabled: 1
+    path: Assets/Resources/Scenes/Questionary.unity
+    guid: 9240f7c19f044e54c9cb01457701ac63
