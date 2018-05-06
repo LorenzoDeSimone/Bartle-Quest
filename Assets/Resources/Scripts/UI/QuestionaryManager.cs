@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionaryManager : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class QuestionaryManager : MonoBehaviour
     [SerializeField] private Transform results;
     [SerializeField] private Text demoAchieverText, demoExplorerText, demoSocializerText, demoKillerText;
     [SerializeField] private Text questionaryAchieverText, questionaryExplorerText, questionarySocializerText, questionaryKillerText;
+    [SerializeField] Image DeathAndPauseScreen;
 
+    private float fadeInTime = 0.5f;
+    private float fadeOutTime = 1f;
     private Dictionary<BartleStatistics.ARCHETYPE, float> demoBartleStatistics, questionaryBartleStatistics;
     private GoogleDataSender googleDataSender;
 
@@ -21,7 +25,7 @@ public class QuestionaryManager : MonoBehaviour
         googleDataSender = GetComponent<GoogleDataSender>();
         demoBartleStatistics = BartleStatistics.Instance().GetResults();
         BartleStatistics.Instance().Reset();
-        dialogueManager.InitDialogue(GetComponent<Talker>());
+        StartCoroutine(FadeIn());
 	}
 
     public void ShowResults()
@@ -53,12 +57,12 @@ public class QuestionaryManager : MonoBehaviour
 
     private void DataSendProcedure(Dictionary<BartleStatistics.ARCHETYPE, float> bartleStatistics)
     {
-        Dictionary<string, float> levelRatings = PlayerChoices.Instance().LevelRatings;
-        //levelRatings = new Dictionary<string, float>();
-        //levelRatings["Level1"] = 0.1f;
-        //levelRatings["Level2"] = 0.2f;
-        //levelRatings["Level3"] = 0.3f;
-        //levelRatings["Level4"] = 0.4f;
+        Dictionary<string, float> levelRatings;// = PlayerChoices.Instance().LevelRatings;
+        levelRatings = new Dictionary<string, float>();
+        levelRatings["Level1"] = 0.1f;
+        levelRatings["Level2"] = 0.2f;
+        levelRatings["Level3"] = 0.3f;
+        levelRatings["Level4"] = 0.4f;
 
         foreach (string levelName in levelRatings.Keys)
         {
@@ -76,5 +80,36 @@ public class QuestionaryManager : MonoBehaviour
             //Sends one row
             googleDataSender.SendData(objNewRecords);
         }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        StartCoroutine(FadeOut("MainMenu"));
+    }
+
+    IEnumerator FadeIn()
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < fadeInTime)
+        {
+            elapsedTime += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeInTime);
+            DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
+            yield return null;
+        }
+        dialogueManager.InitDialogue(GetComponent<Talker>());
+    }
+
+    IEnumerator FadeOut(string sceneName)
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < fadeOutTime)
+        {
+            elapsedTime += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeOutTime);
+            DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
+            yield return null;
+        }
+        SceneManager.LoadScene(sceneName);
     }
 }

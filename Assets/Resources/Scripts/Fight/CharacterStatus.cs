@@ -32,6 +32,11 @@ public class CharacterStatus : MonoBehaviour
         get { return aiManager; }
     }
 
+    public bool CanMove
+    {
+        set { canMove = value; }
+        get { return canMove; }
+    }
 
     public bool CanAttack
     {

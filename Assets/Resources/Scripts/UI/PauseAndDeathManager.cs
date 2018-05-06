@@ -84,7 +84,6 @@ public class PauseAndDeathManager : MonoBehaviour
         }
     }
 
-
     IEnumerator FadeOut(string sceneName)
     {
         elapsedTime = 0;

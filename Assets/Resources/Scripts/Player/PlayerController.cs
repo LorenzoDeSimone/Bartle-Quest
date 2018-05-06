@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
     private void GameUnPausedUpdate()
     {
-        if (myPlayerStatus.DeathStatus)
+        if (myPlayerStatus.DeathStatus || !myPlayerStatus.CanMove)
             return;
 
         if (Input.GetButtonDown("X"))

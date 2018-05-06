@@ -10,7 +10,6 @@ public class MenuInputController : MonoBehaviour
     [SerializeField] private HeadInfo maleHead, femaleHead;
     [SerializeField] private string Level1Name;
     [SerializeField] private float lightIntensity;
-    [SerializeField] Image DeathAndPauseScreen;
     private float fadeOutTime = 1f;
 
     void Start()
@@ -23,7 +22,7 @@ public class MenuInputController : MonoBehaviour
     void Update ()
     {
         if (Input.GetButtonDown("A"))
-            StartCoroutine(FadeOut(Level1Name));
+            StartNewGame();
         else if (Input.GetButtonDown("Y"))
             Application.Quit();
         else if (Input.GetAxis("RT") > 0.2f)
@@ -40,21 +39,10 @@ public class MenuInputController : MonoBehaviour
             PlayerChoices.Instance().IsMale = true;
             PlayerStatistics.Instance().ChangePlayerHead(maleHead);
         }
-
     }
 
-
-    IEnumerator FadeOut(string sceneName)
+    private void StartNewGame()
     {
-        float elapsedTime = 0;
-
-        while (elapsedTime < fadeOutTime)
-        {
-            elapsedTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeOutTime);
-            DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
-            yield return null;
-        }
-        SceneManager.LoadScene(sceneName);
+        PauseAndDeathManager.Instance().LoadScene(Level1Name);
     }
 }
