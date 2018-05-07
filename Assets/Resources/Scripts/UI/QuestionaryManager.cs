@@ -57,12 +57,12 @@ public class QuestionaryManager : MonoBehaviour
 
     private void DataSendProcedure(Dictionary<BartleStatistics.ARCHETYPE, float> bartleStatistics)
     {
-        Dictionary<string, float> levelRatings;// = PlayerChoices.Instance().LevelRatings;
-        levelRatings = new Dictionary<string, float>();
-        levelRatings["Level1"] = 0.1f;
-        levelRatings["Level2"] = 0.2f;
-        levelRatings["Level3"] = 0.3f;
-        levelRatings["Level4"] = 0.4f;
+        Dictionary<string, float> levelRatings= PlayerChoices.Instance().LevelRatings;
+        //levelRatings = new Dictionary<string, float>();
+        //levelRatings["Level1"] = 0.1f;
+        //levelRatings["Level2"] = 0.2f;
+        //levelRatings["Level3"] = 0.3f;
+        //levelRatings["Level4"] = 0.4f;
 
         foreach (string levelName in levelRatings.Keys)
         {
@@ -110,6 +110,12 @@ public class QuestionaryManager : MonoBehaviour
             DeathAndPauseScreen.color = new Color(DeathAndPauseScreen.color.r, DeathAndPauseScreen.color.g, DeathAndPauseScreen.color.b, newAlpha);
             yield return null;
         }
+
+        //Resets everything for a new game
+        PlayerChoices.Instance().Reset();
+        PlayerStatistics.Instance().Reset();
+        BartleStatistics.Instance().Reset();
+
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -20471,21 +20471,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114439971938303438, guid: c635cb039d5a0754d808bbcb4ce21b63,
-        type: 2}
-      propertyPath: canUseExplosionSpell
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114439971938303438, guid: c635cb039d5a0754d808bbcb4ce21b63,
-        type: 2}
-      propertyPath: hasWeirdHat
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114439971938303438, guid: c635cb039d5a0754d808bbcb4ce21b63,
-        type: 2}
-      propertyPath: helpedSpikeWithoutReward
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c635cb039d5a0754d808bbcb4ce21b63, type: 2}
   m_IsPrefabParent: 0
@@ -41943,7 +41928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 1898976083}
   head: {fileID: 2049019663}
-  armour: {fileID: 0}
+  armour: {fileID: 1763556033}
   shield: {fileID: 277432875}
 --- !u!114 &1842739654
 MonoBehaviour:

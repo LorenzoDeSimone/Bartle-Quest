@@ -55,11 +55,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMale: 1
-  helpedSpikeWithoutReward: 1
+  helpedSpikeWithoutReward: 0
   blessedSowrd: 0
   canSeeEnemyHP: 0
-  hasWeirdHat: 1
-  canUseExplosionSpell: 1
+  hasWeirdHat: 0
+  canUseExplosionSpell: 0
   canSeeHiddenWalls: 0
   canSpeakWithSkeletons: 0
   hasHistorianGhost: 0
@@ -76,6 +76,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a05d2c38d4dbd4dbfdef92ade55cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultWeapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
+  defaultHead: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
+  defaultArmour: {fileID: 11400000, guid: 4f05e520cdf60bb43b30867bdccb0a90, type: 2}
+  defaultShield: {fileID: 11400000, guid: 6da50f7e4c8f0334693544b0e83ef9f9, type: 2}
+  defaultMaxHealth: 6
+  defaultVelocity: 6
   weapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
   head: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
   armour: {fileID: 11400000, guid: 4f05e520cdf60bb43b30867bdccb0a90, type: 2}

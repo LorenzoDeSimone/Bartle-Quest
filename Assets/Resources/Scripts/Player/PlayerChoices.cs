@@ -26,6 +26,21 @@ public class PlayerChoices : MonoBehaviour
         get { return levelRatings; }
     }
 
+    public void Reset()
+    {
+        isMale = true;
+        helpedSpikeWithoutReward = false;
+        blessedSowrd = false;
+        canSeeEnemyHP = false;
+        hasWeirdHat = false;
+        canUseExplosionSpell = false;
+        canSeeHiddenWalls = false;
+        canSpeakWithSkeletons = false;
+        hasHistorianGhost = false;
+        lv7AlarmTriggered = false;
+        lv7SkeletonControlled = false;
+    }
+
     void Awake()
     {
         Instance();

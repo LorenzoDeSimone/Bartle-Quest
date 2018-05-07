@@ -10,6 +10,12 @@ public class PlayerStatistics : MonoBehaviour
     private static PlayerStatistics instance;
     private static PlayerStatistics rollbackInstance;
 
+    [SerializeField] private WeaponInfo defaultWeapon;
+    [SerializeField] private HeadInfo defaultHead;
+    [SerializeField] private ArmourInfo defaultArmour;
+    [SerializeField] private ShieldInfo defaultShield;
+    [SerializeField] private int defaultMaxHealth, defaultVelocity;
+
     [SerializeField] private WeaponInfo weapon;
     [SerializeField] private HeadInfo head;
     [SerializeField] private ArmourInfo armour;
@@ -19,7 +25,6 @@ public class PlayerStatistics : MonoBehaviour
     [SerializeField] private float velocity;
 
     private GameObject player;
-
     private EquipSlots playerEquipSlots;
 
     public static PlayerStatistics Instance()
@@ -28,6 +33,18 @@ public class PlayerStatistics : MonoBehaviour
             instance = FindObjectOfType<PlayerStatistics>();
 
         return instance;
+    }
+
+    public void Reset()
+    {
+        Instance().maxHealth = defaultMaxHealth;
+        ApplyPlayerMaxHealth();
+        Instance().velocity = defaultVelocity;
+        ApplyPlayerVelocity();
+        ChangePlayerHead(defaultHead);
+        ChangePlayerArmour(defaultArmour);
+        ChangePlayerShield(defaultShield);
+        ChangePlayerWeapon(defaultWeapon);
     }
 
     public WeaponInfo PlayerWeaponInfo
