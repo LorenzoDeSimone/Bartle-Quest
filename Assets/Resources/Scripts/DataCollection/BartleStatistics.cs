@@ -28,10 +28,10 @@ public class BartleStatistics : MonoBehaviour
     }
     
     
-    void Update()
+    /*void Update()
     {
         Debug.Log("|| A: "+ Instance().ACHIEVER + " || " + "E: " + Instance().EXPLORER + "|| S: " + Instance().SOCIALIZER + " || K: " + Instance().KILLER + " || "+ Instance().totalChoices);
-    }
+    }*/
     
 
     public void IncrementAchiever()   { Instance().ACHIEVER++;   Instance().totalChoices++; }

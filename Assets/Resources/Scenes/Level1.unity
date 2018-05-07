@@ -12192,6 +12192,21 @@ Prefab:
       propertyPath: nextScene
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 114118772393591162, guid: 49223aab68ffdff4c9337354233408c6,
+        type: 2}
+      propertyPath: assignedIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114118772393591162, guid: 49223aab68ffdff4c9337354233408c6,
+        type: 2}
+      propertyPath: assignedDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114118772393591162, guid: 49223aab68ffdff4c9337354233408c6,
+        type: 2}
+      propertyPath: interactionCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49223aab68ffdff4c9337354233408c6, type: 2}
   m_IsPrefabParent: 0
