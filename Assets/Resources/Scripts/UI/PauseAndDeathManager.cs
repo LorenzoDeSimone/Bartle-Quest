@@ -8,6 +8,8 @@ public class PauseAndDeathManager : MonoBehaviour
 {
     private UIPlayerHealth uIPlayerHealth;
     [SerializeField] Image DeathAndPauseScreen;
+    [SerializeField] private bool pauseEnabled = true;
+
     private float elapsedTime = 0;
     private float fadeInTime = 0.5f;
     private float fadeOutTime = 1f;
@@ -36,7 +38,7 @@ public class PauseAndDeathManager : MonoBehaviour
     {
         if (IsPlayerDead())
             ReloadScene();
-        else
+        else if(pauseEnabled)
             PauseManagement();
     }
 

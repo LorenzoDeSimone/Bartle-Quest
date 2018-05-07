@@ -17949,6 +17949,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a05d2c38d4dbd4dbfdef92ade55cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultWeapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
+  defaultHead: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
+  defaultArmour: {fileID: 11400000, guid: 4f05e520cdf60bb43b30867bdccb0a90, type: 2}
+  defaultShield: {fileID: 11400000, guid: 6da50f7e4c8f0334693544b0e83ef9f9, type: 2}
+  defaultMaxHealth: 6
+  defaultVelocity: 6
   weapon: {fileID: 11400000, guid: f7f11b55f00afd340af7e87f576a2e69, type: 2}
   head: {fileID: 11400000, guid: 3624ce1a42f1e6e408d73d684f6fd38a, type: 2}
   armour: {fileID: 11400000, guid: 4f05e520cdf60bb43b30867bdccb0a90, type: 2}
@@ -30457,6 +30463,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eedc66f03a07b42418199a09446d50f6, type: 2}
   m_IsPrefabParent: 0
@@ -31878,6 +31889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathAndPauseScreen: {fileID: 1870043264}
+  pauseEnabled: 1
 --- !u!114 &1019202972
 MonoBehaviour:
   m_ObjectHideFlags: 0

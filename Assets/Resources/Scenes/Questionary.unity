@@ -20820,6 +20820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathAndPauseScreen: {fileID: 1936570997}
+  pauseEnabled: 0
 --- !u!114 &1145586219
 MonoBehaviour:
   m_ObjectHideFlags: 0

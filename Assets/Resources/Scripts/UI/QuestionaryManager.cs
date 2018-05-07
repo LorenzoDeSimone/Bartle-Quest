@@ -17,6 +17,7 @@ public class QuestionaryManager : MonoBehaviour
     private float fadeOutTime = 1f;
     private Dictionary<BartleStatistics.ARCHETYPE, float> demoBartleStatistics, questionaryBartleStatistics;
     private GoogleDataSender googleDataSender;
+    private bool chosenDemoProfile;
 
     // Use this for initialization
     void Start ()
@@ -48,6 +49,8 @@ public class QuestionaryManager : MonoBehaviour
 
     public void ChosenDemoProfile(bool value)
     {
+        chosenDemoProfile = value;
+
         //Demo profile chosen over Bartle test
         if (value)
             DataSendProcedure(demoBartleStatistics);
@@ -55,15 +58,42 @@ public class QuestionaryManager : MonoBehaviour
             DataSendProcedure(questionaryBartleStatistics);
     }
 
+    private Dictionary<string, float[]> GetLevelLabeling()
+    {
+        //I know, this shouldn't be hardcoded. Don't give me that look. I know.
+        Dictionary<string, float[]> levelLabeling = new Dictionary<string, float[]>();
+
+        /* In order:
+        Exploration       & Discovery
+        Killing           & Destruction
+        Escort            & Cooperation
+        Tool              & Experimentation
+        Dialogue          & Storytelling
+        Collection        & Farm
+        World Analysis    & Riddle
+        Create            & Craft
+        Competition       & Speedrun
+        Outpost Upgrade   & Decorate
+        */
+
+        levelLabeling["Level1"] = new float[] { 0.5f , 0.25f, 0f   , 0f   , 0.25f, 0f   , 0.5f , 0f   , 0f   , 0f};
+        levelLabeling["Level2"] = new float[] { 0.75f, 0.5f , 0f   , 0f   , 0.5f , 0f   , 0.5f , 0f   , 0f   , 0f };
+        levelLabeling["Level3"] = new float[] { 0f   , 0f   , 0f   , 1f   , 1f   , 0f   , 1f   , 0f   , 0f   , 0f };
+        levelLabeling["Level4"] = new float[] { 0f   , 1f   , 0.25f, 0f   , 0.25f, 0f   , 0f   , 0f   , 0f   , 0f };
+        levelLabeling["Level5"] = new float[] { 0f   , 1f   , 0f   , 0f   , 0.5f , 0.5f , 0.25f, 0f   , 0.5f , 0f };
+        levelLabeling["Level6"] = new float[] { 0f   , 0.5f , 0f   , 0f   , 0.5f , 0f   , 1f   , 0f   , 0f   , 0f };
+        levelLabeling["Level7"] = new float[] { 0.25f, 0.5f , 0f   , 0f   , 0.75f, 0f   , 0.75f, 0f   , 0f   , 0f };
+        levelLabeling["Level8"] = new float[] { 0f   , 1f   , 0.5f , 0f   , 0.25f, 0f   , 0f   , 0f   , 0f   , 0f };
+
+        return levelLabeling;
+    }
+
     private void DataSendProcedure(Dictionary<BartleStatistics.ARCHETYPE, float> bartleStatistics)
     {
-        Dictionary<string, float> levelRatings= PlayerChoices.Instance().LevelRatings;
-        //levelRatings = new Dictionary<string, float>();
-        //levelRatings["Level1"] = 0.1f;
-        //levelRatings["Level2"] = 0.2f;
-        //levelRatings["Level3"] = 0.3f;
-        //levelRatings["Level4"] = 0.4f;
+        Dictionary<string, float> levelRatings = PlayerChoices.Instance().LevelRatings;
 
+        Dictionary<string, float[]> levelLabeling = GetLevelLabeling();
+      
         foreach (string levelName in levelRatings.Keys)
         {
             List<IList<object>> objNewRecords = new List<IList<object>>();
@@ -75,6 +105,16 @@ public class QuestionaryManager : MonoBehaviour
             obj.Add(bartleStatistics[BartleStatistics.ARCHETYPE.KILLER]);
             obj.Add(levelRatings[levelName]);
             obj.Add(levelName);
+
+            //Right after the levelName, its labeling for each category
+            foreach (float label in levelLabeling[levelName])
+                obj.Add(label);
+
+            if(chosenDemoProfile)
+                obj.Add(1);
+            else
+                obj.Add(0);
+
             objNewRecords.Add(obj);
 
             //Sends one row
