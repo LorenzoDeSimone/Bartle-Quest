@@ -9,6 +9,8 @@ public class MovingLibrary : MonoBehaviour
 
     private IEnumerator MoveAway()
     {
+        AudioManager.Instance().PlaySuccess();
+        
         float elapsedTime = 0f;
         Vector3 finalPosition = transform.position + Vector3.right * 3;
         Vector3 startPosition = transform.position;
@@ -26,7 +28,6 @@ public class MovingLibrary : MonoBehaviour
         }
         transform.position = finalPosition;
         enabled = false;
-
     }
 
     public void Move()

@@ -35,6 +35,7 @@ public class Altar : MonoBehaviour
 
     private IEnumerator MoveAway(Vector3 startPosition)
     {
+        AudioManager.Instance().PlaySuccess();
 
         while (elapsedTime < timeToReachFinalPosition)
         {

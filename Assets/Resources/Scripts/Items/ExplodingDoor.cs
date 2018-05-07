@@ -6,6 +6,7 @@ public class ExplodingDoor : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosion;
     [SerializeField] private RateLevelPopupLoader rateLevelPopupLoader;
+    [SerializeField] private bool successSound = true;
 
     public void Explode()
     {
@@ -15,9 +16,14 @@ public class ExplodingDoor : MonoBehaviour
         if (GetComponent<Target>())
             GetComponent<Target>().enabled = false;
 
+        if (successSound)
+            AudioManager.Instance().PlaySuccess();
+
         explosion.transform.parent = null;
         explosion.gameObject.SetActive(true);
         explosion.Play();
+       
+
         gameObject.SetActive(false);
     }
 }

@@ -40,4 +40,10 @@ public class SkullDoorOpener : Interactable
             }
         }
     }
+
+    void OnDestroy()
+    {
+        nLevers = 0;
+        nLeversPulled = 0;
+    }
 }
