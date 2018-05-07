@@ -21,10 +21,13 @@ public class Level8General : MonoBehaviour
         guardStatus = GetComponent<GuardStatus>();
 	}
 	
-    public void HelpWithFight()
+    public void HelpWithFight(bool value)
     {
-        isHelpingInFight = true;
-        guardStatus.AIManager.enabled = true;
+        isHelpingInFight = value;
+        guardStatus.AIManager.enabled = value;
+
+        if(!value)
+            enemySpawner.RemoveHelper();
     }
 
     public void FightStarted()

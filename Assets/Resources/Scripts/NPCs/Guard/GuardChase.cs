@@ -17,8 +17,9 @@ public class GuardChase : GuardState
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //RotateTowards(myGuardStatus.target.position);
-        if (myGuardStatus.target != null)
+        if (myGuardStatus.Target != null)
         {
+            myGuardStatus.MovingStatus = CharacterStatus.movingRunValue;
             navMeshAgent.destination = myGuardStatus.Target.position;
             navMeshAgent.isStopped = false;
         }
@@ -35,7 +36,7 @@ public class GuardChase : GuardState
     {
         base.CheckTransitions();
 
-        if (myGuardStatus.target != null)
+        if (myGuardStatus.Target != null)
         {
             float distance = Vector3.Distance(myFSM.transform.position, myGuardStatus.Target.position);
             if (distance <= myGuardStatus.attackRadius)

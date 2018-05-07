@@ -9,11 +9,8 @@ public class Level4DialogueLoader : MonoBehaviour
     // Use this for initialization
     void Awake ()
     {
-        if (PlayerChoices.Instance().HelpedSpikeWithoutReward)
-            Spike.SetActive(true);
-        else
+        if (!PlayerChoices.Instance().HelpedSpikeWithoutReward)
         {
-            Spike.SetActive(false);
             gameObject.SetActive(false);
         }
     }

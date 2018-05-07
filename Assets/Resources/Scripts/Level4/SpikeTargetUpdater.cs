@@ -9,22 +9,16 @@ public class SpikeTargetUpdater : MonoBehaviour
 
     void Start()
     {
+        if (!PlayerChoices.Instance().HelpedSpikeWithoutReward)
+        {
+            enemySpawner.RemoveHelper();
+            Destroy(gameObject);
+        }
         guardStatus = GetComponent<GuardStatus>();
-        //StartCoroutine(ChangeTarget());
     }
 
     void Update()
     {
         guardStatus.Target = enemySpawner.GetNearestEnemy(transform.position);
     }
-
-    private IEnumerator ChangeTarget()
-    {
-        while (enabled)
-        {
-            guardStatus.Target = enemySpawner.GetNearestEnemy(transform.position);
-            yield return new WaitUntil(() => guardStatus.Target == null);
-        }
-    }
-
 }

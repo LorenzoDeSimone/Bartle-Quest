@@ -40,20 +40,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 59
+  fileIndex: 43
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 75456
+  currentID: 96238
   autosave: 1
   previewPanning: 0
-  currentDiag: 59
+  currentDiag: 43
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Thank you for showing my way out captain! I will be forever in debt with
-        you... How can I reward you?
+    - text: Captain! It's great too see you. Our paladin squad has been trapped too...
+        We managed to escape and tried to attack the Master.
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -71,19 +71,19 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: -510
-      y: -120
+      x: 70
+      y: 160
       width: 316
-      height: 136
+      height: 149
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 2
+  - commentCount: 1
     s_comment:
-    - text: You've got a nice sword there...
+    - text: It doesn't seem the operation went well...
       extraData: ExtraData
       inputSetIndex: 1
       outputNodeIndex: 2
@@ -98,28 +98,13 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: 'Don''t worry about it, I am sure we will meet again. '
-      extraData: ExtraData
-      inputSetIndex: 1
-      outputNodeIndex: 3
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 69
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: -150
-      y: -140
+      x: 440
+      y: 140
       width: 316
-      height: 130
+      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -128,14 +113,11 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: 'It''s a beauty ain''t it? If I have to lose it, I''m glad it falls in
-        worthy hands.
-
-        I am sure it will serve you well!'
+    - text: A lot of good people died, many are injured and others are still fighting.
       extraData: ExtraData
       inputSetIndex: 2
-      outputNodeIndex: -1
-      outActionIndex: 0
+      outputNodeIndex: 3
+      outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -149,10 +131,101 @@ MonoBehaviour:
     ID: 2
     rect:
       serializedVersion: 2
-      x: 240
-      y: -170
+      x: 830
+      y: 130
       width: 316
-      height: 136
+      height: 123
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: Why didn't you wait for support?
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You should have fled to the headquarters, it was a reckless move.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 69
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You did good, the Master must be stopped, no matter the cost.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 113
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    rect:
+      serializedVersion: 2
+      x: 850
+      y: 290
+      width: 316
+      height: 174
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Perhaps the cost is too high this time... I am truly lost... What should
+        I do?
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 960
+      y: 500
+      width: 316
+      height: 123
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -161,9 +234,176 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: You are truly a hero! When the time comes, I'll surely repay my debt somehow!
+    - text: "I know, I take full responsability \n... I decided to attack because
+        the Master is turning himself into a dragon and we need to stop him."
       extraData: ExtraData
-      inputSetIndex: 3
+      inputSetIndex: 5
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 5
+    rect:
+      serializedVersion: 2
+      x: 1230
+      y: 280
+      width: 316
+      height: 149
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: A dragon could kill an entire acampment of our army...
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    rect:
+      serializedVersion: 2
+      x: 1620
+      y: 330
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 'The ritual is not yet complete: we might still be able to stop him...
+        But if I leave to fight, some men here might die without my spells.'
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    rect:
+      serializedVersion: 2
+      x: 1500
+      y: 530
+      width: 316
+      height: 136
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Stop whining, stand up and fight! We will crush that damned dragon!
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: 9
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Stay here, help your soldiers. Helping people is the most important thing.
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: 10
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 93
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 8
+    rect:
+      serializedVersion: 2
+      x: 1240
+      y: 750
+      width: 316
+      height: 167
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Yes... You are right. Let's kill that damn Master!
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 9
+    rect:
+      serializedVersion: 2
+      x: 1680
+      y: 710
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: You are right... That's the very reason I became a paladin. Thank you.
+      extraData: ExtraData
+      inputSetIndex: 10
       outputNodeIndex: -1
       outActionIndex: 1
       showmore: 0
@@ -176,11 +416,11 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 3
+    ID: 10
     rect:
       serializedVersion: 2
-      x: 200
-      y: 40
+      x: 1620
+      y: 910
       width: 316
       height: 123
     pTag: 
@@ -191,9 +431,9 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Farewell.
+    - text: Let's go! <Exit>
       extraData: ExtraData
-      inputSetIndex: 4
+      inputSetIndex: 11
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -206,13 +446,43 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 9
+    ID: 13
     rect:
       serializedVersion: 2
-      x: 1330
-      y: -70
-      width: 300
-      height: 100
+      x: 2350
+      y: 840
+      width: 316
+      height: 99
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Take care general. <Exit>
+      extraData: ExtraData
+      inputSetIndex: 12
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 16
+    rect:
+      serializedVersion: 2
+      x: 2470
+      y: 1030
+      width: 316
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -222,57 +492,74 @@ MonoBehaviour:
   S_actionNodes:
   - pauseHere: 0
     gameObjectName: DontDestroyOnLoad
-    methodName: set_HelpedSpikeWithoutReward
-    nameIndex: 14
-    methodIndex: 4
-    paramIndex: 1
+    methodName: IncrementKiller
+    nameIndex: 7
+    methodIndex: 35
+    paramIndex: 0
     opts:
     - '[No method]'
     - get_PlayerWeaponInfo
-    - ChangePlayerMaxHealth
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
     - Rollback
     - set_HelpedSpikeWithoutReward
     - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
     - IncrementAchiever
     - IncrementExplorer
     - IncrementSocializer
     - IncrementKiller
     - Reset
+    - Rollback
     - GetResults
     nameOpts:
     - '[No object]'
-    - TorchColumn (1)
-    - TorchColumn (2)
-    - BlockManager
-    - TorchColumn
-    - Spike -1F Transform
-    - ColumnLever (1)
-    - DoorLever
-    - SwordGiver
-    - Prison Scroll
-    - MainLever
-    - ColumnLever (2)
-    - PlayerPrisonDetonator
-    - Spike
-    - DontDestroyOnLoad
-    - door
-    - door
-    - Player
+    - GeneralDialogueTrigger
+    - endLevelDoor
+    - PlayerHealth
     - CanvasPlayerUI
-    - Altar
-    - TorchColumn (3)
-    - door
+    - BlockManager
+    - Player
+    - DontDestroyOnLoad
+    - PurpleBarrier
+    - FightStartTrigger
+    - GreenBarrier
+    - GreenBarrier (1)
     param_bool: 0
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 600
-      y: -180
-      width: 300
-      height: 50
-    ID: 4
+      x: 2060
+      y: 710
+      width: 200
+      height: 144
+    ID: 11
     outPlayerIndex: -1
     outActionIndex: 2
     more: 0
@@ -280,224 +567,329 @@ MonoBehaviour:
     renameDialogue: 
   - pauseHere: 0
     gameObjectName: DontDestroyOnLoad
-    methodName: set_HelpedSpikeWithoutReward
-    nameIndex: 14
-    methodIndex: 4
-    paramIndex: 1
+    methodName: IncrementSocializer
+    nameIndex: 7
+    methodIndex: 34
+    paramIndex: 0
     opts:
     - '[No method]'
     - get_PlayerWeaponInfo
-    - ChangePlayerMaxHealth
+    - get_PlayerHeadInfo
+    - get_PlayerArmourInfo
+    - get_PlayerShieldInfo
+    - Rollback
+    - ApplyPlayerMaxHealth
+    - GiveHealthBonus
+    - GiveVelocityBonus
     - Rollback
     - set_HelpedSpikeWithoutReward
     - get_HelpedSpikeWithoutReward
+    - set_BlessedSword
+    - get_BlessedSword
+    - set_CanSeeEnemyHP
+    - get_CanSeeEnemyHP
+    - set_HasWeirdHat
+    - get_HasWeirdHat
+    - set_CanUseExplosionSpell
+    - get_CanUseExplosionSpell
+    - set_IsMale
+    - get_IsMale
+    - set_CanSeeHiddenWalls
+    - get_CanSeeHiddenWalls
+    - set_CanSpeakWithSkeletons
+    - get_CanSpeakWithSkeletons
+    - set_HasHistorianGhost
+    - get_HasHistorianGhost
+    - set_Lv7AlarmTriggered
+    - get_Lv7AlarmTriggered
+    - set_Lv7SkeletonControlled
+    - get_Lv7SkeletonControlled
     - IncrementAchiever
     - IncrementExplorer
     - IncrementSocializer
     - IncrementKiller
     - Reset
+    - Rollback
     - GetResults
     nameOpts:
     - '[No object]'
-    - TorchColumn (1)
-    - TorchColumn (2)
-    - BlockManager
-    - TorchColumn
-    - Spike -1F Transform
-    - ColumnLever (1)
-    - DoorLever
-    - SwordGiver
-    - Prison Scroll
-    - MainLever
-    - ColumnLever (2)
-    - PlayerPrisonDetonator
-    - Spike
-    - DontDestroyOnLoad
-    - door
-    - door
-    - Player
+    - GeneralDialogueTrigger
+    - endLevelDoor
+    - PlayerHealth
     - CanvasPlayerUI
-    - Altar
-    - TorchColumn (3)
-    - door
-    param_bool: 1
+    - BlockManager
+    - Player
+    - DontDestroyOnLoad
+    - PurpleBarrier
+    - FightStartTrigger
+    - GreenBarrier
+    - GreenBarrier (1)
+    param_bool: 0
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 610
-      y: 10
-      width: 300
-      height: 50
-    ID: 5
+      x: 2060
+      y: 900
+      width: 200
+      height: 144
+    ID: 12
     outPlayerIndex: -1
     outActionIndex: 3
     more: 0
     ovrStartNode: 0
     renameDialogue: 
   - pauseHere: 0
-    gameObjectName: SwordGiver
-    methodName: GivePlayerSword
-    nameIndex: 1
-    methodIndex: 1
-    paramIndex: 0
+    gameObjectName: General
+    methodName: HelpWithFight
+    nameIndex: 24
+    methodIndex: 10
+    paramIndex: 1
     opts:
     - '[No method]'
-    - GivePlayerSword
+    - get_JustHit
+    - set_Invincible
+    - get_Invincible
+    - get_MaxHealth
+    - set_MaxHealth
+    - set_CurrentHealth
+    - get_CurrentHealth
+    - UpdateHealth
+    - get_IsHelpingInFight
+    - HelpWithFight
+    - FightStarted
     nameOpts:
     - '[No object]'
-    - SwordGiver
-    - Player Choices
-    - Bartle Statistics
-    - Player Statistics
-    - Spike -1F Transform
-    - TorchColumn (1)
-    - TorchColumn (2)
-    - BlockManager
-    - TorchColumn
-    - ColumnLever (1)
-    - DoorLever
-    - Prison Scroll
-    - MainLever
-    - ColumnLever (2)
-    - PlayerPrisonDetonator
-    - Spike
-    - door
-    - door
-    - Player
+    - endLevelDoor
+    - PlayerHealth
     - CanvasPlayerUI
-    - Altar
-    - TorchColumn (3)
-    - door
-    param_bool: 0
-    param_string: 
-    param_int: 0
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 830
-      y: -190
-      width: 300
-      height: 50
-    ID: 6
-    outPlayerIndex: -1
-    outActionIndex: 4
-    more: 0
-    ovrStartNode: 0
-    renameDialogue: 
-  - pauseHere: 0
-    gameObjectName: DontDestroyOnLoad
-    methodName: IncrementSocializer
-    nameIndex: 14
-    methodIndex: 8
-    paramIndex: 0
-    opts:
-    - '[No method]'
-    - get_PlayerWeaponInfo
-    - ChangePlayerMaxHealth
-    - Rollback
-    - set_HelpedSpikeWithoutReward
-    - get_HelpedSpikeWithoutReward
-    - IncrementAchiever
-    - IncrementExplorer
-    - IncrementSocializer
-    - IncrementKiller
-    - Reset
-    - GetResults
-    nameOpts:
-    - '[No object]'
-    - TorchColumn (1)
-    - TorchColumn (2)
     - BlockManager
-    - TorchColumn
-    - Spike -1F Transform
-    - ColumnLever (1)
-    - DoorLever
-    - SwordGiver
-    - Prison Scroll
-    - MainLever
-    - ColumnLever (2)
-    - PlayerPrisonDetonator
-    - Spike
+    - Player
+    - floor_bordered_4m_3 (268)
+    - floor_bordered_2m_1 (208)
+    - floor_bordered_2m_1 (145)
+    - floor_bordered_2m_1 (142)
+    - floor_bordered_4m_3 (242)
+    - floor_bordered_4m_3 (266)
+    - floor_bordered_4m_3 (247)
+    - floor_bordered_2m_1 (288)
+    - floor_bordered_4m_3 (262)
+    - floor_bordered_2m_1 (139)
+    - TheMasterDragon
+    - floor_bordered_2m_1 (299)
+    - floor_bordered_2m_1 (198)
+    - MasterDialogueTrigger
+    - floor_bordered_2m_1 (223)
     - DontDestroyOnLoad
-    - door
-    - door
-    - Player
-    - CanvasPlayerUI
-    - Altar
-    - TorchColumn (3)
-    - door
-    param_bool: 0
+    - floor_bordered_2m_1 (270)
+    - floor_bordered_2m_1 (87)
+    - General
+    - floor_bordered_2m_1 (101)
+    - floor_bordered_2m_1 (224)
+    - floor_bordered_2m_1 (160)
+    - floor_bordered_4m_3 (232)
+    - floor_bordered_2m_1 (97)
+    - floor_bordered_2m_1 (261)
+    - floor_bordered_2m_1 (232)
+    - floor_bordered_2m_1 (86)
+    - floor_bordered_2m_1 (240)
+    - floor_bordered_2m_1 (144)
+    - floor_bordered_2m_1 (256)
+    - floor_bordered_4m_3 (261)
+    - floor_bordered_2m_1 (185)
+    - floor_bordered_4m_3 (271)
+    - floor_bordered_2m_1 (226)
+    - floor_bordered_2m_1 (286)
+    - floor_bordered_4m_3 (239)
+    - Ghost
+    - floor_bordered_2m_1 (250)
+    - floor_bordered_2m_1 (268)
+    - floor_bordered_4m_3 (257)
+    - floor_bordered_2m_1 (259)
+    - floor_bordered_4m_3 (251)
+    - floor_bordered_2m_1 (310)
+    - floor_bordered_2m_1 (58)
+    - floor_bordered_2m_1 (242)
+    - floor_bordered_2m_1 (222)
+    - floor_bordered_2m_1 (238)
+    - floor_bordered_2m_1 (277)
+    - floor_bordered_2m_1 (123)
+    - floor_bordered_2m_1 (218)
+    - floor_bordered_2m_1 (209)
+    - floor_bordered_4m_3 (273)
+    - floor_bordered_2m_1 (147)
+    - floor_bordered_2m_1 (210)
+    - floor_bordered_2m_1 (220)
+    - floor_bordered_2m_1 (307)
+    - floor_bordered_2m_1 (212)
+    - floor_bordered_2m_1 (221)
+    - floor_bordered_4m_3 (261)
+    - floor_bordered_4m_3 (253)
+    - floor_bordered_2m_1 (214)
+    - floor_bordered_2m_1 (263)
+    - floor_bordered_2m_1 (216)
+    - floor_bordered_2m_1 (282)
+    - floor_bordered_2m_1 (76)
+    - floor_bordered_2m_1 (258)
+    - floor_bordered_2m_1 (83)
+    - floor_bordered_2m_1 (236)
+    - floor_bordered_2m_1 (230)
+    - floor_bordered_2m_1 (289)
+    - floor_bordered_2m_1 (137)
+    - floor_bordered_4m_3 (286)
+    - floor_bordered_4m_3 (245)
+    - floor_bordered_2m_1 (296)
+    - floor_bordered_2m_1 (100)
+    - floor_bordered_2m_1 (173)
+    - floor_bordered_4m_3 (255)
+    - SpawnManager
+    - floor_bordered_2m_1 (234)
+    - GeneralDialogueTrigger
+    - floor_bordered_2m_1 (295)
+    - floor_bordered_2m_1 (158)
+    - floor_bordered_2m_1 (260)
+    - floor_bordered_2m_1 (228)
+    - floor_bordered_2m_1 (244)
+    param_bool: 1
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 830
-      y: 10
-      width: 300
-      height: 50
-    ID: 7
-    outPlayerIndex: 4
+      x: 2350
+      y: 560
+      width: 200
+      height: 160
+    ID: 14
+    outPlayerIndex: 11
     outActionIndex: -1
     more: 0
     ovrStartNode: 0
     renameDialogue: 
   - pauseHere: 0
-    gameObjectName: DontDestroyOnLoad
-    methodName: IncrementAchiever
-    nameIndex: 14
-    methodIndex: 6
-    paramIndex: 0
+    gameObjectName: General
+    methodName: HelpWithFight
+    nameIndex: 24
+    methodIndex: 10
+    paramIndex: 1
     opts:
     - '[No method]'
-    - get_PlayerWeaponInfo
-    - ChangePlayerMaxHealth
-    - Rollback
-    - set_HelpedSpikeWithoutReward
-    - get_HelpedSpikeWithoutReward
-    - IncrementAchiever
-    - IncrementExplorer
-    - IncrementSocializer
-    - IncrementKiller
-    - Reset
-    - GetResults
+    - get_JustHit
+    - set_Invincible
+    - get_Invincible
+    - get_MaxHealth
+    - set_MaxHealth
+    - set_CurrentHealth
+    - get_CurrentHealth
+    - UpdateHealth
+    - get_IsHelpingInFight
+    - HelpWithFight
+    - FightStarted
     nameOpts:
     - '[No object]'
-    - TorchColumn (1)
-    - TorchColumn (2)
-    - BlockManager
-    - TorchColumn
-    - Spike -1F Transform
-    - ColumnLever (1)
-    - DoorLever
-    - SwordGiver
-    - Prison Scroll
-    - MainLever
-    - ColumnLever (2)
-    - PlayerPrisonDetonator
-    - Spike
-    - DontDestroyOnLoad
-    - door
-    - door
-    - Player
+    - endLevelDoor
+    - PlayerHealth
     - CanvasPlayerUI
-    - Altar
-    - TorchColumn (3)
-    - door
+    - BlockManager
+    - Player
+    - floor_bordered_4m_3 (268)
+    - floor_bordered_2m_1 (208)
+    - floor_bordered_2m_1 (145)
+    - floor_bordered_2m_1 (142)
+    - floor_bordered_4m_3 (242)
+    - floor_bordered_4m_3 (266)
+    - floor_bordered_4m_3 (247)
+    - floor_bordered_2m_1 (288)
+    - floor_bordered_4m_3 (262)
+    - floor_bordered_2m_1 (139)
+    - TheMasterDragon
+    - floor_bordered_2m_1 (299)
+    - floor_bordered_2m_1 (198)
+    - MasterDialogueTrigger
+    - floor_bordered_2m_1 (223)
+    - DontDestroyOnLoad
+    - floor_bordered_2m_1 (270)
+    - floor_bordered_2m_1 (87)
+    - General
+    - floor_bordered_2m_1 (101)
+    - floor_bordered_2m_1 (224)
+    - floor_bordered_2m_1 (160)
+    - floor_bordered_4m_3 (232)
+    - floor_bordered_2m_1 (97)
+    - floor_bordered_2m_1 (261)
+    - floor_bordered_2m_1 (232)
+    - floor_bordered_2m_1 (86)
+    - floor_bordered_2m_1 (240)
+    - floor_bordered_2m_1 (144)
+    - floor_bordered_2m_1 (256)
+    - floor_bordered_4m_3 (261)
+    - floor_bordered_2m_1 (185)
+    - floor_bordered_4m_3 (271)
+    - floor_bordered_2m_1 (226)
+    - floor_bordered_2m_1 (286)
+    - floor_bordered_4m_3 (239)
+    - Ghost
+    - floor_bordered_2m_1 (250)
+    - floor_bordered_2m_1 (268)
+    - floor_bordered_4m_3 (257)
+    - floor_bordered_2m_1 (259)
+    - floor_bordered_4m_3 (251)
+    - floor_bordered_2m_1 (310)
+    - floor_bordered_2m_1 (58)
+    - floor_bordered_2m_1 (242)
+    - floor_bordered_2m_1 (222)
+    - floor_bordered_2m_1 (238)
+    - floor_bordered_2m_1 (277)
+    - floor_bordered_2m_1 (123)
+    - floor_bordered_2m_1 (218)
+    - floor_bordered_2m_1 (209)
+    - floor_bordered_4m_3 (273)
+    - floor_bordered_2m_1 (147)
+    - floor_bordered_2m_1 (210)
+    - floor_bordered_2m_1 (220)
+    - floor_bordered_2m_1 (307)
+    - floor_bordered_2m_1 (212)
+    - floor_bordered_2m_1 (221)
+    - floor_bordered_4m_3 (261)
+    - floor_bordered_4m_3 (253)
+    - floor_bordered_2m_1 (214)
+    - floor_bordered_2m_1 (263)
+    - floor_bordered_2m_1 (216)
+    - floor_bordered_2m_1 (282)
+    - floor_bordered_2m_1 (76)
+    - floor_bordered_2m_1 (258)
+    - floor_bordered_2m_1 (83)
+    - floor_bordered_2m_1 (236)
+    - floor_bordered_2m_1 (230)
+    - floor_bordered_2m_1 (289)
+    - floor_bordered_2m_1 (137)
+    - floor_bordered_4m_3 (286)
+    - floor_bordered_4m_3 (245)
+    - floor_bordered_2m_1 (296)
+    - floor_bordered_2m_1 (100)
+    - floor_bordered_2m_1 (173)
+    - floor_bordered_4m_3 (255)
+    - SpawnManager
+    - floor_bordered_2m_1 (234)
+    - GeneralDialogueTrigger
+    - floor_bordered_2m_1 (295)
+    - floor_bordered_2m_1 (158)
+    - floor_bordered_2m_1 (260)
+    - floor_bordered_2m_1 (228)
+    - floor_bordered_2m_1 (244)
     param_bool: 0
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 1060
-      y: -190
-      width: 300
-      height: 50
-    ID: 8
-    outPlayerIndex: 4
+      x: 2260
+      y: 1090
+      width: 200
+      height: 160
+    ID: 15
+    outPlayerIndex: 12
     outActionIndex: -1
     more: 0
     ovrStartNode: 0

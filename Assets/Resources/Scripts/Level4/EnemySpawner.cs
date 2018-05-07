@@ -123,17 +123,24 @@ public class EnemySpawner : MonoBehaviour
             GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
 
-            if (PlayerChoices.Instance().HelpedSpikeWithoutReward && UnityEngine.Random.Range(0f, 1f) < 0.5f)
+            if (helperNpc && UnityEngine.Random.Range(0f, 1f) < 0.5f)
+            {
+                Debug.Log("A");
                 skeletonStatus.Target = helperNpc;
+            }
             else
             {
-                if (attackEachOther && enemiesAlive.Count > 0)
+                if (attackEachOther && enemiesAlive.Count > 1)
                 {
-                    skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count-1)];
+                    Debug.Log("B");
+                    skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count - 1)];
                     Debug.Log(skeletonStatus.target);
                 }
                 else
+                {
+                    Debug.Log("C");
                     skeletonStatus.Target = player;
+                }
             }
 
             Vector3 spawnPosition = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length - 1)].position +
@@ -148,5 +155,10 @@ public class EnemySpawner : MonoBehaviour
             currentDirection = Quaternion.Euler(0f, 90f, 0f) * currentDirection;
             enemiesAlive.Add(skeletonStatus.transform);
         }
+    }
+
+    public void RemoveHelper()
+    {
+        helperNpc = null;
     }
 }
