@@ -390,8 +390,8 @@ public class PlayerController : MonoBehaviour
 
         if (!myPlayerStatus.GroundedStatus)
         {
-            fallVelocity += Physics.gravity;
-            Vector3 newPosition = transform.position + fallVelocity * Time.deltaTime;
+            fallVelocity += Physics.gravity * Time.deltaTime;
+            Vector3 newPosition = transform.position + fallVelocity;
 
             if (debug)
                 Debug.DrawRay(transform.position, -Vector3.up * 1000, Color.magenta);
