@@ -7,6 +7,7 @@ public class MasterStatus : GuardStatus
     [SerializeField] private EnemySpawner skeletonSpawner;
     [SerializeField] private string canSpeakWithSkeletonDialogue, cannotSpeakWithSkeletonDialogue;
     [SerializeField] private Transform masterHuman;
+    [SerializeField] private AudioClip roar, wings;
 
     // Use this for initialization
     protected new void Start()
@@ -51,5 +52,16 @@ public class MasterStatus : GuardStatus
             masterHuman.transform.position = transform.position;
             masterHuman.gameObject.SetActive(true);
         }
+    }
+
+    //Animation Events
+    public void PlayRoar()
+    {
+        AudioManager.Instance().PlayClipOneShot(roar);
+    }
+
+    public void PlayWings()
+    {
+        AudioManager.Instance().PlayClipOneShot(wings, true);
     }
 }

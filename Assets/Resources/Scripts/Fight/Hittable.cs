@@ -53,6 +53,9 @@ public class Hittable : MonoBehaviour
 
     public virtual void UpdateHealth (int deltaHealth)
     {
+        if (deltaHealth < 0)
+            myCharacterStatus.PlayOnHitSound();
+
         currentHealth = Mathf.Clamp(currentHealth + deltaHealth, 0, maxHealth);
         if (currentHealth <= 0)
             Die();

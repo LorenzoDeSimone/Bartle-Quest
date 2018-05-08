@@ -36,13 +36,16 @@ public class AudioManager : MonoBehaviour
         aSource.PlayOneShot(success);
     }
 
-    public void PlayClipOneShot(AudioClip clip, float volume)
+    public void PlayClipOneShot(AudioClip clip, float volume, bool waitSound = false)
     {
-        aSource.PlayOneShot(success, volume);
+        if (waitSound && aSource.isPlaying)
+            return;
+
+        aSource.PlayOneShot(clip, volume);
     }
 
-    public void PlayClipOneShot(AudioClip clip)
+    public void PlayClipOneShot(AudioClip clip, bool waitSound=false)
     {
-        aSource.PlayOneShot(success);
+        PlayClipOneShot(clip, 1.0f, waitSound);
     }
 }

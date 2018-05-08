@@ -15,6 +15,8 @@ public class CharacterStatus : MonoBehaviour
 
     [SerializeField] private string[] AttackStates;
     [SerializeField] private AudioClip[] AttackSounds;
+    [SerializeField] private AudioClip blockSound;
+    [SerializeField] private AudioClip onHitSound;
 
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
 
@@ -33,7 +35,7 @@ public class CharacterStatus : MonoBehaviour
     {
         get { return aiManager; }
     }
-
+    
     public bool CanMove
     {
         set { canMove = value; }
@@ -223,6 +225,18 @@ public class CharacterStatus : MonoBehaviour
     {
         if (i >= 0 && i < AttackSounds.Length)
             AudioManager.Instance().Asource.PlayOneShot(AttackSounds[i]);
+    }
+
+    public void PlayBlockSound()
+    {
+        if (blockSound)
+            AudioManager.Instance().Asource.PlayOneShot(blockSound);
+    }
+
+    public void PlayOnHitSound()
+    {
+        if (onHitSound)
+            AudioManager.Instance().Asource.PlayOneShot(onHitSound);
     }
 
     public Animator FSM
