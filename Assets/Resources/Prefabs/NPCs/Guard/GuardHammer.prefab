@@ -2233,6 +2233,10 @@ MonoBehaviour:
   - Attack01
   - Attack02
   - Attack03
+  AttackSounds:
+  - {fileID: 8300000, guid: 0316a7939c268db4383afc40c7d69293, type: 3}
+  - {fileID: 8300000, guid: 3720e87fa3e0d0842b5772542f5daf03, type: 3}
+  - {fileID: 8300000, guid: 466d799d9832f9646a8fa41dd328772f, type: 3}
   isNPC: 1
   aiManager: {fileID: 95607025336381226}
   DeathFade: {fileID: 1356131927498972}
@@ -2243,6 +2247,7 @@ MonoBehaviour:
   runSpeed: 4
   turnSpeed: 8
   attackPlayerIfNoTarget: 1
+  healthBarGO: {fileID: 0}
   attackRadius: 10
   distanceForInstantChase: 5
   patrolViewRadius: 15

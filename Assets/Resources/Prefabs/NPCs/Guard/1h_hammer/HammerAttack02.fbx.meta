@@ -180,7 +180,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.5845697
+      - time: 0
         functionName: DisableTransitionsToFalse
         data: 
         objectReferenceParameter: {fileID: 9100000, guid: 8ddade868d97c1a48b61868f2a8c88e5,
@@ -189,6 +189,14 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0
+        functionName: PlayAttackSound
+        data: 
+        objectReferenceParameter: {fileID: 1294470903177078, guid: f38a3d2d836f42344b279abfc54684a6,
+          type: 2}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
+      - time: 0.5845697
         functionName: DisableTransitionsToFalse
         data: 
         objectReferenceParameter: {fileID: 9100000, guid: 8ddade868d97c1a48b61868f2a8c88e5,

@@ -1785,7 +1785,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1294470903177078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.101878166, y: 0.257289, z: 44.99449}
+  m_LocalPosition: {x: -5.3662705, y: 0.06943755, z: -47.40814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4945410448794038}
@@ -2158,6 +2158,10 @@ MonoBehaviour:
   - Attack01
   - Attack02
   - Attack03
+  AttackSounds:
+  - {fileID: 8300000, guid: 0316a7939c268db4383afc40c7d69293, type: 3}
+  - {fileID: 8300000, guid: 3720e87fa3e0d0842b5772542f5daf03, type: 3}
+  - {fileID: 8300000, guid: 466d799d9832f9646a8fa41dd328772f, type: 3}
   isNPC: 1
   aiManager: {fileID: 95705523017886010}
   DeathFade: {fileID: 1434447507267570}

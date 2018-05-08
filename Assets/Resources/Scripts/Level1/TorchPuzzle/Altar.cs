@@ -7,7 +7,8 @@ public class Altar : MonoBehaviour
     [SerializeField] private Torch[] torches;
     [SerializeField] private Vector3 finalPosition;
     [SerializeField] private float timeToReachFinalPosition = 5f;
-
+    [SerializeField] private bool playSuccessSound = false;
+    bool puzzleSolved = false;
     private float elapsedTime = 0f;
 
     void Start()
@@ -18,8 +19,15 @@ public class Altar : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (AllTorchesLit())
+        if (!puzzleSolved && AllTorchesLit())
+        {
+            puzzleSolved = true;
+
+            if (playSuccessSound)
+                AudioManager.Instance().PlaySuccess();
+
             StartCoroutine(MoveAway(transform.position));
+        }
 	}
 
     private bool AllTorchesLit()
@@ -35,8 +43,6 @@ public class Altar : MonoBehaviour
 
     private IEnumerator MoveAway(Vector3 startPosition)
     {
-        AudioManager.Instance().PlaySuccess();
-
         while (elapsedTime < timeToReachFinalPosition)
         {
             elapsedTime += Time.deltaTime;

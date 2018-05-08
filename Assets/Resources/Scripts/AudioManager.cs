@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
-{ 
+{
+    [SerializeField] private AudioClip success;
+    [SerializeField] private AudioSource aSource;
+
     private static AudioManager instance;
-    private AudioSource success;//, death, weapon1, weapon2, weapon3, footsteps;
+
+    public AudioSource Asource
+    {
+        get { return Instance().aSource; }
+    }
 
 	// Use this for initialization
 	void Start ()
@@ -13,9 +20,7 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = FindObjectOfType<AudioManager>();
-            var aSources = GetComponents<AudioSource>();
-            success = aSources[0];
-     
+            instance.aSource = instance.GetComponent<AudioSource>();
         }
 	}
 	
@@ -28,6 +33,16 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySuccess()
     {
-        success.Play();
+        aSource.PlayOneShot(success);
+    }
+
+    public void PlayClipOneShot(AudioClip clip, float volume)
+    {
+        aSource.PlayOneShot(success, volume);
+    }
+
+    public void PlayClipOneShot(AudioClip clip)
+    {
+        aSource.PlayOneShot(success);
     }
 }

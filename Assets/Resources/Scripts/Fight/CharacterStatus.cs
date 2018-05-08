@@ -14,6 +14,8 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] protected bool canCollectItems;
 
     [SerializeField] private string[] AttackStates;
+    [SerializeField] private AudioClip[] AttackSounds;
+
     public static readonly int movingIdleValue = 0, movingWalkValue = 1, movingRunValue = 2;
 
     [SerializeField] private bool isNPC;
@@ -215,6 +217,12 @@ public class CharacterStatus : MonoBehaviour
     public void DisableTransitionsToFalse()
     {
         myAnimator.SetBool("disableTransitions", false);
+    }
+
+    public void PlayAttackSound(int i)
+    {
+        if (i >= 0 && i < AttackSounds.Length)
+            AudioManager.Instance().Asource.PlayOneShot(AttackSounds[i]);
     }
 
     public Animator FSM
