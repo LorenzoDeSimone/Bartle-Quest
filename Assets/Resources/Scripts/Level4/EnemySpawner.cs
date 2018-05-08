@@ -125,20 +125,20 @@ public class EnemySpawner : MonoBehaviour
 
             if (helperNpc && UnityEngine.Random.Range(0f, 1f) < 0.5f)
             {
-                Debug.Log("A");
+                //Debug.Log("A");
                 skeletonStatus.Target = helperNpc;
             }
             else
             {
                 if (attackEachOther && enemiesAlive.Count > 1)
                 {
-                    Debug.Log("B");
+                    //Debug.Log("B");
                     skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count - 1)];
                     Debug.Log(skeletonStatus.target);
                 }
                 else
                 {
-                    Debug.Log("C");
+                    //Debug.Log("C");
                     skeletonStatus.Target = player;
                 }
             }

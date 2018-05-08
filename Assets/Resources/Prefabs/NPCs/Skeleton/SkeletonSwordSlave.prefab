@@ -2107,7 +2107,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 10f5c32756656c44a97e6bc6009926e6, type: 3}
   - {fileID: 8300000, guid: 2741374565fc3ca4b890981f64b1e225, type: 3}
   blockSound: {fileID: 0}
-  onHitSound: {fileID: 8300000, guid: caab85f74f914fc468506ea4f7afaf26, type: 3}
+  onHitSounds:
+  - {fileID: 8300000, guid: caab85f74f914fc468506ea4f7afaf26, type: 3}
+  - {fileID: 8300000, guid: de35e785e0a11514fbbfda50800d073f, type: 3}
+  - {fileID: 8300000, guid: 86886d3f2091b9a4685e99828d1a117a, type: 3}
+  footstepSounds: []
   isNPC: 1
   aiManager: {fileID: 95566729656669978}
   DeathFade: {fileID: 1497612808988418}

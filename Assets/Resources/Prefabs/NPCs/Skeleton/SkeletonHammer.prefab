@@ -2163,7 +2163,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3720e87fa3e0d0842b5772542f5daf03, type: 3}
   - {fileID: 8300000, guid: 466d799d9832f9646a8fa41dd328772f, type: 3}
   blockSound: {fileID: 0}
-  onHitSound: {fileID: 8300000, guid: caab85f74f914fc468506ea4f7afaf26, type: 3}
+  onHitSounds:
+  - {fileID: 8300000, guid: caab85f74f914fc468506ea4f7afaf26, type: 3}
+  - {fileID: 8300000, guid: de35e785e0a11514fbbfda50800d073f, type: 3}
+  - {fileID: 8300000, guid: 86886d3f2091b9a4685e99828d1a117a, type: 3}
+  footstepSounds:
+  - {fileID: 8300000, guid: 2627a9f5ee2a4924bb8a214fcf16ce3b, type: 3}
+  - {fileID: 8300000, guid: 0979996ea8f060d43ac7599ee22e5ccf, type: 3}
+  - {fileID: 8300000, guid: 63dc0e1942d30e648affbe6befc34dfc, type: 3}
+  - {fileID: 8300000, guid: 81dfeb3d20dd6204f9c6f4dd605b34e3, type: 3}
+  - {fileID: 8300000, guid: 0bae71ac1e3ab254c9180f43e851eb4a, type: 3}
+  - {fileID: 8300000, guid: d66daa78709cb664b83937502e295c75, type: 3}
+  - {fileID: 8300000, guid: 7cfa086c281b346459ec5389c8117bee, type: 3}
+  - {fileID: 8300000, guid: c58fcfe468461ed42975f2bc94add19e, type: 3}
+  - {fileID: 8300000, guid: 1e69c9dc56029ca4e893b48c0f5c0b01, type: 3}
+  - {fileID: 8300000, guid: 0607577b0fe8a3044bd983fc071730cf, type: 3}
+  - {fileID: 8300000, guid: 19c667b53223db14fbf985dd0d293e5e, type: 3}
+  - {fileID: 8300000, guid: 51fe2eafded145e4b85ec3c58293f216, type: 3}
   isNPC: 1
   aiManager: {fileID: 95705523017886010}
   DeathFade: {fileID: 1434447507267570}
