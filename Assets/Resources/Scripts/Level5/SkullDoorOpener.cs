@@ -6,6 +6,7 @@ public class SkullDoorOpener : Interactable
 {
     [SerializeField] private Transform skullLight;
     [SerializeField] private ExplodingDoor[] doors;
+    [SerializeField] private DialogueManager dialogueManager;
 
     private static int nLevers = 0;
     private static int nLeversPulled;
@@ -37,6 +38,8 @@ public class SkullDoorOpener : Interactable
             {
                 if (door)
                    door.Explode();
+
+                dialogueManager.InitDialogue(GetComponent<Talker>());
             }
         }
     }

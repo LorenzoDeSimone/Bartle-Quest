@@ -22,11 +22,20 @@ public class MenuInputController : MonoBehaviour
     void Update ()
     {
         if (Input.GetButtonDown("A"))
+        {
+            AudioManager.Instance().PlayUISelect();
             StartNewGame();
+        }
         else if (Input.GetButtonDown("Y"))
+        {
+            AudioManager.Instance().PlayUISelect();
             Application.Quit();
+        }
         else if (Input.GetAxis("RT") > 0.2f)
         {
+            if(PlayerChoices.Instance().IsMale)
+                AudioManager.Instance().PlayUISelect();
+
             femaleLight.intensity = lightIntensity;
             maleLight.intensity = 0;
             PlayerChoices.Instance().IsMale = false;
@@ -34,6 +43,9 @@ public class MenuInputController : MonoBehaviour
         }
         else if (Input.GetAxis("LT") > 0.2f)
         {
+            if (!PlayerChoices.Instance().IsMale)
+                AudioManager.Instance().PlayUISelect();
+
             femaleLight.intensity = 0;
             maleLight.intensity = lightIntensity;
             PlayerChoices.Instance().IsMale = true;

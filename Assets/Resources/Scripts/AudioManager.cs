@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip success;
-    [SerializeField] private AudioSource aSource;
+    [SerializeField] private AudioClip success, ui_ok;
+
+    private AudioSource aSource;
 
     private static AudioManager instance;
 
@@ -34,6 +35,11 @@ public class AudioManager : MonoBehaviour
     public void PlaySuccess()
     {
         aSource.PlayOneShot(success);
+    }
+
+    public void PlayUISelect()
+    {
+        aSource.PlayOneShot(ui_ok);
     }
 
     public void PlayClipOneShot(AudioClip clip, float volume)

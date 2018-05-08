@@ -8,6 +8,7 @@ public class Altar : MonoBehaviour
     [SerializeField] private Vector3 finalPosition;
     [SerializeField] private float timeToReachFinalPosition = 5f;
     [SerializeField] private bool playSuccessSound = false;
+
     bool puzzleSolved = false;
     private float elapsedTime = 0f;
 
