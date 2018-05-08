@@ -2433,6 +2433,7 @@ MonoBehaviour:
   interactionManager: {fileID: 114405207843713946}
   cooldownBar: {fileID: 0}
   cooldownBarImage: {fileID: 0}
+  fireSpellSound: {fileID: 8300000, guid: ad12c11a5258a684994b4c7c8e17360b, type: 3}
 --- !u!114 &114150410993596530
 MonoBehaviour:
   m_ObjectHideFlags: 1

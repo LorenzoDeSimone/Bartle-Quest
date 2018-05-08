@@ -11,6 +11,7 @@ public class SpellCaster : MonoBehaviour
     [SerializeField] private InteractionManager interactionManager;
     [SerializeField] private GameObject cooldownBar;
     [SerializeField] private Image cooldownBarImage;
+    [SerializeField] private AudioClip fireSpellSound;
 
     private PlayerController playerController;
 
@@ -47,6 +48,7 @@ public class SpellCaster : MonoBehaviour
 
     public void ExplosionSpell()
     {
+        AudioManager.Instance().PlayClipOneShot(fireSpellSound);
         coolDownReady = false;
         Hittable hittable;
         UnityEngine.Object spawnEffect = Resources.Load("Prefabs/NPCs/Skeleton/SpawnEffectRed");
