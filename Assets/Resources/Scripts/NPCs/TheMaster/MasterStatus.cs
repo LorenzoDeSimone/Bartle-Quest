@@ -62,6 +62,6 @@ public class MasterStatus : GuardStatus
 
     public void PlayWings()
     {
-        AudioManager.Instance().PlayClipOneShot(wings, true);
+        AudioManager.Instance().PlayClipOneShot(wings);
     }
 }
