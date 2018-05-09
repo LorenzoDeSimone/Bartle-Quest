@@ -154,7 +154,7 @@ public class QuestionaryManager : MonoBehaviour
         //Resets everything for a new game
         PlayerChoices.Instance().Reset();
         PlayerStatistics.Instance().Reset();
-        BartleStatistics.Instance().Reset();
+        BartleStatistics.Instance().Reset();     
 
         SceneManager.LoadScene(sceneName);
     }

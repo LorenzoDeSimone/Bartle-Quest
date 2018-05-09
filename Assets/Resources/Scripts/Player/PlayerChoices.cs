@@ -39,6 +39,9 @@ public class PlayerChoices : MonoBehaviour
         hasHistorianGhost = false;
         lv7AlarmTriggered = false;
         lv7SkeletonControlled = false;
+
+        if (levelRatings != null)
+            levelRatings.Clear();
     }
 
     void Awake()
@@ -143,6 +146,6 @@ public class PlayerChoices : MonoBehaviour
 
     public void AddLevelRating(string levelName, float levelRating)
     {
-        Instance().levelRatings.Add(levelName,levelRating);
+        Instance().levelRatings[levelName] = levelRating;
     }
 }
