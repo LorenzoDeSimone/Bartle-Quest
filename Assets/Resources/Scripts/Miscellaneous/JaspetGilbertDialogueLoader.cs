@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class JaspetGilbertDialogueLoader : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class JaspetGilbertDialogueLoader : MonoBehaviour
             {
                 talker.TalkerName = "Gilbert";
                 talker.DialogueName = gilbertDialogue;
+                VD.LoadDialogues(talker.DialogueName, "");
             }
         }
         else
@@ -28,8 +30,8 @@ public class JaspetGilbertDialogueLoader : MonoBehaviour
             {
                 talker.TalkerName = "Jasper";
                 talker.DialogueName = jasperDialogue;
+                VD.LoadDialogues(talker.DialogueName, "");
             }
         }
-
     }
 }

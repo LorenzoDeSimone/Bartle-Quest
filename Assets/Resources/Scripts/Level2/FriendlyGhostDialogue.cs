@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class FriendlyGhostDialogue : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FriendlyGhostDialogue : MonoBehaviour
     {
         Talker talker = GetComponent<Talker>();
         talker.DialogueName = dialogueName;
+        VD.LoadDialogues(dialogueName, "");
         yield return new WaitForSeconds(1.5f);
         dialogueManager.InitDialogue(talker);
     }

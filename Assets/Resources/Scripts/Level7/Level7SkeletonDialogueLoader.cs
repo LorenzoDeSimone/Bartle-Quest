@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class Level7SkeletonDialogueLoader : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Level7SkeletonDialogueLoader : MonoBehaviour
             GetComponent<Talker>().DialogueName = canTalkWithSkeletonsDialogue;
         else
             GetComponent<Talker>().DialogueName = cannotTalkWithSkeletonsDialogue;
+
+        VD.LoadDialogues(GetComponent<Talker>().DialogueName, "");
     }
 
     public void DisableDialogue()

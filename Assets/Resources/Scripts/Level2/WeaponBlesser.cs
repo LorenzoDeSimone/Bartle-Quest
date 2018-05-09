@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class WeaponBlesser : MonoBehaviour
 {
@@ -24,5 +25,6 @@ public class WeaponBlesser : MonoBehaviour
     public void ChangeGhostDialogue(string dialogueName)
     {
         ghost.DialogueName = dialogueName;
+        VD.LoadDialogues(dialogueName, "");
     }
 }

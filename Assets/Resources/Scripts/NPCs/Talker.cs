@@ -8,6 +8,7 @@ public class Talker : Interactable
     [SerializeField] private string dialogueName;
     [SerializeField] private string talkerName;
     [SerializeField] private Animator actualTalkerAnimator;
+    private DialogueManager dialogueManager;
 
     public string TalkerName
     {
@@ -37,7 +38,7 @@ public class Talker : Interactable
     // Use this for initialization
     void Start ()
     {
-
+        dialogueManager = GameObject.Find("CanvasPlayerUI").GetComponent<DialogueManager>();
     }
 
     public override bool CanInteract()
@@ -47,7 +48,6 @@ public class Talker : Interactable
 
     public override void Interact()
     {
-        GameObject Canvas = GameObject.Find("CanvasPlayerUI");
-        Canvas.GetComponent<DialogueManager>().InitDialogue(this);
+        dialogueManager.InitDialogue(this);
     }
 }

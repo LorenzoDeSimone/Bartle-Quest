@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using VIDE_Data;
 
 public class MasterHittable : Hittable
 {
@@ -66,6 +67,7 @@ public class MasterHittable : Hittable
     {
         Talker talker = GetComponent<Talker>();
         talker.DialogueName = finalMasterDialogue;
+        VD.LoadDialogues(talker.DialogueName, "");
         dialogueManager.InitDialogue(talker);
     }
 }

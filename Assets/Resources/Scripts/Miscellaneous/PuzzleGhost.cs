@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class PuzzleGhost : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class PuzzleGhost : MonoBehaviour
         talker = GetComponent<Talker>();
         nameToGhostPosition[currentGhost.name] = this;
         talker.DialogueName = currentGhost.name;
+        VD.LoadDialogues(talker.DialogueName, "");
     }
 
     void Update()

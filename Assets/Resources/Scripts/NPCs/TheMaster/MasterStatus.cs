@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class MasterStatus : GuardStatus
 {
@@ -17,6 +18,9 @@ public class MasterStatus : GuardStatus
             GetComponent<Talker>().DialogueName = canSpeakWithSkeletonDialogue;
         else
             GetComponent<Talker>().DialogueName = cannotSpeakWithSkeletonDialogue;
+
+        VD.LoadDialogues(GetComponent<Talker>().DialogueName, "");
+
     }
 
     public bool FlyingStatus

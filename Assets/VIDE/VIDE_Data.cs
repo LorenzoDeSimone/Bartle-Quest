@@ -1060,7 +1060,7 @@ namespace VIDE_Data
             }
 
             if (!didLoad)
-                Debug.LogError("Found no dialogue(s) to load!");
+                Debug.LogError("Found no dialogue(s) to load! " + dialogueName);
 
             if (OnLoaded != null)
                 OnLoaded();

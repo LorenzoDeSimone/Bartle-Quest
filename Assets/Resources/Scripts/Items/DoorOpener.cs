@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class DoorOpener : Interactable
 {
@@ -38,6 +39,7 @@ public class DoorOpener : Interactable
             NPC.GetComponent<Talker>().enabled = false;
             NPC.GetComponent<Target>().enabled = false;
             npcTalker.DialogueName = dialogueName;
+            VD.LoadDialogues(dialogueName, "");
             StartCoroutine(StartDialogueWithNPC(npcTalker));
         }
     }
