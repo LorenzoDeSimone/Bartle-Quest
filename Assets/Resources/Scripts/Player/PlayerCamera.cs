@@ -148,7 +148,7 @@ public class PlayerCamera : MonoBehaviour
         if (player.Equals(target))
             return true;
         else
-            return (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance) && Time.timeScale > 0f;
+            return  (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance) && Time.timeScale > 0f;
     }
 
     void LateUpdate()
@@ -160,7 +160,7 @@ public class PlayerCamera : MonoBehaviour
         lastFrameLTtriggerValue = Input.GetAxis("LT");
     }
 
-    private int ClampAngle(float angle, float min, float max)
+    private float ClampAngle(float angle, float min, float max)
     {
         //Debug.Log(angle);
 
@@ -172,7 +172,7 @@ public class PlayerCamera : MonoBehaviour
         {
             angle -= 360;
         }
-        return Mathf.Clamp((int)(angle), (int)(min), (int)(max));
+        return Mathf.Clamp(angle, min, max);
     }
 
 }
