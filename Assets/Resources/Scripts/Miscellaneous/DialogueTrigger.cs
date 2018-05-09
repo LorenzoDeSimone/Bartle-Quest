@@ -14,7 +14,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             dialogueManager.InitDialogue(talker);
             if (oneShot)
-                Destroy(gameObject);
+                Destroy(this);
         }
     }
 }

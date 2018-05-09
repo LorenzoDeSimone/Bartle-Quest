@@ -159,6 +159,7 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1f;
         isDialogueOn = false;
 
+        Debug.Log(currentTalker);
         if (currentTalker && currentTalker.ActualTalkerAnimator)
             currentTalker.ActualTalkerAnimator.updateMode = AnimatorUpdateMode.Normal;
     }

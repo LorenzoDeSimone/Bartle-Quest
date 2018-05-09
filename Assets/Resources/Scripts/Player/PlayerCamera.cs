@@ -140,7 +140,7 @@ public class PlayerCamera : MonoBehaviour
 
     public bool IsTargetPressed()
     {
-        return Input.GetAxis("LT") > Mathf.Max(0.1f, lastFrameLTtriggerValue) && !IsInLockTargetStatus();
+        return Input.GetAxis("LT") > Mathf.Max(0.1f, lastFrameLTtriggerValue) && !IsInLockTargetStatus() && Time.timeScale > 0f;
     }
 
     public bool IsTargetReleased()
@@ -148,7 +148,7 @@ public class PlayerCamera : MonoBehaviour
         if (player.Equals(target))
             return true;
         else
-            return (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance);
+            return (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance) && Time.timeScale > 0f;
     }
 
     void LateUpdate()
