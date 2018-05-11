@@ -113,6 +113,9 @@ public class EnemySpawner : MonoBehaviour
 
         int skeletonToSummon = maxEnemiesAlive - enemiesAlive.Count;
 
+        if (skeletonToSummon > enemyToKill - (enemiesKilled + enemiesAlive.Count))
+            skeletonToSummon = enemyToKill - (enemiesKilled + enemiesAlive.Count);
+
         for (int i = 0; i < skeletonToSummon; i++)
         {
             UnityEngine.Object Skeleton;
