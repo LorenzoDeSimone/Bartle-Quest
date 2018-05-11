@@ -84,8 +84,8 @@ public class QuestionaryManager : MonoBehaviour
         levelLabeling["Level2"] = new float[] { 0.75f, 0.5f , 0f   , 0f   , 0.5f , 0f   , 0.5f , 0f   , 0f   , 0f };
         levelLabeling["Level3"] = new float[] { 0f   , 0f   , 0f   , 1f   , 1f   , 0f   , 1f   , 0f   , 0f   , 0f };
         levelLabeling["Level4"] = new float[] { 0f   , 1f   , 0.25f, 0f   , 0.25f, 0f   , 0f   , 0f   , 0f   , 0f };
-        levelLabeling["Level5"] = new float[] { 0f   , 1f   , 0f   , 0f   , 0.5f , 0.5f , 0.25f, 0f   , 0.5f , 0f };
-        levelLabeling["Level6"] = new float[] { 0f   , 0.5f , 0f   , 0f   , 0.5f , 0f   , 1f   , 0f   , 0f   , 0f };
+        levelLabeling["Level5"] = new float[] { 0f   , 1f   , 0f   , 0f   , 0.5f , 0.25f, 0.25f, 0f   , 0.5f , 0f };
+        levelLabeling["Level6"] = new float[] { 0f   , 0.5f , 0f   , 0f   , 0.75f, 0f   , 1f   , 0f   , 0f   , 0f };
         levelLabeling["Level7"] = new float[] { 0.25f, 0.5f , 0f   , 0f   , 0.75f, 0f   , 0.75f, 0f   , 0f   , 0f };
         levelLabeling["Level8"] = new float[] { 0f   , 1f   , 0.5f , 0f   , 0.25f, 0f   , 0f   , 0f   , 0f   , 0f };
 
