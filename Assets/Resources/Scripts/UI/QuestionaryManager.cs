@@ -11,13 +11,17 @@ public class QuestionaryManager : MonoBehaviour
     [SerializeField] private Transform results;
     [SerializeField] private Text demoAchieverText, demoExplorerText, demoSocializerText, demoKillerText;
     [SerializeField] private Text questionaryAchieverText, questionaryExplorerText, questionarySocializerText, questionaryKillerText;
-    [SerializeField] Image DeathAndPauseScreen;
+    [SerializeField] private Image DeathAndPauseScreen, bartleScreen;
+    [SerializeField] private GameObject bartleHint;
+    [SerializeField] PlayerController playerController;
+
+
 
     private float fadeInTime = 0.5f;
     private float fadeOutTime = 1f;
     private Dictionary<BartleStatistics.ARCHETYPE, float> demoBartleStatistics, questionaryBartleStatistics;
     private GoogleDataSender googleDataSender;
-    private bool chosenDemoProfile;
+    private bool chosenDemoProfile, questionaryCompleted;
 
     // Use this for initialization
     void Start ()
@@ -157,5 +161,38 @@ public class QuestionaryManager : MonoBehaviour
         BartleStatistics.Instance().Reset();     
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Y") && questionaryCompleted)
+        {
+            if(playerController.enabled)
+            {
+                playerController.enabled = false;
+                bartleScreen.gameObject.SetActive(true);
+            }
+            else
+            {
+                playerController.enabled = true;
+                bartleScreen.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public bool QuestionaryCompleted
+    {
+        set
+        {
+            questionaryCompleted = value;
+            if (questionaryCompleted)
+                bartleHint.SetActive(true);
+        }
+    }
+
+    public void OpenQuestionary()
+    {
+        ReturnToMainMenu();
+        Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSc5Rilnhlw7A7bTFO96nYxGk-M6WozzLngErsUcHm8iV52ShQ/viewform");
     }
 }

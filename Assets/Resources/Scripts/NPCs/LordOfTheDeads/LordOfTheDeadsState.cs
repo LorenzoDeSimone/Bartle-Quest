@@ -8,7 +8,7 @@ public class LordOfTheDeadsState : State
     [HideInInspector] protected Hittable myHittable;
     [HideInInspector] protected Animator myFSM;
     [HideInInspector] private bool initDone = false;
-    protected float stoppingDistance = 3.5f;
+    protected float stoppingDistance = 4f;
     protected int lastHealth = 0;
 
     protected void Initialization(Animator animator)

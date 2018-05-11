@@ -8,7 +8,8 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private int enemyToKill, maxEnemiesAlive, minSec = 1, maxSec = 3;
+    [SerializeField] private int maxEnemiesAlive, minSec = 1, maxSec = 3;
+    [SerializeField] public int enemyToKill;
     [SerializeField] private Transform player, helperNpc;
     [SerializeField] private ExplodingDoor[] doors;
     [SerializeField] private Transform[] barriers;
@@ -21,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     private List<Transform> enemiesAlive;
     private int enemiesKilled;
     
+
     public bool FightEnded
     {
         get { return fightEnded; }

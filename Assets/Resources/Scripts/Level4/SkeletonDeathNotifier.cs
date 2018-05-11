@@ -11,9 +11,15 @@ public class SkeletonDeathNotifier : MonoBehaviour
         set { skeletonSpawner = value; }
     }
 
-    void OnDestroy()
+    void Update()
     {
-        if(skeletonSpawner)
-            skeletonSpawner.NotifyEnemyKill(transform);
+        if (skeletonSpawner)
+        {
+            if (GetComponent<CharacterStatus>().DeathStatus)
+            {
+                enabled = false;
+                skeletonSpawner.NotifyEnemyKill(transform);
+            }
+        }
     }
 }

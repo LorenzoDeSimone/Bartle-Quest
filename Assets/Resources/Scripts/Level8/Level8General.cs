@@ -26,8 +26,10 @@ public class Level8General : MonoBehaviour
         isHelpingInFight = value;
         guardStatus.AIManager.enabled = value;
 
-        if(!value)
+        if (!value)
             enemySpawner.RemoveHelper();
+        else
+            enemySpawner.enemyToKill+=2;
     }
 
     public void FightStarted()
