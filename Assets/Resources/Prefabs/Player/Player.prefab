@@ -2429,7 +2429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDownReady: 1
   cooldownSeconds: 10
-  spellDamage: 2
+  spellDamage: 4
   interactionManager: {fileID: 114405207843713946}
   cooldownBar: {fileID: 0}
   cooldownBarImage: {fileID: 0}

@@ -30945,6 +30945,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eedc66f03a07b42418199a09446d50f6, type: 2}
   m_IsPrefabParent: 0
@@ -32346,7 +32351,7 @@ RectTransform:
   - {fileID: 1213727354}
   - {fileID: 1017190853}
   m_Father: {fileID: 1319119693}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -32737,7 +32742,7 @@ RectTransform:
   - {fileID: 992439439}
   - {fileID: 1412849854}
   m_Father: {fileID: 1319119693}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -53147,9 +53152,9 @@ RectTransform:
   - {fileID: 853578203}
   - {fileID: 171102575}
   - {fileID: 579810353}
-  - {fileID: 1870043263}
   - {fileID: 1053792853}
   - {fileID: 1019202970}
+  - {fileID: 1870043263}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88847,7 +88852,7 @@ RectTransform:
   m_Children:
   - {fileID: 1212859272}
   m_Father: {fileID: 1319119693}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
