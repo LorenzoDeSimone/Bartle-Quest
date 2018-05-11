@@ -22,6 +22,7 @@ public class LordOfTheDeadsState : State
         }
     }
 
+
     protected void RotateTowards(Vector3 target)
     {
         Vector3 sameYTarget = new Vector3(target.x, myStatus.transform.position.y, target.z);
@@ -37,8 +38,9 @@ public class LordOfTheDeadsState : State
         {
             myFSM.SetTrigger("justHit");
             myFSM.SetInteger("hitTaken", myFSM.GetInteger("hitTaken") + 1);
-            if (myFSM.GetInteger("hitTaken") >= myStatus.deltaHitToTeleport)
+            if (myFSM.GetInteger("hitTaken") >= myStatus.deltaHitToTeleport && myStatus.teleportsDone < myStatus.maxTeleports)
             {
+                myStatus.teleportsDone++;
                 myFSM.SetInteger("hitTaken", 0);
                 myFSM.SetTrigger("teleport");
             }
