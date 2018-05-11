@@ -192,7 +192,6 @@ public class QuestionaryManager : MonoBehaviour
 
     public void OpenQuestionary()
     {
-        ReturnToMainMenu();
         Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSc5Rilnhlw7A7bTFO96nYxGk-M6WozzLngErsUcHm8iV52ShQ/viewform");
     }
 }
