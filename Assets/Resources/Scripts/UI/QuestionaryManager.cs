@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class QuestionaryManager : MonoBehaviour
 {
     [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private Transform results;
+    [SerializeField] private Transform results, demoProfile, questionaryProfile;
     [SerializeField] private Text demoAchieverText, demoExplorerText, demoSocializerText, demoKillerText;
     [SerializeField] private Text questionaryAchieverText, questionaryExplorerText, questionarySocializerText, questionaryKillerText;
     [SerializeField] private Image DeathAndPauseScreen, bartleScreen;
@@ -57,9 +57,15 @@ public class QuestionaryManager : MonoBehaviour
 
         //Demo profile chosen over Bartle test
         if (value)
+        {
+            questionaryProfile.gameObject.SetActive(false);
             DataSendProcedure(demoBartleStatistics);
+        }
         else
+        {
+            demoProfile.gameObject.SetActive(false);
             DataSendProcedure(questionaryBartleStatistics);
+        }
     }
 
     private Dictionary<string, float[]> GetLevelLabeling()
@@ -118,6 +124,17 @@ public class QuestionaryManager : MonoBehaviour
                 obj.Add(1);
             else
                 obj.Add(0);
+
+            //Writing both profiles here to easily calculate loss function after
+            obj.Add(demoBartleStatistics[BartleStatistics.ARCHETYPE.ACHIEVER]);
+            obj.Add(demoBartleStatistics[BartleStatistics.ARCHETYPE.EXPLORER]);
+            obj.Add(demoBartleStatistics[BartleStatistics.ARCHETYPE.SOCIALIZER]);
+            obj.Add(demoBartleStatistics[BartleStatistics.ARCHETYPE.KILLER]);
+
+            obj.Add(questionaryBartleStatistics[BartleStatistics.ARCHETYPE.ACHIEVER]);
+            obj.Add(questionaryBartleStatistics[BartleStatistics.ARCHETYPE.EXPLORER]);
+            obj.Add(questionaryBartleStatistics[BartleStatistics.ARCHETYPE.SOCIALIZER]);
+            obj.Add(questionaryBartleStatistics[BartleStatistics.ARCHETYPE.KILLER]);
 
             objNewRecords.Add(obj);
 

@@ -6678,6 +6678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 206253476}
   results: {fileID: 869295490}
+  demoProfile: {fileID: 959229355}
+  questionaryProfile: {fileID: 497647048}
   demoAchieverText: {fileID: 910922688}
   demoExplorerText: {fileID: 1674853526}
   demoSocializerText: {fileID: 1932384403}
