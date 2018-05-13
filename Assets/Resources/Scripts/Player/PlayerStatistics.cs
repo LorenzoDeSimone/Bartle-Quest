@@ -179,9 +179,9 @@ public class PlayerStatistics : MonoBehaviour
         Instance().player.GetComponent<Hittable>().CurrentHealth = Instance().maxHealth;
     }
 
-    public void GiveVelocityBonus(float multiplier)
+    public void GiveVelocityBonus(float bonus)
     {
-        Instance().velocity *= multiplier;
+        Instance().velocity += bonus;
         ApplyPlayerVelocity();
     }
 }

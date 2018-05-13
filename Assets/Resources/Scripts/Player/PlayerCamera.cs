@@ -148,7 +148,7 @@ public class PlayerCamera : MonoBehaviour
         if (player.Equals(target))
             return true;
         else
-            return  (Input.GetAxis("LT") <= 0.1f ||  target == null || Vector3.Distance(target.position, player.position) > maxTargetDistance) && Time.timeScale > 0f;
+            return  (Input.GetAxis("LT") <= 0.1f ||  target == null || ( target !=null && Vector3.Distance(target.position, player.position) > maxTargetDistance)) && Time.timeScale > 0f;
     }
 
     void LateUpdate()
