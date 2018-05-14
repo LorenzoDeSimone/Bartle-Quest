@@ -36666,7 +36666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1440747932}
   rateLevelPopupLoader: {fileID: 0}
-  successSound: 1
+  successSound: 0
 --- !u!1001 &785432455
 Prefab:
   m_ObjectHideFlags: 0
