@@ -41,6 +41,7 @@ public class GhostHittable : Hittable
             if (ghostsKilled == ghostsToKill && talkingHeads)
             {
                 talkingHeads.gameObject.SetActive(true);
+                AudioManager.Instance().PlaySuccess();
             }
         }
     }

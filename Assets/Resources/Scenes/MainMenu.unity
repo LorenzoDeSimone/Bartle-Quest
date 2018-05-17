@@ -1591,6 +1591,7 @@ MonoBehaviour:
   - Level2GhostAchieverChoice
   - Level2GhostAfterBless
   - Level2GhostExplorerChoice
+  - Level3Hint
   - Level3Story1
   - Level3Story2
   - Level4Alone
@@ -1601,6 +1602,7 @@ MonoBehaviour:
   - Level5AltarAfterPray
   - Level5AltarEnd
   - Level5DoorOpenedWithLevers
+  - Level5FirstDoor
   - Level5HatDialogue
   - Level5Library
   - Level5NoHatDialogue
@@ -2189,7 +2191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ver 1.2.2
+  m_Text: ver 1.2.3
 --- !u!222 &246270383
 CanvasRenderer:
   m_ObjectHideFlags: 0

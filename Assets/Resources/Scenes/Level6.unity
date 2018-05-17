@@ -30950,6 +30950,16 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198906421121041854, guid: eedc66f03a07b42418199a09446d50f6,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eedc66f03a07b42418199a09446d50f6, type: 2}
   m_IsPrefabParent: 0
@@ -53020,6 +53030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diags:
   - ColourMismatchDialogue
+  - Empty
   - GhostBlue
   - GhostGirl
   - GhostGirlEnd
@@ -53035,6 +53046,7 @@ MonoBehaviour:
   - Level2GhostAchieverChoice
   - Level2GhostAfterBless
   - Level2GhostExplorerChoice
+  - Level3Hint
   - Level3Story1
   - Level3Story2
   - Level4Alone
@@ -53044,6 +53056,7 @@ MonoBehaviour:
   - Level5Altar
   - Level5AltarAfterPray
   - Level5AltarEnd
+  - Level5DoorOpenedWithLevers
   - Level5HatDialogue
   - Level5Library
   - Level5NoHatDialogue
@@ -53060,6 +53073,13 @@ MonoBehaviour:
   - Level7Library2
   - Level7Library3
   - Level7Start
+  - Level8CannotSpeakSkeletons
+  - Level8CanSpeakSkeletons
+  - Level8General
+  - Level8HatDialogue
+  - Level8MasterBeforeFight
+  - Level8MasterDeath
+  - Level8NoHat
   - LonelyPrincess1
   - LonelyPrincess2
   - LonelyPrincess3
@@ -53070,6 +53090,7 @@ MonoBehaviour:
   - PrisonAltar
   - PrisonGuard
   - PrisonScroll
+  - Questionary
   - SpikeEscaped
   - SpikeInprisoned
   - Vincent

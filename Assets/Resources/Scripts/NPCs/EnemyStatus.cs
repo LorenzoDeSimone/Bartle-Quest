@@ -9,7 +9,7 @@ public class EnemyStatus : CharacterStatus
     [SerializeField] public float walkSpeed = 2f;
     [SerializeField] public float runSpeed = 4f;
     [SerializeField] public float turnSpeed = 5f;
-    [SerializeField] private bool attackPlayerIfNoTarget = true;
+    [SerializeField] public bool attackPlayerIfNoTarget = true;
 
     private static Transform player = null;
 

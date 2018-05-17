@@ -8,6 +8,8 @@ public class SkullDoorOpener : Interactable
     [SerializeField] private ExplodingDoor[] doors;
     [SerializeField] private DialogueManager dialogueManager;
 
+    [SerializeField] string normalLeverDialogue, finalLeverDialogue;
+
     private static int nLevers = 0;
     private static int nLeversPulled;
 
@@ -32,14 +34,23 @@ public class SkullDoorOpener : Interactable
         skullLight.gameObject.SetActive(true);
 
         nLeversPulled++;
-        if (nLeversPulled >= nLevers)
+        Talker talker = GetComponent<Talker>();
+
+        if (nLeversPulled < nLevers)
+        {
+            AudioManager.Instance().PlaySuccess();
+            talker.DialogueName = normalLeverDialogue;
+            dialogueManager.InitDialogue(talker);
+        }
+        else if (nLeversPulled >= nLevers)
         {
             foreach (ExplodingDoor door in doors)
             {
                 if (door)
                    door.Explode();
 
-                dialogueManager.InitDialogue(GetComponent<Talker>());
+                talker.DialogueName = finalLeverDialogue;
+                dialogueManager.InitDialogue(talker);
             }
         }
     }

@@ -128,24 +128,26 @@ public class EnemySpawner : MonoBehaviour
             GuardStatus skeletonStatus = skeletonGO.GetComponent<GuardStatus>();
             NavMeshAgent agent = skeletonStatus.GetComponent<NavMeshAgent>();
 
-            if (helperNpc && UnityEngine.Random.Range(0f, 1f) < 0.5f)
+
+            if(attackEachOther)
             {
-                //Debug.Log("A");
+                skeletonStatus.attackPlayerIfNoTarget = false;
+                if (enemiesAlive.Count > 1)
+                {
+                    Debug.Log("A");
+                    skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count - 1)];
+                    //Debug.Log(skeletonStatus.target);
+                }
+            }
+            else if (helperNpc && UnityEngine.Random.Range(0f, 1f) < 0.5f)
+            {
+                Debug.Log("B");
                 skeletonStatus.Target = helperNpc;
             }
             else
             {
-                if (attackEachOther && enemiesAlive.Count > 1)
-                {
-                    //Debug.Log("B");
-                    skeletonStatus.Target = enemiesAlive[UnityEngine.Random.Range(0, enemiesAlive.Count - 1)];
-                    Debug.Log(skeletonStatus.target);
-                }
-                else
-                {
-                    //Debug.Log("C");
-                    skeletonStatus.Target = player;
-                }
+                Debug.Log("C");
+                skeletonStatus.Target = player;
             }
 
             Vector3 spawnPosition = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length - 1)].position +

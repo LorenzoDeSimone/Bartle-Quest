@@ -76,6 +76,7 @@ public class PuzzleGhost : MonoBehaviour
                 BartleStatistics.Instance().IncrementSocializer();
                 DisableAllInteractions();
                 talkingHeads.gameObject.SetActive(true);
+                AudioManager.Instance().PlaySuccess();
             }
         }
 
